@@ -836,17 +836,17 @@ f) 6
 \\
 2.8. Se consideră un arbore cu 10 noduri，numerotate de la 1 la 10 având vectorul de tați următor （0，1，1，1，3，3，3，4，7，7）．Descendenții nodului 3 sunt:
 \\
-a） 5,6,7
+a) 5,6,7
 \\
-b） 5,6,7,9,10
+b) 5,6,7,9,10
 \\
-c） 4,5,6,7,8,9,10
+c) 4,5,6,7,8,9,10
 \\
-d） 6,7
+d) 6,7
 \\
-e） 4,5,6
+e) 4,5,6
 \\
-f） 4,7
+f) 4,7
 \\
 2.9. Știind că inițial variabilele întregi $\mathbf{x}$ și $\mathbf{y}$ au valorile 1 și respectiv 2 , stabilițic care sunt valorile lor după apelul $\mathbf{F}(\mathbf{x}, \mathbf{y})$ (pentru variantele în limbajele C++ sau Pascal) respectiv $\mathbf{F}(\& \mathbf{x}, \mathbf{y})$ (pentru varianta în limbajul C):
 \begin{verbatim}
@@ -1674,96 +1674,113 @@ f) 5
 
 \section*{Varianta 4}
 
-\begin{enumerate}
-  \item Variabila n reprezintă un număr natural cu exact două cifre. Precizați câte dintre expresiile următoare au valoarea 1 /true dacă și numai dacă cifrele lui $n$ au aceeași paritate.
-\end{enumerate}
-
+4.1. Variabila n reprezintă un număr natural cu exact două cifre. Precizați câte dintre expresiile următoare au valoarea 1 /true dacă și numai dacă cifrele lui $n$ au aceeași paritate.
 Limbajul C++/ Limbajul C
-
 \begin{verbatim}
-(n/10-n%10)%2==0
-n/10%2==n%2
-n/10==n%10
-(n/10+n%10*10) %2==n%2
-n/2==n%2
+1. (n/10-n%10)%2==0
+2. n/10%2==n%2
+3. n/10==n%10
+4. (n/10+n%10*10) %2==n%2
+5. n/2==n%2
 \end{verbatim}
-
 Limbajul Pascal
-
 \begin{verbatim}
-(n div 10 - n mod 10) mod 2 = 0
-n div 10 mod 2 = n mod 2
-n div 10=n mod 10
-(n div 10 + n mod 10 *10) mod 2 = n mod 2
-n div 2 = n mod 2
+1. (n div 10 - n mod 10) mod 2 = 0
+2. n div 10 mod 2 = n mod 2
+3. n div 10=n mod 10
+4. (n div 10 + n mod 10 *10) mod 2 = n mod 2
+5. n div 2 = n mod 2
 \end{verbatim}
-
-a) 0\\
-b) 1\\
-c) 2\\
-d) 3\\
-e) 4\\
+\\
+a) 0
+\\
+b) 1
+\\
+c) 2
+\\
+d) 3
+\\
+e) 4
+\\
 f) 5
-
-2 Pentru implementarea ecuației unei drepte de forma $\mathbf{a x + b y}+\mathbf{c}=0$ (unde $\mathbf{a}, \mathbf{b}, \mathbf{c} \in \mathrm{R}$ ), se definește structura:
-
+\\
+4.2. Pentru implementarea ecuației unei drepte de forma $\mathbf{a x + b y}+\mathbf{c}=0$ (unde $\mathbf{a}, \mathbf{b}, \mathbf{c} \in \mathrm{R}$ ), se definește structura:
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 typedef struct
     {float a, b, c;}dreapta;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 type dreapta=record
         a, b, c : real;
     end;
 \end{verbatim}
-
 Dacă d1 și d2 sunt două variabile de tipul dreapta, precizați care dintre următoarele expresii verifică dacă d1 și d2 sunt paralele.
-
-Limbajul C++/ Limbajul C\\
-a) $\mathrm{d} 1 \mathrm{\|}$ d2\\
-b) d1.a\hl{d2.a \&\& d1.b}d2.b\\
-c) $a . d 1 / a . d 2==b . d 1 / b . d 2$\\
-d) d1.a/d2.a\hl{d1.b/d2.b\\
-e) d1.a}0 \&\& d2.a\hl{0\\
-f) d1.a\textit{d2.b-d1.b}d2.a}0
-
-Limbajul Pascal\\
-a) $\mathrm{d} 1=\mathrm{d} 2$\\
-b) (d1.a=d2.a) and (d1.b = d2.b)\\
-c) a.d1/a.d2 = b.d1/b.d2\\
-d) d1.a/d2.a=d1.b/d2.b\\
-e) (d1.a=0) and (d2.a=0)\\
-f) d1.a\textit{d2.b-d1.b}d2.a=0
-
-3 Funcţia $\mathbf{f}$ primeşte ca parametri două valori reale şi returnează cea mai mare dintre cele două valori. Antetul funcției este:\\
-(Limbajul C++/C) float f(float x, float y) ;\\
-(Limbajul Pascal) function $f(x, y$ : real) :real;\\
-Precizați care dintre următoarele expresii reprezintă suma celor mai mici două valori dintre numerele reale $\mathrm{a}, \mathrm{b}$ şi c .\\
-a) $a+b+c-f(a, b)$\\
-b) $a+b+c-f(a, b)-f(b, c)$\\
-c) $a+2 * b+c-f(a, b)-f(b, c)$\\
-d) $a+b+c-f(a, b, c)$\\
-e) $a+b+c-f(a, f(c, b))$\\
-f) $a+b+c-f(f(a, b), f(b, a))$
-
-4 Precizați care sunt valorile afișate în urma execuției următorului program.
-
+\\
+Limbajul C++/ Limbajul C
+a) d1 \|\| d2
+\\
+b) d1.a==d2.a \&\& d1.b==d2.b
+\\
+c) a.d1/a.d2==b.d1/b.d2
+\\
+d) d1.a/d2.a==d1.b/d2.b
+\\
+e) d1.a==0 \&\& d2.a==0
+\\
+f) d1.a*d2.b-d1.b*d2.a==0
+\\
+Limbajul Pascal
+a) d1 = d2
+\\
+b) (d1.a=d2.a) and (d1.b = d2.b)
+\\
+c) a.d1/a.d2 = b.d1/b.d2
+\\
+d) d1.a/d2.a=d1.b/d2.b
+\\
+e) (d1.a=0) and (d2.a=0)
+\\
+f) d1.a*d2.b-d1.b*d2.a=0
+\\
+4.3. Funcţia $\mathbf{f}$ primeşte ca parametri două valori reale şi returnează cea mai mare dintre cele două valori. Antetul funcției este:
+(Limbajul C++/C) float f(float x, float y) ;
+(Limbajul Pascal) function $f(x, y$ : real) :real;
+Precizați care dintre următoarele expresii reprezintă suma celor mai mici două valori dintre numerele reale $\mathrm{a}, \mathrm{b}$ şi c .
+\\
+a) a+b+c-f(a, b)
+\\
+b) a+b+c-f(a, b)-f(b, c)
+\\
+c) a+2 * b+c-f(a, b)-f(b, c)
+\\
+d) a+b+c-f(a, b, c)
+\\
+e) a+b+c-f(a, f(c, b))
+\\
+f) a+b+c-f(f(a, b), f(b, a))
+\\
+4.4. Precizați care sunt valorile afișate în urma execuției următorului program.
 \begin{verbatim}
-. Limbajul C++
-    #include<iostream>
-    using namespace std;
-    int a,b;
-    void f(int a, int &b)
-    {
-        if (a>0)
-            {
-                a++; b--; f(b,a);
-            }
+Limbajul C++
+#include<iostream>
+using namespace std;
+int a,b;
+void f(int a, int &b)
+{
+    if (a>0)
+        {
+            a++; b--; f(b,a);
+        }
+    cout<<a<<" "<<b<<" ";
+}
+int main()
+{ a=0; b=1;
+    f(b,a);
+    cout<<<a<<" "<<b;
+}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 #include<stdio.h>
@@ -1775,11 +1792,17 @@ void f(int a, int *b)
         a++; (*b)--;
         f(*b,&a);
     }
+    printf("%d %d",a,*b);
+}
+void main ( )
+{
+    a=0; b=1;
+    f(b,&a) ;
+    printf("%d %d",a,b);
+}
 \end{verbatim}
-
-Limbajul Pascal
-
 \begin{verbatim}
+Limbajul Pascal
 var a,b:integer;
 procedure f(a:integer;
 var b:integer);
@@ -1789,31 +1812,6 @@ begin
             a:=a+1; b:=b-1;
             f(b,a)
         end;
-\end{verbatim}
-
-\begin{verbatim}
-    cout<<a<<" "<<b<<" "; printf("%d %d
-}
-int main()
-{ a=0; b=1;
-    f(b,a);
-    cout<<<a<<" "<<b;
-}
-\end{verbatim}
-
-\begin{verbatim}
-",a,*b);
-}
-void main ( )
-{
-    a=0; b=1;
-    f(b,&a) ;
-    printf("%d
-%d",a,b) ;
-}
-\end{verbatim}
-
-\begin{verbatim}
     write(a,' ',b,' ')
 end;
 begin
@@ -1822,17 +1820,22 @@ begin
     write(a,' ',b,' ')
 end.
 \end{verbatim}
-
-a) $\begin{array}{llllll}-1 & 2 & 2 & -1 & -1 & 1\end{array}$\\
-b) $01011 \quad$ c) Ciclare infinită\\
-d) $\begin{array}{llllll}1 & 2 & 2 & -1 & 0 & 1\end{array}$\\
-e) $0 \quad 2 \quad 0 \quad-1 \quad 0 \quad 1$\\
-f) $-1 \quad 0 \quad 1 \quad-1 \quad 1 \quad 1$
-
-5 În secvența următoare variabilele n și m au ca valori numere naturale.
-
+\\
+a) -1 2 2 -1 -1 1
+\\
+b) 0 1 0 1
+\\
+c) Ciclare infinită
+\\
+d) -1 2 2 -1 0 1
+\\
+e) 0 2 0 -1 0 1
+\\
+f) -1 0 1 -1 1 1
+\\
+4.5. În secvența următoare variabilele n și m au ca valori numere naturale.
 \begin{verbatim}
-. Limbajul C++/ Limbajul C
+Limbajul C++/ Limbajul C
 n=42015; m=0;
 while(n>0)
     {
@@ -1840,33 +1843,32 @@ while(n>0)
         n/=100;
     }
 \end{verbatim}
-
-Limbajul Pascal
-
 \begin{verbatim}
+Limbajul Pascal
 n:=42015; m:=0;
 while n>0 do
     begin
         m:=m*100+n div 10 mod 10*10+n mod 10;
         n:=n div 100;
+    end;
 \end{verbatim}
-
-\begin{verbatim}
-end;
-\end{verbatim}
-
-După rularea secvenței, valoarea variabilei $m$ este:\\
-a) 15024\\
-b) 15204\\
-c) $\mathbf{2 4 0 5 1}$\\
-d) 51024\\
-e) 152004\\
+După rularea secvenței, valoarea variabilei $m$ este:
+\\
+a) 15024
+\\
+b) 15204
+\\
+c) 24051
+\\
+d) 51024
+\\
+e) 152004
+\\
 f) 152400
-
-6 Se consideră următorul program:
-
+\\
+4.6. Se consideră următorul program:
 \begin{verbatim}
-. Limbajul C++
+Limbajul C++
     #include<iostream>
     using namespace std;
     int main( )
@@ -1889,7 +1891,6 @@ f) 152400
         cout<<n;
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 #include<stdio.h>
@@ -1912,80 +1913,116 @@ void main ( )
         }
     printf("%d", n);
 }
-}
 \end{verbatim}
-
-Precizați care este cel mai mic număr natural format din 5 cifre distincte care poate fi citit ca dată de intrare astfel încât valoarea afișată să fie aceeași.\\
-a) 10000\\
-b) 10192\\
-c) 10234\\
-d) 10239\\
-e) 10923\\
+\begin{verbatim}
+var n,cn,x,p : longint;
+begin
+    readln(n);
+cn:=n;
+x:=0;
+p:=1;
+while n>0 do
+begin
+    if n mod 10>x then
+        x:=n mod 10;
+    n:=n div 10
+end;
+x:=x+1;
+while cn>0 do
+    begin
+        n:=n+cn mod 10*p;
+        p:=p*x;
+        cn:=cn div 10
+    end;
+write(n)
+end.
+\end{verbatim}
+Precizați care este cel mai mic număr natural format din 5 cifre distincte care poate fi citit ca dată de intrare astfel încât valoarea afișată să fie aceeași.
+\\
+a) 10000
+\\
+b) 10192
+\\
+c) 10234
+\\
+d) 10239
+\\
+e) 10923
+\\
 f) 12345
-
-7 Tabloul bidimensional b(cu liniile și coloanele numerotate de la 1 la $\mathbf{n}$ ) se obține din tabloul bidimensional a prin rotire cu $90^{\circ}$ spre dreapta.\\
-De exemplu, dacă a este: (123456789) se obține tabloul bidimensional b:\\
-(741852963)
-
+\\
+4.7. Tabloul bidimensional b(cu liniile și coloanele numerotate de la 1 la $\mathbf{n}$ ) se obține din tabloul bidimensional a prin rotire cu $90^{\circ}$ spre dreapta.
+De exemplu, dacă a este: (123456789) se obține tabloul bidimensional b:(741852963)
 Pentru obținerea unei transformări corecte, secvența:
-
-Limbajul C++/ Limbajul C\\
-for (i=1; $i<=n ; i++)$\\
-for (j=1; j<=n; j++) ......;\\
-trebuie completată cu atribuirea:\\
-Limbajul C++/ Limbajul C\\
-a) $b[i][j]=a[j][i]$\\
-b) $b[i][j]=a[j][n-i+1]$\\
-c) $b[i][j]=a[n-j+1][n-i+1]$\\
-d) $b[i][j]=a[n-i+1][n-j+1]$\\
-e) $b[i][j]=a[n-j+1][i]$\\
-f) $b[i][j]=a[n-i+1][j]$
-
-Limbajul Pascal\\
-for $\mathrm{i}:=1$ to n do for $\mathrm{j}:=1$ to n do .......;
-
-Limbajul Pascal\\[0pt]
-a) b[i][j]:=a[j][i]\\
-b) $\mathrm{b}[\mathrm{i}, \mathrm{j}]:=\mathrm{a}[\mathrm{j}, \mathrm{n}-\mathrm{i}+1]$\\
-c) $b[i, j]:=a[n-j+1, n-i+1]$\\
-d) $b[i, j]:=a[n-i+1, n-j+1]$\\
-e) $b[i, j]:=a[n-j+1, i]$\\
-f) $b[i, j]:=a[n-i+1, j]$
-
-8 Variabila $\mathbf{x}$ este de tip întreg și reprezintă o cifră nenulă. Precizați care dintre expresiile - următoare este echivalentă cu expresia:
-
-$$
-\begin{aligned}
-& \text { (Limbajul C++/C) } \\
-& \text { (Limbajul Pascal) }
-\end{aligned}
-$$
-
-Limbajul C++/ Limbajul C\\
-a) $35 \% x==0$\\
-b) $x!=7 \& \& x!=5$\\
-c) $x>4 \& \&!(x \% 2==0| | x \% 3==0)$\\
-d) $x \% 2!=0 \& \& x \% 3!=0$\\
-e) ! $(x!=7 \mid 1 x!=5)$\\
-f) $x>4 \& \&!(x \% 2==0 \& \& x \% 3==0)$
-
-$$
-\begin{aligned}
-& x=7 \text { |l } x=5 \\
-& (x=7) \text { or }(x=5)
-\end{aligned}
-$$
-
-Limbajul Pascal\\
-a) $35 \bmod x=0$\\
-b) ( $x<>7$ ) and ( $x<>5$ )\\
-c) $(x>4)$ and $\operatorname{not}((x \bmod 2=0)$ or $(x \bmod 3=0))$\\
-d) ( $x \bmod 2<>0$ ) and ( $x \bmod 3<>0$ )\\
-e) $\operatorname{not}((x<>7)$ or $(x<>5))$\\
-f) $(x>4)$ and $\operatorname{not}((x \bmod 2=0)$ and $(x \bmod 3=0)$
-
-9 Tabloul unidimensional a conține n numere naturale, ordonate crescător. Se cere afișarea mesajului DA dacă în a există două elemente a căror diferență este egală cu s (număr natural) sau a mesajului NU, în caz contrar. Precizați condiția ce trebuie utilizată în locul punctelor de suspensie astfel încât secvența următoare să rezolve corect problema dată.
-
+\begin{verbatim}
+Limbajul C++/ Limbajul C
+for (i=1; i<=n ; i++)
+    for (j=1; j<=n; j++) ......;
+Limbajul Pascal
+for i:=1 to n do
+    for i:=1 to n do .......;
+\end{verbatim}
+trebuie completată cu atribuirea:
+\\
+Limbajul C++/ Limbajul C
+a) b[i][j]=a[j][i]
+\\
+b) b[i][j]=a[j][n-i+1]
+\\
+c) b[i][j]=a[n-j+1][n-i+1]
+\\
+d) b[i][j]=a[n-i+1][n-j+1]
+\\
+e) b[i][j]=a[n-j+1][i]
+\\
+f) b[i][j]=a[n-i+1][j]
+\\
+Limbajul Pascal
+a) b[i][j]:=a[j][i]
+\\
+b) b[i,j]:=a[j,n-i+1]
+\\
+c) b[i, j]:=a[n-j+1, n-i+1]
+\\
+d) b[i, j]:=a[n-i+1, n-j+1]
+\\
+e) b[i, j]:=a[n-j+1, i]
+\\
+f) b[i, j]:=a[n-i+1, j]
+\\
+4.8. Variabila $\mathbf{x}$ este de tip întreg și reprezintă o cifră nenulă. Precizați care dintre expresiile - următoare este echivalentă cu expresia:
+\begin{verbatim}
+(Limbajul C++/C) x == 7 || x == 5
+(Limbajul Pascal) (x=7) or (x=5)
+\end{verbatim}    
+\\
+Limbajul C++/ Limbajul C
+a) 35 \% x==0
+\\
+b) x!=7 \&\& x!=5
+\\
+c) x>4 \&\&!(x \% 2==0 \|\| x \% 3==0)
+\\
+d) x \% 2!=0 \&\& x \% 3!=0
+\\
+e) ! (x!=7 \|\| 1 x!=5)
+\\
+f) x>4 \&\&!(x \% 2==0 \&\& x \% 3==0)
+\\
+Limbajul Pascal
+a) 35 mod x=0
+\\
+b) ( x<>7 ) and ( x<>5 )
+\\
+c) (x>4) and not((x mod 2=0) or (x mod 3=0))
+\\
+d) ( x mod 2<>0 ) and ( x moc 3<>0 )
+\\
+e) not((x<>7) or (x<>5))
+\\
+f) (x>4) and not((x mod 2=0) and (x mod 3=0)
+\\
+4.9. Tabloul unidimensional a conține n numere naturale, ordonate crescător. Se cere afișarea mesajului DA dacă în a există două elemente a căror diferență este egală cu s (număr natural) sau a mesajului NU, în caz contrar. Precizați condiția ce trebuie utilizată în locul punctelor de suspensie astfel încât secvența următoare să rezolve corect problema dată.
 \begin{verbatim}
 Limbajul C++/C
 i = 1; j = 2;
@@ -1998,14 +2035,6 @@ if (j <= n) cout<<"DA"; |
 printf("DA");
 else cout<<"NU"; | printf("DA");
 \end{verbatim}
-
-a) $j<n$\\
-b) $j<=n \& \& a[j]-a[i]!=s$\\
-c) $j<=n \& \& a[j]-a[i]==s$\\
-d) $a[j]-a[i]!=s$\\
-e) $i<=j$\\
-f) $i<=n \& \& a[j]-a[i]==s$
-
 \begin{verbatim}
 Limbajul Pascal
 i:= 1; j:= 2;
@@ -2017,15 +2046,34 @@ while ....... do
 if $j<=n$ then write('DA')
 else write('NU');
 \end{verbatim}
-
-a) $\quad j<n$\\
-b) ( $j<=n$ ) and (a[j]-a[i]<>s)\\
-c) $\quad(j<=n)$ and (a[j]-a[i]=s)\\
-d) $a[j]-a[i]<>s$\\
-e) $i<=j$\\[0pt]
-f) (i<=n) and (a[j]-a[i]=s)\\
-10. Precizați care este rolul următorului subprogram.
-
+\\
+Limbajul C++/C
+a) j<n
+\\
+b) j<=n \& & a[j]-a[i]!=s
+\\
+c) j<=n \&\& a[j]-a[i]==s
+\\
+d) a[j]-a[i]!=s
+\\
+e) i<=j
+\\
+f) i<=n \&\& a[j]-a[i]==s
+\\
+Limbajul Pascal
+a) j<n
+\\
+b) (j<=n) and (a[j]-a[i]<>s)
+\\
+c) (j<=n) and (a[j]-a[i]=s)
+\\
+d) a[j]-a[i]<>s
+\\
+e) i<=j
+\\
+f) (i<=n) and (a[j]-a[i]=s)
+\\
+4.10. Precizați care este rolul următorului subprogram.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 void f(char s[],char t[],int k)
@@ -2037,7 +2085,6 @@ void f(char s[],char t[],int k)
     strcat(s,aux);
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 procedure f(var s:string;t:string;
@@ -2050,90 +2097,157 @@ begin
     s:=concat (s,aux);
 end;
 \end{verbatim}
-
-a) Șterge ultimele $\mathbf{k}$ caractere ale lui $\mathbf{s}$ și concatenează rezultatul cu șirul $\mathbf{t}$\\
-b) Concatenează șirul s cu rezultatul concatenării șirurilor s și $t$\\
-c) Inserează șirul sîn șirul $t$, începând cu poziția $\mathbf{k}$\\
-d) Concatenează șirurile $\mathbf{s}$ și $\mathbf{t}$, obținând un șir de lungime $\mathbf{k}$\\
-e) Înlocuiește primele $\mathbf{k}$ caractere din $\mathbf{s}$ cu primele $\mathbf{k}$ caractere din $\mathbf{t}$\\
-f) Inserează șirul $\mathbf{t}$ în șirul $\mathbf{s}$, începând cu poziția $\mathbf{k}$\\
-11. Se consideră un graf orientat cu 6 noduri, numerotate $1,2, \ldots, 6$. Arcele grafului sunt de forma $(\mathbf{x}, \mathbf{2 *} \mathbf{x})$ pentru orice $\mathbf{x} \in\{1,2,3\}$ și de forma $(\mathbf{x}, \mathbf{x}-\mathbf{1})$ pentru orice $\mathbf{x} \in\{2,3,4,5,6\}$. Care este numărul minim de arce ce trebuie adăugate astfel încât graful să fie tare conex?\\
-a) 0\\
-b) 1\\
-c) 2\\
-d) 3\\
-e) 4\\
-f) 5\\
-12. Precizați care dintre tablourile următoare poate reprezenta vectorul gradelor unui graf neorientat conex.\\
-a) $(3,2,1,5,1,1)$\\
-b) $(5,1,6,4,5,3)$\\
-c) $(1,1,1,1,2,2)$\\
-d) $(1,1,1,1,1,6)$\\
-e) $(2,1,3,1,0,1)$\\
-f) $(1,3,5,2,1,2)$\\
-13. Dacă un graf neorientat conex are $\mathbf{n}$ vârfuri și $3 n+2$ muchii, precizați care este valoarea minimă pentru n .\\
-a) 16\\
-b) 8\\
-c) 4\\
-d) 2\\
-e) 1\\
-f) 0\\
-14. Pentru un număr natural nenul $n$, se construiește un arbore cu rădăcină astfel: rădăcina este numerotată n și orice nod care este numerotat cu o valoare $\mathbf{x}>1$ are ca fii nodurile numerotate cu divizorii săi, mai puțin numărul însuși. Toate frunzele arborelui sunt numerotate cu 1. Precizați câte dintre numerele naturale din intervalul $[10,20]$ pot fi alese ca rădăcină, astfel încât arborele asociat să aibă un număr maxim de frunze.\\
-a) 1\\
-b) 2\\
-c) 3\\
-d) 4\\
-e) 5\\
-f) 6\\
-15. Un pulover norvegian este frumos dacă pentru a-l tricota se folosesc cel puțin 2 și cel mult 4 culori de lână. Precizați câte modalități de combinare a culorilor există pentru a tricota un pulover norvegian frumos, având la dispoziție 5 ghemuri de lână de culori diferite.\\
-a) 5\\
-b) 12\\
-c) 24\\
-d) 25\\
-e) 48\\
+\\
+a) Șterge ultimele $\mathbf{k}$ caractere ale lui $\mathbf{s}$ și concatenează rezultatul cu șirul $\mathbf{t}$
+\\
+b) Concatenează șirul s cu rezultatul concatenării șirurilor s și $t$
+\\
+c) Inserează șirul sîn șirul $t$, începând cu poziția $\mathbf{k}$
+\\
+d) Concatenează șirurile $\mathbf{s}$ și $\mathbf{t}$, obținând un șir de lungime $\mathbf{k}$
+\\
+e) Înlocuiește primele $\mathbf{k}$ caractere din $\mathbf{s}$ cu primele $\mathbf{k}$ caractere din $\mathbf{t}$
+\\
+f) Inserează șirul $\mathbf{t}$ în șirul $\mathbf{s}$, începând cu poziția $\mathbf{k}$
+\\
+4.11. Se consideră un graf orientat cu 6 noduri, numerotate $1,2, \ldots, 6$. Arcele grafului sunt de forma $(\mathbf{x}, \mathbf{2 *} \mathbf{x})$ pentru orice $\mathbf{x} \in\{1,2,3\}$ și de forma $(\mathbf{x}, \mathbf{x}-\mathbf{1})$ pentru orice $\mathbf{x} \in\{2,3,4,5,6\}$. Care este numărul minim de arce ce trebuie adăugate astfel încât graful să fie tare conex?
+\\
+a) 0
+\\
+b) 1
+\\
+c) 2
+\\
+d) 3
+\\
+e) 4
+\\
+f) 5
+\\
+4.12. Precizați care dintre tablourile următoare poate reprezenta vectorul gradelor unui graf neorientat conex.
+\\
+a) (3,2,1,5,1,1)
+\\
+b) (5,1,6,4,5,3)
+\\
+c) (1,1,1,1,2,2)
+\\
+d) (1,1,1,1,1,6)
+\\
+e) (2,1,3,1,0,1)
+\\
+f) (1,3,5,2,1,2)
+\\
+4.13. Dacă un graf neorientat conex are $\mathbf{n}$ vârfuri și $3 n+2$ muchii, precizați care este valoarea minimă pentru n .
+\\
+a) 16
+\\
+b) 8
+\\
+c) 4
+\\
+d) 2
+\\
+e) 1
+\\
+f) 0
+\\
+4.14. Pentru un număr natural nenul $n$, se construiește un arbore cu rădăcină astfel: rădăcina este numerotată n și orice nod care este numerotat cu o valoare $\mathbf{x}>1$ are ca fii nodurile numerotate cu divizorii săi, mai puțin numărul însuși. Toate frunzele arborelui sunt numerotate cu 1. Precizați câte dintre numerele naturale din intervalul $[10,20]$ pot fi alese ca rădăcină, astfel încât arborele asociat să aibă un număr maxim de frunze.
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
+f) 6
+\\
+4.15. Un pulover norvegian este frumos dacă pentru a-l tricota se folosesc cel puțin 2 și cel mult 4 culori de lână. Precizați câte modalități de combinare a culorilor există pentru a tricota un pulover norvegian frumos, având la dispoziție 5 ghemuri de lână de culori diferite.
+\\
+a) 5
+\\
+b) 12
+\\
+c) 24
+\\
+d) 25
+\\
+e) 48
+\\
 f) 125
+\\
 
 \section*{Varianta 5}
-\begin{enumerate}
-  \item Precizați care dintre următoarele expresii are valoarea $\mathbf{1} /$ true dacă şi numai dacă numărul natural nenul memorat în variabila $\mathbf{x}$ nu este divizibil cu 6 .
-\end{enumerate}
 
-Limbajul C++/ Limbajul C\\
-a) $\mathbf{x} / 6==0$\\
-b) $x==6$\\
-c) $\times \%==0$\\
-d) $x / 6>0$\\
-e) $x \% 2+x \% 3>0$\\
-f) $x>6$
-
-Limbajul Pascal\\
-a) $\mathbf{x} \operatorname{div} 6=0$\\
-b) $x=6$\\
-c) $\mathbf{x} \bmod 6=0$\\
-d) $x / 6>0$\\
-e) $x \bmod 2+x \bmod 3>0$\\
-f) $x>6$\\
-2. Precizațic care dintre următoarele instrucțiuni este corectă dacă variabilele $\mathbf{x}, \mathbf{y}$ și $\mathbf{z}$ au declarările de mai jos:\\
-Limbajul C++/ Limbajul C\\
-Limbajul Pascal\\
-float x;\\
-x : real;\\
-int $y, z$;\\
-y,z:integer;\\
-a) $\mathbf{x}=\mathbf{x} * \mathbf{y} \% \mathbf{z}$;\\
-b) $x=z \% y^{*} x$;\\
-a) $\mathbf{x}:=x^{*} y \bmod z$;\\
-b) $\mathbf{x}:=\mathbf{z} \bmod y^{*} \mathbf{x}$;\\
-c) $\mathbf{x}=\mathbf{x} \% \mathbf{y} \mathbf{z}$;\\
-c) $\mathbf{x}:=\mathbf{x} \bmod \mathrm{y}^{\star} \mathbf{z}$;\\
-d) $\mathbf{x}=\mathbf{x *} \mathbf{z} \% \mathbf{x}$;\\
-d) $\mathbf{x}:=\mathbf{x}^{\star} \mathbf{z} \bmod \mathbf{x}$;\\
-e) $\mathbf{x}=x \% \mathbf{z}$;\\
-e) $x:=x \bmod z$;\\
-f) $y=z \% x$;\\
-f) $y:=z \bmod x ;$\\
-3. Precizați ce valoare se va afişa pe ecran în urma executării secvenței de program următoare, ştiind că s este o variabilă care memorează un şir de caractere, iar i este o variabilă de tip întreg.
-
+5.1. Precizați care dintre următoarele expresii are valoarea $\mathbf{1} /$ true dacă şi numai dacă numărul natural nenul memorat în variabila $\mathbf{x}$ nu este divizibil cu 6 .
+\\
+Limbajul C++/ Limbajul C
+a) x / 6==0
+\\
+b) x==6
+\\
+c) x \%==0
+\\
+d) x / 6>0
+\\
+e) x \% 2+x \% 3>0
+\\
+f) x>6
+\\
+Limbajul Pascal
+a) x div 6=0
+\\
+b) x=6
+\\
+c) x mod 6=0
+\\
+d) x / 6>0
+\\
+e) x mod 2+x mod 3>0
+\\
+f) x>6
+\\
+5.2. Precizațic care dintre următoarele instrucțiuni este corectă dacă variabilele $\mathbf{x}, \mathbf{y}$ și $\mathbf{z}$ au declarările de mai jos:
+\begin{verbatim}
+Limbajul C++/ Limbajul C
+float x;
+int y, z;
+Limbajul Pascal
+x : real;
+y,z: integer;
+\end{verbatim}
+\\
+Limbajul C++/ Limbajul C
+a) x = x *y\%z;
+\\
+b) x=z \% y* x;
+\\
+c) x=x\%y*z;
+\\
+d) x=x* z \% x;
+\\
+e) x=x \% z;
+\\
+f) y=z \% x;
+\\
+Limbajul Pascal
+a) x:=x*y mod z;
+\\
+b) x:=z mod y* x;
+\\
+c) x:=xmod y*z;
+\\
+d) x:=x*z mod \x;
+\\
+e) x:=x mod z;
+\\
+f) y:=z mod x ;
+\\
+5.3. Precizați ce valoare se va afişa pe ecran în urma executării secvenței de program următoare, ştiind că s este o variabilă care memorează un şir de caractere, iar i este o variabilă de tip întreg.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 strcpy(s,"admitere");
@@ -2142,7 +2256,6 @@ for(i=0;i<strlen(s);i++)
         strcpy(s+i,s+i+1);
 cout<<s; | printf("%s",s);
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 s:='admitere';
@@ -2151,40 +2264,66 @@ for i:=1 to length(s) do
         delete(s,i,1);
 write(s);
 \end{verbatim}
-
-a) dmt\\
-b) dm\\
-c) dmtr\\
-d) $d m r$\\
-e) mt\\
-f) mrt\\
-4. Precizați care dintre următoarele afirmații este adevărată pentru orice graf neorientat $\mathbf{G}$ format din 100 de noduri și 100 de muchii.\\
-a) Graful G nu este conex\\
-b) Graful G este conex\\
-c) Graful G este complet\\
-d) Graful G conține cel puțin un ciclu\\
-e) Graful G nu are noduri izolate\\
-f) Graful G conține un lanț elementar de lungime 100\\
-5. Pentru reprezentarea unui graf orientat $\mathbf{G}$ se utilizează matricea de adiacență. Precizați care este suma elementelor din această matrice dacă graful are 20 de noduri și 30 de arce.\\
-a) 60\\
-b) 50\\
-c) 40\\
-d) 30\\
-e) 20\\
-f) 10\\
-6. Precizați care este lungimea maximă a unui lanț simplu (lanț în care fiecare muchie apare o singură dată) într-un arbore cu 10 noduri în care fiecare nod are gradul un număr impar.\\
-a) 9\\
-b) 8\\
-c) 7\\
-d) 6\\
-e) 5\\
-f) 4\\
-7. Tabloul unidimensional $\mathbf{v}$ conține $\mathbf{n}$ numere întregi numerotate de la 1 la $\mathbf{n}$. Precizați care dintre următoarele secvențe determină înlocuirea primului element din tabloul unidimensional $\mathbf{v} \mathbf{c u}$ cea mai mică valoare care apare în acesta.
-
+\\
+a) dmt
+\\
+b) dm
+\\
+c) dmtr
+\\
+d) dmr
+\\
+e) mt
+\\
+f) mrt
+\\
+5.4. Precizați care dintre următoarele afirmații este adevărată pentru orice graf neorientat $\mathbf{G}$ format din 100 de noduri și 100 de muchii.
+\\
+a) Graful G nu este conex
+\\
+b) Graful G este conex
+\\
+c) Graful G este complet
+\\
+d) Graful G conține cel puțin un ciclu
+\\
+e) Graful G nu are noduri izolate
+\\
+f) Graful G conține un lanț elementar de lungime 100
+\\
+5.5. Pentru reprezentarea unui graf orientat $\mathbf{G}$ se utilizează matricea de adiacență. Precizați care este suma elementelor din această matrice dacă graful are 20 de noduri și 30 de arce.
+\\
+a) 60
+\\
+b) 50
+\\
+c) 40
+\\
+d) 30
+\\
+e) 20
+\\
+f) 10
+\\
+5.6. Precizați care este lungimea maximă a unui lanț simplu (lanț în care fiecare muchie apare o singură dată) într-un arbore cu 10 noduri în care fiecare nod are gradul un număr impar.
+\\
+a) 9
+\\
+b) 8
+\\
+c) 7
+\\
+d) 6
+\\
+e) 5
+\\
+f) 4
+\\
+5.7. Tabloul unidimensional $\mathbf{v}$ conține $\mathbf{n}$ numere întregi numerotate de la 1 la $\mathbf{n}$. Precizați care dintre următoarele secvențe determină înlocuirea primului element din tabloul unidimensional $\mathbf{v} \mathbf{c u}$ cea mai mică valoare care apare în acesta.
+\\
 Limbajul C++/ Limbajul C
-
-\begin{verbatim}
-a) for (i=1; i<n; i++)
+a) \begin{verbatim}
+ for (i=1; i<n; i++)
     if(v[i]>v[i+1])
     \{
         $a=v[i]$;
@@ -2192,139 +2331,187 @@ a) for (i=1; i<n; i++)
         v[i+1]=a;
     \}
 \end{verbatim}
-
-b) $\operatorname{for}(i=n-1$; $i>=1$; $i--)$\\[0pt]
-if (v[i]>v[i+1])\\
-\{\\[0pt]
-a=v[i];\\[0pt]
-v[i]=v[i+1];\\
-$v[i+1]=a ;$\\
-\}\\
-c) $f \circ r(i=n-1$; $i>=1$; $i--)$\\[0pt]
-if(v[i]<v[i+1])\\
-\{\\[0pt]
-a=v[i];\\[0pt]
-v[i]=v[i+1];\\
-$\mathrm{v}[\mathrm{i}+1]=\mathrm{a}$;\\
-\}\\
-d) for (i=1; i<=n-1; i++)\\[0pt]
-if(v[i]<v[i+1])\\
-\{\\[0pt]
-a=v[i];\\
-$\mathrm{v}[\mathrm{i}]=\mathrm{v}[\mathrm{i}+1]$;\\[0pt]
-v[i+1]=a;\\
-\}\\
-e) for (i=n-1; i>=1; i--)\\[0pt]
-if (v[i]<v[i+1])\\
-\{\\
-$a=v[i+1]$;\\[0pt]
-v[i]=v[i+1];\\
-$v[i+1]=a ;$\\
-\}\\
-f) for (i=1; i<=n-1; i++)\\[0pt]
-if(v[i]<v[i+1])\\
-\{\\
-$a=v[i+1]$;
-
+\\
+b) \begin{verbatim}
+for(i=n-1; i>=1; i--)
+    if (v[i]>v[i+1])
+    {
+        a=v[i];
+        v[i]=v[i+1];
+        v[i+1]=a ;
+    }
+\end{verbatim}
+\\
+c) \begin{verbatim}
+for(i=n-1; i>=1; i--)
+    if(v[i]<v[i+1])
+    {
+        a=v[i];
+        v[i]=v[i+1];
+        v[i+1]=a;
+    }
+\end{verbatim}
+\\
+d) \begin{verbatim} 
+for (i=1; i<=n-1; i++)
+    if(v[i]<v[i+1])
+    {
+        a=v[i];
+        v[i]=v[i+1];
+        v[i+1]=a;
+    }
+\end{verbatim}
+\\
+e) \begin{verbatim}
+for (i=n-1; i>=1; i--)
+    if (v[i]<v[i+1])
+    {
+        a=v[i+1];
+        v[i]=v[i+1];
+        v[i+1]=a ;
+    }
+\end{verbatim}
+\\
+f) \begin{verbatim}
+for (i=1; i<=n-1; i++)
+    if(v[i]<v[i+1])
+    {
+        a=v[i+1];
+        v[i]=v[i+1];
+        v[i+1]=a;
+    }
+\end{verbatim}
+\\
 Limbajul Pascal
-
-\begin{verbatim}
-a) for $i:=1$ to $n-1$ do
-    if $v[i]>v[i+1]$ then
+a) \begin{verbatim}
+for $i:=1$ to $n-1$ do
+    if v[i]>v[i+1] then
         begin
             a:=v[i];
             v[i]:=v[i+1];
             v[i+1]:=a;
         end;
 \end{verbatim}
-
-b) for $i:=n-1$ downto 1 do\\
-if $v[i]>v[i+1]$ then\\
-begin\\[0pt]
-a:=v[i];\\[0pt]
-v[i]:=v[i+1];\\[0pt]
-v[i+1]:=a;\\
-end;\\
-c) for $i:=n-1$ downto 1 do\\
-if $v[i]<v[i+1]$ then\\
-begin\\[0pt]
-a:=v[i];\\[0pt]
-v[i]:=v[i+1];\\[0pt]
-v[i+1]:=a;\\
-end;\\
-d) for $i:=1$ to $n-1$ do\\
-if $v[i]<v[i+1]$ then\\
-begin\\[0pt]
-a:=v[i];\\[0pt]
-v[i]:=v[i+1];\\[0pt]
-v[i+1]:=a;\\
-end;\\
-e) for $i:=n-1$ downto 1 do\\
-if $v[i]<v[i+1]$ then\\
-begin\\[0pt]
-a:=v[i+1];\\[0pt]
-v[i]:=v[i+1];\\[0pt]
-v[i+1]:=a;\\
-end;\\
-f) for $i:=1$ to $n-1$ do\\
-if $v[i]<v[i+1]$ then\\
-begin\\[0pt]
-a:=v[i+1];
-
-\begin{verbatim}
-    v[i]=v[i+1];
-    v[i+1]=a;
-}
+\\
+b) \begin{verbatim}
+for i:=n-1 downto 1 do
+    if v[i]>v[i+1] then
+        begin
+            a:=v[i];
+            v[i]:=v[i+1];
+            v[i+1]:=a;
+        end;
 \end{verbatim}
-
-\begin{verbatim}
-    v[i]:=v[i+1];
-    v[i+1]:=a;
-end;
+\\
+c) \begin{verbatim}
+for i:=n-1 downto 1 do
+    if v[i]<v[i+1] then
+        begin
+            a:=v[i];
+            v[i]:=v[i+1];
+            v[i+1]:=a;
+        end;
 \end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{7}
-  \item Precizați pentru care dintre următoarele tablouri unidimensionale se poate aplica algoritmul căutării binare cu scopul de a găsi în mod eficient, dacă există, numere care au cifra unităților egală cu o valoare x , dată.\\
-a) $(1,21,13,23,33,17,27)$\\
-b) $(1,13,17,21,23,27,33)$\\
-c) $(1,13,33,17,21,23,27)$\\
-d) $(33,27,23,21,17,13,1)$\\
-e) $(1,13,33,21,23,27,17)$\\
-f) $(33,27,23,21,13,1,17)$
-  \item În secvenţa de mai jos, variabila a memorează un tablou bidimensional cu 4 linii şi 4 coloane, numerotate de la 1 la 4, cu elementele întregi. Variabila s este întreagă, iar i este de tip întreg. Precizați care dintre instrucţiunile de mai jos poate înlocui punctele de suspensie, astfel încât secvența să determine memorarea în variabila s, a valorii sumei elementelor aflate pe prima și ultima coloană ale matricei.
-\end{enumerate}
-
-Limbajul C++/ Limbajul C\\
-s=0;\\
-for (i=1;i<=4;i++)....\\
-a) $s=s+a[4][i]+a[i][4]$;\\
-b) $s=s+a[4-i][4]+a[i][1]$;\\
-c) $s=s+a[i][1]+a[i][4]$;\\
-d) $s=s+a[i][i]+a[1][i] ;$\\
-e) $s=s+a[1][i]+a[4][i]$;\\
-f) $s=s+a[i][i]+a[5-i][i]$;
-
-Limbajul Pascal\\
-s:=0;\\
-for $i:=1$ to 4 do .....\\
-a) $s:=s+a[4, i]+a[i, 4]$;\\
-b) $s:=s+a[4-i, 4]+a[i, 1]$;\\
-c) $s:=s+a[i, 1]+a[i, 4]$;\\
-d) $s:=s+a[i, i]+a[1, i]$;\\
-e) $s:=s+a[1, i]+a[4, i]$;\\
-f) $s:=s+a[i, i]+a[5-i, i]$;\\
-10. Utilizând metoda backtracking se generează toate anagramele cuvântului avion. Precizați câte anagrame încep și se termină cu câte o consoană.\\
-a) 6\\
-b) 12\\
-c) 20\\
-d) 36\\
-e) 38\\
-f) 40\\
-11. Subprogramul $\mathbf{f}$ are definiţia următoare. Dacă variabilele a și b sunt de tip întreg și memorează valorile 3 respectiv 5 , precizați care vor fi valorile pe care le memorează variabilele a și b după apelul:\\
-$\mathrm{f}(\mathrm{a}, \mathrm{b})$; $\quad($ Limbajul Pascal/C++)\\
-$\mathrm{f}(\mathrm{a}, \mathrm{\& b})$; (Limbajul C).
-
+\\
+d) \begin{verbatim}
+for i:=1 to n-1 do
+    if v[i]<v[i+1] then
+        begin
+            a:=v[i];
+            v[i]:=v[i+1];
+            v[i+1]:=a;
+        end;
+\end{verbatim}
+\\
+e) \begin{verbatim}
+for i:=n-1 downto 1 do
+    if v[i]<v[i+1] then
+        begin
+            a:=v[i+1];
+            v[i]:=v[i+1];
+            v[i+1]:=a;
+        end;
+\end{verbatim}
+\\
+f) \begin{verbatim}
+for i:=1 to n-1 do
+    if v[i]<v[i+1] then
+        begin
+            a:=v[i+1];
+            v[i]:=v[i+1]'
+            v[i+1]:=a;
+        end;
+\end{verbatim}
+\\
+5.8. Precizați pentru care dintre următoarele tablouri unidimensionale se poate aplica algoritmul căutării binare cu scopul de a găsi în mod eficient, dacă există, numere care au cifra unităților egală cu o valoare x , dată.
+\\
+a) (1,21,13,23,33,17,27)
+\\
+b) (1,13,17,21,23,27,33)
+\\
+c) (1,13,33,17,21,23,27)
+\\
+d) (33,27,23,21,17,13,1)
+\\
+e) (1,13,33,21,23,27,17)
+\\
+f) (33,27,23,21,13,1,17)
+\\
+5.9. În secvenţa de mai jos, variabila a memorează un tablou bidimensional cu 4 linii şi 4 coloane, numerotate de la 1 la 4, cu elementele întregi. Variabila s este întreagă, iar i este de tip întreg. Precizați care dintre instrucţiunile de mai jos poate înlocui punctele de suspensie, astfel încât secvența să determine memorarea în variabila s, a valorii sumei elementelor aflate pe prima și ultima coloană ale matricei.
+\begin{verbatim}
+Limbajul C++/ Limbajul C
+s=0;
+for (i=1;i<=4;i++)....
+Limbajul Pascal
+s:=0;
+for i:=1 to 4 do .....
+\end{verbatim}
+\\
+Limbajul C++/ Limbajul C
+a) s=s+a[4][i]+a[i][4];
+\\
+b) s=s+a[4-i][4]+a[i][1];
+\\
+c) s=s+a[i][1]+a[i][4];
+\\
+d) s=s+a[i][i]+a[1][i] ;
+\\
+e) s=s+a[1][i]+a[4][i];
+\\
+f) s=s+a[i][i]+a[5-i][i];
+\\
+Limbajul Pascal
+a) s:=s+a[4, i]+a[i, 4];
+\\
+b) s:=s+a[4-i, 4]+a[i, 1];
+\\
+c) s:=s+a[i, 1]+a[i, 4];
+\\
+d) s:=s+a[i, i]+a[1, i];
+\\
+e) s:=s+a[1, i]+a[4, i];
+\\
+f) s:=s+a[i, i]+a[5-i, i];
+\\
+5.10. Utilizând metoda backtracking se generează toate anagramele cuvântului avion. Precizați câte anagrame încep și se termină cu câte o consoană.
+\\
+a) 6
+\\
+b) 12
+\\
+c) 20
+\\
+d) 36
+\\
+e) 38
+\\
+f) 40
+\\
+5.11. Subprogramul $\mathbf{f}$ are definiţia următoare. Dacă variabilele a și b sunt de tip întreg și memorează valorile 3 respectiv 5 , precizați care vor fi valorile pe care le memorează variabilele a și b după apelul:
+\begin{verbatim}
+f(a,b); (Limbajul Pascal/C++)
+f(a, &b); (Limbajul C)
+\end{verbatim}
 \begin{verbatim}
 Limbajul C++
 void f(int x,int &y)
@@ -2345,113 +2532,168 @@ Limbajul Pascal
             aux:=x; x:=y; y:=aux;
     end;
 \end{verbatim}
-
-a) 3 și 3\\
-b) 4 și 3\\
-c) 5 și 5\\
-d) 3 și 5\\
-e) 3 și 4\\
-f) 5 și 3\\
-12. Considerăm declararea următoare, folosită pentru a memora numărătorul și numitorul unei fracții. Precizați care dintre instrucțiunile de mai jos este corectă.
-
+\\
+a) 3 și 3
+\\
+b) 4 și 3
+\\
+c) 5 și 5
+\\
+d) 3 și 5
+\\
+e) 3 și 4
+\\
+f) 5 și 3
+\\
+5.12. Considerăm declararea următoare, folosită pentru a memora numărătorul și numitorul unei fracții. Precizați care dintre instrucțiunile de mai jos este corectă.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 typedef struct
     { int a, b; }fractie;
 fractie m,n;
 \end{verbatim}
-
-a) $m=n$;\\
-b) if $(m>n) m++;$\\
-c) if $(m==n) m--$;\\
-d) if $(m<=n) m=n$;\\
-e) if $(m!=n) m--$;\\
-f) if ( $m>n$ ) $m=n$;
-
 \begin{verbatim}
 Limbajul Pascal
 type fractie=record
         a,b:integer;
     end;
 var m,n:fractie;
-a)m:=n;
-b) if (m>n) then m:=m+1;
-c) if (m=n) then m:=m-1;
-d) if (m<=n) then m:=n;
-e) if (m<>n) then m:=m-1;
-f) if (m>n) then m:=n;
 \end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{12}
-  \item Precizați care este numărul de grafuri orientate distincte formate din 3 noduri și $\mathbf{4}$ arce. Două grafuri sunt distincte dacă au matricea de adiacență diferită.\\
-a) 32\\
-b) 30\\
-c) 20\\
-d) 16\\
-e) 15\\
+\\
+Limbajul C++/ Limbajul C
+a) m=n;
+\\
+b) if (m>n) m++;
+\\
+c) if (m==n) m--;
+\\
+d) if (m<=n) m=n;
+\\
+e) if (m!=n) m--;
+\\
+f) if (m>n) m=n;
+\\
+Limbajul Pascal
+a)m:=n;
+\\
+b) if (m>n) then m:=m+1;
+\\
+c) if (m=n) then m:=m-1;
+\\
+d) if (m<=n) then m:=n;
+\\
+e) if (m<>n) then m:=m-1;
+\\
+f) if (m>n) then m:=n;
+\\
+5.13. Precizați care este numărul de grafuri orientate distincte formate din 3 noduri și $\mathbf{4}$ arce. Două grafuri sunt distincte dacă au matricea de adiacență diferită.
+\\
+a) 32
+\\
+b) 30
+\\
+c) 20
+\\
+d) 16
+\\
+e) 15
+\\
 f) 9
-  \item Precizați care este instrucţiunea prin care variabilei $\mathbf{y}$ i se atribuie numărul obținut prin inversarea ordinii cifrelor numărului natural format din exact 2 cifre, memorat în variabila întreagă $\mathbf{x}$.\\
-Limbajul C++/ Limbajul C\\
-Limbajul Pascal\\
-a) $\mathbf{y}=\mathrm{x} / 10 * 10+\mathrm{x} \% 100$;\\
-a) $\mathrm{y}:=\mathrm{x} \operatorname{div} 10 * 10+\mathrm{x} \bmod 100$;\\
-b) $y=x \% 10+x / 10$;\\
-b) $\mathrm{y}:=\mathrm{x} \bmod 10+\mathrm{x} \operatorname{div} 10$;\\
-c) $\mathbf{y}=\mathrm{x} / 10 * 10+\mathrm{x} \% 10$;\\
-c) $\mathrm{y}:=\mathrm{x} \operatorname{div} 10 * 10+\mathrm{x} \bmod 10$;\\
-d) $y=x \% 100 / 10$;\\
-d) $y:=x \bmod 100 \operatorname{div} 10 ;$\\
-e) $y=x * 10 \% 100+x / 10$;\\
-e) $\mathrm{y}:=\mathrm{x} * 10 \bmod 100+\mathrm{x} \operatorname{div} 10$;\\
-f) $\mathrm{y}=\mathrm{x} \% 10 / 10$;\\
-f) $\mathrm{y}:=\mathrm{x} \bmod 10 \operatorname{div} 10$;
-  \item Fie $\mathbf{G}$ un graf neorientat complet cu 100 de noduri. Precizați care dintre următoarele afirmații este adevarată:\\
-a) În graful G există un lanț elementar de lungime $\mathbf{1 0 0}$\\
-b) Graful g este un graf hamiltonian\\
-c) Graful g este un graf eulerian\\
-d) Graful g nu este conex\\
-e) Graful g are 900 de muchii\\
+\\
+5.14. Precizați care este instrucţiunea prin care variabilei $\mathbf{y}$ i se atribuie numărul obținut prin inversarea ordinii cifrelor numărului natural format din exact 2 cifre, memorat în variabila întreagă $\mathbf{x}$.
+\\
+Limbajul C++/ Limbajul C
+a) y=x/10*10+x\%100;
+\\
+b)  y=x\%10+x/10;
+\\
+c)  y=x/10*10+x\%10;
+\\ 
+d)  y=x\%100/10;
+\\
+e)  y=x*10\%100+x/10;
+\\ 
+f)  y=x\%10/10;
+\\
+Limbajul Pascal
+a)  y:=x div 10*10+x mod 100;
+\\
+b)  y:=x mod 10 +x div 10;
+\\
+c)  y:=x div 10*10+x mod 10;
+\\
+d)  y:=x mod 100 div 10;
+\\
+e)  y:=x*10 mod 100+x div 10;
+\\
+f)  y:=x mod 10 div 10;
+\\
+5.15. Fie $\mathbf{G}$ un graf neorientat complet cu 100 de noduri. Precizați care dintre următoarele afirmații este adevarată:
+\\
+a) În graful G există un lanț elementar de lungime 100
+\\
+b) Graful g este un graf hamiltonian
+\\
+c) Graful g este un graf eulerian
+\\
+d) Graful g nu este conex
+\\
+e) Graful g are 900 de muchii
+\\
 f) Graful G are două componente conexe
-\end{enumerate}
+\\
 
 \section*{Varianta 6}
-\begin{enumerate}
-  \item Precizați care este valoarea maximă pe care o poate avea expresia de mai jos în care $\mathbf{x}$ este $o$ variabilă de tip întreg.
-\end{enumerate}
 
-Limbajul C++/ Limbajul C\\
-$2 * x \% 10 * 2 \% 10$
-
-Limbajul Pascal\\
-$2 * x \bmod 10 * 2 \bmod 10$\\
-0\\
-d) 0\\
-e) 10\\
-f) 20\\
-a) 9\\
-b) 8\\
-c) 7\\
-10\\
-2. Variabilele întregi a şi b memorează câte un număr natural nenul. Precizați care dintre următoarele expresii are valoarea true/1 dacă și numai dacă valorile memorate de a și b au aceeași paritate.
-
-Limbajul C++/ Limbajul C\\
-a) $a==b$\\
-b) $a \% 2==0 \& \& b \% 2==0$\\
-c) $(a+b) \% 2==0$\\
-d) $a * b \% 2==0$\\
-e) $a \% b==2$\\
-f) $a / b==2$
-
-Limbajul Pascal\\
-a) $a=b$\\
-b) ( $\mathrm{a} \bmod 2=0$ ) and $(\mathrm{b} \bmod 2=0)$\\
-c) $(a+b) \bmod 2=0$\\
-d) $a * b \bmod 2=0$\\
-e) $a \bmod b=2$\\
-f) $a \operatorname{div} b=2$\\
-3. Precizați ce se afişează în urma executării secvenţei de program de mai jos, dacă variabilele a și b pot memora câte un şir de cel mult 100 de caractere.
-
+6.1. Precizați care este valoarea maximă pe care o poate avea expresia de mai jos în care $\mathbf{x}$ este $o$ variabilă de tip întreg.
+\begin{verbatim}
+Limbajul C++/ Limbajul C
+2 * x % 10 * 2 % 10
+Limbajul Pascal
+2 * x mod 10 * 2 mod 10
+\end{verbatim}
+\\
+a) 9
+\\
+b) 8
+\\
+c) 7
+\\
+d) 0
+\\
+e) 10
+\\
+f) 20
+\\
+6.2. Variabilele întregi a şi b memorează câte un număr natural nenul. Precizați care dintre următoarele expresii are valoarea true/1 dacă și numai dacă valorile memorate de a și b au aceeași paritate.
+\\
+Limbajul C++/ Limbajul C
+a) a==b
+\\
+b) a \% 2==0 \&\& b \% 2==0
+\\
+c) (a+b) \% 2==0
+\\
+d) a * b \% 2==0
+\\
+e) a \% b==2
+\\
+f) a / b==2
+\\
+Limbajul Pascal
+a) a=b
+\\
+b) (a mod 2=0) and (b mod 2=0)
+\\ 
+c) (a+b) mod 2 = 0
+\\
+d) a*b mod 2=0
+\\
+e) a mod b=2
+\\
+f) a div b = 2
+\\
+6.3. Precizați ce se afişează în urma executării secvenţei de program de mai jos, dacă variabilele a și b pot memora câte un şir de cel mult 100 de caractere.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 strcpy (a,"matematica");
@@ -2459,119 +2701,173 @@ strcpy (b, strstr(a,"ema") +2) ;
 strcat(b,strchr(a,a[3])+1);
 cout<<b; | printf("\%s",b);
 \end{verbatim}
-
-Limbajul Pascal
-
 \begin{verbatim}
+Limbajul Pascal
 a:='matematica';
-b:=copy(a,pos('ema',a)+2,length(a
-));
-b:=b+copy (a,pos (a [4],a) +1, length (
-a));
+b:=copy(a,pos('ema',a)+2,length(a));
+b:=b+copy (a,pos (a [4],a) +1, length (a));
 write(b);
 \end{verbatim}
-
-a) aticamatica\\
-b) maticamatica\\
-c) maticaatica\\
-d) matica\\
-e) matematica\\
-f) atica\\
-4. Fie un graf neorientat complet cu 10 noduri. Precizați care este numărul minim de muchii care trebuie eliminate astfel încât graful parțial obținut să nu fie conex.\\
-a) 10\\
-b) 9\\
-c) 8\\
-d) 7\\
-e) 6\\
-f) 5\\
-5. Precizați care dintre următoarele ș̦iruri de grade corespund unui graf neorientat cu 6 noduri.\\
-a) $(1,2,3,4,5,6)$\\
-b) $(0,1,2,3,4,5)$\\
-c) $(0,1,0,1,0,1)$\\
-d) $(1,2,2,1,2,2)$\\
-e) $(1,1,1,1,1,2)$\\
-f) $(1,2,2,1,1,2)$\\
-6. Precizați care este numărul maxim de frunze ce apar într-un arbore cu 17 de noduri, dacă fiecare nod are gradul mai mic sau egal cu 4.\\
-a) 11\\
-b) 12\\
-c) 13\\
-d) 14\\
-e) 15\\
-f) 16\\
-7. Graful orientat G are 10 noduri și 12 arce. Precizați care este cel mai mare grad exterior al unui nod din acest graf, dacă G este tare conex.\\
-a) 12\\
-b) 3\\
-c) 10\\
-d) 4\\
-e) 5\\
-f) 6\\
-8. Se consideră un tablou bidimensional a cu n linii şi n coloane, numerotate de la 1 la $n, \mathrm{cu}$ elemente numere întregi. Precizați ce reprezintă valoarea variabilei întregi $\mathbf{x}$, după executarea secvenței de program de mai jos.
-
+\\
+a) aticamatica
+\\
+b) maticamatica
+\\
+c) maticaatica
+\\
+d) matica
+\\
+e) matematica
+\\
+f) atica
+\\
+6.4. Fie un graf neorientat complet cu 10 noduri. Precizați care este numărul minim de muchii care trebuie eliminate astfel încât graful parțial obținut să nu fie conex.
+\\
+a) 1
+\\
+b) 9
+\\
+c) 8
+\\
+d) 7
+\\
+e) 6
+\\
+f) 5
+\\
+6.5. Precizați care dintre următoarele ș̦iruri de grade corespund unui graf neorientat cu 6 noduri.
+\\
+a) (1,2,3,4,5,6)
+\\
+b) (0,1,2,3,4,5)
+\\
+c) (0,1,0,1,0,1)
+\\
+d) (1,2,2,1,2,2)
+\\
+e) (1,1,1,1,1,2)
+\\
+f) (1,2,2,1,1,2)
+\\
+6.6. Precizați care este numărul maxim de frunze ce apar într-un arbore cu 17 de noduri, dacă fiecare nod are gradul mai mic sau egal cu 4.
+\\
+a) 11
+\\
+b) 12
+\\
+c) 13
+\\
+d) 14
+\\
+e) 15
+\\
+f) 16
+\\
+6.7. Graful orientat G are 10 noduri și 12 arce. Precizați care este cel mai mare grad exterior al unui nod din acest graf, dacă G este tare conex.
+\\
+a) 12
+\\
+b) 3
+\\
+c) 10
+\\
+d) 4
+\\
+e) 5
+\\
+f) 6
+\\
+6.8. Se consideră un tablou bidimensional a cu n linii şi n coloane, numerotate de la 1 la $n, \mathrm{cu}$ elemente numere întregi. Precizați ce reprezintă valoarea variabilei întregi $\mathbf{x}$, după executarea secvenței de program de mai jos.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 x=0;
 for(i=1;i<=n;i++) x=x+a[i][n-i+1];
+Limbajul Pascal
+x:=0; 
+for i:=1 to n do x:=x+a[i,n-i+1];
 \end{verbatim}
-
-a) suma elementelor de pe diagonala principală a tabloului a\\
-b) suma elementelor de pe diagonala secundară a tabloului a\\
-c) suma elementelor tabloului a\\
-d) suma elementelor situate pe ultima coloană a tabloului a\\
-e) suma elementelor situate pe prima coloană a tabloului a\\
-f) suma elementelor situate pe ultima linie a tabloului a\\
-9. Se consideră secvența alăturată în care A este un tablou bidimensional cu cinci linii şi cinci coloane, numerotate de la 1 la 5, iar $\mathbf{x}$ și i sunt variabile de tip întreg. Ştiind că orice element al tabloului este inițial egal cu numărul de ordine al liniei pe care se află, precizaţi care este valoarea variabilei $\mathbf{x}$ după executarea secvenței de mai jos?
-
+\\
+a) suma elementelor de pe diagonala principală a tabloului a
+\\
+b) suma elementelor de pe diagonala secundară a tabloului a
+\\
+c) suma elementelor tabloului a
+\\
+d) suma elementelor situate pe ultima coloană a tabloului a
+\\
+e) suma elementelor situate pe prima coloană a tabloului a
+\\
+f) suma elementelor situate pe ultima linie a tabloului a
+\\
+6.9. Se consideră secvența alăturată în care A este un tablou bidimensional cu cinci linii şi cinci coloane, numerotate de la 1 la 5, iar $\mathbf{x}$ și i sunt variabile de tip întreg. Ştiind că orice element al tabloului este inițial egal cu numărul de ordine al liniei pe care se află, precizaţi care este valoarea variabilei $\mathbf{x}$ după executarea secvenței de mai jos?
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 x=0;
 for(i=1;i<=5;i++)
     if(i%2==0) x=x+A[i-1][i];
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 x:=0;
 for i:=1 to 5 do
     if ( i mod 2 = 0) then x:=x+A[i-1,i];
 \end{verbatim}
-
-a) 25\\
-b) 4\\
-c) 15\\
-d) 5\\
-e) 30\\
+\\
+a) 25
+\\
+b) 4
+\\
+c) 15
+\\
+d) 5
+\\
+e) 30
+\\
 f) 3
-
-10 Problema generării tuturor numerelor formate din exact trei cifre nenule, cu toate cifrele
-
-\begin{itemize}
-  \item distincte două câte două, este similară cu generarea:\\
-a) aranjamentelor\\
-b) permutărilor\\
-c) elementelor produsului cartezian\\
-d) tuturor submultimilor unei mulțimi\\
-e) combinărilor\\
+\\
+6.10. Problema generării tuturor numerelor formate din exact trei cifre nenule, cu toate cifrele distincte două câte două, este similară cu generarea:
+\\
+a) aranjamentelor
+\\
+b) permutărilor
+\\
+c) elementelor produsului cartezian
+\\
+d) tuturor submultimilor unei mulțimi
+\\
+e) combinărilor
+\\
 f) partițiilor unei mulțimi
-\end{itemize}
-
-11 O delegație formată din patru elevi ai unei grupe trebuie să participe la o conferință. Știind că în grupă sunt $\mathbf{9}$ elevi, dintre care cinci sunt fete, precizați care este numărul posibilităț̦ilor de a forma delegația care va participa la conferință, dacă aceasta trebuie să fie alcătuită din doi băieți și două fete.\\
-a) 20\\
-b) 45\\
-c) 180\\
-d) 60\\
-e) 90\\
+\\
+6.11. O delegație formată din patru elevi ai unei grupe trebuie să participe la o conferință. Știind că în grupă sunt $\mathbf{9}$ elevi, dintre care cinci sunt fete, precizați care este numărul posibilităț̦ilor de a forma delegația care va participa la conferință, dacă aceasta trebuie să fie alcătuită din doi băieți și două fete.
+\\
+a) 20
+\\
+b) 45
+\\
+c) 180
+\\
+d) 60
+\\
+e) 90
+\\
 f) 120
-
-12 Fie un șir format din 10000 de numere naturale, fiecare având cel mult 9 cifre. Precizați care dintre următorii algoritmi efectuează un număr minim de pași.\\
-a) ordonarea crescătoare a elementelor din șir\\
-b) numărarea elementelor prime din șir\\
-c) determinarea elementului maxim din șir\\
-d) verificarea unicității tuturor elementelor din șir\\
-e) generarea tuturor permutărilor elementelor din șir\\
+\\
+6.12. Fie un șir format din 10000 de numere naturale, fiecare având cel mult 9 cifre. Precizați care dintre următorii algoritmi efectuează un număr minim de pași.
+\\
+a) ordonarea crescătoare a elementelor din șir
+\\
+b) numărarea elementelor prime din șir
+\\
+c) determinarea elementului maxim din șir
+\\
+d) verificarea unicității tuturor elementelor din șir
+\\
+e) generarea tuturor permutărilor elementelor din șir
+\\
 f) suma elementelor care apar de exact două ori în șir
-
-13 În declararea alăturată, câmpurile $\mathbf{x}$ şi $\mathbf{y}$ ale înregistrării pot memora coordonatele carteziene ale unui punct din planul $x O y$. Precizați care dintre următoarele expresii are valoarea true/1 dacă şi numai dacă punctul P este situat în cadranul I sau III, dar nu și pe axe.
-
+\\
+6.13. În declararea alăturată, câmpurile $\mathbf{x}$ şi $\mathbf{y}$ ale înregistrării pot memora coordonatele carteziene ale unui punct din planul $x O y$. Precizați care dintre următoarele expresii are valoarea true/1 dacă şi numai dacă punctul P este situat în cadranul I sau III, dar nu și pe axe.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 typedef struct
@@ -2580,7 +2876,6 @@ typedef struct
     } punct;
 punct p;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 type punct=record
@@ -2588,24 +2883,34 @@ type punct=record
     end;
 var p:punct;
 \end{verbatim}
-
-a) $p \cdot x * p \cdot y>0$\\
-b) $p . x>p \cdot y$\\
-c) $p \cdot x * p \cdot y>=0$\\
-d) $x \cdot p * y \cdot p>0$\\
-e) $x \cdot p * y \cdot p>0$\\
-f) $p \cdot x+p \cdot y>=0$
-
-14 Precizați care este suma maximă a elementelor care apar într-un tablou unidimensional cu legături „de tip tată", asociat unui arbore cu rădăcină format din 10 noduri, etichetate cu numere de la 1 la 10 .\\
-a) 100\\
-b) 90\\
-c) 81\\
-d) 45\\
-e) 80\\
+\\
+a) p.x*p.y>0
+\\
+b) p.x>p.y
+\\
+c) p.x*p.y>=0
+\\
+d) x.p*y.p>0
+\\
+e) x.p*y.p>0
+\\
+f) p.x+p.y>=0
+\\
+14 Precizați care este suma maximă a elementelor care apar într-un tablou unidimensional cu legături „de tip tată", asociat unui arbore cu rădăcină format din 10 noduri, etichetate cu numere de la 1 la 10 .
+\\
+a) 100
+\\
+b) 90
+\\
+c) 81
+\\
+d) 45
+\\
+e) 80
+\\
 f) 60
-
-15 Subprogramul f are definiţia de mai jos. Dacă variabila a este de tip întreg și memorează valorarea 3, precizați care va fi valorea pe care o memorează aceeași variabilă a, după apelul $\mathrm{f}(\mathrm{a}, \mathrm{a})$; (limbajul Pascal/C++), respectiv $\mathrm{f}(\varepsilon a, \& a)$; (în limbajul C).
-
+\\
+6.15. Subprogramul f are definiţia de mai jos. Dacă variabila a este de tip întreg și memorează valorarea 3, precizați care va fi valorea pe care o memorează aceeași variabilă a, după apelul $\mathrm{f}(\mathrm{a}, \mathrm{a})$; (limbajul Pascal/C++), respectiv $\mathrm{f}(\varepsilon a, \& a)$; (în limbajul C).
 \begin{verbatim}
 Limbajul C++
 void f(int &x,int &y)
@@ -2613,6 +2918,12 @@ void f(int &x,int &y)
     x=1;
     x=x+y;
 }
+Limbajul C
+void f(int *x, int *y) 
+{ 
+   *x=1; 
+   *x=*x+*y; 
+} 
 Limbajul Pascal
 procedure f(var x,y: integer);
 begin
@@ -2620,21 +2931,22 @@ x:=1;
 x:=x+y;
 end;
 \end{verbatim}
-
-Limbajul C\\
-void $f\left(\right.$ int ${ }^{*} x$, int *y)\\
-\{\\
-* $\mathrm{x}=1$;\\
-*x=*x+*y;\\
-\}\\
-a) 1\\
-b) 2\\
-c) 3\\
-d) 4\\
-e) 5\\
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
 f) 6
+\\
 
 \section*{Varianta 7}
+
 \begin{enumerate}
   \item Indicaţi care dintre expresiile $\mathrm{C}++/ \mathrm{C} /$ Pascal de mai jos are valoarea true/1 dacă și numai dacă numărul memorat în variabila întreagă x aparţine reuniunii de intervale:
 \end{enumerate}
