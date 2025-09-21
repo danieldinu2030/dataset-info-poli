@@ -46,6 +46,9 @@ with open(input_file, encoding="utf-8") as f:
 # Regex for exercises
 exercise_pattern = re.compile(r'(\d+\.\d+\.)\s+(.*?)(?=\n\d+\.\d+\.|\Z)', re.DOTALL)
 
+# Regex for verbatim blocks
+verbatim_pattern = re.compile(r'\\begin{verbatim}(.*?)\\end{verbatim}', re.DOTALL)
+
 # Regex for options
 option_pattern = re.compile(r'([a-f])\)\s*(.*?)(?=\\\\|\Z)', re.DOTALL)
 
@@ -53,14 +56,25 @@ for match in exercise_pattern.finditer(data):
     exercise_number = match.group(1)
     block = match.group(2).strip()
 
-    # Split at first "\\" into exercise_text and options
-    parts = block.split('\\\\', 1)
+    # Check for \\ inside verbatim in this block
+    verbatim_blocks = verbatim_pattern.findall(block)
+    verbatim_has_backslash = any(r"\\" in vb for vb in verbatim_blocks)
+
+    # Mask verbatim blocks so we can safely split on \\ outside them
+    def mask_verbatim(text):
+        def replacer(match):
+            return "__VERBATIM__"
+        return verbatim_pattern.sub(replacer, text)
+
+    masked_block = mask_verbatim(block)
+
+    # Split at first \\ (outside of verbatim)
+    parts = masked_block.split('\\\\', 1)
     rest = parts[1].strip() if len(parts) > 1 else ""
 
     is_dual = rest.lstrip().startswith("Limbajul C")
 
     if is_dual:
-        # Dual mode
         parts_dual = re.split(r'Limbajul Pascal', rest, maxsplit=1)
         c_block = parts_dual[0]
         pascal_block = parts_dual[1] if len(parts_dual) > 1 else ""
@@ -76,19 +90,19 @@ for match in exercise_pattern.finditer(data):
             letter, _ = opt_match.groups()
             opts_p[letter] = "X"
 
-        if all(opts_c.values()) and all(opts_p.values()):
-            print(f"{exercise_number} matches (dual mode)")
-        else:
-            print(f"{exercise_number} does not match (dual mode)")
-
+        match_status = "matches" if all(opts_c.values()) and all(opts_p.values()) else "does not match"
+        msg = f"{exercise_number} {match_status} (dual mode)"
     else:
-        # Single mode
         opts = {k: "" for k in "abcdef"}
         for opt_match in option_pattern.finditer(rest):
             letter, _ = opt_match.groups()
             opts[letter] = "X"
 
-        if all(opts.values()):
-            print(f"{exercise_number} matches (single mode)")
-        else:
-            print(f"{exercise_number} does not match (single mode)")
+        match_status = "matches" if all(opts.values()) else "does not match"
+        msg = f"{exercise_number} {match_status} (single mode)"
+
+    # Add warning inline if needed
+    if verbatim_has_backslash:
+        msg += ", but contains '\\\\' inside a verbatim block; this will break extraction regex"
+
+    print(msg)
