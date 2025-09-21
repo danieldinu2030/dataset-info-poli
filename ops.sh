@@ -11,10 +11,11 @@ while true; do
     echo "Possible operations:"
     echo "[0] Exit"
     echo "[1] Full format check for all exercises"
-    echo "[2] Full format check for one exercise"
+    echo "[2] Full format check for one set of exercises"
     echo "[3] Format check for dual mode exercises"
-    echo "[4] Format check for \\\\ inside verbatim blocks in all exercises"
-    echo "[5] Attempt extraction to CSV"
+    echo "[4] Format check for trio mode exercises"
+    echo "[5] Format check for \\\\ inside verbatim blocks in all exercises"
+    echo "[6] Attempt extraction to CSV"
     echo "==============================================================="
     read -p "Choose operation: " choice
 
@@ -28,10 +29,10 @@ while true; do
             read -p "Press Enter to continue..."
             ;;
         2)
-            read -p "Choose exercise number: " exercise
-            python3 $checker $src | grep "^$exercise\."
+            read -p "Choose exercise set number: " set
+            python3 $checker $src | grep "^$set\."
             if [ $? -ne 0 ]; then
-                echo "The exercise doesn't exist or there was an error."
+                echo "The exercise set with this number doesn't exist or there was an error."
             fi
             read -p "Press Enter to continue..."
             ;;
@@ -44,13 +45,20 @@ while true; do
             read -p "Press Enter to continue..."
             ;;
         4)
+            python3 $checker $src | grep trio
+            if [ $? -eq 1 ]; then
+                echo "There are no trio mode exercises."
+            fi
+            read -p "Press Enter to continue..."
+            ;;
+        5)
             python3 $checker $src | grep verbatim
             if [ $? -eq 1 ]; then
                 echo "All verbatim block are clean."
             fi
             read -p "Press Enter to continue..."
             ;;
-        5)
+        6)
             python3 $extractor $src $dest
             read -p "Press Enter to continue..."
             ;;

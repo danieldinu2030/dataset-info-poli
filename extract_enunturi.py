@@ -3,18 +3,32 @@
 # <test_number>.<exercise_number>. <beginning of exercise text>
 # <multiple lines of exercise text (if necessary)>
 # \\
-# Limbajul C++/ Limbajul C (optional, if it exists, then all optional lines below exist)
-# a) option a
+# Limbajul C++
+# a) option a-C++
 # \\
-# b) option b
+# b) option b-C++
 # \\
-# c) option c
+# c) option c-C++
 # \\
-# d) option d
+# d) option d-C++
 # \\
-# e) option e
+# e) option e-C++
 # \\
-# f) option f
+# f) option f-C++
+# \\
+# Limbajul C (optional)
+# \\
+# a) option a-C (optional)
+# \\
+# b) option b-C (optional)
+# \\
+# c) option c-C (optional)
+# \\
+# d) option d-C (optional)
+# \\
+# e) option e-C (optional)
+# \\
+# f) option f-C (optional)
 # \\
 # Limbajul Pascal (optional)
 # \\
@@ -46,76 +60,136 @@ with open(input_file, encoding="utf-8") as f:
     data = f.read()
 
 rows = []
-current_section = None
 
-# Regex for \section*{...}
+# Regex patterns
 section_pattern = re.compile(r'\\section\*\{([^}]*)\}')
-
-# Regex for exercises
 exercise_pattern = re.compile(r'(\d+\.\d+\.)\s+(.*?)(?=\n\d+\.\d+\.|\Z)', re.DOTALL)
-
-# Regex for options
 option_pattern = re.compile(r'([a-f])\)\s*(.*?)(?=\\\\|\Z)', re.DOTALL)
 
-for line in data.splitlines():
-    sec_match = section_pattern.match(line.strip())
-    if sec_match:
-        current_section = sec_match.group(1).strip()
+def split_language_blocks(rest_text):
+    """
+    Returns dict with keys:
+        mode: 'trio' | 'dual' | 'single' | 'single-C'
+        cpp_block, c_block, pascal_block
+    """
+    lines = rest_text.splitlines()
+    markers = []
+    for i, ln in enumerate(lines):
+        s = ln.strip()
+        if s == "Limbajul C++/ Limbajul C":
+            markers.append((i, "C++/C"))
+        elif s == "Limbajul C++":
+            markers.append((i, "C++"))
+        elif s == "Limbajul C":
+            markers.append((i, "C"))
+        elif s == "Limbajul Pascal":
+            markers.append((i, "Pascal"))
 
-for match in exercise_pattern.finditer(data):
-    exercise_number = match.group(1)
-    block = match.group(2).strip()
+    if not markers:
+        return {"mode": "single", "cpp_block": rest_text, "c_block": "", "pascal_block": ""}
 
-    # Split at first "\\" into exercise_text and options part
+    first_idx, first_marker = markers[0]
+
+    if first_marker == "C++/C":
+        pascal_idx = next((i for i, m in markers if m == "Pascal" and i > first_idx), None)
+        cpp_c_block = "\n".join(lines[first_idx+1:pascal_idx if pascal_idx is not None else len(lines)]).strip()
+        pascal_block = "\n".join(lines[pascal_idx+1:] if pascal_idx is not None else []).strip()
+        return {"mode": "dual", "cpp_block": cpp_c_block, "c_block": "", "pascal_block": pascal_block}
+
+    elif first_marker == "C++":
+        c_idx = next((i for i, m in markers if m == "C" and i > first_idx), None)
+        pascal_idx = next((i for i, m in markers if m == "Pascal" and i > (c_idx if c_idx is not None else first_idx)), None)
+
+        cpp_block = "\n".join(lines[first_idx+1:c_idx if c_idx is not None else (pascal_idx if pascal_idx is not None else len(lines))]).strip()
+        c_block = "\n".join(lines[c_idx+1:pascal_idx if pascal_idx is not None else len(lines)]).strip() if c_idx is not None else ""
+        pascal_block = "\n".join(lines[pascal_idx+1:] if pascal_idx is not None else []).strip()
+        return {"mode": "trio", "cpp_block": cpp_block, "c_block": c_block, "pascal_block": pascal_block}
+
+    elif first_marker == "C":
+        pascal_idx = next((i for i, m in markers if m == "Pascal" and i > first_idx), None)
+        c_block = "\n".join(lines[first_idx+1:pascal_idx if pascal_idx is not None else len(lines)]).strip()
+        pascal_block = "\n".join(lines[pascal_idx+1:] if pascal_idx is not None else []).strip()
+        return {"mode": "single-C", "cpp_block": "", "c_block": c_block, "pascal_block": pascal_block}
+
+    else:
+        return {"mode": "single", "cpp_block": rest_text, "c_block": "", "pascal_block": ""}
+
+# Get section positions for dynamic assignment
+section_positions = [(m.start(), m.group(1).strip()) for m in section_pattern.finditer(data)]
+
+# Main extraction
+for ex in exercise_pattern.finditer(data):
+    ex_start = ex.start()
+    exercise_number = ex.group(1)
+    block = ex.group(2).strip()
+
+    # Determine current section
+    section_name = "Unknown"
+    for sec_pos, sec_name in section_positions:
+        if sec_pos <= ex_start:
+            section_name = sec_name
+        else:
+            break
+
+    # Split at first \\ for exercise text
     parts = block.split('\\\\', 1)
     exercise_text = parts[0].strip()
     rest = parts[1].strip() if len(parts) > 1 else ""
 
-    # Check if dual mode (C + Pascal)
-    is_dual = rest.lstrip().startswith("Limbajul C")
+    info = split_language_blocks(rest)
 
-    if is_dual:
-        # Split into two blocks at "Limbajul Pascal"
-        parts_dual = re.split(r'Limbajul Pascal', rest, maxsplit=1)
-        c_block = parts_dual[0]
-        pascal_block = parts_dual[1] if len(parts_dual) > 1 else ""
+    # Initialise all options as "N/A"
+    opts_cpp = {k: "N/A" for k in "abcdef"}
+    opts_c   = {k: "N/A" for k in "abcdef"}
+    opts_p   = {k: "N/A" for k in "abcdef"}
 
-        opts_c = {k: "" for k in "abcdef"}
-        opts_p = {k: "" for k in "abcdef"}
-
-        for opt_match in option_pattern.finditer(c_block):
+    if info["mode"] == "trio":
+        for opt_match in option_pattern.finditer(info["cpp_block"]):
+            letter, content = opt_match.groups()
+            opts_cpp[letter] = content.strip()
+        for opt_match in option_pattern.finditer(info["c_block"]):
             letter, content = opt_match.groups()
             opts_c[letter] = content.strip()
-
-        for opt_match in option_pattern.finditer(pascal_block):
+        for opt_match in option_pattern.finditer(info["pascal_block"]):
             letter, content = opt_match.groups()
             opts_p[letter] = content.strip()
 
-        rows.append([
-            current_section,
-            exercise_number,
-            exercise_text,
-            opts_c["a"], opts_c["b"], opts_c["c"], opts_c["d"], opts_c["e"], opts_c["f"],
-            opts_p["a"], opts_p["b"], opts_p["c"], opts_p["d"], opts_p["e"], opts_p["f"],
-        ])
-
-    else:
-        opts = {k: "" for k in "abcdef"}
-        for opt_match in option_pattern.finditer(rest):
+    elif info["mode"] == "dual":
+        for opt_match in option_pattern.finditer(info["cpp_block"]):
             letter, content = opt_match.groups()
-            opts[letter] = content.strip()
+            opts_cpp[letter] = content.strip()
+        for opt_match in option_pattern.finditer(info["pascal_block"]):
+            letter, content = opt_match.groups()
+            opts_p[letter] = content.strip()
+        # C set remains N/A for dual mode
+        # opts_c is intentionally left as N/A
 
-        rows.append([
-            current_section,
-            exercise_number,
-            exercise_text,
-            opts["a"], opts["b"], opts["c"], opts["d"], opts["e"], opts["f"],
-            "N/A", "N/A", "N/A", "N/A", "N/A", "N/A",
-        ])
+    elif info["mode"] == "single-C":
+        for opt_match in option_pattern.finditer(info["c_block"]):
+            letter, content = opt_match.groups()
+            opts_c[letter] = content.strip()
+        for opt_match in option_pattern.finditer(info["pascal_block"]):
+            letter, content = opt_match.groups()
+            opts_p[letter] = content.strip()
 
-# Write to CSV
+    else:  # single
+        for opt_match in option_pattern.finditer(info["cpp_block"]):
+            letter, content = opt_match.groups()
+            opts_cpp[letter] = content.strip()
+
+    rows.append([
+        section_name,
+        exercise_number,
+        exercise_text,
+        opts_cpp["a"], opts_cpp["b"], opts_cpp["c"], opts_cpp["d"], opts_cpp["e"], opts_cpp["f"],
+        opts_c["a"],   opts_c["b"],   opts_c["c"],   opts_c["d"],   opts_c["e"],   opts_c["f"],
+        opts_p["a"],   opts_p["b"],   opts_p["c"],   opts_p["d"],   opts_p["e"],   opts_p["f"],
+    ])
+
+# Write CSV
 header = [
     "section", "exercise_number", "exercise_text",
+    "a-C++", "b-C++", "c-C++", "d-C++", "e-C++", "f-C++",
     "a-C", "b-C", "c-C", "d-C", "e-C", "f-C",
     "a-Pascal", "b-Pascal", "c-Pascal", "d-Pascal", "e-Pascal", "f-Pascal"
 ]
