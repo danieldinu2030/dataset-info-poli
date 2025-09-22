@@ -7785,258 +7785,270 @@ f) 1234
 \\
 
 \section*{Varianta 17}
-\begin{enumerate}
-  \item Alegeți secvențele de instrucțiuni prin care variabilei întregi pc i se atribuie valoarea primei cifre a unui număr natural dat prin variabila a.
-\end{enumerate}
 
+17.1. Alegeți secvențele de instrucțiuni prin care variabilei întregi pc i se atribuie valoarea primei cifre a unui număr natural dat prin variabila a.
 \begin{verbatim}
 Limbajul C++
-    pc=a/10;
-    pc=a;while(pc>9)pc=pc/10;
-    pc=a%10;
-    pc=a;while (pc>9) pc=pc%10;
-    pc=a;while (pc>0) pc=pc/10;
-    pc=a;while (pc>0) pc=pc%10;
+1. pc=a/10; 
+2. pc=a;while(pc>9)pc=pc/10; 
+3. pc=a%10; 
+4. pc=a;while(pc>9)pc=pc%10; 
+5. pc=a;while(pc>0)pc=pc/10; 
+6. pc=a;while(pc>0)pc=pc%10;
 \end{verbatim}
-
-\section*{Limbajul C}
 \begin{verbatim}
-pc=a/10;
-pc=a;while(pc>9) pc=pc/10;
-pc=a%10;
-pc=a;while (pc>9) pc=pc%10;
-pc=a;while (pc>0) pc=pc%10;
-pc=a;while(pc>0) pc=pc/10;
+Limbajul C 
+1. pc=a/10; 
+2. pc=a;while(pc>9)pc=pc/10; 
+3. pc=a%10; 
+4. pc=a;while(pc>9)pc=pc%10; 
+5. pc=a;while(pc>0)pc=pc%10; 
+6. pc=a;while(pc>0)pc=pc/10;
+Limbajul Pascal 
+1. pc:=a div 10; 
+2. pc:=a; while (pc>9) 
+do pc:=pc div 10; 
+3. pc:=a mod 10; 
+4. pc:=a; while (pc>9) 
+do pc:=pc mod 10; 
+5. pc:=a; while (pc>0) 
+do pc:=pc div 10; 
+6. pc:=a; while (pc>0) 
+do pc:=pc mod 10;
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-1. pc:=a div 10;
-2. pc:=a; while (pc>9)
-    do pc:=pc div 10;
-3. pc:=a mod 10;
-4. pc:=a; while (pc>9)
-    do pc:=pc mod 10;
-5. pc:=a; while (pc>0)
-    do pc:=pc div 10;
-6. pc:=a; while (pc>0)
-    do pc:=pc mod 10;
-\end{verbatim}
-
-a) 1\\
-b) 2\\
-c) 3\\
-d) 4\\
-e) 5\\
-f) 6\\
-2. Precizați care dintre următoarele secvențe de instrucțiuni atribuie variabilei întregi $p$, valoarea $3^{\text {n }}$, unde variabila $n$ reprezintă un număr natural dat.
-
-\begin{verbatim}
-Limbajul C++
-    p=1;for(i=1;i<=n;i++)p*=n;
-    p=3;for(i=1;i<=n;i++) p*=i;
-    p=1;i=0;while(i<n)p*=3;i++;
-    p=1;for(i=1;i<=n;i++)p*=3;
-    p=3;for(i=n;i>=0;i--)p*=3;
-    p=1;for(i=n;i>=0;i--)p*=3;
-\end{verbatim}
-
-\section*{Limbajul C}
-\begin{verbatim}
-p=1;for(i=1;i<=n;i++) p*=n;
-p=3;for(i=1;i<=n;i++) p*=i;
-p=1;i=0;while (i<n) p*=3;i++;
-p=1;for(i=1;i<=n;i++) p*=3;
-p=3;for(i=n;i>=0;i--) p*=3;
-p=1;for(i=n;i>=0;i--) p*=3;
-\end{verbatim}
-
-Limbajul Pascal
-
-\begin{verbatim}
-1. p:=1;for i:=1 to n
-    do p:=p*n;
-2. p:=3;for i:=1 to n
-    do p:=p*i;
-3. p:=1; i:=0;
-    while (i<n) do
-    p:=p*3; inc(i);
-4. p:=1;for i:=1 to n
-    do p:=p*3;
-5. p:=3;
-    for i:=n downto O do
-    p:=p*3;
-6. p:=1;
-    for i:=n downto O do
-    p:=p*3;
-\end{verbatim}
-
-a) 1\\
-b) 2\\
-c) 3\\
-d) 4\\
-e) 5\\
-f) 6\\
-3. Indicați valoarea returnată de funcția definită mai jos, la apelul sp (3).
-
-\begin{verbatim}
-Limbajul C
-int sp(int n)
-{
-if(n>1)
-    return
-sp(n-1)+n*(n+1)*(n+2);
-    else return 6;}
-\end{verbatim}
-
-Limbajul C++\\
-int $s p($ int $n$ )\\
-{if( $\mathrm{n}>1$ ) return\\
-$\mathrm{sp}(\mathrm{n}-1)+\mathrm{n}$ * $(\mathrm{n}+1)$ * $(\mathrm{n}+2)$;
-else return 6;}\\
-a) 30\\
-b) 60\\
-c) 90\\
-d) 120\\
-e) 150\\
-e) 150\\
-f) 180\\
-4. Indicați expresia corectă din punct de vedere sintactic și care are ca valoare $\mathbf{3}^{2020}$.
-
-\section*{Limbajul C++}
-\begin{verbatim}
-$\exp (2020 * \log (3))$
-$\exp (\log (2020))$ *exp (3)
-$\log (3)$ *exp (2020)
-$\log (3 * \exp (2020))$
-$\exp (\log (2020) * \log (3))$
-\end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{5}
-  \item $\log (\exp (2020 * \log (3)))$
-\end{enumerate}
-
-\section*{Limbajul C}
-\begin{verbatim}
-$\exp (2020 * \log (3))$
-$\exp (\log (2020)) * \exp (3)$
-$\log (3) * \exp (2020)$
-log (3*exp (2020))
-$\exp (\log (2020) * \log (3))$
-\end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{5}
-  \item $\log (\exp (2020 * \log (3)))$\\
-a) 1\\
-b) 2\\
-c) 3\\
-d) 4\\
-e) 5\\
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
 f) 6
-  \item Fie graful neorientat $\mathbf{G}=(\mathrm{V}, \mathbf{M})$, unde V este mulțimea nodurilor grafului, $\operatorname{card}(\mathrm{V})=\mathrm{n}$, respectiv, M este mulțimea muchiilor grafului, iar $\operatorname{card}(\mathrm{M})=\mathrm{m}$. Graful dat are $p$ componente conexe. Dacă $\mathrm{n}=1010, \mathrm{~m}=2020$ iar $\mathrm{p}=100$, precizați care este numărul maximal de cicluri independente care pot fi construite concomitent pe graf. Prin cicluri independente se înțelege, cicluri care conțin cel puţin câte o muchie care aparține doar unuia din ele.\\
-a) 1001\\
-b) 1010\\
-c) 1011\\
-d) 1100\\
-e) 1101\\
-f) 1110
-  \item Indicați valoarea variabilei text după executarea instrucţiunilor de mai jos.
-\end{enumerate}
-
-Limbajul Pascal
-
+\\
+17.2. Precizați care dintre următoarele secvențe de instrucțiuni atribuie variabilei întregi $p$, valoarea $3^{\text {n }}$, unde variabila $n$ reprezintă un număr natural dat.
 \begin{verbatim}
-exp (2020*ln(3))
-exp(ln(2020))*exp (3)
-ln(3)*exp (2020)
-ln(3*exp (2020))
-exp(log(2020)*ln(3))
-log(exp(2020*ln(3)))
+Limbajul C++ 
+1. p=1;for(i=1;i<=n;i++)p*=n; 
+2. p=3;for(i=1;i<=n;i++)p*=i; 
+3. p=1;i=0;while(i<n)p*=3;i++; 
+4. p=1;for(i=1;i<=n;i++)p*=3; 
+5. p=3;for(i=n;i>=0;i--)p*=3; 
+6. p=1;for(i=n;i>=0;i--)p*=3;
+Limbajul C 
+1. p=1;for(i=1;i<=n;i++) p*=n; 
+2. p=3;for(i=1;i<=n;i++) p*=i; 
+3. p=1;i=0;while (i<n) p*=3;i++; 
+4. p=1;for(i=1;i<=n;i++) p*=3; 
+5. p=3;for(i=n;i>=0;i--) p*=3; 
+6. p=1;for(i=n;i>=0;i--) p*=3;
+Limbajul Pascal 
+1. p:=1;for i:=1 to n 
+do p:=p*n; 
+2. p:=3;for i:=1 to n 
+do p:=p*i; 
+3. p:=1; i:=0;  
+while (i<n) do 
+p:=p*3; inc(i); 
+4. p:=1;for i:=1 to n 
+do p:=p*3; 
+5. p:=3; 
+for i:=n downto 0 do 
+p:=p*3; 
+6. p:=1;  
+for i:=n downto 0 do 
+p:=p*3;
 \end{verbatim}
-
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
+f) 6
+\\
+17.3. Indicați valoarea returnată de funcția definită mai jos, la apelul sp (3).
 \begin{verbatim}
-Limbajul Pascal
-function
-sp(n:integer) :integer;
-Begin
-if(n>1) then
-    sp:=sp(n-1)+n*(n+1)*(n+2)
-        else
-            sp:=6;
+Limbajul C 
+int sp(int n) 
+{ 
+if(n>1)  
+ return  
+sp(n-1)+n*(n+1)*(n+2); 
+ else return 6;}
+Limbajul C++ 
+int sp(int n) 
+{if(n>1) return  
+sp(n-1)+n*(n+1)*(n+2); 
+   else return 6;}
+Limbajul Pascal 
+function 
+sp(n:integer):integer; 
+Begin 
+if(n>1) then  
+ sp:=sp(n-1)+n*(n+1)*(n+2) 
+    else  
+     sp:=6; 
 End;
 \end{verbatim}
-
+\\
+a) 30
+\\
+b) 60
+\\
+c) 90
+\\
+d) 120
+\\
+e) 150
+\\
+f) 180
+\\
+17.4. Indicați expresia corectă din punct de vedere sintactic și care are ca valoare $\mathbf{3}^{2020}$.
 \begin{verbatim}
-Limbajul C++
-char text[250];
-strncpy(text,
-strstr("Admitere Poli 2020",
-"oli"),9);
-text[9]='\0';
-Limbajul C
-char text[250];
-strncpy(text,
-strstr("Admitere Poli 2020",
-"oli"),9);
-text[9]='\0';
+Limbajul C++ 
+1. exp(2020*log(3)) 
+2. exp(log(2020))*exp(3) 
+3. log(3)*exp(2020) 
+4. log(3*exp(2020)) 
+5. exp(log(2020)*log(3)) 
+6. log(exp(2020*log(3)))
+Limbajul C 
+1. exp(2020*log(3)) 
+2. exp(log(2020))*exp(3) 
+3. log(3)*exp(2020)  
+4. log(3*exp(2020)) 
+5. exp(log(2020)*log(3)) 
+6. log(exp(2020*log(3)))
+Limbajul Pascal 
+1. exp(2020*ln(3)) 
+2. exp(ln(2020))*exp(3) 
+3. ln(3)*exp(2020) 
+4. ln(3*exp(2020)) 
+5. exp(log(2020)*ln(3)) 
+6. log(exp(2020*ln(3))) 
 \end{verbatim}
-
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
+f) 6
+\\
+17.5. Fie graful neorientat $\mathbf{G}=(\mathrm{V}, \mathbf{M})$, unde V este mulțimea nodurilor grafului, $\operatorname{card}(\mathrm{V})=\mathrm{n}$, respectiv, M este mulțimea muchiilor grafului, iar $\operatorname{card}(\mathrm{M})=\mathrm{m}$. Graful dat are $p$ componente conexe. Dacă $\mathrm{n}=1010, \mathrm{~m}=2020$ iar $\mathrm{p}=100$, precizați care este numărul maximal de cicluri independente care pot fi construite concomitent pe graf. Prin cicluri independente se înțelege, cicluri care conțin cel puţin câte o muchie care aparține doar unuia din ele.
+\\
+a) 1001
+\\
+b) 1010
+\\
+c) 1011
+\\
+d) 1100
+\\
+e) 1101
+\\
+f) 1110
+\
+17.6. Indicați valoarea variabilei text după executarea instrucţiunilor de mai jos.
 \begin{verbatim}
-Limbajul Pascal
-var
-text:string[250];p:integer;
-Begin
-text:='Admitere Poli 2020';
-p:=pos('oli',text);
-text:=copy(text,p,9);
-End.
+Limbajul C++ 
+char text[250]; 
+strncpy(text, 
+strstr("Admitere Poli 2020", 
+"oli"),9); 
+text[9]='\0';
+Limbajul C 
+char text[250]; 
+strncpy(text, 
+strstr("Admitere Poli 2020", 
+"oli"),9); 
+text[9]='\0';
+Limbajul Pascal 
+var 
+text:string[250];p:integer; 
+Begin 
+text:=’Admitere Poli 2020’; 
+p:=pos(’oli’,text); 
+text:=copy(text,p,9); 
+End. 
 \end{verbatim}
-
-a) Admitere\\
-b) Admitere 2020\\
-c) Admitere Poli\\
-d) Poli 2020\\
-e) oli 2020\\
-f) 2020\\
-7. Indicați valoarea variabilei text după executarea secvenței de instrucţiuni de mai jos.
-
+\\
+a) Admitere
+\\
+b) Admitere 2020
+\\
+c) Admitere Poli
+\\
+d) Poli 2020
+\\
+e) oli 2020
+\\
+f) 2020
+\\
+17.7. Indicați valoarea variabilei text după executarea secvenței de instrucţiuni de mai jos.
 \begin{verbatim}
-Limbajul C++
-char text[250];
-strcpy(text,strstr("Admitere Politehnica Bucuresti
-2020", "Poli")+strlen("240820201731"));
-cout<<strcat(text," ADMIS");
-Limbajul C
-char text[250];
-strcpy(text,strstr("Admitere Politehnica Bucuresti
-2020", "Poli")+strlen("240820201731"));
-printf(" %s \n", strcat(text," ADMIS"));
-Limbajul Pascal
-var text:string[250];p:integer;
-Begin
-text:='Admitere Politehnica Bucuresti 2020';
-p:=pos('Poli',text);
-text:=copy(text,p+length('240820201731'),length(text));
+Limbajul C++ 
+char text[250]; 
+strcpy(text,strstr("Admitere Politehnica Bucuresti 
+2020", "Poli")+strlen("240820201731")); 
+cout<<strcat(text," ADMIS"); 
+ 
+Limbajul C 
+char text[250]; 
+strcpy(text,strstr("Admitere Politehnica Bucuresti 
+2020", "Poli")+strlen("240820201731")); 
+printf(" %s \n", strcat(text," ADMIS")); 
+ 
+Limbajul Pascal 
+var text:string[250];p:integer; 
+Begin 
+text:='Admitere Politehnica Bucuresti 2020'; 
+p:=pos('Poli',text); 
+text:=copy(text,p+length('240820201731'),length(text)); 
 text:=concat(text,' ADMIS'); writeln(text); End.
 \end{verbatim}
-
-a) Admitere 2020 ADMIS\\
-b) Admitere 2020\\
-c) Bucuresti ADMIS\\
-d) Bucuresti 2020 ADMIS\\
-e) Politehnica ADMIS\\
-f) Politehnica 2020 ADMIS\\
-8. Utilizând metoda backtracking, se generează toate modalitățile de a se îmbrăca un inginer. Ș̦tiind că el are la dispoziție 12 cămăși, 8 pantaloni și 9 cravate, indicați numărul de modalități de a se îmbrăca, folosind toate cele trei elemente vestimentare, pe care le are inginerul.\\
-a) 864\\
-b) 204\\
-c) 168\\
-d) 108\\
-e) 96\\
-f) 29\\
-9. Precizați care este cea mai mare valoare pe care o poate lua variabila întreagă $\mathbf{n}$ astfel încât să se afișeze mesajul Corect.
-
+\\
+a) Admitere 2020 ADMIS
+\\
+b) Admitere 2020
+\\
+c) Bucuresti ADMIS
+\\
+d) Bucuresti 2020 ADMIS
+\\
+e) Politehnica ADMIS
+\\
+f) Politehnica 2020 ADMIS
+\\
+17.8. Utilizând metoda backtracking, se generează toate modalitățile de a se îmbrăca un inginer. Ș̦tiind că el are la dispoziție 12 cămăși, 8 pantaloni și 9 cravate, indicați numărul de modalități de a se îmbrăca, folosind toate cele trei elemente vestimentare, pe care le are inginerul.
+\\
+a) 864
+\\
+b) 204
+\\
+c) 168
+\\
+d) 108
+\\
+e) 96
+\\
+f) 29
+\\
+17.9. Precizați care este cea mai mare valoare pe care o poate lua variabila întreagă $\mathbf{n}$ astfel încât să se afișeze mesajul Corect.
 \begin{verbatim}
 Limbajul C
 if(n<17-3*n)
@@ -8044,7 +8056,6 @@ if(n<17-3*n)
 else
 printf("Incorect");
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C++
 if (n<17-3*n)
@@ -8052,7 +8063,6 @@ cout<<"Corect";
 else
 cout<<"Incorect";
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 if n<17-3*n then
@@ -8060,28 +8070,32 @@ write("Corect")
 else
 write("Incorect");
 \end{verbatim}
-
-a) 17\\
-b) 15\\
-c) 12\\
-d) 10\\
-e) 7\\
-f) 4\\
-10. Precizați care este valoarea inițială a variabilei întregi $n$ pentru ca secvența de program de mai jos să afișeze $\mathbf{\$} \mathbf{\$} \mathbf{\$} \mathbf{\$}$.
-
+\\
+a) 17
+\\
+b) 15
+\\
+c) 12
+\\
+d) 10
+\\
+e) 7
+\\
+f) 4
+\\
+17.10. Precizați care este valoarea inițială a variabilei întregi $n$ pentru ca secvența de program de mai jos să afișeze $\mathbf{\$} \mathbf{\$} \mathbf{\$} \mathbf{\$}  \mathbf{\$}$.
 \begin{verbatim}
 Limbajul C
 while(n!=3)
     { n--;
         printf("$$");}
 \end{verbatim}
-
-a) 1\\
-b) 2\\
-c) 3\\
-d) 3\\
-e) 5 f) nici $\mathbf{o}$ valoare
-
+\begin{verbatim}
+Limbajul C++
+while(n!=3)
+    { n--;
+    cout<<"$$";}
+\end{verbatim}
 \begin{verbatim}
 Limbajul Pascal
 while n<>3 do
@@ -8089,60 +8103,102 @@ begin
 dec(n);
 write('$$');end;
 \end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{10}
-  \item Se construiește un tablou bidimensional cu $n$ linii și n coloane, în variabila $\mathbf{A}$ prin secvența de mai jos, unde variabila $n$ este un număr natural nenul dat.
-\end{enumerate}
-
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 3
+\\
+e) 5
+\\
+f) nici o valoare
+\\
+17.11. Se construiește un tablou bidimensional cu $n$ linii și n coloane, în variabila $\mathbf{A}$ prin secvența de mai jos, unde variabila $n$ este un număr natural nenul dat.
 \begin{verbatim}
 Limbajul C
 for(i=1;i<=n;i++)
 for(j=1;j<=n;j++)
 A[i][j]=(2*i+j)/2;
 \end{verbatim}
-
 \begin{verbatim}
-Limbajul C++
-while(n!=3)
-    { n--;
-    cout<<"$$";}
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul C++
-for(i=1;i<=n;i++)
-for( }\textrm{j}=1;\textrm{j}<=n;j++
+Limbajul C++ 
+for(i=1;i<=n;i++) 
+for(j=1;j<=n;j++) 
 A[i][j]=(2*i+j)/2;
+Limbajul Pascal for i:=1 to n do 
+for i:=1 to n do 
+A[i,j]:=(2*i+j)/2;
 \end{verbatim}
-
-Limbajul Pascal for $\mathrm{i}:=1$ to n do for $i:=1$ to $n$ do A[i,j]:=(2*i+j)/2;
-
-Precizați suma elementelor alfate pe diagonala principală a tabloului bidimensional A, în urma execuției secvenței de mai sus.\\
-a) $\frac{3}{4} \cdot(n+1) \cdot n$\\
-b) $\frac{3}{4} \cdot n^{2}$\\
-c) $\frac{4}{3} \cdot n^{2}$\\
-d) $\frac{1}{4} \cdot(n+1) \cdot n$\\
-e) $\frac{1}{4} \cdot n^{2}$\\
-f) $\frac{1}{3} \cdot n^{2}$\\
-12. Se consideră declarările de mai jos. Indicați tipul expresiei aa.a.a
-
-\begin{center}
-\begin{tabular}{|l|l|l|}
-\hline
-Limbajul C struct S1 {int a; char b;}; struct S2 {float a; double b; }; struct S3 {struct S1 a; struct S2 b; } $a \mathrm{a}, \mathrm{bb}$; & Limbajul C++ struct S1 {int a; char b;}; struct S2 {float a; double b; }; struct S3 {struct S1 a; struct S2 b; } $a \mathrm{a}, \mathrm{bb}$; & Limbajul Pascal Type S1=Record a: integer; b: char; End; S2=Record a: real; b: real; End; S3=Record a: S1; b: S2; End; var aa,bb:S3; \\
-\hline
-\end{tabular}
-\end{center}
-
-a) long/ long/ longint\\
-b) float/ float/ real\\
-c) int/ int/ integer\\
-d) double/ double/ real\\
-e) char/ char/char\\
-f) nu putem avea în înregistrări diferite, câmpuri cu același nume\\
-13. Stabiliți care este valoarea inițială a variabilei naturale i pentru ca secvența de program de mai jos să afișeze valorile $1 \begin{array}{llllll}1 & 2 & 4 & 5 & 6\end{array}$.
-
+Precizați suma elementelor alfate pe diagonala principală a tabloului bidimensional A, în urma execuției secvenței de mai sus.
+\\
+a) $\frac{3}{4} \cdot(n+1) \cdot n$
+\\
+b) $\frac{3}{4} \cdot n^{2}$
+\\
+c) $\frac{4}{3} \cdot n^{2}$
+\\
+d) $\frac{1}{4} \cdot(n+1) \cdot n$
+\\
+e) $\frac{1}{4} \cdot n^{2}$
+\\
+f) $\frac{1}{3} \cdot n^{2}$
+\\
+17.12. Se consideră declarările de mai jos. Indicați tipul expresiei aa.a.a
+\begin{verbatim}
+Limbajul C 
+struct S1 
+{int a; 
+char b;}; 
+struct S2 
+{float a; double 
+b;}; 
+struct S3 
+{struct S1 a; 
+struct S2 b; 
+} aa, bb;
+Limbajul C++ 
+struct S1 
+{int a; 
+char b;}; 
+struct S2 
+{float a; double 
+b;}; 
+struct S3 
+{struct S1 a; 
+struct S2 b; 
+} aa, bb;
+Limbajul Pascal Type S1=Record           
+a: 
+integer;         
+b: char; 
+       End; 
+      S2=Record 
+       a: real; 
+       b: real; 
+         End;        
+S3=Record 
+          a: S1; 
+          b: S2; 
+          End; 
+var aa,bb:S3;
+\end{verbatim}
+\\
+a) long/ long/ longint
+\\
+b) float/ float/ real
+\\
+c) int/ int/ integer
+\\
+d) double/ double/ real
+\\
+e) char/ char/char
+\\
+f) nu putem avea în înregistrări diferite, câmpuri cu același nume
+\\
+17.13. Stabiliți care este valoarea inițială a variabilei naturale i pentru ca secvența de program de mai jos să afișeze valorile $1 \begin{array}{llllll}1 & 2 & 4 & 5 & 6 & 7\end{array}$.
 \begin{verbatim}
 Limbajul C
 k=1;
@@ -8152,7 +8208,6 @@ for(i=...i<=2020;i++)
     k++;
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C++
 k=1;
@@ -8162,7 +8217,6 @@ for(i=...i<=2020;i++)
     k++;
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 $\mathrm{k}:=1$;
@@ -8172,22 +8226,34 @@ Begin
     inc (k);
 end;
 \end{verbatim}
-
-a) 7\\
-b) 17\\
-c) 283\\
-d) 314\\
-e) 2013\\
-f) 2014\\
-14. Se consideră o mulțime A cu n numere naturale. Precizați care este complexitatea temporală pentru a genera toate submulțimile care au proprietatea că suma elementelor fiecărei submulțimi generate este divizibilă cu n.\\
-a) $\mathbf{O}(\mathbf{n} \cdot \log (\mathrm{n}))$\\
-b) $\mathbf{O}(\mathbf{n}+\log (\mathrm{n}))$\\
-c) $\mathbf{O}\left(2^{\text {n }}\right)$\\
-d) $\mathbf{O}\left(\mathbf{n}^{3}\right)$\\
-e) $\mathbf{O}\left(\mathbf{n}^{2}\right)$\\
-f) $\mathbf{O}(\mathbf{n})$\\
-15. Precizați complexitatea timp pentru secvența de program de mai jos.
-
+\\
+a) 7
+\\
+b) 17
+\\
+c) 283
+\\
+d) 314
+\\
+e) 2013
+\\
+f) 2014
+\\
+17.14. Se consideră o mulțime A cu n numere naturale. Precizați care este complexitatea temporală pentru a genera toate submulțimile care au proprietatea că suma elementelor fiecărei submulțimi generate este divizibilă cu n.
+\\
+a) $\mathbf{O}(\mathbf{n} \cdot \log (\mathrm{n}))$
+\\
+b) $\mathbf{O}(\mathbf{n}+\log (\mathrm{n}))$
+\\
+c) $\mathbf{O}\left(2^{\text {n }}\right)$
+\\
+d) $\mathbf{O}\left(\mathbf{n}^{3}\right)$
+\\
+e) $\mathbf{O}\left(\mathbf{n}^{2}\right)$
+\\
+f) $\mathbf{O}(\mathbf{n})$
+\\
+17.15. Precizați complexitatea timp pentru secvența de program de mai jos.
 \begin{verbatim}
 Limbajul C
 k=0;
@@ -8201,30 +8267,33 @@ for(int a=n;a>=1;a/=2)
     for(int b=a;b>=1;b--)
         k++;
 cout<<k;
-\end{verbatim}
-
-a) $\mathbf{O}(\mathbf{n} \cdot \log (\mathrm{n}))$\\
-b) $\mathbf{O}(\mathrm{n}+\log (\mathrm{n}))$\\
-c) $\mathbf{O}\left(\mathbf{2}^{\text {n }}\right)$\\
-d) $\mathbf{O}\left(\mathbf{n}^{2}\right)$\\
-e) $\mathbf{O}(\mathbf{n})$\\
-f) $\mathbf{O}(1)$
-
-\begin{verbatim}
-Limbajul Pascal
-k:=0;a:=n;
-while(a>=1) do
-begin
-    b:=a;
-        while(b>=1) do
-            begin
-                k++;
-                dec (b) ;
-            end;
-    a:=a div 2;
-end;
+Limbajul Pascal 
+k:=0;a:=n; 
+while(a>=1) do  
+begin 
+  b:=a; 
+    while(b>=1) do 
+       begin 
+        k++; 
+        dec(b); 
+      end; 
+  a:=a div 2; 
+end; 
 write(k);
 \end{verbatim}
+\\
+a) $\mathbf{O}(\mathbf{n} \cdot \log (\mathrm{n}))$
+\\
+b) $\mathbf{O}(\mathrm{n}+\log (\mathrm{n}))$
+\\
+c) $\mathbf{O}\left(\mathbf{2}^{\text {n }}\right)$
+\\
+d) $\mathbf{O}\left(\mathbf{n}^{2}\right)$
+\\
+e) $\mathbf{O}(\mathbf{n})$
+\\
+f) $\mathbf{O}(1)$
+\\
 
 \section*{Varianta 18}
 \begin{enumerate}
