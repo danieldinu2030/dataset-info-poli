@@ -14,8 +14,7 @@ while true; do
     echo "[2] Full format check for one set of exercises"
     echo "[3] Format check for dual mode exercises"
     echo "[4] Format check for trio mode exercises"
-    echo "[5] Format check for \\\\ inside verbatim blocks in all exercises"
-    echo "[6] Attempt extraction to CSV"
+    echo "[5] Attempt extraction to CSV"
     echo "==============================================================="
     read -p "Choose operation: " choice
 
@@ -52,13 +51,6 @@ while true; do
             read -p "Press Enter to continue..."
             ;;
         5)
-            python3 $checker $src | grep verbatim
-            if [ $? -eq 1 ]; then
-                echo "All verbatim block are clean."
-            fi
-            read -p "Press Enter to continue..."
-            ;;
-        6)
             python3 $extractor $src $dest
             read -p "Press Enter to continue..."
             ;;
