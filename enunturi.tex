@@ -6521,14 +6521,29 @@ a) \begin{verbatim}
 b) \begin{verbatim}
 5 30
 5 80
-
-
-
-\begin{enumerate}
-  \setcounter{enumi}{3}
-  \item Precizați care este valoarea returnată de funcție la apelul $f(1502)$.
-\end{enumerate}
-
+\end{verbatim}
+\\
+c) \begin{verbatim}
+5 30
+10 80
+\end{verbatim}
+\\
+d) \begin{verbatim}
+10 30
+10 80
+\end{verbatim}
+\\
+e) \begin{verbatim}
+10 30
+30 70
+\end{verbatim}
+\\
+f) \begin{verbatim}
+10 30
+30 80
+\end{verbatim}
+\\
+14.4. Precizați care este valoarea returnată de funcție la apelul $f(1502)$.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 int f(int i)
@@ -6540,14 +6555,6 @@ int f(int i)
         return i%10 * f(i/10);
 }
 \end{verbatim}
-
-a) 3175\\
-b) 2600\\
-c) 2330\\
-d) 2050\\
-e) 530\\
-f) 350
-
 \begin{verbatim}
 Limbajul Pascal
 function
@@ -6561,12 +6568,20 @@ else
     f:=(i mod 10)*f(i div 10);
 end;
 \end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{4}
-  \item Precizați ce se va afișa în urma rulării secvenței următoare, în care se consideră că variabilele $\mathbf{x}$ și $\mathbf{y}$ sunt de tip întreg.
-\end{enumerate}
-
+\\
+a) 3175
+\\
+b) 2600
+\\
+c) 2330
+\\
+d) 2050
+\\
+e) 530
+\\
+f) 350
+\\
+14.5. Precizați ce se va afișa în urma rulării secvenței următoare, în care se consideră că variabilele $\mathbf{x}$ și $\mathbf{y}$ sunt de tip întreg.
 \begin{verbatim}
 Limbajul C++
 x=2 ; y=5;
@@ -6574,34 +6589,34 @@ while(x<y)
     { cout<<++x+y++<<<" ";
         x++; }
 Limbajul C
-$\mathrm{x}=2$; $\mathrm{y}=5$;
-while (x<y)
+x=2; y=5; 
+while(x<y) 
+{ printf("%d ",++x+y++); 
+  x++; }
+Limbajul Pascal 
+x:=2; y:=5; 
+while x<y do 
+  begin 
+     inc(x); 
+     write(x+y,' '); 
+     inc(y); 
+     inc(x); 
+  end; 
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal $x:=2$; $y:=5$;
-while x<y do
-    begin
-        inc(x);
-        write(x+y,' ');
-        inc(y);
-        inc(x);
-    end;
-\end{verbatim}
-
-\begin{verbatim}
-{ printf("%d ",++x+y++);
-    x++; }
-\end{verbatim}
-
-a) $7 \quad 10 \quad 13$\\
-b) 810\\
-c) $8 \quad 11 \quad 14$\\
-d) 911\\
-e) 912\\
-f) $9 \quad 12 \quad 15$\\
-6. Știind că variabila s este de tip şir de caractere, precizați ce se va afișa după executarea următoarei secvențe de instrucţiuni.
-
+\\
+a) 7 10 13
+\\
+b) 8 10
+\\
+c) 8 11 14
+\\
+d) 9 11
+\\
+e) 9 12
+\\
+f) 9 12 15
+\\
+14.6. Știind că variabila s este de tip şir de caractere, precizați ce se va afișa după executarea următoarei secvențe de instrucţiuni.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 strcpy(s, "Examen-UPB");
@@ -6611,7 +6626,6 @@ strcpy(s+strlen(s)/2-1,
 s+strlen(s)/2+1);
 printf("%s",s); | cout<<s;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 s:='Examen-UPB';
@@ -6620,71 +6634,132 @@ do s[i]:=s[length(s)-i+2];
 delete(s,length(s) div 2,2);
 write(s) ;
 \end{verbatim}
-
-a) - UPB\\
-b) $-n-U P B$\\
-c) n -UPB\\
-d) EBPUUPB\\
-e) EBPU-UPB\\
-f) EBPU--UPB\\
-7. Indicați care este numărul necesar de comparații pentru ordonarea prin interschimbare a unui tablou unidimensional cu 100 elemente.\\
-a) 99\\
-b) 2475\\
-c) 4851\\
-d) 4950\\
-e) 5050\\
-f) 10000\\
-8. Indicați câte numere divizibile cu 10 , cu 10 cifre, pot fi construite folosind numai cifrele 0, 1 și 2.\\
-a) 6561\\
-b) 13122\\
-c) 13212\\
-d) 15322\\
-e) 19683\\
-f) 59049\\
-9. Fie mulțimile $A=\{1,2,3,4\}, B=\{1,2,3\}, C=\{1,2\}, D=\{1,2,3,4\}$. Precizați care este al 10-lea element al produsului cartezian $\mathbf{A} \times \mathbf{B} \times \mathbf{C} \times \mathrm{D}$, cât și antepenultimul element.\\
-a) 1212 ; 4322\\
-b) 1212 ; 4323\\
-c) 1213 ; 4322\\
-d) 1221 ; 4322\\
-e) 1312 ; 4322\\
-f) 1312 ; 4323\\
-10. Fie un graf neorientat cu 25 noduri și $\mathbf{4 0}$ muchii. Precizați care este numărul maxim de noduri izolate pe care le poate avea graful.\\
-a) 16\\
-b) 15\\
-c) 14\\
-d) 13\\
-e) 10\\
-f) 5\\
-11. Fie un graf neorientat cu 100 noduri. Precizați care este numărul minim de muchii necesar pentru ca graful să nu aibă noduri izolate.\\
-a) 48\\
-b) 49\\
-c) 50\\
-d) 98\\
-e) 99\\
-f) 100\\
-12. Precizați care este numărul maxim de frunze al unui arbore binar cu 100 noduri care are înălțimea minimă. Un arbore binar este un arbore în care fiecare nod are cel mult doi descendenți direcți (fii).\\
-a) 99\\
-b) 69\\
-c) 51\\
-d) 50\\
-e) 37\\
-f) 34\\
-13. Fie arborele cu rădăcină cu nodurile numerotate de la $\mathbf{1}$ la 15 , reprezentat prin vectorul de tați: $(10,8,4,10,1,4,5,10,8,0,3,5,3,12,3)$. Precizați câte lanțuri elementare distincte de lungime 3 , care pleacă din radăcină, există.\\
-a) 2\\
-b) 3\\
-c) 4\\
-d) 5\\
-e) 6\\
-f) 7\\
-14. Precizați câte grafuri orientate distincte cu 25 noduri, dintre care cel puțin un nod este izolat, se pot construi.\\
-a) $5^{2} \cdot 2^{600}$\\
-b) $3 \cdot 2^{603}$\\
-c) $2^{600}$\\
-d) $5^{2} \cdot 2^{552}$\\
-e) $3 \cdot \mathbf{2}^{555}$\\
-f) $\mathbf{2}^{552}$\\
-15. Precizați care este complexitatea timp pentru următoarea secvență de program, unde n reprezintă numărul de elemente al unui tablou unidimensional $\mathbf{v}$, numerotat de la 1 la n , cu elemente numere întregi, iar $\mathbf{x}$ un număr întreg.
-
+\\
+a) - UPB
+\\
+b) -n-UPB
+\\
+c) n-UPB
+\\
+d) EBPUUPB
+\\
+e) EBPU-UPB
+\\
+f) EBPU--UPB
+\\
+14.7. Indicați care este numărul necesar de comparații pentru ordonarea prin interschimbare a unui tablou unidimensional cu 100 elemente.
+\\
+a) 99
+\\
+b) 2475
+\\
+c) 4851
+\\
+d) 4950
+\\
+e) 5050
+\\
+f) 10000
+\\
+14.8. Indicați câte numere divizibile cu 10 , cu 10 cifre, pot fi construite folosind numai cifrele 0, 1 și 2.
+\\
+a) 6561
+\\
+b) 13122
+\\
+c) 13212
+\\
+d) 15322
+\\
+e) 19683
+\\
+f) 59049
+\\
+14.9. Fie mulțimile $A=\{1,2,3,4\}, B=\{1,2,3\}, C=\{1,2\}, D=\{1,2,3,4\}$. Precizați care este al 10-lea element al produsului cartezian $\mathbf{A} \times \mathbf{B} \times \mathbf{C} \times \mathrm{D}$, cât și antepenultimul element.
+\\
+a) 1212 ; 4322
+\\
+b) 1212 ; 4323
+\\
+c) 1213 ; 4322
+\\
+d) 1221 ; 4322
+\\
+e) 1312 ; 4322
+\\
+f) 1312 ; 4323
+\\
+14.10. Fie un graf neorientat cu 25 noduri și $\mathbf{4 0}$ muchii. Precizați care este numărul maxim de noduri izolate pe care le poate avea graful.
+\\
+a) 16
+\\
+b) 15
+\\
+c) 14
+\\
+d) 13
+\\
+e) 10
+\\
+f) 5
+\\
+14.11. Fie un graf neorientat cu 100 noduri. Precizați care este numărul minim de muchii necesar pentru ca graful să nu aibă noduri izolate.
+\\
+a) 48
+\\
+b) 49
+\\
+c) 50
+\\
+d) 98
+\\
+e) 99
+\\
+f) 100
+\\
+14.12. Precizați care este numărul maxim de frunze al unui arbore binar cu 100 noduri care are înălțimea minimă. Un arbore binar este un arbore în care fiecare nod are cel mult doi descendenți direcți (fii).
+\\
+a) 99
+\\
+b) 69
+\\
+c) 51
+\\
+d) 50
+\\
+e) 37
+\\
+f) 34
+\\
+14.13. Fie arborele cu rădăcină cu nodurile numerotate de la $\mathbf{1}$ la 15 , reprezentat prin vectorul de tați: $(10,8,4,10,1,4,5,10,8,0,3,5,3,12,3)$. Precizați câte lanțuri elementare distincte de lungime 3 , care pleacă din radăcină, există.
+\\
+a) 2
+\\
+b) 3
+\\
+c) 4
+\\
+d) 5
+\\
+e) 6
+\\
+f) 7
+\\
+14.14. Precizați câte grafuri orientate distincte cu 25 noduri, dintre care cel puțin un nod este izolat, se pot construi.
+\\
+a) $5^{2} \cdot 2^{600}$\
+\
+b) $3 \cdot 2^{603}$
+\\
+c) $2^{600}$
+\\
+d) $5^{2} \cdot 2^{552}$
+\\
+e) $3 \cdot \mathbf{2}^{555}$
+\\
+f) $\mathbf{2}^{552}$
+\\
+14.15. Precizați care este complexitatea timp pentru următoarea secvență de program, unde n reprezintă numărul de elemente al unui tablou unidimensional $\mathbf{v}$, numerotat de la 1 la n , cu elemente numere întregi, iar $\mathbf{x}$ un număr întreg.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 j=0;
@@ -6693,7 +6768,6 @@ for(i=1; i<=n; i++)
         { j++; v[j]=v[i]; }
 n=j;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 j:=0;
@@ -6704,13 +6778,19 @@ for i:=1 to n do
 end;
     n:=j;
 \end{verbatim}
-
-a) $O$ ( $n$ )\\
-b) $O(\log n)$\\
-c) $O(n \cdot \log n)$\\
-d) $O\left(n^{2}\right)$\\
-e) $O\left(n^{3}\right)$\\
+\\
+a) $O$ ( $n$ )
+\\
+b) $O(\log n)$
+\\
+c) $O(n \cdot \log n)$
+\\
+d) $O\left(n^{2}\right)$
+\\
+e) $O\left(n^{3}\right)$
+\\
 f) $O\left(2^{n}\right)$
+\\
 
 \section*{Varianta 15}
 \begin{enumerate}
