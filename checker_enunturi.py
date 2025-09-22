@@ -92,7 +92,7 @@ for match in exercise_pattern.finditer(data):
         print(msg)
         continue # skip to next exercise
 
-    # --- Trio mode ---
+    # Trio mode
     if rest.lstrip().startswith("Limbajul C++"):
         # Split but keep the markers
         lang_split = re.split(r'(?=Limbajul (?:C\+\+|C|Pascal))', rest)

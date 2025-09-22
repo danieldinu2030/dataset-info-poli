@@ -24,7 +24,10 @@ while true; do
             exit 0
             ;;
         1)
-            python3 $checker $src
+            python3 $checker $src | grep not
+            if [ $? -eq 1 ]; then
+                echo "All exercises match."
+            fi
             read -p "Press Enter to continue..."
             ;;
         2)
@@ -36,17 +39,16 @@ while true; do
             read -p "Press Enter to continue..."
             ;;
         3) 
-            python3 $checker $src | grep dual
+            python3 $checker $src | grep dual | grep not
             if [ $? -eq 1 ]; then
-                echo "There are no dual mode exercises."
+                echo "All dual mode exercises match."
             fi
-
             read -p "Press Enter to continue..."
             ;;
         4)
-            python3 $checker $src | grep trio
+            python3 $checker $src | grep trio | grep not
             if [ $? -eq 1 ]; then
-                echo "There are no trio mode exercises."
+                echo "All trio mode exercises match."
             fi
             read -p "Press Enter to continue..."
             ;;
