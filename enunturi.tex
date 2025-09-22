@@ -2947,90 +2947,126 @@ f) 6
 
 \section*{Varianta 7}
 
-\begin{enumerate}
-  \item Indicaţi care dintre expresiile $\mathrm{C}++/ \mathrm{C} /$ Pascal de mai jos are valoarea true/1 dacă și numai dacă numărul memorat în variabila întreagă x aparţine reuniunii de intervale:
-\end{enumerate}
-
-\begin{verbatim}
+7.1. Indicaţi care dintre expresiile $\mathrm{C}++/ \mathrm{C} /$ Pascal de mai jos are valoarea true/1 dacă și numai dacă numărul memorat în variabila întreagă x aparţine reuniunii de intervale:
 $[-4,-1] \cup[1,4] \cup[10, \infty)$.
+\\
 Limbajul C++/ Limbajul C
-a) $x>=-4$ \&\& $x<=-1 \quad \& \& \quad x>=1 \quad \& \& \quad x<=4 \quad \& \& \quad x>=10$
-b) ! ( $x<-4$ || $x>-1$ ) || ! ( $x<1$ || $x>4$ ) || ! $(x<10)$
-c) $x>=-4$ || $x<=-1$ || $x>=1$ || $x<=4$ || $x>=10$
-d) ! $(x<-4 \& \& \quad x>4 \& \& x>-1 \quad| | x<1 \& \& x>=10)$
-e) ! $(x<-4| | x>-1) \& \&!(x<1| | x>4) \quad| |!(x<10)$
-f) ! ( $x<-4$ || $x>-1$ ) \&\& ! $(x<1| | x>4) \& \&!(x<10)$
+a) x>= -4 \&\& x<= -1 \&\& x>=1 \&\& x<=4 \&\& x>=10
+\\
+b) !(x<-4 \|\| x>-1) \|\| !(x<1 \|\| x>4) \|\| !(x<10)
+\\
+c) x>= -4 \|\| x<=-1 \|\| x>=1 \|\| x<=4 \|\| x>=10
+\\
+d) !(x<-4 \&\& x>4 \&\& x>-1 \|\| x<1 \&\& x>=10)
+\\
+e) !(x<-4 \|\| x>-1) \&\& !(x<1 \|\| x>4) \|\| !(x<10)
+\\
+f) !(x<-4 \|\| x>-1) \&\& !(x<1 \|\| x>4) \&\& !(x<10)
+\\
 Limbajul Pascal
-a) $(x>=-4)$ and $(x<=-1)$ and $(x>=1)$ and $(x<=4)$ and ( $x>=10)$
-b) not(( $x<-4$ ) or ( $x>-1)$ ) or not( $(x<1)$ or ( $x>4)$ ) or not $(x<10)$
-c) ( $x>=-4$ ) or ( $x<=-1$ ) or ( $x>=1$ ) or ( $x<=4$ ) or ( $x>=10$ )
-d) $\operatorname{not}((x<-4)$ and $(x>4)$ and ( $x>-1)$ or ( $x<1$ ) and ( $x>=10)$ )
-e) $\operatorname{not}((x<-4)$ or $(x>-1))$ and $\operatorname{not}((x<1)$ or $(x>4))$ or $\operatorname{not}(x<10)$
-f) $\operatorname{not}((x<-4)$ or $(x>-1))$ and $\operatorname{not}((x<1)$ or $(x>4))$ and $\operatorname{not}(x<10)$
-\end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{1}
-  \item Indicați expresia $\mathrm{C}++/ \mathrm{C} /$ Pascal care are valoarea true /1:
-\end{enumerate}
-
-Limbajul C++/ Limbajul C\\
-a) floor (5) $+1==\operatorname{ceil}(5)$\\
-b) floor(5.49) $==$ ceil(5.49)\\
-c) floor(5.19) $==$ floor(5.91)\\
-d) floor(5.91) $==$ ceil(5.19)\\
-e) floor(sqrt(8))==ceil(sqrt(8))\\
-f) $\operatorname{sqrt}(4)==\operatorname{pow}(4,2)$
-
-Limbajul Pascal\\
-a) trunc (5) +1 $=$ round (5)\\
-b) trunc(5.19) $=$ round (5.91)\\
-c) trunc(5.19) $=$ trunc(5.91)\\
-d) round(5.91) $=$ round (5.19)\\
-e) round (sqrt(8)) =trunc (sqrt (8))\\
-f) $\operatorname{sqrt}(4)=\operatorname{sqr}(4)$\\
-3. Se consideră două tablouri unidimensionale $A$ şi $B$. Știind că $A=(7,10,12,18,20)$, iar în urma interclasării tablourilor A şi B, în ordine descrescătoare, se obține tabloul cu elementele $(46,20,18,17,12,10,10,7,4,3)$. Atunci tabloul B poate fi:\\
-a) $(3,4,17,46)$\\
-b) $(3,4,10,46)$\\
-c) $(3,4,10,17)$\\
-d) $(3,4,10,17,46)$\\
-e) $(46,17,4,3)$\\
-f) $(46,10,4,3)$\\
-4. Pentru a verifica dacă într-un tablou unidimensional având elementele $(3,4,7,10,12,17,18,20,46)$ există elementul cu valoarea $\mathbf{x}=17$, se aplică metoda căutării binare. Ştiind că numerotarea elementelor, în tablou, se realizează începând cu poziţia 0 , care este numărul minim de elemente ale tabloului care trebuie verificate pentru a găsi elementul căutat?\\
-a) 6\\
-b) 2\\
-C) 9\\
-d) 5\\
-e) 3\\
-f) 1\\
-5. Variabila $\mathbf{x}$ este de tip real și poate memora un număr real din intervalul $[32,48]$. Numărul valorilor distincte pe care le poate avea expresia următoare este:
-
+a) (x>= -4) and (x<= -1) and ( x>=1) and (x<=4) and (x>=10)
+\\
+b) not((x<-4) or ( x>-1)) or not((x<1)or (x>4)) or not(x<10)
+\\
+c) (x>= -4) or (x<=-1) or (x>=1) or (x<=4) or (x>=10)
+\\
+d) not((x<-4) and (x>4) and (x>-1) or (x<1) and (x>=10))
+\\
+e) not((x<-4) or ( x>-1)) and not((x<1)or (x>4)) or not(x<10)
+\\
+f) not((x<-4) or ( x>-1)) and not((x<1)or (x>4)) and not(x<10)
+\\
+7.2. Indicați expresia $\mathrm{C}++/ \mathrm{C} /$ Pascal care are valoarea true /1:
+\\
+Limbajul C++/ Limbajul C
+a) floor(5)+1 == ceil(5)
+\\
+b) floor(5.49) == ceil(5.49)
+\\
+c) floor(5.19) == floor(5.91)
+\\
+d) floor(5.91) == ceil(5.19)
+\\
+e) floor(sqrt(8))==ceil(sqrt(8))
+\\
+f) sqrt(4) == pow(4,2)
+\\
+Limbajul Pascal
+a) trunc(5)+1 = round(5)
+\\
+b) trunc(5.19) = round(5.91)
+\\
+c) trunc(5.19) = trunc(5.91)
+\\  
+d) round(5.91) = round(5.19)
+\\
+e) round(sqrt(8))=trunc(sqrt(8))
+\\
+f) sqrt(4) = sqr(4)
+\\
+7.3. Se consideră două tablouri unidimensionale $A$ şi $B$. Știind că $A=(7,10,12,18,20)$, iar în urma interclasării tablourilor A şi B, în ordine descrescătoare, se obține tabloul cu elementele $(46,20,18,17,12,10,10,7,4,3)$. Atunci tabloul B poate fi:
+\\
+a) (3,4,17,46)
+\\
+b) (3,4,10,46)
+\\
+c) (3,4,10,17)
+\\
+d) (3,4,10,17,46)
+\\
+e) (46,17,4,3)
+\\
+f) (46,10,4,3)
+\\
+7.4. Pentru a verifica dacă într-un tablou unidimensional având elementele $(3,4,7,10,12,17,18,20,46)$ există elementul cu valoarea $\mathbf{x}=17$, se aplică metoda căutării binare. Ştiind că numerotarea elementelor, în tablou, se realizează începând cu poziţia 0 , care este numărul minim de elemente ale tabloului care trebuie verificate pentru a găsi elementul căutat?
+\\
+a) 6
+\\
+b) 2
+\\
+C) 9
+\\
+d) 5
+\\
+e) 3
+\\
+f) 1
+\\
+7.5. Variabila $\mathbf{x}$ este de tip real și poate memora un număr real din intervalul $[32,48]$. Numărul valorilor distincte pe care le poate avea expresia următoare este:
 \begin{verbatim}
 Limbajul C++/C
 floor(sqrt(x+1))
-\end{verbatim}
-
 Limbajul Pascal
-
-\begin{verbatim}
 trunc(sqrt(x+1))
 \end{verbatim}
-
-a) 17\\
-b) 1\\
-c) 0\\
-d) 2\\
-e) 4\\
-f) 3\\
-6. Un grup format din şase prieteni (Andrei, Bogdan, Claudiu, Daniel, Emil, Florin) doreşte să participe la o competiţie de baschet pentru echipe formate din câte trei jucători. Ştiind că echipa Andrei, Bogdan, Claudiu este identică cu echipa Bogdan, Claudiu, Andrei, precizați care este numărul de echipe care se pot forma cu cei şase prieteni.\\
-a) 2\\
-b) 720\\
-c) 120\\
-d) 20\\
-e) 6\\
-f) 3\\
-7. Fie subprogramul recursiv următor:
-
+\\
+a) 17
+\\
+b) 1
+\\
+c) 0
+\\
+d) 2
+\\
+e) 4
+\\
+f) 3
+\\
+7.6. Un grup format din şase prieteni (Andrei, Bogdan, Claudiu, Daniel, Emil, Florin) doreşte să participe la o competiţie de baschet pentru echipe formate din câte trei jucători. Ştiind că echipa Andrei, Bogdan, Claudiu este identică cu echipa Bogdan, Claudiu, Andrei, precizați care este numărul de echipe care se pot forma cu cei şase prieteni.
+\\
+a) 2
+\\
+b) 720
+\\
+c) 120
+\\
+d) 20
+\\
+e) 6
+\\
+f) 3
+\\
+7.7. Fie subprogramul recursiv următor:
 \begin{verbatim}
 Limbajul C++
 void ex(char c)
@@ -3041,7 +3077,6 @@ void ex(char c)
             ex(c-1);
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 void ex(char c)
@@ -3052,7 +3087,6 @@ void ex(char c)
             ex(c-1);
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 procedure ex(c:char)
@@ -3064,64 +3098,70 @@ ex(pred(c));
 ex(pred(c));
 end;
 \end{verbatim}
-
-Indicați numărul de autoapeluri ale subprogramului dacă se apelează ex (' c' ) :\\
-a) 0\\
-b) 1\\
-c) 7\\
-d) 3\\
-e) 6\\
-f) 5\\
-8. Într-un program $\mathrm{C}++/ \mathrm{C} /$ Pascal în care a este o variabilă de tip întreg, se citesc datele din fişierul "admitere.dat" utilizând următoarea instruç̧iune:
-
-Limbajul C++\\
-Limbajul C\\
-Limbajul Pascal\\
+Indicați numărul de autoapeluri ale subprogramului dacă se apelează ex (' c' ) :
+\\
+a) 0
+\\
+b) 1
+\\
+c) 7
+\\
+d) 3
+\\
+e) 6
+\\
+f) 5
+\\
+7.8. Într-un program $\mathrm{C}++/ \mathrm{C} /$ Pascal în care a este o variabilă de tip întreg, se citesc datele din fişierul "admitere.dat" utilizând următoarea instruç̧iune:
+\begin{verbatim}
+Limbajul C++
 f>>a;
-
-\begin{verbatim}
+Limbajul C
 fscanf(f, "%d", &a);
-\end{verbatim}
-
-Precizaţi care este forma corectă a instrucţiunii ce are ca efect închiderea fişierului utilizat:\\
-Limbajul C++\\
-Limbajul C\\
 Limbajul Pascal
-
-\begin{verbatim}
-a) close(f);
-b) close (admitere) ;
-c) admitere.close () ;
-d) close.admitere;
-e) close.f;
-f) f.close();
+readln(f, a);
 \end{verbatim}
-
+Precizaţi care este forma corectă a instrucţiunii ce are ca efect închiderea fişierului utilizat:
+\\
+Limbajul C++/Limbajul C
+a) close(f) | fclose(admitere);
+\\
+b) close(admitere) | close(admitere);
+\\
+c) admitere.close() | close(f);
+\\
+d) close.admitere | admitere(close);
+\\
+e) close.f | close.f;
+\\
+f) f.close() | fclose(f);
+\\
+Limbajul Pascal
+a)  f.close();
+\\
+b)  admitere.close();
+\\ 
+c)  close(admitere);
+\\
+d)  admitere(close);
+\\
+e)  close.f;
+\\
+f)  close(f);
+\\
+7.9. Se consideră următoarea secvență de instrucțiuni:
 \begin{verbatim}
-a) fclose (admitere) ;
-b) close (admitere) ;
-c) close (f) ;
-d) admitere (close) ;
-e) close.f
-f) fclose (f) ;
+Limbajul C++ 
+char cif; int cifra; 
+cin>>cif;    
+cifra = cif – '0'; 
+cout<< cifra;
+Limbajul C
+char cif; int cifra; 
+scanf("%c", &cif); 
+cifra = cif-'0'; 
+printf ("%d", cifra);
 \end{verbatim}
-
-a) f.close();\\
-b) admitere.close();\\
-c) close(admitere);\\
-d) admitere (close);\\
-e) close.f;\\
-f) close(f);\\
-9. Se consideră următoarea secvență de instrucțiuni:
-
-\begin{verbatim}
-Limbajul C++ Limbajul C
-char cif; int cifra; char cif; int cifra;
-cin>>cif; scanf("%c", &cif);
-cifra = cif - '0'; cifra = cif-'0';
-cout<< cifra; printf ("%d", cifra);
-\end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 var cif: char;
@@ -3132,44 +3172,42 @@ cifra:=ord(cif) -ord('0');
     write (cifra);
 end.
 \end{verbatim}
-
 Precizați ce se afişează după executarea acestei secvenţe dacă, în urma operaţiei de citire, variabila cif conține caracterul ' 9 '.
-
-\begin{verbatim}
-a) instrucţiunea de atribuire
-b) '9'
-C) }
-    cifra:=ord(cif)-ord('0');
+\\
+a) \begin{verbatim}
+instrucţiunea de atribuire
+cifra:=ord(cif)-ord('0');
 {Pascal}
     cifra = cif - '0'; //C++/C
         este incorectă
-d) 0
-e) 'O' f) 57
 \end{verbatim}
-
-10 Variabila c definită mai jos, memorează codul, cele două note obținute la probele matematică şi informatică din cadrul concursului de admitere la Facultatea de Automatică şi Calculatoare, precum şi media obţinută la examenul de bacalaureat pentru un candidat.
-
+\\
+b) '9'
+\\
+c) 9
+\\
+d) 0
+\\
+e) 'O'
+\\
+f) 57
+\\
+7.10. Variabila c definită mai jos, memorează codul, cele două note obținute la probele matematică şi informatică din cadrul concursului de admitere la Facultatea de Automatică şi Calculatoare, precum şi media obţinută la examenul de bacalaureat pentru un candidat.
 \begin{verbatim}
 Limbajul C++
-Limbajul C
-typedef struct {
-typedef struct {
-        unsigned cod;
-        float p1, p2;
-        float medbac;
-    }candidat ;
-    candidat c;
-\end{verbatim}
-
-\begin{verbatim}
-    unsigned cod;
-    float p1, p2;
-    float medbac;
-}candidat;
+typedef struct      {  
+ unsigned  cod; 
+ float p1, p2;  
+ float medbac; 
+}candidat ; 
 candidat c;
-\end{verbatim}
-
-\begin{verbatim}
+Limbajul C
+typedef struct {  
+ unsigned  cod; 
+ float p1, p2;  
+ float medbac; 
+}candidat; 
+candidat c;
 Limbajul Pascal
 type candidat=record
             cod: word;
@@ -3178,150 +3216,246 @@ type candidat=record
                 end;
 var c: candidat;
 \end{verbatim}
-
-Precizaţi care este expresia corectă ce poate fi utilizată pentru a verifica dacă un candidat îndeplineşte baremul minim de admitere (media de admitere este minimum 5):\\
-a) $(\mathrm{p} 1+\mathrm{p} 2) / 2 * 0.8+$ medbac\textit{0.2 $>=5.0$\\
-b) (candidat.p1 + candidat.p2)\textit{0.8 + candidat.medbac}0.2 >= 5.0\\
-c) (candidat.c.p1 + candidat.c.p2)\textit{0.8 + candidat.c.medbac}0.2 >=5.0\\
-d) (c.p1 + c.p2)/2}0.8 + c.medbac*0.2 >= 5.0\\
-e) ((candidat.p1 + candidat.p2)\textit{0.8 + candidat.medbac}0.2) >=5.0\\
-f) $80 / 100 *(c . p 1+c . p 2) / 2+20 / 100 * c . m e d b a c>=5.0$\\
-11. Precizaţi care este antetul corect al unui subprogram (definit de utilizator) care returnează prima şi ultima cifră a unui număr natural $n$, fără a permite modificarea parametrului $n$.
-
-Limbajul C++\\
-a) unsigned cifre (unsigned n)\\
-b) unsigned cifre (unsigned $n$, unsigned prim, unsigned ult)\\
-c) void cifre (unsigned $n$, unsigned prim, unsigned ult)\\
-d) void cifre (unsigned $n$, unsigned \&prim, unsigned \&ult)\\
-e) void cifre (unsigned $\& n$, unsigned \&prim, unsigned \&ult)\\
-f) void cifre (unsigned $\& n$ )
-
-Limbajul C\\
-a) unsigned cifre (unsigned n)\\
-b) unsigned cifre (unsigned $n$, unsigned prim, unsigned ult)\\
-c) void cifre (unsigned $n$, unsigned prim, unsigned ult)\\
-d) void cifre (unsigned $n$, unsigned *prim, unsigned *ult)\\
-e) void cifre (unsigned *n, unsigned *prim, unsigned *ult)\\
+Precizaţi care este expresia corectă ce poate fi utilizată pentru a verifica dacă un candidat îndeplineşte baremul minim de admitere (media de admitere este minimum 5):
+\\
+a)  (p1+p2)/2*0.8 + medbac*0.2 >= 5.0 
+\\
+b)  (candidat.p1 + candidat.p2)*0.8 + candidat.medbac*0.2 >= 5.0 
+\\
+c)  (candidat.c.p1 + candidat.c.p2)*0.8 + candidat.c.medbac*0.2 >= 5.0 
+\\
+d)  (c.p1 + c.p2)/2*0.8 + c.medbac*0.2 >= 5.0 
+\\
+e)  ((candidat.p1 + candidat.p2)*0.8 + candidat.medbac*0.2) >= 5.0 
+\\
+f)  80/100*(c.p1 + c.p2)/2+ 20/100*c.medbac >= 5.0
+\\
+7.11. Precizaţi care este antetul corect al unui subprogram (definit de utilizator) care returnează prima şi ultima cifră a unui număr natural $n$, fără a permite modificarea parametrului $n$.
+\\
+Limbajul C++
+a) unsigned cifre (unsigned n)
+\\
+b) unsigned cifre (unsigned n, unsigned prim, unsigned ult)
+\\
+c) void cifre (unsigned n, unsigned prim, unsigned ult)
+\\
+d) void cifre (unsigned n, unsigned \&prim, unsigned \&ult)
+\\
+e) void cifre (unsigned \& n, unsigned \&prim, unsigned \&ult)
+\\
+f) void cifre (unsigned \& n)
+\\
+Limbajul C
+a) unsigned cifre (unsigned n)
+\\
+b) unsigned cifre (unsigned n, unsigned prim, unsigned ult)
+\\
+c) void cifre (unsigned n, unsigned prim, unsigned ult)
+\\
+d) void cifre (unsigned n, unsigned *prim, unsigned *ult)
+\\
+e) void cifre (unsigned *n, unsigned *prim, unsigned *ult)
+\\
 f) void cifre (unsigned *n)
-
-Limbajul Pascal\\
-a) function cifre ( n : longint) : byte;\\
-b) function cifre ( $n$ : longint; prim,ult: byte): byte;\\
-c) procedure cifre (n: longint; prim,ult: byte);\\
-d) procedure cifre ( $n$ : longint; var prim,ult: byte);\\
-e) procedure cifre (var n: longint; var prim,ult: byte);\\
-f) procedure cifre (var n: longint);\\
-12. Precizați care sunt numărul maxim, respectiv numărul minim de componente conexe pentru un graf neorientat cu 16 noduri şi 16 muchii?\\
-a) 1 şi 1\\
-b) 11 şi 2\\
-c) 2 şi 1\\
-d) 16 şi 1\\
-e) 11 şi 1\\
-f) 10 şi 1\\
-13. Precizați care sunt numărul minim și numărul maxim de arce ale unui graf orientat tare conex cu 15 vârfuri.\\
-a) $\mathbf{1 4}$ și 105\\
-b) $\mathbf{1 5}$ și $\mathbf{1 0 5}$\\
-c) $\mathbf{1 5}$ și $\mathbf{2 1 0}$\\
-d) $\mathbf{1 4}$ și $\mathbf{2 1 0}$\\
-e) 15 şi 15\\
-f) $\mathbf{1 4}$ și $\mathbf{1 5}$\\
-14. Dacă $\mathbf{G}$ este un graf neorientat eulerian cu 10 noduri și 16 muchii, iar lista de adiacență a fiecărui nod din $\mathbf{G}$ este formată din cel puțin un element, precizați care dintre afirmațiile de mai jos sunt întotdeauna adevărate.
-
-\begin{enumerate}
-  \item G este conex
-  \item G are cel puțin un nod de grad egal cu 2
-  \item G este hamiltonian
-  \item G nu poate conține cicluri elementare de lungime 3.\\
-a) toate\\
-b) niciuna\\
-c) 1, 2, 3\\
-d) 2, 3\\
-e) 3, 4\\
-f) 1,2
-  \item Un arbore binar este un arbore cu rădăcină în care orice nod are cel mult doi fii. Înălțimea unui arbore binar este dată de lungimea celui mai lung lanţ elementar care are una dintre extremităţi în rădăcină şi cealaltă în oricare dintre frunze. Numărul maxim de noduri dintr-un arbore binar de înălțime 5 este:\\
-a) 31\\
-b) 15\\
-c) 32\\
-d) 63\\
-e) 64\\
+\\
+Limbajul Pascal
+a) function cifre ( n : longint) : byte;
+\\
+b) function cifre ( n : longint; prim,ult: byte): byte;
+\\
+c) procedure cifre (n: longint; prim,ult: byte);
+\\
+d) procedure cifre ( n : longint; var prim,ult: byte);
+\\
+e) procedure cifre (var n: longint; var prim,ult: byte);
+\\
+f) procedure cifre (var n: longint);
+\\
+7.12. Precizați care sunt numărul maxim, respectiv numărul minim de componente conexe pentru un graf neorientat cu 16 noduri şi 16 muchii?
+\\
+a) 1 şi 1
+\\
+b) 11 şi 2
+\\
+c) 2 şi 1
+\\
+d) 16 şi 1
+\\
+e) 11 şi 1
+\\
+f) 10 şi 1
+\\
+7.13. Precizați care sunt numărul minim și numărul maxim de arce ale unui graf orientat tare conex cu 15 vârfuri.
+\\
+a) 14 și 105 
+\\
+b) 15 și 105
+\\
+c) 15 și 210
+\\
+d) 14 și 210
+\\
+e) 15 şi 15
+\\
+f) 14 și 15
+\\
+7.14. Dacă $\mathbf{G}$ este un graf neorientat eulerian cu 10 noduri și 16 muchii, iar lista de adiacență a fiecărui nod din $\mathbf{G}$ este formată din cel puțin un element, precizați care dintre afirmațiile de mai jos sunt întotdeauna adevărate.
+\begin{verbatim}
+1.  G este conex  
+2.  G are cel puțin un nod de grad egal cu 2  
+3.  G este hamiltonian  
+4.  G nu poate conține cicluri elementare de lungime 3. 
+\end{verbatim}
+\\
+a) toate
+\\
+b) niciuna
+\\
+c) 1, 2, 3
+\\
+d) 2, 3
+\\
+e) 3, 4
+\\
+f) 1, 2
+\\
+7.15. Un arbore binar este un arbore cu rădăcină în care orice nod are cel mult doi fii. Înălțimea unui arbore binar este dată de lungimea celui mai lung lanţ elementar care are una dintre extremităţi în rădăcină şi cealaltă în oricare dintre frunze. Numărul maxim de noduri dintr-un arbore binar de înălțime 5 este:
+\\
+a) 31
+\\
+b) 15
+\\
+c) 32
+\\
+d) 63
+\\
+e) 64
+\\
 f) 6
-\end{enumerate}
+\\
 
 \section*{Varianta 8}
-\begin{enumerate}
-  \item Indicaţi care dintre expresiile $\mathrm{C}++/ \mathrm{C} /$ Pascal de mai jos are valoarea true/1, dacă și numai dacă numărul memorat în variabila întreagă $\mathbf{x ~ n u}$ aparţine reuniunii de intervale:\\
-$[-4,-1] \cup[1,4] \cup[10, \infty)$.\\
-Limbajul C++/ Limbajul C\\
-a) ! ( $(x>=-4 \& \& x<=-1) \& \&(x>=1 \quad \& \& x<=4) \& \&(x>=10))$\\
-b) $(x<-4$ || $x>-1)$ || $(x<1$ || $x>4)$ || $(x<10)$\\
-c) $(x<-4 \& \& x>-1)$ || $(x<1 \& \& x>4)$ || $(x<10)$\\
-d) ! $(x<-4 \& \& x>4 \& \& x>-1| | x<1 \& \& x>=10)$\\
-e) ! ( $(x>=-4 \& \& x<=-1)||(x>=1 \& \& x<=4)||(x>=10))$\\
-f) ! ( $x>=-4 \& \& x<=-1$ ) ||! $(x>=1 \& \& x<=4)|\mid!(x>=10)$
-\end{enumerate}
 
-Limbajul Pascal\\
-a) $\operatorname{not}((x>=-4$ and $x<=-1)$ and $(x>=1$ and $x<=4)$ and $(x>=10))$\\
-b) ( $x<-4$ or $x>-1$ ) or ( $x<1$ or $x>4$ ) or ( $x<10$ )\\
-c) ( $x<-4$ and $x>-1$ ) or ( $x<1$ and $x>4$ ) or ( $x<10$ )\\
-d) not $(x<-4$ and $x>4$ and $x>-1$ or $x<1$ and $x>=10)$\\
-e) $\operatorname{not}((x>=-4$ and $x<=-1)$ or $(x>=1$ and $x<=4)$ or $(x>=10))$\\
-f) $\operatorname{not}(x>=-4$ and $x<=-1)$ or not $(x>=1$ and $x<=4)$ or not $(x>=10)$\\
-2. O expresie C++/C/Pascal care are valoarea true /1 este:
-
-Limbajul C++/ Limbajul C\\
-a) floor(5) $+1==$ ceil(5)\\
-b) floor(5.49) $==$ ceil(5.49)\\
-c) floor(5.19) $==$ floor(5.91)\\
-d) floor(5.91) $==$ ceil(5.91)\\
-e) floor(sqrt(8))==ceil(sqrt (8))\\
-f) $\operatorname{sqrt}(4)==\operatorname{pow}(4,2)$
-
-Limbajul Pascal\\
-a) trunc (5) +1=round (5)\\
-b) trunc (5.19) $=$ round (5.91)\\
-c) trunc (5.19) $=$ trunc (5.91)\\
-d) trunc (5.91) =round (5.91)\\
-e) round (sqrt (8)) =trunc (sqrt (8))\\
-f) $\operatorname{sqrt}(4)=\operatorname{sqr}(4)$\\
-3. Pentru a verifica dacă într-un tablou unidimensional există elementul cu valoarea $\mathbf{x}=1 \mathbf{1 7}$, se aplică metoda căutării binare, iar succesiunea de elemente ale tabloului a căror valoare se compară cu valoarea lui $\mathbf{x}$, pe parcursul aplicării metodei indicate, este: $12,18,17$. Numerotarea elementelor, în tablou, se realizează începând cu poziţia 0 . Elementele tabloului pot fi (în ordinea în care apar în tablou):\\
-a) $(3,4,7,12,15,17,18,20)$\\
-b) $(3,7,8,10,12,17,18,20,46)$\\
-c) $(4,7,12,17,18,20,46)$\\
-d) $(3,4,7,10,12,18,17,20)$\\
-e) $(3,7,8,10,12,17,18,20)$\\
-f) $(3,4,7,10,12,17,18,20,46)$\\
-4. Se consideră două tablouri unidimensionale A şi B. Știind că în urma interclasării tablourilor A şi B în ordine descrescătoare se obţine tabloul cu elementele: $(46,20,18,17,12,10,10,7,4,3)$, o variantă corectă pentru valorile celor două tablouri este:\\
-a) $(3,4,17,46)$ şi $(7,10,12,18,20)$\\
-b) $(7,10,12,18)$ şi $(46,17,4,3)$\\
-c) $(3,4,10,46)$ şi $(7,10,12,18,20)$\\
-d) $(7,10,12,18,20)$ şi $(46,17,4,3)$\\
-e) $(3,4,10,17,46)$ şi $(7,10,12,18,20)$\\
-f) $(3,4,17,46)$ şi $(7,10,12,20)$\\
-5. Variabila $\mathbf{x}$ este de tip întreg și poate memora un număr natural format din exact două cifre. Indicaţi cea mai mare valoare pe care o poate avea expresia :
-
-\begin{center}
-\begin{tabular}{l|l}
-Limbajul C++/ Limbajul C & Limbajul Pascal \\
-abs $(\mathbf{x} / 10-\mathbf{x} \% 10)$ & $\operatorname{abs}(\mathbf{x} \operatorname{div} 10-\mathbf{x} \bmod 10)$ \\
-\end{tabular}
-\end{center}
-
-a) 1\\
-b) 10\\
-C) 9\\
-d) 8\\
-e) 5\\
-f) 0\\
-6. O echipă profesionistă de ciclism este alcătuită din 8 sportivi. La fiecare mare tur participă doar cu un lot format din 4 ciclişti. Precizați care este numărul de variante pentru formarea lotului de cicliști ce pot concura la Turul Franței în anul 2020.\\
-a) 40320\\
-b) 0\\
-c) 1680\\
-d) 70\\
-e) 8\\
-f) 4\\
-7. Fie subprogramul recursiv următor în care $\mathbf{n}$ este un număr natural nenul:
-
+8.1. Indicaţi care dintre expresiile $\mathrm{C}++/ \mathrm{C} /$ Pascal de mai jos are valoarea true/1, dacă și numai dacă numărul memorat în variabila întreagă $\mathbf{x ~ n u}$ aparţine reuniunii de intervale:
+$[-4,-1] \cup[1,4] \cup[10, \infty)$.
+\\
+Limbajul C++/ Limbajul C
+a) !((x>=-4 && x<=-1)&&(x>=1 && x<=4)&&(x>=10))
+\\
+b) (x<-4 || x>-1) || (x<1 || x>4) || (x<10)
+\\
+c) (x<-4 && x>-1) || (x<1 && x>4) || (x<10)
+\\
+d) !(x<-4 && x>4 && x>-1 || x<1 && x>=10)
+\\
+e) !((x>=-4 && x<=-1)||(x>=1 && x<=4)||(x>=10))
+\\
+f) !(x>=-4 && x<=-1)||!(x>=1 && x<=4)||!(x>=10)
+\\
+Limbajul Pascal
+a) not((x>=-4 and x<=-1)and(x>=1 and x<=4)and(x>=10))
+\\
+b) (x<-4 or x>-1) or (x<1 or x>4) or (x<10)
+\\
+c) (x<-4 and x>-1) or (x<1 and x>4) or (x<10)
+\\
+d) not(x<-4 and x>4 and x>-1 or x<1 and x>=10)
+\\
+e) not((x>=-4 and x<=-1)or(x>=1 and x<=4)or(x>=10))
+\\
+f) not(x>=-4 and x<=-1)or not(x>=1 and x<=4)or not(x>=10)
+\\
+8.2. O expresie C++/C/Pascal care are valoarea true /1 este:
+\\
+Limbajul C++/ Limbajul C
+a) floor(5)+1 == ceil(5)
+\\
+b) floor(5.49) == ceil(5.49)
+\\
+c) floor(5.19) == floor(5.91)
+\\
+d) floor(5.91) == ceil(5.91)
+\\
+e) floor(sqrt(8))==ceil(sqrt(8))
+\\
+f) sqrt(4) == pow(4,2)
+\\
+Limbajul Pascal
+a) trunc(5)+1=round(5)
+\\
+b) trunc(5.19)=round(5.91)
+\\
+c) trunc(5.19)=trunc(5.91)
+\\
+d) trunc(5.91)=round(5.91)
+\\
+e) round(sqrt(8))=trunc(sqrt(8))
+\\ 
+f) sqrt(4) = sqr(4)
+\\
+8.3. Pentru a verifica dacă într-un tablou unidimensional există elementul cu valoarea $\mathbf{x}=1 \mathbf{1 7}$, se aplică metoda căutării binare, iar succesiunea de elemente ale tabloului a căror valoare se compară cu valoarea lui $\mathbf{x}$, pe parcursul aplicării metodei indicate, este: $12,18,17$. Numerotarea elementelor, în tablou, se realizează începând cu poziţia 0 . Elementele tabloului pot fi (în ordinea în care apar în tablou):
+\\
+a) (3,4,7,12,15,17,18,20)
+\\
+b) (3,7,8,10,12,17,18,20,46)
+\\
+c) (4,7,12,17,18,20,46)
+\\
+d) (3,4,7,10,12,18,17,20)
+\\ 
+e) (3,7,8,10,12,17,18,20)
+\\
+f) (3,4,7,10,12,17,18,20,46)
+\\
+8.4. Se consideră două tablouri unidimensionale A şi B. Știind că în urma interclasării tablourilor A şi B în ordine descrescătoare se obţine tabloul cu elementele: $(46,20,18,17,12,10,10,7,4,3)$, o variantă corectă pentru valorile celor două tablouri este:
+\\
+a)(3,4,17,46) şi (7,10,12,18,20)
+\\
+b)(7,10,12,18) şi (46,17,4,3)
+\\
+c)(3,4,10,46) şi (7,10,12,18,20)
+\\
+d)(7,10,12,18,20) şi (46,17,4,3)
+\\
+e)(3,4,10,17,46) şi (7,10,12,18,20)
+\\
+f)(3,4,17,46) şi (7,10,12,20)
+\\
+8.5. Variabila $\mathbf{x}$ este de tip întreg și poate memora un număr natural format din exact două cifre. Indicaţi cea mai mare valoare pe care o poate avea expresia :
+\begin{verbatim}
+Limbajul C++/ Limbajul C
+abs(x/10-x%10)
+Limbajul Pascal
+abs(x div 10- x mod 10)
+\end{verbatim}
+\\
+a) 1
+\\
+b) 10
+\\
+C) 9
+\\
+d) 8
+\\
+e) 5
+\\
+f) 0
+\\
+8.6. O echipă profesionistă de ciclism este alcătuită din 8 sportivi. La fiecare mare tur participă doar cu un lot format din 4 ciclişti. Precizați care este numărul de variante pentru formarea lotului de cicliști ce pot concura la Turul Franței în anul 2020.
+\\
+a) 40320
+\\
+b) 0
+\\
+c) 1680
+\\
+d) 70
+\\
+e) 8
+\\
+f) 4
+\\
+8.7. Fie subprogramul recursiv următor în care $\mathbf{n}$ este un număr natural nenul:
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 unsigned ex(unsigned n)
@@ -3335,7 +3469,6 @@ unsigned ex(unsigned n)
         }
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 function ex(n:longint) : byte;
@@ -3350,53 +3483,71 @@ begin
                 end;
 end;
 \end{verbatim}
-
-Precizați pentru care dintre valorile următoare se va returna un număr impar la apelul funcției $\mathbf{e x}(\mathrm{n})$.\\
-a) 90\\
-b) 98\\
-c) 709\\
-d) 340\\
-e) 512\\
-f) $\mathbf{2 5 6}$\\
-8. Într-un program $\mathrm{C}++/ \mathrm{C} /$ Pascal, variabila a este de tip întreg, iar datele din fişierul "candidati.dat" se citesc utilizând următoarea instrucţiune:
-
-\begin{center}
-\begin{tabular}{lll}
-Limbajul C++ & Limbajul C & Limbajul Pascal \\
-f>>a; & fscanf(f, "\%d", \&a); & $|$\begin{tabular}{rl}
-readln $(f, a) ;$ \\
-\end{tabular} \\
-\end{tabular}
-\end{center}
-
-Precizaţi care este forma corectă a instrucţiunii ce are ca efect închiderea fişierului utilizat:\\
-Limbajul C++\\
-Limbajul C\\
+Precizați pentru care dintre valorile următoare se va returna un număr impar la apelul funcției ex(n).
+\\
+a) 90
+\\
+b) 98
+\\
+c) 709
+\\
+d) 340
+\\
+e) 512
+\\
+f) 256
+\\
+8.8. Într-un program $\mathrm{C}++/ \mathrm{C} /$ Pascal, variabila a este de tip întreg, iar datele din fişierul "candidati.dat" se citesc utilizând următoarea instrucţiune:
+\begin{verbatim}
+Limbajul C++
+f>>a;
+Limbajul C
+fscanf(f, "%d", &a);
 Limbajul Pascal
-
-\begin{center}
-\begin{tabular}{|l|l|l|}
-\hline
-a) close(f) ; & a) fclose(candidati); & a) f.close(); \\
-\hline
-b) close(candidati); & b) close(candidati); & b) candidati.close (); \\
-\hline
-c) candidati.close(); & c) close (f) ; & c) close (candidati) ; \\
-\hline
-d) f.close(); & d) fclose(f); & d) close (f) ; \\
-\hline
-e) close.f; & e) close.f; & e) f(close) ; \\
-\hline
-f) f (close) ; & f) f (close) ; & f) close (candidati) ; \\
-\hline
-\end{tabular}
-\end{center}
-
-\begin{enumerate}
-  \setcounter{enumi}{8}
-  \item Se consideră următoarea secvenţă de instrucţiuni:
-\end{enumerate}
-
+readln ( f, a);
+\end{verbatim}
+Precizaţi care este forma corectă a instrucţiunii ce are ca efect închiderea fişierului utilizat:
+\\
+Limbajul C++
+a) close(f);
+\\
+b) close(candidati);
+\\ 
+c) candidati.close();
+\\
+d) f.close();
+\\
+e) close.f;
+\\
+f) f(close);
+\\
+Limbajul C
+a) fclose(candidati);
+\\ 
+b) close(candidati);
+\\
+c) close(f);
+\\
+d) fclose(f);
+\\
+e) close.f;
+\\
+f) f(close);
+\\
+Limbajul Pascal
+a) f.close();
+\\
+b)candidati.close();
+\\
+c)close(candidati);
+\\
+d)close(f);
+\\
+e)f(close);
+\\
+f)close(candidati);
+\\
+8.9. Se consideră următoarea secvenţă de instrucţiuni:
 \begin{verbatim}
 Limbajul C++
 char cif; int cifra;
@@ -3404,7 +3555,6 @@ cin>>cifra;
 cif = cifra + '0';
 cout<<cif;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 char cif; int cifra;
@@ -3412,9 +3562,7 @@ scanf("%d", &cifra);
 cif = cifra + '0';
 printf ("%c", cif);
 \end{verbatim}
-
 Limbajul Pascal
-
 \begin{verbatim}
 var cif: char;
     cifra: integer;
@@ -3424,26 +3572,24 @@ cif:=chr(cifra+ord('0'));
     write (cif);
 end.
 \end{verbatim}
-
-Precizați care este valoarea memorată în variabila cif la finalul secvenței dacă, după citire, variabila cifra conţine valoarea 9.\\
-a) instrucţiunea de atribuire\\
-b) '9'\\
-C) 9\\
-d) $\quad 0$ '\\
-e) 0\\
-f) 57
-
-\begin{verbatim}
-cif:=chr(cifra+ ord('0'));{Pascal}
-    cif = cifra + '0'; //C++/C este
+Precizați care este valoarea memorată în variabila cif la finalul secvenței dacă, după citire, variabila cifra conţine valoarea 9.
+\\
+a) instrucţiunea de atribuire  
+cif:=chr(cifra+ ord('0'));{Pascal} 
+ cif = cifra + '0'; //C++/C  este 
 incorectă
-\end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{9}
-  \item Considerând declarările de mai jos,
-\end{enumerate}
-
+\\
+b) '9'
+\\
+c) 9
+\\
+d) '0'
+\\
+e) 0
+\\
+f) 57
+\\
+8.10. Considerând declarările de mai jos,
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 typedef struct{
@@ -3455,7 +3601,6 @@ typedef struct{
 }elev;
 elev e;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 type datan=record
@@ -3467,26 +3612,35 @@ elev=record
     end;
 var e: elev;
 \end{verbatim}
-
 Precizați care este expresia corectă pentru a verifica dacă elevul este fată şi este născută în primele zece zile ale lunii iulie:
-
-Limbajul C++/ Limbajul C\\
-a) e.sex=='F' \&\& e.sex=='f' \&\& e.datan.l\hl{7 \&\& e.datan.z<=10\\
-b) (elev.sex}'F' || elev.sex=='f') \&\& (elev.dn.l\hl{7 \&\& elev.dn. $z<=10$ )\\
-c) (e.sex}'F' || e.sex=='f') \&\& (e.dn.l\hl{7 \&\& e.dn.z<10)\\
-d) (e.sex}'F' \&\& e.sex=='f') \&\& (e.dn.l\hl{7 \&\& e.dn.z<=10)\\
-e) e.sex}'F' || e.sex=='f' || e.dn.l\hl{7 \&\& e.dn.z<=10\\
-f) (e.sex}'F' || e.sex=='f') \&\& (e.dn.l==7 \&\& e.dn.z<=10)
-
-Limbajul Pascal\\
-a) (e.sex='F') and (e.sex='f') and (e.datan.l=7) and (e.datan. $z<=10$ )\\
-b) ((elev.sex='F') or (elev.sex='f')) and (elev.dn.l=7) and (elev.dn. $\mathrm{z}<=10$ )\\
-c) ((e.sex='F') or (e.sex='f')) and ((e.dn.l=7) and (e.dn.z<10))\\
-d) ((e.sex='F') and (e.sex='f')) and (e.dn.l=7) and (e.dn.z<=10)\\
-e) ((e.sex='F') or (e.sex='f')) or (e.dn.l=7) and (e.dn.z<=10)\\
-f) ((e.sex='F') or (e.sex='f')) and (e.dn.l=7) and (e.dn.z<=10)\\
-11. Pentru subprogramul următor:
-
+\\
+Limbajul C++/ Limbajul C
+a)  e.sex=='F' && e.sex=='f' && e.datan.l==7 && e.datan.z<=10
+\\
+b)  (elev.sex=='F' || elev.sex=='f') && (elev.dn.l==7 && elev.dn.z<=10)
+\\ 
+c)  (e.sex=='F' || e.sex=='f') && (e.dn.l==7 && e.dn.z<10)
+\\
+d)  (e.sex=='F' && e.sex=='f') && (e.dn.l==7 && e.dn.z<=10)
+\\
+e)   e.sex=='F' || e.sex=='f' || e.dn.l==7 && e.dn.z<=10
+\\
+f)  (e.sex=='F' || e.sex=='f') && (e.dn.l==7 && e.dn.z<=10)
+\\
+Limbajul Pascal
+a)  (e.sex='F') and (e.sex='f') and (e.datan.l=7) and (e.datan.z<=10)
+\\
+b)  ((elev.sex='F') or (elev.sex='f')) and (elev.dn.l=7) and (elev.dn.z<=10)
+\\
+c)  ((e.sex='F') or (e.sex='f')) and ((e.dn.l=7) and (e.dn.z<10))
+\\ 
+d)  ((e.sex='F') and (e.sex='f')) and (e.dn.l=7) and (e.dn.z<=10)
+\\
+e)  ((e.sex='F') or (e.sex='f')) or (e.dn.l=7) and (e.dn.z<=10)
+\\
+f)  ((e.sex='F') or (e.sex='f')) and (e.dn.l=7) and (e.dn.z<=10)
+\\
+8.11. Pentru subprogramul următor:
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 unsigned suma( unsigned n)
@@ -3498,7 +3652,6 @@ unsigned suma( unsigned n)
     return s;
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 function suma(n:longint): byte;
@@ -3512,119 +3665,164 @@ begin
 suma:=s;
 end;
 \end{verbatim}
-
 Precizați care dintre variante nu reprezintă o variantă corectă de apel.
-
-\begin{verbatim}
+\\
 Limbajul C++
-a) if (suma(n) % 2) cout<<"NU";
-        else cout<<"DA";
-b) cout<<suma (10945);
-c) cout<<suma (12,12);
-d) cout<<suma (suma (n) +suma (10945));
-e) cout<<suma (n);
-f) sn= suma(n); // sn este o variabilă declarată de tip unsigned
+a) \begin{verbatim}
+    if (suma(n) % 2) cout<<”NU”; 
+            else cout<<”DA”;
 \end{verbatim}
-
+\\ 
+b) cout<<suma(10945); 
+\\
+c) cout<<suma(12,12);
+\\
+d) cout<<suma(suma(n)+suma(10945));
+\\
+e) cout<<suma(n);
+\\
+f) sn= suma(n); // sn este o variabilă declarată de tip unsigned
+\\
 Limbajul C
-
-\begin{verbatim}
-a) if (suma(n) % 2) printf("NU");
+a) \begin{verbatim}
+    if (suma(n) % 2) printf("NU");
         else printf("DA");
-b) printf("%d",suma(10945));
-c) printf("%d", suma(12,12));
-d) printf("%d",suma(suma(n) +suma(10945)));
-e) printf("%d",suma(n));
-f) sn= suma(n); // sn este o variabilă declarată de tip unsigned
 \end{verbatim}
-
-Limbajul Pascal\\
-a) if suma( $n$ ) mod $2=0$ then write (' $D A^{\prime}$ )\\
-else write ('NU').\\
-else write('NU');\\
-b) write (suma (10945)) ;\\
-c) write (suma $(12,12)$ );\\
-d) write (suma (suma (n) +suma (10945))) ;\\
-e) write (suma (n)) ;\\
-f) $s n:=s u m a(n)$; $\{s n$ este 0 variabilă declarată de tip byte \}\\
-12. Precizați care este numărul minim de muchii ale unui graf neorientat cu 16 noduri care are exact două componente conexe, fiecare dintre aceste două componente fiind graf complet.\\
-a) 15\\
-b) 14\\
-C) 105\\
-d) 55\\
-e) 28\\
-f) 56\\
-13. Se cunosc următoarele informaţii despre matricea de adiacență a unui graf neorientat conex: are 10 linii şi 24 de valori nenule. Precizaţi care este valoarea maximă pe care o poate avea gradul unui nod într-un astfel de graf.\\
-a) nu există astfel de graf\\
-b) 12\\
-c) 1\\
-d) 10\\
-e) 9\\
-f) 8\\
-14. Fie graful orientat $G$, definit prin perechea ordonată de mulţimi $X=\{1,2,3,4,5\}$ şi $\mathrm{U}=\{(1,2),(2,1),(2,3),(3,4),(4,3),(4,1),(4,5),(5,1),(1,5)\}$.\\
-Precizați care dintre afirmaţiile următoare nu este adevărată pentru acest graf.\\
-a) Graful este conex\\
-b) Graful este tare conex\\
-c) Graful are două componente conexe\\
-d) Graful conţine cel puţin un drum elementar de lungime 4.\\
-e) Graful nu conţine vârfuri izolate (vârf izolat = vârf care nu este adiacent cu alt vârf)\\
-f) Graful conţine cel puţin un circuit elementar.\\
-15. Precizați care este numărul maxim de frunze ale unui arbore binar (arbore în care fiecare nod are cel mult doi fii) cu 66 de noduri.\\
-a) 65\\
-b) 35\\
-c) 1\\
-d) 33\\
-e) 32\\
+\\
+b) printf("%d",suma(10945));
+\\
+c) printf("%d", suma(12,12));
+\\
+d) printf("%d",suma(suma(n) +suma(10945)));
+\\
+e) printf("%d",suma(n));
+\\
+f) sn= suma(n); // sn este o variabilă declarată de tip unsigned
+\\
+Limbajul Pascal
+a) \begin{verbatim}
+    if suma(n) mod 2 = 0 then write (‘DA’)  
+      else write(‘NU’);
+\end{verbatim}
+\\
+b) write(suma(10945));
+\\
+c) write(suma(12,12));
+\\
+d) write(suma(suma(n)+suma(10945)));
+\\
+e) write(suma(n));
+\\
+f) sn:=suma(n); {sn este o variabilă declarată de tip byte }
+\\
+8.12. Precizați care este numărul minim de muchii ale unui graf neorientat cu 16 noduri care are exact două componente conexe, fiecare dintre aceste două componente fiind graf complet.
+\\
+a) 15
+\\
+b) 14
+\\
+C) 105
+\\
+d) 55
+\\
+e) 28
+\\
+f) 56
+\\
+8.13. Se cunosc următoarele informaţii despre matricea de adiacență a unui graf neorientat conex: are 10 linii şi 24 de valori nenule. Precizaţi care este valoarea maximă pe care o poate avea gradul unui nod într-un astfel de graf.
+\\
+a) nu există astfel de graf
+\\
+b) 12
+\\
+c) 1
+\\
+d) 10
+\\
+e) 9
+\\
+f) 8
+\\
+8.14. Fie graful orientat $G$, definit prin perechea ordonată de mulţimi $X=\{1,2,3,4,5\}$ şi $\mathrm{U}=\{(1,2),(2,1),(2,3),(3,4),(4,3),(4,1),(4,5),(5,1),(1,5)\}$.
+Precizați care dintre afirmaţiile următoare nu este adevărată pentru acest graf.
+\\
+a) Graful este conex
+\\
+b) Graful este tare conex
+\\
+c) Graful are două componente conexe
+\\
+d) Graful conţine cel puţin un drum elementar de lungime 4.
+\\
+e) Graful nu conţine vârfuri izolate (vârf izolat = vârf care nu este adiacent cu alt vârf)
+\\
+f) Graful conţine cel puţin un circuit elementar.
+\\
+8.15. Precizați care este numărul maxim de frunze ale unui arbore binar (arbore în care fiecare nod are cel mult doi fii) cu 66 de noduri.\\
+a) 65
+\\
+b) 35
+\\
+c) 1
+\\
+d) 33
+\\
+e) 32
+\\
 f) 66
+\\
 
 \section*{Varianta 9}
-\begin{enumerate}
-  \item Fie $\mathbf{n}$ un număr natural cu cel puţin 4 cifre. Precizați care dintre următoarele instrucțiuni determină interschimbarea cifrei sutelor cu cifra zecilor.
-\end{enumerate}
 
+9.1. Fie $\mathbf{n}$ un număr natural cu cel puţin 4 cifre. Precizați care dintre următoarele instrucțiuni determină interschimbarea cifrei sutelor cu cifra zecilor.
 Limbajul C++/ Limbajul C
-
-\begin{enumerate}
-  \item $\mathrm{n}=\mathrm{n} \% 10+\mathrm{n} / 1000 * 1000+\mathrm{n} \% 1000 / 100 * 10+\mathrm{n} \% 100 / 10 * 100$;
-  \item $\mathrm{n}=\mathrm{n} / 1000 * 1000+\mathrm{n} \% 1000 / 100 * 100+\mathrm{n} \% 100 / 10 * 10+\mathrm{n} \% 10$;
-  \item $n=n \% 1000 / 100 * 10+n \% 100 / 10 * 100+n \% 10+n / 1000 * 1000$;
-  \item $\mathrm{n}=\mathrm{n} \% 1000 / 100 * 10+\mathrm{n} \% 100 / 10 * 100+\mathrm{n} / 10$;
-\end{enumerate}
-
-Limbajul Pascal
-
-\begin{enumerate}
-  \item $\mathrm{n}:=\mathrm{n} \bmod 10+\mathrm{n}$ div $1000 * 1000+\mathrm{n} \bmod 1000 \operatorname{div} 100 * 10+\mathrm{n} \bmod 100 \operatorname{div} 10 * 100 ;$
-  \item $\mathrm{n}:=\mathrm{n}$ div $1000 * 1000+\mathrm{n} \bmod 1000$ div $100 * 100+\mathrm{n} \bmod 100 \operatorname{div} 10 * 10+\mathrm{n} \bmod 10$;
-  \item $\mathrm{n}:=\mathrm{n} \bmod 1000$ div $100 * 10+\mathrm{n} \bmod 100$ div $10 * 100+\mathrm{n} \bmod 10+\mathrm{n}$ div 1000*1000;
-  \item $n:=n \bmod 1000$ div $100 * 10+n \bmod 100$ div $10 * 100+n$ div 10 ;\\
-a) 1 și 2\\
-b) 1 și 3\\
-C) $\mathbf{1 , 3} \mathbf{3} \mathbf{~ i} \mathbf{4}$\\
-d) 1 și 4\\
-e) 2 și 3\\
+\begin{verbatim}
+Limbajul C++/ Limbajul C 
+1.  n=n%10+n/1000*1000+n%1000/100*10+n%100/10*100; 
+2.  n=n/1000*1000+n%1000/100*100+n%100/10*10+n%10; 
+3.  n=n%1000/100*10+n%100/10*100+n%10+n/1000*1000; 
+4.  n=n%1000/100*10+n%100/10*100+n/10; 
+Limbajul Pascal 
+1.  n:=n mod 10+n div 1000*1000+n mod 1000 div 100*10+n mod 100 div 10*100; 
+2.  n:=n div 1000*1000+n mod 1000 div 100*100+n mod 100 div 10*10+n mod 10; 
+3.  n:=n mod 1000 div 100*10+n mod 100 div 10*100+n mod 10+n div 1000*1000; 
+4.  n:=n mod 1000 div 100*10+n mod 100 div 10*100+n div 10;
+\end{verbatim}
+\\
+a) 1 și 2
+\\
+b) 1 și 3
+\\
+c) 1, 3 și 4
+\\
+d) 1 și 4
+\\
+e) 2 și 3
+\\
 f) 2 și 4
-  \item Dacă expresia:
-\end{enumerate}
-
-$$
-\begin{aligned}
-& \text { Limbajul C++/ Limbajul C } \\
-& !(x>2)| |(x<=5) \& \&(x>-5)
-\end{aligned}
-$$
-
-Limbajul Pascal\\
-not ( $x>2$ ) or ( $x<=5$ ) and ( $x>-5$ )\\
-este adevărată, atunci:\\
-a) $\mathbf{x} \in(-5,2) \cup[5, \infty)$\\
-b) $x \in(-\infty, 2] \cap[5, \infty)$\\
-c) $\mathbf{x} \in(-\infty, 2] \cup[5, \infty)$\\
-d) $x \in(-\infty, 5)$\\
-e) $x \in(-5,2) \cap[5, \infty)$\\
-f) $x \in(-\infty, 5]$\\
-3. În urma executării secvenţei de program de mai jos, în care variabila s memorează un şir cu cel mult 100 caractere, iar i este de tip întreg, se afișează șirul acbb. Precizați care este conținutul șirului s înainte de această secvență.
-
+\\ 
+9.2. Dacă expresia:
+\begin{verbatim}
+Limbajul C++/ Limbajul C
+!(x>2)||(x<=5)&&(x>-5)
+Limbajul Pascal
+not(x>2)or(x<=5)and(x>-5)
+\end{verbatim}
+este adevărată, atunci:
+\\
+a) $\mathbf{x} \in(-5,2) \cup[5, \infty)$
+\\
+b) $x \in(-\infty, 2] \cap[5, \infty)$
+\\
+c) $\mathbf{x} \in(-\infty, 2] \cup[5, \infty)$
+\\
+d) $x \in(-\infty, 5)$
+\\
+e) $x \in(-5,2) \cap[5, \infty)$
+\\
+f) $x \in(-\infty, 5]$
+\\
+9.3. În urma executării secvenţei de program de mai jos, în care variabila s memorează un şir cu cel mult 100 caractere, iar i este de tip întreg, se afișează șirul acbb. Precizați care este conținutul șirului s înainte de această secvență.
 \begin{verbatim}
 Limbajul C++/C
 for(i=0;i<strlen(s);i++)
@@ -3637,13 +3835,6 @@ for(i=0;i<strlen(s);i++)
     cout<<s; |
         printf("%s",s);
 \end{verbatim}
-
-a) abaa\\
-b) abcbdcba\\
-c) abcd\\
-d) abcddcba\\
-e) $a c b b$
-
 \begin{verbatim}
 Limbajul Pascal
 for i:=1 to length(s) do begin
@@ -3654,41 +3845,64 @@ for i:=1 to length(s) do begin
     end;
     write(s);
 \end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{3}
-  \item Precizați care dintre următoarele matrice, este matricea de adiacenţă a unui arbore cu 4 noduri.\\
-a) 0101\\
-b) $\quad 0010$\\
-C) 0111\\
-0010\\
-0001\\
-1010
-\end{enumerate}
-
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-\multirow{2}{*}{} & 1000 & \multicolumn{3}{|c|}{1000} & 1100 \\
-\hline
- & 1010 &  & 0100 &  & 1000 \\
-\hline
-\multirow[t]{4}{*}{d)} & 0010 & e) & 0010 & f) & 0010 \\
-\hline
- & 0001 &  & 0101 &  & 0001 \\
-\hline
- & 1001 &  & 1001 &  & 1001 \\
-\hline
- & 0110 &  & 0110 &  & 0111 \\
-\hline
-\end{tabular}
-\end{center}
-
-\begin{enumerate}
-  \setcounter{enumi}{4}
-  \item În secvenţa de mai jos, variabilele $\mathbf{i}$ şi $\mathbf{j}$ sunt de tip întreg, iar variabila a memorează un tablou bidimensional în care prima linie şi prima coloană sunt numerotate începând cu 1 . Toate elementele tabloului primesc valori în urma executării secvenţei.
-\end{enumerate}
-
+\\
+a) abaa
+\\
+b) abcbdcba
+\\
+c) abcd
+\\
+d) abcddcba
+\\
+e) acbb
+\\
+f) bdcc
+\\
+9.4. Precizați care dintre următoarele matrice, este matricea de adiacenţă a unui arbore cu 4 noduri.
+\\
+a) \begin{verbatim}
+0 1 0 1 
+0 0 1 0 
+\end{verbatim}
+\\
+b) \begin{verbatim}
+0 0 1 0 
+0 0 0 1
+\end{verbatim}
+\\
+c) \begin{verbatim}
+0 1 1 1 
+1 0 1 0
+\end{verbatim}
+\\
+d) \begin{verbatim}
+1 0 0 0 
+1 0 1 0
+0 0 1 0 
+0 0 0 1 
+1 0 0 1 
+0 1 1 0
+\end{verbatim}
+\\
+e) \begin{verbatim}
+1 0 0 0 
+0 1 0 0
+0 0 1 0 
+0 1 0 1 
+1 0 0 1 
+0 1 1 0
+\end{verbatim}
+\\
+f) \begin{verbatim}
+1 1 0 0 
+1 0 0 0
+0 0 1 0 
+0 0 0 1 
+1 0 0 1 
+0 1 1 1 
+\end{verbatim}
+\\
+9.5. În secvenţa de mai jos, variabilele $\mathbf{i}$ şi $\mathbf{j}$ sunt de tip întreg, iar variabila a memorează un tablou bidimensional în care prima linie şi prima coloană sunt numerotate începând cu 1 . Toate elementele tabloului primesc valori în urma executării secvenţei.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 for(j=1;j<=4;j++)
@@ -3697,7 +3911,6 @@ for(j=1;j<=4;j++)
             else
             a[i][j]=a[i][j-1]+a[i+1][j];
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 for j:=1 to 4 do
@@ -3707,55 +3920,83 @@ for j:=1 to 4 do
         else
         a[i][j]:=a[i][j-1]+a[i+1][j];
 \end{verbatim}
-
-Precizați câte numere prime sunt memorate în tabloul a după executarea secvenței de program.\\
-a) 3\\
-b) 4\\
-c) 5\\
-d) 6\\
-e) 7\\
-f) 8\\
-6. Se generează prin metoda backtracking mulţimi distincte cu elemente numere naturale nenule şi cu proprietatea că suma elementelor fiecărei mulţimi este egală cu 6 astfel: $\{1,2,3\}$, $\{1,5\},\{2,4\},\{6\}$. Folosind aceeaşi metodă pentru a genera mulţimi distincte cu elemente numere naturale nenule şi cu proprietatea că suma elementelor fiecărei mulţimi este egală cu 10 , stabiliți în ce ordine sunt generate următoarele mulțimi:
-
+Precizați câte numere prime sunt memorate în tabloul a după executarea secvenței de program.
+\\
+a) 3
+\\
+b) 4
+\\
+c) 5
+\\
+d) 6
+\\
+e) 7
+\\
+f) 8
+\\
+9.6. Se generează prin metoda backtracking mulţimi distincte cu elemente numere naturale nenule şi cu proprietatea că suma elementelor fiecărei mulţimi este egală cu 6 astfel: $\{1,2,3\}$, $\{1,5\},\{2,4\},\{6\}$. Folosind aceeaşi metodă pentru a genera mulţimi distincte cu elemente numere naturale nenule şi cu proprietatea că suma elementelor fiecărei mulţimi este egală cu 10 , stabiliți în ce ordine sunt generate următoarele mulțimi:
 \begin{enumerate}
   \item $\{2,3,5\}$;
   \item $\{3,7\}$;
   \item $\{2,8\}$;
-  \item $\{1,9\}$.\\
-a) 4123\\
-b) 4132\\
-c) 4213\\
-d) 4231\\
-e) 4312\\
-f) 4321
+  \item $\{1,9\}$.
 \end{enumerate}
-
-\begin{enumerate}
-  \setcounter{enumi}{6}
-  \item Se consideră graful neorientat $\mathrm{G}=(\mathrm{X}, \mathrm{U})$ unde $\mathrm{X}=\{1,2,3,4,5,6\}$ şi $\mathrm{U}=\{[1,2]$, $[1,3]$, $[5,1],[3,4],[4,5],[3,2],[3,5]\}$. Precizați câte cicluri elementare distincte există în graful G. (Două cicluri elementare sunt distincte dacă diferă prin cel puţin o muchie).\\
-a) 2\\
-b) 3\\
-c) 4\\
-d) 5\\
-e) 6\\
+\\
+a) 4 1 2 3
+\\
+b) 4 1 3 2
+\\
+c) 4 2 1 3
+\\
+d) 4 2 3 1
+\\
+e) 4 3 1 2
+\\
+f) 4 3 2 1
+\\
+9.7. Se consideră graful neorientat $\mathrm{G}=(\mathrm{X}, \mathrm{U})$ unde $\mathrm{X}=\{1,2,3,4,5,6\}$ şi $\mathrm{U}=\{[1,2]$, $[1,3]$, $[5,1],[3,4],[4,5],[3,2],[3,5]\}$. Precizați câte cicluri elementare distincte există în graful G. (Două cicluri elementare sunt distincte dacă diferă prin cel puţin o muchie).
+\\
+a) 2
+\\
+b) 3
+\\
+c) 4
+\\
+d) 5
+\\
+e) 6
+\\
 f) 7
-  \item Se consideră graful orientat $G=(v, E)$ unde $v=\{1,2,3,4,5,6,7\}$ şi $E=\{(1,2),(6,1)$, $(2,5),(2,3),(4,5),(3,4),(3,6)\}$. Precizați câte componente tare conexe are graful dat.\\
-a) 1\\
-b) 2\\
-c) 3\\
-d) 4\\
-e) 5\\
+\\
+9.8. Se consideră graful orientat $G=(v, E)$ unde $v=\{1,2,3,4,5,6,7\}$ şi $E=\{(1,2),(6,1)$, $(2,5),(2,3),(4,5),(3,4),(3,6)\}$. Precizați câte componente tare conexe are graful dat.
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
 f) 6
-  \item Un arbore cu nodurile numerotate de la 1 la 12, este memorat cu ajutorul vectorului de taţi tata $=(2,5,5,3,0,2,3,7,6,6,7,4)$. Numărul de lanțuri elementare de lungime maximă care leagă două noduri ale arborelui este:\\
-a) 2\\
-b) 3\\
-c) 4\\
-d) 5\\
-e) 6\\
+\\
+9.9. Un arbore cu nodurile numerotate de la 1 la 12, este memorat cu ajutorul vectorului de taţi tata $=(2,5,5,3,0,2,3,7,6,6,7,4)$. Numărul de lanțuri elementare de lungime maximă care leagă două noduri ale arborelui este:
+\\
+a) 2
+\\
+b) 3
+\\
+c) 4
+\\
+d) 5
+\\
+e) 6
+\\
 f) 7
-  \item Se consideră declarările următoare, în care variabila $\mathbf{x}$ memorează coordonatele, în planul $\mathbf{x O y}$, ale centrului unui cerc, precum şi lungimea razei acestuia.
-\end{enumerate}
-
+\\
+9.10. Se consideră declarările următoare, în care variabila $\mathbf{x}$ memorează coordonatele, în planul $\mathbf{x O y}$, ale centrului unui cerc, precum şi lungimea razei acestuia.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 typedef struct {
@@ -3767,7 +4008,6 @@ typedef struct {
     } cerc;
 cerc x;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 type punct=record
@@ -3779,23 +4019,35 @@ type punct=record
         end;
 var x:cerc;
 \end{verbatim}
-
-Expresia care verifică dacă originea sistemului de coordonate, este în interiorul cercului, este:\\
-a) $c . x^{*} c \cdot x+c \cdot y^{*} c . y<c . r * c . r ;$\\
-b) $x . c \cdot x+x . c . y<x . r$\\
-c) c. $x^{*} c \cdot x+c . y^{*} c \cdot y<x \cdot r * x . r$\\
-d) $x \cdot x^{*} x \cdot x+x \cdot y^{*} x \cdot y<x \cdot r * x \cdot r$\\
-\includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-047}\\
-f) $x . r^{*} x . r<x . c . x^{*} x . c . x+x . c . y^{\star} x . c . y$\\
-11. Se consideră tabloul unidimensional $\mathbf{x}=(1,2,4,3)$. Precizați care dintre următoarele variante reprezintă tabloul unidimensional $y$, știind că pentru orice $0 \leq i<4$, există relaţia $\mathbf{x}[y[i]]=y[x[i]]$.\\
-a) $y=(1,2,3,4)$\\
-b) $y=(1,3,4,2)$\\
-c) $y=(2,3,1,4)$\\
-d) $y=(3,2,1,4)$\\
-e) $y=(3,4,1,2)$\\
-f) $y=(4,2,1,3)$\\
-12. Subprogramul $\pounds$ este definit mai jos. Precizați ce valori se vor afişa în urma apelului f('m', 0).
-
+Expresia care verifică dacă originea sistemului de coordonate, este în interiorul cercului, este:
+\\
+a) c.x*c.x+c.y*c.y<c.r*c.r;
+\\
+b) x.c.x+x.c.y<x.r
+\\
+c) c.x*c.x+c.y*c.y<x.r*x.r
+\\
+d) x.x*x.x+x.y*x.y<x.r*x.r
+\\
+e) x.c.x*x.c.x+x.c.y*x.c.y<x.r*x.r
+\\
+f) x.r*x.r< x.c.x*x.c.x+x.c.y*x.c.y
+\\
+9.11. Se consideră tabloul unidimensional $\mathbf{x}=(1,2,4,3)$. Precizați care dintre următoarele variante reprezintă tabloul unidimensional $y$, știind că pentru orice $0 \leq i<4$, există relaţia $\mathbf{x}[y[i]]=y[x[i]]$.
+\\
+a) $y=(1,2,3,4)$
+\\
+b) $y=(1,3,4,2)$
+\\
+c) $y=(2,3,1,4)$
+\\
+d) $y=(3,2,1,4)$
+\\
+e) $y=(3,4,1,2)$
+\\
+f) $y=(4,2,1,3)$
+\\
+9.12. Subprogramul $\pounds$ este definit mai jos. Precizați ce valori se vor afişa în urma apelului f('m', 0).
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 void f(char c, int x)
@@ -3807,15 +4059,6 @@ void f(char c, int x)
         cout<<x;|printf("%d",x);
 }
 \end{verbatim}
-
-a) 4 jklm\\
-b) 4 jmkl\\
-c) 4 mlkj\\
-d) $j k \operatorname{lm} 4$\\
-e) jmk 14\\
-c) 4 mlkj\\
-f) mlkj 4
-
 \begin{verbatim}
 Limbajul Pascal
 procedure f (c:char; x : word) ;
@@ -3827,25 +4070,28 @@ if (pos(c,'aeiou')=0) then
     else write(x);
 end;
 \end{verbatim}
+\\
+a) 4jklm
+\\
+b) 4jmkl
+\\
+c) 4mlkj
+\\
+d) jklm4
+\\
+e) jmkl4
+\\
+c) 4mlkj
+\\
+f) mlkj4
+\\
+9.13. Se consideră subprogramele de mai jos. Dacă înaintea apelului $g(x)$, variabilele globale de tip întreg $\mathbf{x}$ și $\mathbf{y}$ aveau valorile 1 , respectiv -3 , precizați care vor fi valorile memorate în variabilele globale $\mathbf{x}$ și $\mathbf{y}$ după executarea apelului $\mathrm{g}(\mathbf{x})$.
 
-\begin{enumerate}
-  \setcounter{enumi}{12}
-  \item Se consideră subprogramele de mai jos. Dacă înaintea apelului $g(x)$, variabilele globale de tip întreg $\mathbf{x}$ și $\mathbf{y}$ aveau valorile 1 , respectiv -3 , precizați care vor fi valorile memorate în variabilele globale $\mathbf{x}$ și $\mathbf{y}$ după executarea apelului $\mathrm{g}(\mathbf{x})$.
-\end{enumerate}
 
 \begin{verbatim}
 Limbajul C++/ Limbajul C
     void f(int x)
 { x=x+1;
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-procedure f(x: longint);
-begin
-\end{verbatim}
-
-\begin{verbatim}
     y=2*x+3; }
 void g(int x)
 {
@@ -3855,15 +4101,10 @@ void g(int x)
         y=y+b;
 }
 \end{verbatim}
-
-a) 1 și 13\\
-b) 1 și 17\\
-c) 1 și 18\\
-d) 2 și 13\\
-e) 2 și 17\\
-f) 2 și 18
-
 \begin{verbatim}
+Limbajul Pascal
+procedure f(x: longint);
+begin
 x:=x+1;
 y:=2*x+3;end;
 procedure g(x: longint);
@@ -3873,38 +4114,44 @@ begin
     f(a); f(b);
     y:=y+b;end;
 \end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{13}
-  \item În secvenţa de program de mai jos, toate variabilele sunt de tip întreg. Precizați care este valoarea afișată la finalul executării secvenţei următoare.
-\end{enumerate}
-
+\\
+a) 1 și 13
+\\
+b) 1 și 17
+\\
+c) 1 și 18
+\\
+d) 2 și 13
+\\
+e) 2 și 17
+\\
+f) 2 și 18
+\\
+9.14. În secvenţa de program de mai jos, toate variabilele sunt de tip întreg. Precizați care este valoarea afișată la finalul executării secvenţei următoare.
 \begin{verbatim}
 Limbajul C++/Limbajul C
-$\mathrm{k}=0$;
-for ( i=1;i<=9999;i++)
-\{
-$\mathrm{d}=2 ; \mathrm{p}=1$; $\mathrm{n}=\mathrm{i}$;
-    while(d*d<=n)
-    {
-        e=0;
-        while(n%d==0)
-        {
-            e++;
-            n=n/d;
-        }
-    p=p*(e+1);
-    d++;
-    }
-if (n>1)p=p*2;
-if(p%2==0) k++;
-}
-    cout<<k; | printf("%d",k); write(k);
+  k=0; 
+        for(     i=1;i<=9999;i++) 
+        { 
+            d=2;p=1;n=i; 
+            while(d*d<=n) 
+            { 
+                e=0; 
+                while(n%d==0) 
+                { 
+                    e++; 
+                    n=n/d; 
+                } 
+            p=p*(e+1); 
+            d++; 
+            } 
+        if(n>1)p=p*2; 
+        if(p%2==0) k++; 
+        } 
+        cout<<k; | printf("%d",k);
 \end{verbatim}
-
-Limbajul Pascal
-
 \begin{verbatim}
+Limbajul Pascal
 k:=0;
 for i:=1 to 9999 do
     begin
@@ -3925,15 +4172,20 @@ for i:=1 to 9999 do
     end;
 write(k);
 \end{verbatim}
-
-a) 99\\
-b) 8901\\
-c) 8990\\
-d) 9900\\
-e) 9901\\
-f) 9990\\
-15. Funcția $\pounds$ este definită mai jos.
-
+\\
+a) 99
+\\
+b) 8901
+\\
+c) 8990
+\\
+d) 9900
+\\
+e) 9901
+\\
+f) 9990
+\\
+9.15. Funcția $\pounds$ este definită mai jos.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 int a[100];
@@ -3948,9 +4200,6 @@ else
 }
 Limbajul Pascal
 type vector=array[0..99] of integer;
-\end{verbatim}
-
-\begin{verbatim}
     var a:vector;
 function f(x:vector;st,dr:integer):byte;
 begin
@@ -3962,69 +4211,79 @@ else
     else f:=0;
 end;
 \end{verbatim}
-
 Precizațic care dintre următoarele șiruri de valori pot fi memorate în tabloul unidimensional a (cu indicii începând de la 0 ), astfel încât apelul $f(a, 2,5)$ să returneze valoarea 1 .
-
 \begin{verbatim}
 1. a=(0,1,1,3,4,4,5)
 2. a=(0,5,3,4,2,0)
 3. a=(0,2,2,3,4,5,5)
 4. a=(0,4,3,3,2,2,1)
 \end{verbatim}
-
-a) niciunul\\
-b) șirurile 1 și 3\\
-c) doar șirul 2\\
-d) șirurile 2 și 4\\
-e) doar șirul 3\\
+\\
+a) niciunul
+\\
+b) șirurile 1 și 3
+\\
+c) doar șirul 2
+\\
+d) șirurile 2 și 4
+\\
+e) doar șirul 3
+\\
 f) toate
+\\
 
 \section*{Varianta 10}
-\begin{enumerate}
-  \item Precizați ce valoare va avea variabila reală $\mathbf{x}$, după executarea următoarei instrucțiuni.
-\end{enumerate}
 
-Limbajul C++/ Limbajul C\\
-$\mathbf{x}=7.51+35 / 4 * 67 \% 8-2.83$;
-
-Limbajul Pascal\\
-$\mathbf{x}:=7.51+35 \operatorname{div} 4 * 67 \bmod 8-2.83 ;$\\
-a) instrucțiunea este\\
-b) 4\\
-c) 4.68 incorectă\\
-d) 5\\
-e) 28\\
-f) 28.68\\
-2. Precizați care dintre următoarele variante de instruncțiuni inserează cifra 2 în faţa ultimei cifre a unui număr natural n.\\
+10.1. Precizați ce valoare va avea variabila reală $\mathbf{x}$, după executarea următoarei instrucțiuni.
+\begin{verbatim}
 Limbajul C++/ Limbajul C
-
-\begin{verbatim}
-1. n=(n%10*10+2)*10+n/10;
-2. n=(n/10*10+2)*10+n%10;
-3. n=n/10+2*10+n%10;
-4. }\textrm{n}=(\textrm{n}/10+2)*10+n%10
-\end{verbatim}
-
+x=7.51+35/4*67%8-2.83;
 Limbajul Pascal
-
+x:=7.51+35 div 4*67 mod 8-2.83
+\end{verbatim}
+\\
+a) instrucțiunea este incorectă
+\\
+b) 4
+\\
+c) 4.68
+\\
+d) 5
+\\
+e) 28
+\\
+f) 28.68
+\\
+10.2. Precizați care dintre următoarele variante de instruncțiuni inserează cifra 2 în faţa ultimei cifre a unui număr natural n.
+\\
 \begin{verbatim}
-1. n:=(n mod 10*10+2)*10+n div 10;
-2. n:=(n div 10*10+2)*10+n mod 10;
-3. n:=n div 10+2*10+n mod 10;
+Limbajul C++/ Limbajul C
+1.  n=(n%10*10+2)*10+n/10; 
+2.  n=(n/10*10+2)*10+n%10; 
+3.  n=n/10+2*10+n%10; 
+4. n=(n/10+2)*10+n%10; 
+Limbajul Pascal
+1.  n:=(n mod 10*10+2)*10+n div 10; 
+2.  n:=(n div 10*10+2)*10+n mod 10; 
+3.  n:=n div 10+2*10+n mod 10; 
 4. n:=(n div 10+2)*10+n mod 10;
 \end{verbatim}
-
-a) niciuna\\
-b) 1\\
-c) 1 și 2\\
-d) 2\\
-e) 3\\
-f) 4\\
-3. În secvența de program de mai jos, variabilele $\mathbf{x}, \mathbf{y}$ și $\mathbf{z}$ sunt de tip întreg.
-
-Limbajul C++/ Limbajul C
-
+\\
+a) niciuna
+\\
+b) 1
+\\
+c) 1 și 2
+\\
+d) 2
+\\
+e) 3
+\\
+f) 4
+\\
+10.3. În secvența de program de mai jos, variabilele $\mathbf{x}, \mathbf{y}$ și $\mathbf{z}$ sunt de tip întreg.
 \begin{verbatim}
+Limbajul C++/ Limbajul C
 z=1;
 while (y>0)
 {
@@ -4035,10 +4294,8 @@ while (y>0)
 }
 cout<<z; | printf("%d",z);
 \end{verbatim}
-
-Limbajul Pascal
-
 \begin{verbatim}
+Limbajul Pascal
 z:=1;
     while y>0 do
     begin
@@ -4049,16 +4306,21 @@ z:=1;
     end;
     write(z);
 \end{verbatim}
-
-Dacă înaintea secvenței, $\mathbf{x}$ are valoarea 137 , precizați câte valori cu exact două cifre poate avea $\mathbf{y}$ astfel încât valoarea lui $\mathbf{z}$ (afișată la finalul secvenței) să fie 1 .\\
-a) 21\\
-b) 22\\
-c) 23\\
-d) 24\\
-e) 25\\
-f) 26\\
-4. Se consideră declarările:
-
+Dacă înaintea secvenței, $\mathbf{x}$ are valoarea 137 , precizați câte valori cu exact două cifre poate avea $\mathbf{y}$ astfel încât valoarea lui $\mathbf{z}$ (afișată la finalul secvenței) să fie 1 .
+\\
+a) 21
+\\
+b) 22
+\\
+c) 23
+\\
+d) 24
+\\
+e) 25
+\\
+f) 26
+\\
+10.4. Se consideră declarările:
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 typedef struct
@@ -4066,8 +4328,8 @@ typedef struct
         float st,dr;
     } interval;
 interval v[20], m;
+int i,j;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 type interval=record
@@ -4075,90 +4337,126 @@ type interval=record
     end;
 var v:array[0..19] of interval;
 m:interval;
+i,j:word;
 \end{verbatim}
-
-\begin{verbatim}
-int i,j;
-| i,j:word;
-\end{verbatim}
-
 Precizați care dintre următoarele instrucțiuni sunt corecte din punct de vedere sintactic.
-
-Limbajul C++/ Limbajul C
-
-\begin{enumerate}
-  \item $v[i]=v[v[j]]$;
-  \item $\mathrm{m}=(\mathrm{v}[2]+\mathrm{v}[3]) / 2$;
-  \item $\mathrm{v}[10]=\mathrm{m}$;
-  \item m.st=v[5].st\%2;
-\end{enumerate}
-
-Limbajul Pascal
-
 \begin{verbatim}
-1. v[i]:=v[v[j]];
-2. m:=(v[2]+v[3])/2;
-3. v[10]:=m;
-4. m.st:=v[5].st mod 2;
+Limbajul C++/ Limbajul C
+1.  v[i]=v[v[j]]; 
+2.  m=(v[2]+v[3])/2; 
+3.  v[10]=m; 
+4.  m.st=v[5].st%2;
+Limbajul Pascal
+1.  v[i]:=v[v[j]]; 
+2.  m:=(v[2]+v[3])/2; 
+3.  v[10]:=m; 
+4.  m.st:=v[5].st mod 2;
 \end{verbatim}
-
-c) 1 și 4\\
-a) niciuna\\
-b) 1 , 2 și 3\\
-d) 3\\
-e) 3 și 4\\
-5. Subprogramul f cu antetul int f (int x ) (în limbajul C++ și limbajul C), respectiv function $f(x$ : integer) : integer; (în limbajul Pascal), returnează cea mai mică cifră a numărului $\mathbf{x}$, care apare de cel puţin două ori în scrierea lui $\mathbf{x}$, sau valoarea -1 , dacă numărul $\mathbf{x}$ este format din cifre distincte.\\
-Stabiliţi valoarea expresiei $f(f(775125)+f(97917))$.\\
-a) -1\\
-b) 0\\
-c) 1\\
-d) 12\\
-e) 14\\
-f) 16\\
-6. Se generează prin metoda backtracking, submulţimile nevide ale mulţimii $\{1,2,3\}$ astfel: $\{1\},\{1,2\},\{1,2,3\},\{1,3\},\{2\},\{2,3\},\{3\}$. Folosind aceeaşi metodă pentru a genera submulţimile nevide ale mulţimii $\{1,2,3,4,5,6,7\}$, stabiliţi care este a $10-\mathrm{a}$, respectiv a 11-a soluție generată.\\
-a) $\{1,2,3,4,7\}$,\\
-b) $\{1,2,3,4,7\},\{1,2,3,5\}$\\
-c) $\{1,2,3,4,6,7\}$, $\{1,2,3,6,7\}$ \{1,2,3,4,6,7\}\\
-d) $\{1,2,3,4,6\}$, \{1,2,3,4,6,7\}\\
-e) $\{1,2,3,4,6\}$, $\{1,2,3,5\}$\\
-f) $\{1,2,3,4,6,7\},\{1,2,3,4,7\}$\\
-7. Se consideră graful neorientat $G=(X, U)$ unde $X=\{1,2,3,4,5\}$ şi $\mathrm{U}=\{[1,2],[1,3],[5,1],[3,4],[4,5],[3,2]\}$. Precizați numărul minim de muchii care trebuie adăugate pentru ca graful să devină eulerian.\\
-a) 0\\
-b) 1\\
-c) 2\\
-d) 3\\
-e) 4\\
-f) 5\\
-8. Un graf neorientat are 30 noduri şi 16 muchii. Precizați numărul componentelor conexe pe care le poate avea acest graf.\\
-a) exact 14\\
-b) cel puţin 14 şi cel mult 24\\
-c) cel puţin 14 şi cel mult 26\\
-d) cel puţin 16 şi cel mult 24\\
-e) cel puţin 16 şi cel mult 26\\
-f) exact 24\\
-9. Fie $\mathrm{G}=(\mathrm{V}, \mathrm{E})$ un graf orientat în care mulţimea nodurilor este $\mathrm{V}=\{1,2, \ldots, 10\}$, iar mulţimea arcelor este $\mathrm{E}=\{(\mathrm{i}, \mathrm{j}) \mathrm{VxV} \mid$ i este divizor propriu al lui j$\}$. Stabiliţi care dintre următoarele afirmaţii este adevărată.
-
+\\
+a) niciuna
+\\
+b) 1 , 2 și 3
+\\
+c) 1 și 4
+\\
+d) 3
+\\
+e) 3 și 4
+\\
+f) toate
+\\
+10.5. Subprogramul f cu antetul int f (int x ) (în limbajul C++ și limbajul C), respectiv function $f(x$ : integer) : integer; (în limbajul Pascal), returnează cea mai mică cifră a numărului $\mathbf{x}$, care apare de cel puţin două ori în scrierea lui $\mathbf{x}$, sau valoarea -1 , dacă numărul $\mathbf{x}$ este format din cifre distincte.
+Stabiliţi valoarea expresiei $f(f(775125)+f(97917))$.
+\\
+a) -1
+\\
+b) 0
+\\
+c) 1
+\\
+d) 12
+\\
+e) 14
+\\
+f) 16
+\\
+10.6. Se generează prin metoda backtracking, submulţimile nevide ale mulţimii $\{1,2,3\}$ astfel: $\{1\},\{1,2\},\{1,2,3\},\{1,3\},\{2\},\{2,3\},\{3\}$. Folosind aceeaşi metodă pentru a genera submulţimile nevide ale mulţimii $\{1,2,3,4,5,6,7\}$, stabiliţi care este a $10-\mathrm{a}$, respectiv a 11-a soluție generată.
+\\
+a) $\{1,2,3,4,7\}, {1,2,3,4,6,7}$
+\\
+b) $\{1,2,3,4,7\},\{1,2,3,5\}$
+\\
+c) $\{1,2,3,4,6,7\}$, $\{1,2,3,6,7\}$
+\\
+d) $\{1,2,3,4,6\}, \{1,2,3,4,6,7\}$
+\\
+e) $\{1,2,3,4,6\}$, $\{1,2,3,5\}$
+\\
+f) $\{1,2,3,4,6,7\},\{1,2,3,4,7\}$
+\\
+10.7. Se consideră graful neorientat $G=(X, U)$ unde $X=\{1,2,3,4,5\}$ şi $\mathrm{U}=\{[1,2],[1,3],[5,1],[3,4],[4,5],[3,2]\}$. Precizați numărul minim de muchii care trebuie adăugate pentru ca graful să devină eulerian.
+\\
+a) 0
+\\
+b) 1
+\\
+c) 2
+\\
+d) 3
+\\
+e) 4
+\\
+f) 5
+\\
+10.8. Un graf neorientat are 30 noduri şi 16 muchii. Precizați numărul componentelor conexe pe care le poate avea acest graf.
+\\
+a) exact 14
+\\
+b) cel puţin 14 şi cel mult 24
+\\
+c) cel puţin 14 şi cel mult 26
+\\
+d) cel puţin 16 şi cel mult 24
+\\
+e) cel puţin 16 şi cel mult 26
+\\
+f) exact 24
+\\
+10.9. Fie $\mathrm{G}=(\mathrm{V}, \mathrm{E})$ un graf orientat în care mulţimea nodurilor este $\mathrm{V}=\{1,2, \ldots, 10\}$, iar mulţimea arcelor este $\mathrm{E}=\{(\mathrm{i}, \mathrm{j}) \mathrm{VxV} \mid$ i este divizor propriu al lui j$\}$. Stabiliţi care dintre următoarele afirmaţii este adevărată.
 \begin{enumerate}
   \item Graful G are 3 componente tare conexe
   \item Graful G are 3 componente conexe
   \item G nu are vârfuri izolate
-  \item Graful G conţine cel puțin un circuit\\
-a) 1\\
-b) 1 și 2\\
-c) 2\\
-d) 3\\
-e) 4\\
-f) toate
-  \item Prin înălţimea unui arbore cu rădăcină înţelegem numărul de muchii ale celui mai lung lanţ elementar care are una dintre extremităţi în rădăcina arborelui. Dacă arborele este reprezentat prin următorul vector de taţi: tata $=(4,5,1,0,4,5,6,1,4)$, atunci înălţimea sa este:\\
-a) 2\\
-b) 3\\
-c) 4\\
-d) 5\\
-e) 6\\
-f) 7
-  \item Subprogramul g este definit mai jos. Precizați ce valori se vor afișa în urma apelul g (4).
+  \item Graful G conţine cel puțin un circuit
 \end{enumerate}
-
+\\
+a) 1
+\\
+b) 1 și 2
+\\
+c) 2
+\\
+d) 3
+\\
+e) 4
+\\
+f) toate
+\\
+10.10. Prin înălţimea unui arbore cu rădăcină înţelegem numărul de muchii ale celui mai lung lanţ elementar care are una dintre extremităţi în rădăcina arborelui. Dacă arborele este reprezentat prin următorul vector de taţi: tata $=(4,5,1,0,4,5,6,1,4)$, atunci înălţimea sa este:
+\\
+a) 2
+\\
+b) 3
+\\
+c) 4
+\\
+d) 5
+\\
+e) 6
+\\
+f) 7
+\\
+10.11. Subprogramul g este definit mai jos. Precizați ce valori se vor afișa în urma apelul g (4).
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 void g(int n)
@@ -4171,7 +4469,6 @@ void g(int n)
         }
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 procedure g(n:word);
@@ -4185,15 +4482,20 @@ if n>0 then
     end;
 end;
 \end{verbatim}
-
-a) 42132\\
-b) 42322\\
-c) 423222\\
-d) 432322\\
-e) 432132121\\
-f) $\mathbf{4 2 1 3 2 1 2 2 1 1}$\\
-12. În secvența de program alăturată, variabilele i și $\mathbf{k}$ sunt de tip întreg, iar variabila $\mathbf{A}$ memorează o matrice cu 8 linii și 8 coloane (numerotate de la 1 la 8) cu elemente numere întregi. Înainte de executarea secvenței, toate elementele vectorului sunt nule. Precizați care este a 9-a valoare afișată și care este numărul de valori afișate pe parcursul executării secvenței date.
-
+\\
+a) 42132
+\\
+b) 42322
+\\
+c) 423222
+\\
+d) 432322
+\\
+e) 432132121
+\\
+f) 4213212211
+\\
+10.12. În secvența de program alăturată, variabilele i și $\mathbf{k}$ sunt de tip întreg, iar variabila $\mathbf{A}$ memorează o matrice cu 8 linii și 8 coloane (numerotate de la 1 la 8) cu elemente numere întregi. Înainte de executarea secvenței, toate elementele vectorului sunt nule. Precizați care este a 9-a valoare afișată și care este numărul de valori afișate pe parcursul executării secvenței date.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 n=8;k=3;
@@ -4208,48 +4510,46 @@ for(i=n-k;i>=k;i--)
     cout<<A[i][n-k+1]<<' '; | printf("%d ", A[i][n-k+1]);
 for(i=n-k;i>k;i--)
     cout<<A[k][i]<<' '; | printf("%d ", A[k][i]);
+
+    Limbajul Pascal n:=8;k:=3; 
+for i:=n downto 1 do 
+    for j:=n downto 1 do
+        A[i,j]:=n*(j-1)+i; 
+for i:=k to n-k+1 do 
+  write(A[i,k],' '); 
+for i:=k+1 to n-k+1 do  
+    write(A[n-k+1,i],' '); 
+for i:=n-k downto k do  
+    write(A[i,n-k+1],' '); 
+for i:=n-k downto k+1 do  
+ write(A[k,i],' ');
 \end{verbatim}
-
-Limbajul Pascal\\
-$\mathrm{n}:=8 ; \mathrm{k}:=3$;\\
-for i:=n downto 1 do\\
-for $\mathrm{j}:=\mathrm{n}$ downto 1 do
-
-\begin{verbatim}
-            A[i,j]:=n*(j-1)+i;
-for i:=k to n-k+1 do
-        write(A[i,k],' ');
-for i:=k+1 to n-k+1 do
-    write(A[n-k+1,i],' ');
-for i:=n-k downto k do
-    write(A[i,n-k+1],' ');
-for i:=n-k downto k+1 do
-        write(A[k,i],' ');
-\end{verbatim}
-
-a) $\mathbf{4 3}$ și $\mathbf{1 0}$\\
-b) 43 și 12\\
-C) 44 și 10\\
-d) 44 și 12\\
-e) 45 și 10\\
-f) 45 și 12\\
-13. Se consideră declarările:
-
+\\
+a) 43 și 10
+\\
+b) 43 și 12
+\\
+C) 44 și 10
+\\
+d) 44 și 12
+\\
+e) 45 și 10
+\\
+f) 45 și 12
+\\
+10.13. Se consideră declarările:
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 char s[30]="bacaacbc";
 char t[3][3]={"ab","ac","bc"};
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 var i:word;
 s:string[30];
 t:array[0..2]of string[3];
 \end{verbatim}
-
 Precizați ce se va afișa după executarea secvenței de program de mai jos.
-
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 for(int i=0;i<3;i++)
@@ -4259,10 +4559,8 @@ for(int i=0;i<3;i++)
 cout<<strlen(s); | printf("%d",strlen(s));
 cout<<s; | printf("%s",s);
 \end{verbatim}
-
-Limbajul Pascal
-
 \begin{verbatim}
+Limbajul Pascal
 s:='bacaacbc';t[0]:='ab';t[1]:='ac';t[2]:='bc';
 for i:=0 to 2 do
         if pos(t[i],s)=0 then s:=s+t[2-i]
@@ -4270,15 +4568,20 @@ for i:=0 to 2 do
 write(length(s));
 write(s);
 \end{verbatim}
-
-a) secvența este incorectă\\
-b) acbc8bacaacbc\\
-C) acbc10bacaacbc sintactic\\
-d) bcac10bacaacbcbc\\
-e) $a c b 10 b a c a a c b c b c$\\
-f) $a c b c 10 b a c a a c b c b c$\\
-14. Subprogramul p este definit mai jos. Variabila a memorează un vector cu 100 de elemente numere întregi, aflate pe poziții numerotate de la o la 99. Precizaţi câte elemente divizibile cu 3 conține tabloul unidimensional a după executarea apelului $p(6, a)$.
-
+\\
+a) secvența este incorectă sintactic
+\\
+b) acbc8bacaacbc
+\\
+C) acbc10bacaacbc
+\\
+d) bcac10bacaacbcbc
+\\
+e) acb10bacaacbcbc
+\\
+f) acbc10bacaacbcbc
+\\
+10.14. Subprogramul p este definit mai jos. Variabila a memorează un vector cu 100 de elemente numere întregi, aflate pe poziții numerotate de la o la 99. Precizaţi câte elemente divizibile cu 3 conține tabloul unidimensional a după executarea apelului $p(6, a)$.
 \begin{verbatim}
 Limbajul C++/Limbajul C
 void p(int k, int v[100])
@@ -4291,8 +4594,13 @@ void p(int k, int v[100])
             if(j==0) v[j]=1;
             else
             if(i==j) v[j]=1;
+                else v[j]=w[j-1]+w[j];
+        }
+        for(int j=0;j<=i;j++)
+            w[j]=v[j];
+    }
+}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 type vector=array[0..99]of integer;
@@ -4305,33 +4613,26 @@ begin
         for j:=0 to i do
             if j=0 then v[j]:=1
                 else
-\end{verbatim}
-
-\begin{verbatim}
-                else v[j]=w[j-1]+w[j];
-        }
-        for(int j=0;j<=i;j++)
-            w[j]=v[j];
-    }
-}
-\end{verbatim}
-
-\begin{verbatim}
     if i=j then v[j]:=1
         else v[j]:=w[j-1]+w[j];
     for j:=0 to i do w[j]:=v[j];
     end;
 end;
 \end{verbatim}
-
-a) 1\\
-b)2\\
-c) 3\\
-d) 4\\
-e) 5\\
-f) 6\\
-15. Variabilele $\mathbf{x}, \mathrm{n}, \mathbf{i}, \mathrm{b}, \mathrm{c}$ memorează numere naturale. Dacă inițial variabila b memorează valoarea 3 și variabila x memorează inițial valoarea 0 , indicaţi valoarea afișată de secvența de program următoare:
-
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
+f) 6
+\\
+10.15. Variabilele $\mathbf{x}, \mathrm{n}, \mathbf{i}, \mathrm{b}, \mathrm{c}$ memorează numere naturale. Dacă inițial variabila b memorează valoarea 3 și variabila x memorează inițial valoarea 0 , indicaţi valoarea afișată de secvența de program următoare:
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 for(i=0;i<=99;i++)
@@ -4346,14 +4647,6 @@ for(i=0;i<=99;i++)
 }
 cout<<x; l printf("%d",x);
 \end{verbatim}
-
-a) 4\\
-b) 5\\
-c) 6\\
-d) 7\\
-e) 8\\
-f) 9
-
 \begin{verbatim}
 Limbajul Pascal
 for i:=0 to 99 do
@@ -4367,47 +4660,71 @@ for i:=0 to 99 do
             if c>x then x:=c;
 end;
 write(x);
-\end{verbatim}
+\end{verbatim}\
+\\
+a) 4
+\\
+b) 5
+\\
+c) 6
+\\
+d) 7
+\\
+e) 8
+\\
+f) 9
+\\
+
 
 \section*{Varianta 11}
-\begin{enumerate}
-  \item Precizaţi care este numărul elementelor egale cu 1 (pentru limbajul $\mathbf{C} / \mathbf{C}++$ )/true (pentru limbajul Pascal) aflate pe diagonala principală în urma executării secvenței de mai jos, în care a este un tablou bidimensional cu $\mathbf{n}$ linii și $\mathbf{n}$ coloane, iar $\mathbf{i}, \mathbf{j}$ sunt variabile de tip întreg.
-\end{enumerate}
 
+11.1 Precizaţi care este numărul elementelor egale cu 1 (pentru limbajul $\mathbf{C} / \mathbf{C}++$ )/true (pentru limbajul Pascal) aflate pe diagonala principală în urma executării secvenței de mai jos, în care a este un tablou bidimensional cu $\mathbf{n}$ linii și $\mathbf{n}$ coloane, iar $\mathbf{i}, \mathbf{j}$ sunt variabile de tip întreg.
 \begin{verbatim}
 Limbajul C++
 for(i=n;i>=1;i--)
 for(j=n;j>=1;j--)
     a[i][j]=(i==j);
 \end{verbatim}
-
-a) nu poate fi calculat\\
-b) $n^{2}$
-
 \begin{verbatim}
 Limbajul C
 for(i=n;i>=1;i--)
 for(j=n;j>=1;j--)
     a[i][j]=(i==j);
+Limbajul  Pascal 
+for i:=n downto 1 do 
+for j:=n downto 1 do 
+ a[i,j]:=(i=j); 
 \end{verbatim}
-
-Limbajul Pascal for $i:=n$ downto 1 do for $j:=n$ downto 1 do\\
-$a[i, j]:=(i=j) ;$\\
-c) $\mathrm{n}-1$\\
-d) $n^{2}-1$\\
-e) $n$\\
-f) $(\mathrm{n}+1) * \mathrm{n} / 2$\\
-2. Precizaţi care este complexitatea algoritmului de interclasare a două șiruri, cu m și respectiv n numere naturale ( $\mathrm{n} \leq \mathrm{m}$ ).\\
-a) $O(\max (m, n))$\\
-b) $O(\min (m, n))$\\
-c) $O(m+n)$\\
-d) $O(m * n)$\\
-e) $O\left(\operatorname{llog}_{2}(n)\right)$\\
-f) $O\left(\mathrm{nlog}_{2}(\mathrm{~m})\right)$\\
-3. Indicaţi care dintre următoarele secvențe de program calculează în variabila nr, în mod corect și eficient ca timp de executare, numărul cuburilor naturale perfecte mai mici sau egale decât $\mathbf{n}$ (număr natural cunoscut).\\
-a)
-
-\begin{verbatim}
+\\
+a) nu poate fi calculat
+\\
+b) $n^{2}$
+\\
+c) $\mathrm{n}-1$
+\\
+d) $n^{2}-1$
+\\
+e) $n$
+\\
+f) $(\mathrm{n}+1) * \mathrm{n} / 2$
+\\
+11.2. Precizaţi care este complexitatea algoritmului de interclasare a două șiruri, cu m și respectiv n numere naturale ( $\mathrm{n} \leq \mathrm{m}$ ).
+\\
+a) $O(\max (m, n))$
+\\
+b) $O(\min (m, n))$
+\\
+c) $O(m+n)$
+\\
+d) $O(m * n)$
+\\
+e) $O\left(\operatorname{llog}_{2}(n)\right)$
+\\
+f) $O\left(\mathrm{nlog}_{2}(\mathrm{~m})\right)$
+\\
+11.3. Indicaţi care dintre următoarele secvențe de program calculează în variabila nr, în mod corect și eficient ca timp de executare, numărul cuburilor naturale perfecte mai mici sau egale decât $\mathbf{n}$ (număr natural cunoscut).
+\\
+a) \begin{verbatim}
 Limbajul C++
 int n,nr=0,i;
 cin>>n;
@@ -4415,11 +4732,26 @@ for(i=1;i<=n;i++)
 if(i*i*i<=n)
 nr++;
 cout<<nr;
+Limbajul C 
+int n,nr=0,i; 
+scanf("%d",&n); 
+for(i=1;i<=n;i++) 
+if(i*i*i<=n) 
+nr++; 
+printf("%d",nr);
+Limbajul  Pascal 
+var n,i,nr:integer;  
+BEGIN  
+readln(n); 
+nr:=0; 
+ for i:=1 to n do 
+if i*i*i<=n then 
+nr:=nr+1; 
+writeln(nr);  
+END.
 \end{verbatim}
-
-b)
-
-\begin{verbatim}
+\\
+b) \begin{verbatim}
 Limbajul C++
 int n,nr=0,i,j;
 cin>>n;
@@ -4428,183 +4760,124 @@ for(j=1;j<=i;j++)
 if(j*j*j==i)
 nr++;
 cout<<nr;
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-int n,nr=0,i;
-scanf("%d",&n);
-for(i=1;i<=n;i++)
-if(i*i*i<=n)
-nr++;
+Limbajul C 
+int n, nr=0, j, i; 
+scanf("%d",&n); 
+for(i=1;i<=n;i++) 
+for(j=1;j<=i;j++) 
+if(j*j*j==i) 
+nr++; 
 printf("%d",nr);
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal var n,i,nr:integer; BEGIN readln(n); nr:=0;
-    for i:=1 to n do
-if i*i*i<=n then
-nr:=nr+1;
-writeln(nr);
+Limbajul  Pascal 
+var 
+n,nr,i,j:integer;  
+BEGIN  
+readln(n);nr:=0; 
+for i:=1 to n do 
+for j:=1 to i do 
+if j*j*j=i then 
+nr:=nr+1; 
+writeln(nr);  
 END.
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-int n, nr=0, j, i;
-scanf("%d",&n);
-for(i=1;i<=n;i++)
-for(j=1;j<=i;j++)
-if(j*j*j==i)
-nr++;
-printf("%d",nr);
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var
-n,nr,i,j:integer;
-BEGIN
-readln(n);nr:=0;
-for i:=1 to n do
-for j:=1 to i do
-if j*j*j=i then
-nr:=nr+1;
-writeln(nr);
-END.
-\end{verbatim}
-
-c)
-
-\begin{verbatim}
-Limbajul C++
-int n,nr;
-cin>>n;
-nr=(int) exp(1/2.0*
-log(n));
+\\
+c) \begin{verbatim}
+Limbajul C++ 
+int n,nr; 
+cin>>n; 
+nr=(int)exp(1/2.0* 
+log(n)); 
 cout<<nr;
+Limbajul C 
+int n,nr; 
+scanf("%d",&n); 
+nr=(int)exp(1/2.0* 
+log(n)); 
+printf("%d",nr);
+Limbajul  Pascal 
+var n,nr:integer;  
+BEGIN  
+readln(n);  
+nr:=trunc(exp(1/2* 
+ln(n)));  
+writeln(nr);  
+END.
 \end{verbatim}
-
-d)
-
-\begin{verbatim}
-Limbajul C++
-int n, nr;
-cin>>n;
-nr=n*n* (n+1)*(n+1)/4;
+\\
+d) \begin{verbatim}
+Limbajul  C++ 
+int n, nr; 
+cin>>n; nr=n*n*(n+1)*(n+1)/4; 
 cout<<nr;
+Limbajul C 
+int n, nr; 
+scanf("%d",&n); nr=n*n*(n+1)*(n+1)/4; 
+printf("%d",nr);
+Limbajul  Pascal 
+var n, nr:integer;  
+BEGIN  
+readln(n);  nr:=n*n*(n+1)*(n+1)div 4;  
+writeln(nr);  
+END.
 \end{verbatim}
-
-e)
-
-\begin{verbatim}
-Limbajul C++
-int n, nr;
-cin>>n;
-nr=n*n* (n+1)* (n+1)/6;
+\\
+e) \begin{verbatim}
+Limbajul  C++ 
+int n, nr; 
+cin>>n; nr=n*n*(n+1)*(n+1)/6; 
 cout<<nr;
+Limbajul C 
+int n, nr; 
+scanf("%d",&n); nr=n*n*(n+1)*(n+1)/6; 
+printf("%d",nr);
+Limbajul  Pascal 
+var n, nr:integer;  
+BEGIN  
+readln(n);  nr:=n*n*(n+1)*(n+1)div 6;  
+writeln(nr);  
+END.
 \end{verbatim}
-
-f)
-
-\begin{verbatim}
-Limbajul C++
-int n, nr;
-cin>>n;
-nr=(int) exp(1/3.0*
-log(n));
+\\
+f) \begin{verbatim}
+Limbajul  C++ 
+int n, nr; 
+cin>>n; 
+nr=(int)exp(1/3.0* 
+log(n)); 
 cout<<nr;
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-int n,nr;
-scanf("%d",&n);
-nr=(int) exp(1/2.0*
-log(n));
+Limbajul C 
+int n, nr; 
+scanf("%d",&n); 
+nr=(int)exp(1/3.0* 
+log(n)); 
 printf("%d",nr);
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var n,nr:integer;
-BEGIN
-readln(n);
-nr:=trunc (exp (1/2*
-ln(n)));
-writeln(nr) ;
+Limbajul  Pascal 
+var n, nr:integer;  
+BEGIN  
+readln(n);  
+nr:=trunc(exp(1/3* 
+ln(n)));  
+writeln(nr);  
 END.
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-int n, nr;
-scanf("%d",&n);
-nr=n*n* (n+1) * (n+1)/4;
-printf("%d",nr);
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var n, nr:integer;
-BEGIN
-readln(n) ;
-nr:=n*n* (n+1)* (n+1) div 4;
-writeln(nr) ;
-END.
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-int n, nr;
-scanf("%d",&n);
-nr=n*n* (n+1)* (n+1) / 6;
-printf("%d",nr);
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var n, nr:integer;
-BEGIN
-readln(n) ;
-nr:=n*n*(n+1)*(n+1) div 6;
-writeln(nr) ;
-END.
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-int n, nr;
-scanf("%d",&n);
-nr=(int) exp(1/3.0*
-log(n));
-printf("%d",nr);
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var n, nr:integer;
-BEGIN
-readln(n);
-nr:=trunc (exp (1/3*
-ln(n)));
-writeln(nr) ;
-END.
-\end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{3}
-  \item Se definește funcția:\\
+\\
+11.4. Se definește funcția:
 $M_{n}^{k}=\left\{\begin{array}{c}M_{n-1}^{k}+k * M_{n-1}^{k-1} \text { pentru } k>0 \\ 1 \text { pentru } k=0\end{array}\right.$\\
-Dacă se citesc numerele naturale $\mathbf{n}, \mathbf{k}(\mathbf{n}>=\mathbf{k})$ și se apelează funcția recursivă scrisă într-un limbaj de programare cunoscut (C++/C sau Pascal) care evaluează funcția definită mai sus, valoarea calculată reprezintă:\\
-a) produsul cartezian\\
-d) numărul submulțimilor cu b) numărul submulțimilor\\
-unei mulțimi cu n elemente\\
-c) afișarea tuturor aranjamentelor mulțimii $\{1,2, . . . n\}$ luate câte $\mathbf{k}$ $\mathbf{k}$ elemente ale unei mulțimi\\
-e) afiṣarea tuturor f) nici una dintre aceste cu $n$ elemente combinărilor mulțimii variante
-  \item Indicaţi care este efectul prelucrării secvenței de program de mai jos, pentru $\mathbf{x}, \mathbf{y}$ numere naturale cu $\mathbf{x} \leq \mathbf{y}$ :
-\end{enumerate}
-
+Dacă se citesc numerele naturale $\mathbf{n}, \mathbf{k}(\mathbf{n}>=\mathbf{k})$ și se apelează funcția recursivă scrisă într-un limbaj de programare cunoscut (C++/C sau Pascal) care evaluează funcția definită mai sus, valoarea calculată reprezintă:
+\\
+a) produsul cartezian
+\\
+b) numărul submulțimilor
+\\
+c) afișarea tuturor aranjamentelor mulțimii $\{1,2, . . . n\}$ luate câte $\mathbf{k}$ $\mathbf{k}$ elemente ale unei mulțimi
+\\
+d) numărul submulțimilor cu k elemente ale unei mulțimi cu n elemente
+\\
+e) afișarea tuturor combinărilor mulțimii {1,2,..,n} luate câte k
+\\
+f) nici una dintre variante
+\\
+11.5. Indicaţi care este efectul prelucrării secvenței de program de mai jos, pentru $\mathbf{x}, \mathbf{y}$ numere naturale cu $\mathbf{x} \leq \mathbf{y}$ :
 \begin{verbatim}
 Limbajul C++
 int f(int x,int
@@ -4621,7 +4894,6 @@ cin>>x>>y;
     cout<<f(x,y);
 return 0;}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 int f(int x,int
@@ -4638,7 +4910,6 @@ scanf("%d%d",&x,&y);
 printf("%d",f(x,y));
 return 0;}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 var x,y:integer;
@@ -4657,16 +4928,21 @@ readln(x,y);
 writeln(f(x,y));
 end.
 \end{verbatim}
-
-S-a notat cu [a] partea întreagă a numărului a și cu |a-b|, modulul diferenței a-b.\\
-a) $\mathbf{x}+\mathbf{y}$\\
-b) $[y-x]$\\
-c) $|y-x|$\\
-d) $\mathbf{x}^{y}$\\
-e) $[(x+y) / 2]$\\
-f) $y^{x}$\\
-6. Indicaţi care este valoarea inițială a variabilei a dacă, în urma executării secvenței următoare de program, s-a afișat valoarea 6.
-
+S-a notat cu [a] partea întreagă a numărului a și cu |a-b|, modulul diferenței a-b.
+\\
+a) $\mathbf{x}+\mathbf{y}$
+\\
+b) $[y-x]$
+\\
+c) $|y-x|$
+\\
+d) $\mathbf{x}^{y}$
+\\
+e) $[(x+y) / 2]$
+\\
+f) $y^{x}$
+\\
+11.6. Indicaţi care este valoarea inițială a variabilei a dacă, în urma executării secvenței următoare de program, s-a afișat valoarea 6.
 \begin{verbatim}
 Limbajul C++
 int a=... ,n;
@@ -4684,11 +4960,6 @@ n=n/10;
 }
 cout<<<a<<endl;
 \end{verbatim}
-
-a) 8\\
-b) nici una dintre\\
-variante variante
-
 \begin{verbatim}
 Limbajul C
     int a=... ,n;
@@ -4708,7 +4979,6 @@ n=n/10;
 }
 printf("%d",a);
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 var n,a:integer;
@@ -4728,34 +4998,62 @@ end;
 writeln(a);
 END.
 \end{verbatim}
-
-c) 9\\
-d) 13\\
-e)10\\
-f) 5\\
-7. Fie un graf neorientat conex cu $\mathbf{4 0}$ de noduri și $\mathbf{7 0}$ de muchii. Precizați numărul maxim de muchii care pot fi eliminate astfel încât graful să rămână conex:\\
-a) 31\\
-b) 30\\
-c) 1\\
-d) 0\\
-e) 39\\
-f) 35\\
-8. Precizați numărul grafurilor orientate complete cu noduri care pot fi construite:\\
-a) $4^{n \star(n-1) / 2}$\\
-b) $4^{n}(\mathrm{n}+1) / 2$\\
-c) $3^{n \star(n+1) / 2}$\\
-d) $\mathbf{4}^{\mathrm{n} / 2}$\\
-e) $2^{\mathrm{n}^{\star}(\mathrm{n}-1) / 2}$\\
-f) $3^{n \star(n-1) / 2}$\\
-9. Precizați care din următoarele șiruri de numere nu poate reprezenta gradele vârfurilor unui arbore.\\
-a) 2211\\
-b) 411211\\
-c) 121\\
-d) 111215\\
-e) 111214\\
-f) 121213\\
-10. Precizați care este valoarea produsă de subprogramului $\mathbf{f}$ definit mai jos, în urma apelului $\mathbf{f ( s )}$, atunci când parametrul $\mathbf{s}$ primește șirul de caractere: 123abc4567
-
+\\
+a) 8
+\\
+b) nici una dintre variante variante
+\\
+c) 9
+\\
+d) 13
+\\
+e) 10
+\\
+f) 5
+\\
+11.7. Fie un graf neorientat conex cu $\mathbf{4 0}$ de noduri și $\mathbf{7 0}$ de muchii. Precizați numărul maxim de muchii care pot fi eliminate astfel încât graful să rămână conex:
+\\
+a) 31
+\\
+b) 30
+\\
+c) 1
+\\
+d) 0
+\\
+e) 39
+\\
+f) 35
+\\
+11.8. Precizați numărul grafurilor orientate complete cu noduri care pot fi construite:
+\\
+a) $4^{n \star(n-1) / 2}$
+\\
+b) $4^{n}(\mathrm{n}+1) / 2$
+\\
+c) $3^{n \star(n+1) / 2}$
+\\
+d) $\mathbf{4}^{\mathrm{n} / 2}$
+\\
+e) $2^{\mathrm{n}^{\star}(\mathrm{n}-1) / 2}$
+\\
+f) $3^{n \star(n-1) / 2}$
+\\
+11.9. Precizați care din următoarele șiruri de numere nu poate reprezenta gradele vârfurilor unui arbore.
+\\
+a) 2 2 1 1
+\\
+b) 4 1 1 2 1 1
+\\
+c) 1 2 1
+\\
+d) 1 1 1 2 1 5
+\\
+e) 1 1 1 2 1 4
+\\
+f) 1 2 1 2 1 3
+\\
+11.10. Precizați care este valoarea produsă de subprogramului $\mathbf{f}$ definit mai jos, în urma apelului $\mathbf{f ( s )}$, atunci când parametrul $\mathbf{s}$ primește șirul de caractere: 123abc4567
 \begin{verbatim}
 Limbajul C++
 int f( char s[100])
@@ -4764,7 +5062,6 @@ for(i=0;s[i]>='0'&&s[i]<='9';i++)
     nr=nr*10+s[n-i-1]-'0';
 return nr;}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 int f( char s[100])
@@ -4774,7 +5071,6 @@ for(i=0;s[i]>='0'&&s[i]<='9';i++)
     nr=nr*10+s[n-i-1]-'0';
     return nr;}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 function f(s:String):longint;
@@ -4788,15 +5084,20 @@ i:=i+1;
 end;f:=nr;
 end;
 \end{verbatim}
-
-a) 1234567\\
-b) 123\\
-c) 456\\
-d) 321\\
-e) 765\\
-f) 7654\\
-11. Precizați care este suma calculată în urma apelului $f(1, n)$ al subprogramului $f$ definit mai jos, unde $n$ este un număr natural cunoscut:
-
+\\
+a) 1234567
+\\
+b) 123
+\\
+c) 456
+\\
+d) 321
+\\
+e) 765
+\\
+f) 7654
+\\
+11.11. Precizați care este suma calculată în urma apelului $f(1, n)$ al subprogramului $f$ definit mai jos, unde $n$ este un număr natural cunoscut:
 \begin{verbatim}
 Limbajul C++
 int f(int i, int n)
@@ -4809,7 +5110,6 @@ int f(int i, int n)
         else return 0;
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 int f(int i, int n)
@@ -4822,7 +5122,6 @@ int f(int i, int n)
     else return 0;
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 function f(i,n:integer):integer;
@@ -4834,22 +5133,34 @@ if i<=3*n then
 else f:=0
 end;
 \end{verbatim}
-
-a) $\sum_{i=1}^{3 n} i$\\
-b) $\sum_{i=1}^{n} 3 * i$\\
-c) $\sum_{i=1}^{n} \boldsymbol{i}$\\
-d) $\sum_{i=1}^{n}(i+3)$\\
-e) $\sum_{i=1}^{n} \boldsymbol{i} / \mathbf{3}$\\
-f) $\sum_{i=1}^{n / 3} i$\\
-12. Utilizând metoda backtracking, se generează toate posibilitățile de a forma șiruri din trei cuvinte distincte din mulțimea \{examen, reușit, promovat, nota, felicitări\}. Primele trei soluții sunt: examen reușit promovat; examen reușit nota; examen reușit felicitări. Indicați care este soluția generată înainte de felicitări examen reușit.\\
-a) nota examen felicitări\\
-b) nota felicitări promovat\\
-c) felicitări examen promovat\\
-d) examen promovat\\
-e) felicitări nota examen\\
-f) promovat examen felicitări felicitări\\
-13. Dacă pentru variabila a se citește valoarea 11, precizați câte valori pot fi citite pentru variabila b astfel încât în urma apelului $\mathbf{f}(\mathbf{a}, \mathbf{b})$, subprogramul $\mathbf{f}$ de finit mai jos să producă valoarea 10.
-
+\\
+a) $\sum_{i=1}^{3 n} i$
+\\
+b) $\sum_{i=1}^{n} 3 * i$
+\\
+c) $\sum_{i=1}^{n} * i$
+\
+d) $\sum_{i=1}^{n}(i+3)$
+\\
+e) $\sum_{i=1}^{n} i / 3$
+\\
+f) $\sum_{i=1}^{n / 3} i$
+\\
+11.12. Utilizând metoda backtracking, se generează toate posibilitățile de a forma șiruri din trei cuvinte distincte din mulțimea \{examen, reușit, promovat, nota, felicitări\}. Primele trei soluții sunt: examen reușit promovat; examen reușit nota; examen reușit felicitări. Indicați care este soluția generată înainte de felicitări examen reușit.
+\\
+a) nota examen felicitări
+\\
+b) nota felicitări promovat
+\\
+c) felicitări examen promovat
+\\
+d) examen promovat felicitări
+\\
+e) felicitări nota examen
+\\
+f) promovat examen felicitări
+\\
+11.13. Dacă pentru variabila a se citește valoarea 11, precizați câte valori pot fi citite pentru variabila b astfel încât în urma apelului $\mathbf{f}(\mathbf{a}, \mathbf{b})$, subprogramul $\mathbf{f}$ de finit mai jos să producă valoarea 10.
 \begin{verbatim}
 Limbajul C++
 int f(int a,int b)
@@ -4859,7 +5170,6 @@ int f(int a,int b)
 return
 f(a,(a+b)/2)+f((a+b)/2+1,b); }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 int f(int a,int b)
@@ -4869,7 +5179,6 @@ int f(int a,int b)
 return
 f(a, (a+b)/2) +f((a+b)/2+1,b) ;}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 function f(a,b:integer):integer;
@@ -4879,76 +5188,81 @@ else
 f:=f(a,(a+b) div 2) +f((a+b) div 2+1,b);
 end;
 \end{verbatim}
-
-a) 2\\
-b) 1\\
-c) 0\\
-d)3\\
-e) 4\\
-f) 7\\
+\\
+a) 2
+\\
+b) 1
+\\
+c) 0
+\\
+d) 3
+\\
+e) 4
+\\
+f) 7
+\\
 14. Indicați pentru ce valori ale lui $\mathbf{n}$ și $\mathbf{p}$, valoarea variabilei întregi $\mathbf{x}$ este 164 , în urma apelului $f(1)$ al subprogramului $f$ definit mai jos.
-
 \begin{verbatim}
 Limbajul C++
 int s[100],n,p,x;
 void f(int k)
 { int i;
     if(k==p+1) x++;
+else 
+if(k==1) 
+for(i=1;i<=n;i++) f(k+1); 
+    else 
+for(i=1+s[k-1];i<=n;i++) 
+    {  s[k]=i;f(k+1); }}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 int s[100],n,p,x;
 void f(int k)
 { int i;
     if(k==p+1) x++;
+else 
+if(k==1) 
+for(i=1;i<=n;i++) f(k+1); 
+    else 
+ for(i=1+s[k-1];i<=n;i++) 
+    {  s[k]=i;f(k+1); }}
 \end{verbatim}
-
 \begin{verbatim}
-else
-if(k==1)
-for(i=1;i<=n;i++) f(k+1);
-    else
-for(i=1+s[k-1];i<=n;i++)
-    { s[k]=i;f(k+1); }}
+Limbajul Pascal 
+type vector=array[1..100] of integer; 
+var n,p,x:integer; 
+s: vector; 
+procedure f(k:integer); 
+var i,i1:integer; 
+begin 
+if k=p+1 then x:=x+1 
+else 
+if  k=1 then 
+for i1:=1 to n do 
+begin 
+s[k]:=i1; f(k+1); 
+end 
+else 
+for i:=1+s[k-1] to n do 
+begin 
+s[k]:=i; f(k+1); 
+end; end;
 \end{verbatim}
-
-\begin{verbatim}
-else
-if(k==1)
-for(i=1;i<=n;i++) f(k+1);
-        else
-    for(i=1+s[k-1];i<=n;i++)
-        { s[k]=i;f(k+1); }}
-\end{verbatim}
-
-Limbajul Pascal
-type vector=array[1..100] of integer;\\
-var $\mathrm{n}, \mathrm{p}, \mathrm{x}$ :integer;\\
-s: vector;\\
-procedure $f(k$ :integer) ;\\
-var i,il:integer;\\
-begin\\
-if $k=p+1$ then $x:=x+1$\\
-else\\
-if $k=1$ then\\
-for il:=1 to $n$ do\\
-begin
-s[k]:=i1; $f(k+1)$;\\
-end\\
-else\\
-for $i:=1+s[k-1]$ to $n$ do\\
-begin
-s[k]:=i; $\mathrm{f}(\mathrm{k}+1)$;\\
-end; end;\\
-a) 82 și 2\\
-b) 164 și 1\\
-c) 328 și 4\\
-d) 41 si 123\\
-e) 41 și 1\\
-f) 81 și 2\\
-15. Precizați care este valoarea produsă de subprogramul $f$, definit mai jos, în urma apelului f(1999, 7) .
-
+\\
+a) 82 și 2
+\\
+b) 164 și 1
+\\
+c) 328 și 4
+\\
+d) 41 si 123
+\\
+e) 41 și 
+1\
+f) 81 și 2
+\\
+11.15. Precizați care este valoarea produsă de subprogramul $f$, definit mai jos, în urma apelului f(1999, 7) .
 \begin{verbatim}
 Limbajul C++
 int f(int x, int n)
@@ -4960,7 +5274,6 @@ return (x*f(x,n-1))%10;
     else
 return 1;}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 int f(int x, int n)
@@ -4973,7 +5286,6 @@ return (x*f(x,n-1))%10;
     else
 return 1;}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 function f(x,n:integer):integer;
@@ -4981,57 +5293,72 @@ begin
 if n=0 then f:=1
 else
 if n mod 2=0 then
-\end{verbatim}
-
-\begin{verbatim}
 f:=(f(x,n div 2)*f(x,n div 2)) mod 10
 else
     f:=(x*f(x,n-1)) mod 10;
 end;
 \end{verbatim}
-
-a) 798800599919\\
-b) 9\\
-c) nu poate fi\\
-d) 1\\
-e) 0\\
+\\
+a) 798800599919
+\\
+b) 9
+\\
+c) nu poate fi calculată valoarea
+\\
+d) 1
+\\
+e) 0
+\\
 f) 28
-
-\begin{verbatim}
-
-\end{verbatim}
+\\
 
 \section*{Varianta 12}
-\begin{enumerate}
-  \item Precizați care este numărul muchiilor care trebuie adăugate, îtr-un graf neorientat conex care are $\mathbf{n}$ noduri și $\mathrm{n}-1$ muchii ( n număr natural cunoscut), pentru a deveni complet:\\
-a) $n *(n-1) / 2$\\
-b) $(n-1) *(n-2) / 2$\\
-c) $n$\\
-d) $(\mathrm{n}+1) * \mathrm{n} / 2$\\
-e) 0\\
+
+12.1. Precizați care este numărul muchiilor care trebuie adăugate, îtr-un graf neorientat conex care are $\mathbf{n}$ noduri și $\mathrm{n}-1$ muchii ( n număr natural cunoscut), pentru a deveni complet:
+\\
+a) $n *(n-1) / 2$
+\\
+b) $(n-1) *(n-2) / 2$
+\\
+c) $n$
+\\
+d) $(\mathrm{n}+1) * \mathrm{n} / 2$
+\\
+e) 0
+\\
 f) $n-1$
-  \item În secvenţa următoare $\mathbf{i}, \mathbf{j}$ şi $\mathbf{n}$ sunt variabile întregi, iar a este un tablou bidimensional format din $\mathbf{n}$ linii şi $\mathbf{n}$ coloane numerotate de la 1 la $\mathbf{n}$. Indicați care este suma elementelor de pe diagonala secundară a tabloului a, în urma executării acestei secvențe.
-\end{enumerate}
-
-\begin{center}
-\begin{tabular}{l|l|l}
-Limbajul C++ & Limbajul C & Limbajul Pascal \\
-for $(i=1 ; i<=n ; i++)$ & for $(i=1 ; i<=n ; i++)$ & for $i:=1$ to $n$ do \\
-for $(j=1 ; j<=n ; j++)$ & for $(j=1 ; j<=n ; j++)$ & for $j:=1$ to $n$ do \\
-a[i][j] =(i+j)\% n; & a[i][j]=(i+j)\% $n ;$ & $a[i, j]:=(i+j) \bmod n ;$ \\
-\end{tabular}
-\end{center}
-
-a) $n$\\
-b) $n-1$\\
-c) nu se poate calcula\\
-d) $(n+1) * n / 2$\\
-e) $n^{2}$\\
-f) $n * n$\\
-3. Indicați care dintre următoarele secvențe de program calculează în variabila nr, în mod corect și eficient ca timp de executare, suma primelor n cuburi naturale perfecte nenule ( $n$ număr natural cunoscut).\\
-a)
-
+\\
+12.2.În secvenţa următoare $\mathbf{i}, \mathbf{j}$ şi $\mathbf{n}$ sunt variabile întregi, iar a este un tablou bidimensional format din $\mathbf{n}$ linii şi $\mathbf{n}$ coloane numerotate de la 1 la $\mathbf{n}$. Indicați care este suma elementelor de pe diagonala secundară a tabloului a, în urma executării acestei secvențe.
 \begin{verbatim}
+Limbajul C++ 
+for(i=1; i<=n; i++) 
+for(j=1; j<=n; j++) 
+a[i][j] = (i+j)% n;
+Limbajul C 
+for(i=1; i<=n; i++) 
+for(j=1; j<=n; j++) 
+a[i][j] = (i+j)% n;
+Limbajul Pascal 
+for i:=1 to n do 
+for j:=1 to n do 
+a[i,j]:=(i+j) mod n;
+\end{verbatim}
+\\
+a) $n$
+\\
+b) $n-1$
+\\
+c) nu se poate calcula
+\\
+d) $(n+1) * n / 2$
+\\
+e) $n^{2}$
+\\
+f) $n * n$
+\\
+12.3. Indicați care dintre următoarele secvențe de program calculează în variabila nr, în mod corect și eficient ca timp de executare, suma primelor n cuburi naturale perfecte nenule ( $n$ număr natural cunoscut).
+\\
+a) \begin{verbatim}
 Limbajul C++
 int n, nr=0, i;
 cin>>n;
@@ -5039,182 +5366,169 @@ for(i=1;i<=n;i++)
 if(i*i*i<=n)
 nr+=i*i*i;
 cout<<nr;
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul C int $\mathrm{n}, \mathrm{nr}=0$, i ; scanf("\%d", \&n);
-for(i=1;i<=n;i++)
-if(i*i*i<=n)
-nr+=i*i*i;
-printf("%d",nr);
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal var n , nr,i:integer;
-BEGIN readln(n); nr:=0;
-    for i:=1 to n do
-if i*i*i<=n then
-nr:=nr+i*i*i;
-writeln(nr);
+Limbajul C 
+int n, nr=0, i; 
+scanf("%d",&n); 
+for(i=1;i<=n;i++) 
+if(i*i*i<=n) 
+nr+=i*i*i; 
+ printf("%d",nr);
+Limbajul Pascal 
+var n, 
+nr,i:integer;  
+BEGIN  
+readln(n); 
+nr:=0; 
+ for i:=1 to n do 
+if i*i*i<=n then 
+nr:=nr+i*i*i; 
+writeln(nr);  
 END.
 \end{verbatim}
-
-b)
-
-\begin{verbatim}
-Limbajul C++
-int n, nr=0, i, j;
-cin>>n;
-for(i=1;i<=n;i++)
-for(j=1;j<=i;j++)
-if(j*j*j==i)
-nr+=i*i*i;
-cout<<nnr;
-\end{verbatim}
-
-c)
-
-\begin{center}
-\begin{tabular}{l|l|l}
-Limbajul C++ & Limbajul C & Limbajul Pascal \\
-int $n, \mathrm{nr} ;$ & int $\mathrm{n}, \mathrm{nr} ;$ & var $\mathrm{n}, \mathrm{nr}$ :integer; \\
-\end{tabular}
-\end{center}
-
-\begin{verbatim}
-cin>>n;
-nr=(int) exp(1/3.0*
-log(n));
+\\
+b) \begin{verbatim}
+Limbajul C++ 
+int n, nr=0, i, j; 
+cin>>n; 
+for(i=1;i<=n;i++) 
+for(j=1;j<=i;j++) 
+if(j*j*j==i) 
+nr+=i*i*i; 
 cout<<nr;
+Limbajul C 
+int n, nr=0, i, j; 
+scanf("%d",&n); 
+for(i=1;i<=n;i++) 
+for(j=1;j<=i;j++) 
+if(j*j*j==i) 
+nr+=i*i*i; 
+printf("%d",nr);
+Limbajul Pascal 
+var n, i, j 
+nr:integer;  
+BEGIN  
+readln(n);nr:=0; 
+for i:=1 to n do 
+for j:=1 to i do 
+if j*j*j=i then 
+nr:=nr+i*i*i; 
+writeln(nr);  
+END.
 \end{verbatim}
-
-d)
-
-\begin{verbatim}
-Limbajul C++
+\\
+c) \begin{verbatim}
+Limbajul C++ 
 int n, nr;
-cin>>n;
-nr=n*n* (n+1)*(n+1)/4;
+cin>>n; 
+nr=(int)exp(1/3.0* 
+log(n)); 
 cout<<nr;
-\end{verbatim}
-
-e)
-
-\begin{verbatim}
-Limbajul C++
+Limbajul C 
 int n, nr;
-cin>>n;
-nr=(int) exp(1/2.0*
-log(n));
-cout<<nr;
-\end{verbatim}
-
-f)
-
-\begin{verbatim}
-Limbajul C++
-int n, nr;
-cin>>n;
-nr=n*n* (n+1)* (n+1)/6;
-cout<<nr;
-\end{verbatim}
-
-\begin{verbatim}
-scanf("%d",&n);
-nr=(int) exp (1/3.0*
-log(n)));
-printf("%d",nr) ;
-\end{verbatim}
-
-\begin{verbatim}
-BEGIN
-readln(n);
-nr:=trunc (exp (1/3*
-ln(n)));
-writeln(nr);
-END .
-\end{verbatim}
-
-\begin{verbatim}
-int n, nr;
-scanf("%d",&n);
-nr=n*n* (n+1) * (n+1) /4;
-printf("%d",nr) ;
-\end{verbatim}
-
-Limbajul C
-
-\begin{verbatim}
-Limbajul Pascal
+scanf("%d",&n); 
+nr=(int)exp(1/3.0* 
+log(n))); 
+printf("%d",nr);
+Limbajul Pascal 
 var n, nr:integer;
-BEGIN
-readln(n);
-nr:=n*n* (n+1) * (n+1)
-div 4;
-writeln(nr) ;
-END .
+BEGIN  
+readln(n);  
+nr:=trunc(exp(1/3* 
+ln(n)));  
+writeln(nr);  
+END.
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-int n, nr;
-scanf("%d",&n);
-nr=(int) exp (1/2.0*
-log(n)));
-printf("%d",nr) ;
+\\
+d) \begin{verbatim}
+Limbajul C++ 
+int n, nr; 
+cin>>n; nr=n*n*(n+1)*(n+1)/4; 
+cout<<nr;
+Limbajul C 
+int n, nr; 
+scanf("%d",&n); nr=n*n*(n+1)*(n+1)/4; 
+printf("%d",nr);
+Limbajul Pascal 
+var n, nr:integer;  
+BEGIN  
+readln(n);  
+nr:=n*n*(n+1)*(n+1) 
+div 4;  
+writeln(nr);  
+END. 
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var n, nr:integer;
-BEGIN
-readln(n);
-nr:=trunc (exp (1/2*
-ln(n)));
-writeln(nr) ;
-END .
+\\
+e) \begin{verbatim}
+Limbajul C++ 
+int n, nr; 
+cin>>n; 
+nr=(int)exp(1/2.0* 
+log(n)); 
+cout<<nr;
+Limbajul C 
+int n, nr; 
+scanf("%d",&n); 
+nr=(int)exp(1/2.0* 
+log(n))); 
+printf("%d",nr);
+Limbajul Pascal 
+var n, nr:integer;  
+BEGIN  
+readln(n);  
+nr:=trunc(exp(1/2* 
+ln(n)));  
+writeln(nr); 
+END.
 \end{verbatim}
-
-Limbajul C
-
-\begin{verbatim}
-int n, nr;
-scanf("%d",&n) ;
-nr=n*n* (n+1) * (n+1) /6;
-printf("%d",nr) ;
+\\
+f) \begin{verbatim}
+Limbajul C++ 
+int n, nr; 
+cin>>n; nr=n*n*(n+1)*(n+1)/6; 
+cout<<nr;
+Limbajul C 
+int n, nr; 
+scanf("%d",&n); nr=n*n*(n+1)*(n+1)/6; 
+printf("%d",nr);
+Limbajul Pascal 
+var n, nr:integer;  
+BEGIN  
+readln(n);  
+nr:=n*n*(n+1)*(n+1) 
+div 6;  
+writeln(nr);  
+END.
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var n, nr:integer;
-BEGIN
-readln(n);
-nr:=n*n* (n+1) * (n+1)
-div 6;
-writeln(nr) ;
-END .
-\end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{3}
-  \item Se definește recursiv o funcție care calculează numărul combinărilor de $\mathbf{n}$ luate câte $\mathbf{k}$ astfel: $\quad C_{n}^{k}=\left\{\begin{array}{c}\frac{n-k+1}{k} * C_{n}^{k-1} \text { pentru } k>0 \\ 1 \text { pentru } k=0\end{array}\right.$\\
-Dacă se citesc numerele naturale $n, k(n>=k)$ și se apelează funcția recursivă scrisă întrun limbaj de programare cunoscut (C++/C/Pascal) care evaluează funcția definită mai sus, precizați care este numărul apelurilor necesare pentru a calcula $\boldsymbol{C}_{\boldsymbol{n}}^{\boldsymbol{k}}$ :\\
-a) $n$\\
-b) $k$\\
-c) $\mathbf{k - 1}$\\
-d) $n+1$\\
-e) $\mathrm{n}+\mathbf{k}$\\
+\\
+12.4. Se definește recursiv o funcție care calculează numărul combinărilor de $\mathbf{n}$ luate câte $\mathbf{k}$ astfel: $\quad C_{n}^{k}=\left\{\begin{array}{c}\frac{n-k+1}{k} * C_{n}^{k-1} \text { pentru } k>0 \\ 1 \text { pentru } k=0\end{array}\right.$ Dacă se citesc numerele naturale $n, k(n>=k)$ și se apelează funcția recursivă scrisă întrun limbaj de programare cunoscut (C++/C/Pascal) care evaluează funcția definită mai sus, precizați care este numărul apelurilor necesare pentru a calcula $\boldsymbol{C}_{\boldsymbol{n}}^{\boldsymbol{k}}$ :
+\\
+a) $n$
+\\
+b) $k$
+\\
+c) $\mathbf{k - 1}$
+\\
+d) $n+1$
+\\
+e) $\mathrm{n}+\mathbf{k}$
+\\
 f) $k+1$
-  \item Precizați numărul circuitelor care trec prin toate nodurile unui graf orientat tare conex cu n noduri ( n număr natural cunoscut).\\
-a) cel puțin 1\\
-b) exact 1\\
-c) 0\\
-d) cel mult 1\\
-e) exact n-2\\
+\\
+12.5. Precizați numărul circuitelor care trec prin toate nodurile unui graf orientat tare conex cu n noduri ( n număr natural cunoscut).
+\\
+a) cel puțin 1
+\\
+b) exact 1
+\\
+c) 0
+\\
+d) cel mult 1
+\\
+e) exact n-2
+\\
 f) exact $\mathbf{n + 1}$
-  \item Precizați ce afișează următoarea secvență de program:
-\end{enumerate}
-
+\\
+12.6. Precizați ce afișează următoarea secvență de program:
 \begin{verbatim}
 Limbajul C++
     int a=0,n;
@@ -5238,10 +5552,6 @@ n=n/10;
 } while(n!=0);
 cout<<a<<endl;
 \end{verbatim}
-
-a) suma cifrelor numărului $n$\\
-d) numărul cifrelor prime din numărul n
-
 \begin{verbatim}
 Limbajul C
 int a=0,n;
@@ -5265,10 +5575,6 @@ n=n/10;
 } while(n!=0);
 printf("%d",a);
 \end{verbatim}
-
-b) numărul cifrelor impare din numărul n\\
-e) suma cifrelor impare din numărul $n$
-
 \begin{verbatim}
 Limbajul Pascal
 var n,a:integer;
@@ -5290,32 +5596,62 @@ end;
         writeln(a);
 END.
 \end{verbatim}
-
-c) diferența dintre suma cifrelor pare și suma cifrelor impare din numărul n\\
-f) diferența dintre suma cifrelor impare și suma cifrelor pare din numărul $n$\\
-7. Folosind metoda backtracking se generează toate șirurile formate din patru caractere distincte din mulțimea $\{\#, *, \&, @, \%$ \}. Primele trei soluții sunt: \#\textit{\&@, \#}\&\%, \#*@\&. Indicați care este soluția generată înainte de $\& *$ \#@\\
-a) $\& @ \%$ \#\\
-b) $\& \# @ \%$\\
-c) $\& \# \%$ @\\
-d) $* \& @ \%$\\
-e) $* \& \%$ @\\
-f) $\& @ \# \%$\\
-8. Un graf orientat se numește turneu, dacă între oricare două vârfuri i şi j, ījj, există un singur arc. Precizați numărul grafurilor turneu cu n noduri ( n număr natural cunoscut).\\
-a) $4^{n \star(n-1) / 2}$\\
-b) $3^{n}(n-1) / 2$\\
-c) $4^{n *(n+1) / 2}$\\
-d) $2^{n \star(n-1) / 2}$\\
-e) $2^{n \star(n+1) / 2}$\\
-f) $3^{n \star(n+1) / 2}$\\
-9. Precizați care din următoarele șiruri de numere poate reprezenta gradele vârfurilor unui arbore cu n noduri ( n număr natural cunoscut).\\
-a) 411211\\
-b) 2111\\
-c) 122\\
-d) 111215\\
-e) 111\\
-f) 111216\\
-10. Precizați care este valoarea produsă de subprogramul f, definit mai jos, în urma apelului $\mathrm{f}(\mathrm{s})$, atunci când variabila s memorează șirul de caractere: 123abc45678
-
+\\
+a) suma cifrelor numărului $n$
+\\
+b)  numărul  cifrelor  impare din numărul n
+\\
+c) diferența  dintre  suma cifrelor  pare  și  suma cifrelor impare din numărul n
+\\
+d) numărul cifrelor prime din numărul n
+\\
+e) suma  cifrelor  impare  din numărul n
+\\
+f)  diferența  dintre  suma cifrelor  impare  și  suma cifrelor pare din numărul n
+\\
+12.7. Folosind metoda backtracking se generează toate șirurile formate din patru caractere distincte din mulțimea $\{\#, *, \&, @, \%$ \}. Primele trei soluții sunt: \#\textit{\&@, \#}\&\%, \#*@\&. Indicați care este soluția generată înainte de $\& *$ \#@
+\\
+a) $\& @ \%$ \#
+\\
+b) $\& \# @ \%$
+\\
+c) $\& \# \%$ @
+\\
+d) $* \& @ \%$
+\\
+e) $* \& \%$ @
+\\
+f) $\& @ \# \%$
+\\
+12.8. Un graf orientat se numește turneu, dacă între oricare două vârfuri i şi j, ījj, există un singur arc. Precizați numărul grafurilor turneu cu n noduri ( n număr natural cunoscut).
+\\
+a) $4^{n \star(n-1) / 2}$
+\\
+b) $3^{n}(n-1) / 2$
+\\
+c) $4^{n *(n+1) / 2}$
+\\
+d) $2^{n \star(n-1) / 2}$
+\\
+e) $2^{n \star(n+1) / 2}$
+\\
+f) $3^{n \star(n+1) / 2}$
+\
+12.9. Precizați care din următoarele șiruri de numere poate reprezenta gradele vârfurilor unui arbore cu n noduri ( n număr natural cunoscut).
+\\
+a) 4 1 1 2 1 1
+\\
+b) 2 1 1 1
+\\
+c) 1 2 2
+\\
+d) 1 1 1 2 1 5
+\\
+e) 1 1 1
+\\
+f) 1 1 1 2 1 6
+\\
+12.10. Precizați care este valoarea produsă de subprogramul f, definit mai jos, în urma apelului $\mathrm{f}(\mathrm{s})$, atunci când variabila s memorează șirul de caractere: 123abc45678
 \begin{verbatim}
 Limbajul C++
 int f( char s[100])
@@ -5326,7 +5662,6 @@ for(i=0;s[i]>='0'&&s[i]<='9'; i++)
 return nr;
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 int f( char s[100])
@@ -5337,7 +5672,6 @@ for(i=0;s[i]>='0'&&s[i]<='9'; i++)
     p*=10;}
 return nr;}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 function f(s:String):longint;
@@ -5351,15 +5685,20 @@ i:=i+1; p:=p*10;
 end;f:=nr;
 end;
 \end{verbatim}
-
-a) 45678\\
-b) 123\\
-c) 876\\
-d) 678\\
-e) 654\\
-f) 876\\
-11. În urma apelului $f(1, n)$ al subprogramului $f$ definit mai jos, este calculată valoarea sumei...:
-
+\\
+a) 45678
+\\
+b) 123
+\\
+c) 876
+\\
+d) 678
+\\
+e) 654
+\\
+f) 876
+\\
+12.11. În urma apelului $f(1, n)$ al subprogramului $f$ definit mai jos, este calculată valoarea sumei...:
 \begin{verbatim}
 Limbajul C++
 float f(int i,int
@@ -5372,7 +5711,6 @@ return
 1.0/i+f(i+1,n);
         else return 0;}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 float f(int i,int
@@ -5385,15 +5723,6 @@ return
 1.0/i+f(i+1,n);
     else return 0;}
 \end{verbatim}
-
-a)\\
-) b)\\
-$\sum_{i=1}^{n} 1 /(3 * i)$\\
-c)\\
-d)\\
-$\sum_{i=1}^{n} 1 / i$\\
-$\sum_{i=1}^{2 n} 1 / i$
-
 \begin{verbatim}
 Limbajul Pascal
 function
@@ -5405,15 +5734,21 @@ f:=f(i+1,n)+1/i
 else f:=f(i+1,n)
 else f:=0
 end;
-e) f)
-$\sum_{i=1}^{n} 1 /(i-3) \quad \sum_{i=1}^{n} 1 /(i+3)$
 \end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{11}
-  \item Precizați care este valoarea variabilei $\mathbf{x}$, în urma apelului $\mathbf{f}(1)$ al subprogramului $\mathbf{f}$ definit mai jos, pentru $n=4$ și $p=3$.
-\end{enumerate}
-
+\\
+a) $\sum_{i=1}^{3 n} 1 /i$
+\\
+b) $\sum_{i=1}^{n} 1 /(3 * i)$
+\\
+c) $\sum_{i=1}^{n} 1 / i$
+\\
+d) $\sum_{i=1}^{2 n} 1 / i$
+\\
+e) $\sum_{i=1}^{n} 1 / (i - 3)$
+\\
+f) $\sum_{i=1}^{n} 1 / (i + 3)$
+\\
+12.12. Precizați care este valoarea variabilei $\mathbf{x}$, în urma apelului $\mathbf{f}(1)$ al subprogramului $\mathbf{f}$ definit mai jos, pentru $n=4$ și $p=3$.
 \begin{verbatim}
 Limbajul C++
 int s[100],n,p,x;
@@ -5424,8 +5759,12 @@ if(k==p+1) x++;
 for(i=1;i<=n;i++)
 {s[k]=i;
 ok=1;
+for(j=1;j<k;j++) 
+if(s[k]==s[j]) 
+ok=0; 
+if(ok) f(k+1);    
+}}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 int s[100],n,p,x;
@@ -5436,8 +5775,12 @@ if(k==p+1) x++;
 for(i=1;i<=n;i++)
 {s[k]=i;
 ok=1;
+for(j=1;j<k;j++) 
+if(s[k]==s[j]) 
+ok=0; 
+if(ok)f(k+1);     
+}}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 type
@@ -5447,62 +5790,55 @@ var n,p,x:integer;
 s: vector;
 procedure
 f(k:integer);
+var i,i1,j,ok:integer; 
+begin 
+if k=p+1 then 
+x:=x+1 
+else 
+if  k=1 then 
+ for i1:=1 to n do 
+  begin 
+   s[k]:=i1; f(k+1); 
+  end 
+else 
+for i:=1 to n do 
+ begin 
+  s[k]:=i;  
+  ok:=1; 
+  for j:=1 to k-1 do 
+   if s[k]=s[j] then 
+     ok:=0; 
+  if ok=1 then f(k+1);     
+ end; end;
 \end{verbatim}
-
-\begin{verbatim}
-for(j=1;j<k;j++)
-if(s[k]==s[j])
-ok=0;
-if(ok) f(k+1);
-} }
-\end{verbatim}
-
-\begin{verbatim}
-for(j=1;j<k;j++)
-if(s[k]==s[j])
-ok=0;
-if(ok) f(k+1);
-} }
-\end{verbatim}
-
-\begin{verbatim}
-var i,il,j,ok:integer;
-begin
-if k=p+1 then
-x:=x+1
-else
-if k=1 then
-    for il:=1 to n do
-        begin
-            s[k]:=i1; f(k+1);
-        end
-else
-for i:=1 to n do
-    begin
-            s[k]:=i;
-        ok:=1;
-        for j:=1 to k-1 do
-            if s[k]=s[j] then
-                ok:=0;
-        if ok=1 then f(k+1);
-    end; end;
-\end{verbatim}
-
-a) 120\\
-b) 12\\
-c) 10\\
-d) 8\\
-e) 24\\
-f) 60\\
-13. Precizați numărul maxim de muchii care pot exista într-un graf neorientat cu $\mathbf{n}$ noduri ( $\mathbf{n}$ număr natural cunoscut):\\
-a) $n$\\
-b) $n *(n+1) / 2$\\
-c) $n *(n-1) / 2$\\
-d) $n * n *(n-1)$\\
-e) $n+1$\\
-f) $n-1$\\
-14. Dacă pentru variabila n se citește valoarea 12 , precizați care este valoarea produsă în urma apelului $f(1, n, n)$ al subprogramului $\mathbf{f}$ definit mai jos:
-
+\\
+a) 120
+\\
+b) 12
+\\
+c) 10
+\\
+d) 8
+\\
+e) 24
+\\
+f) 60
+\\
+12.13. Precizați numărul maxim de muchii care pot exista într-un graf neorientat cu $\mathbf{n}$ noduri ( $\mathbf{n}$ număr natural cunoscut):
+\\
+a) $n$
+\\
+b) $n *(n+1) / 2$
+\\
+c) $n *(n-1) / 2$
+\\
+d) $n * n *(n-1)$
+\\
+e) $n+1$
+\\
+f) $n-1$
+\\
+12.14. Dacă pentru variabila n se citește valoarea 12 , precizați care este valoarea produsă în urma apelului $f(1, n, n)$ al subprogramului $\mathbf{f}$ definit mai jos:
 \begin{verbatim}
 Limbajul C++
 int f(int a,int b, int n)
@@ -5513,34 +5849,36 @@ else
 return
 f(a,(a+b)/2,n)+f((a+b)/2+1,b,n); }
 Limbajul C
-int $f($ int $a, i n t b, i n t n)$
-\{
-if ( $a==b$ )
-    return (n%a==0?1:0);
-else
-return
-f(a, (a+b)/2,n)+f((a+b)/2+1,b,n);}
-\end{verbatim}
-
+int f(int a,int b, int n) 
+{    
+if(a==b) 
+    return (n%a==0?1:0);  
+else 
+return 
+f(a,(a+b)/2,n)+f((a+b)/2+1,b,n);}
 Limbajul Pascal
-
-\begin{verbatim}
-function f(a,b,n:integer):integer;
+function f(a,b,n:integer):integer; 
+begin 
+if a=b then  
+if n mod a=0 then f:=1 
+else f:=0 
+else f:=f(a,(a+b) div 2,n)+f((a+b) div 2+1,b,n); 
+end;
 \end{verbatim}
-
-begin\\
-if $a=b$ then\\
-if $n \bmod a=0$ then $f:=1$\\
-else $f:=0$\\
-else $f:=f(a,(a+b) \operatorname{div} 2, n)+f((a+b) \operatorname{div} 2+1, b, n) ;$ end;\\
-a) 0\\
-b) 2\\
-c) 4\\
-d) 6\\
-e) 12\\
-f) 8\\
-15. Indicați ce reprezintă valoarea afișată în urma rulări programului de mai jos:
-
+\\
+a) 0
+\\
+b) 2
+\\
+c) 4
+\\
+d) 6
+\\
+e) 12
+\\
+f) 8
+\\
+12.15. Indicați ce reprezintă valoarea afișată în urma rulări programului de mai jos:
 \begin{verbatim}
 Limbajul C++
 #include<iostream>
@@ -5559,7 +5897,6 @@ int f(int n, int k)
                     s=s+f(n,k);
                 cout<<s; return 0;}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 #include <stdio.h>
@@ -5576,65 +5913,70 @@ int f(int n, int k)
             for(k=1;k<=n;k++)
                 s=s+f(n,k);
     printf("%d",s); return 0;}
+Limbajul Pascal 
+function f(n,k:integer):integer; 
+begin 
+if k=1 then f:=1 
+else if k=n then f:=1 
+else if k>n then f:=0 
+else 
+f:=f(n-1,k-1)+k*f(n-1,k);  
+end; 
+var n,k,s:integer; 
+begin 
+  readln(n);s:=0; 
+  for k:=1 to n do s:=s+f(n,k); 
+  writeln(s);readln; 
+end. 
 \end{verbatim}
-
-Limbajul Pascal\\
-function $\mathrm{f}(\mathrm{n}, \mathrm{k}$ :integer) : integer;\\
-begin\\
-if $k=1$ then $f:=1$\\
-else if $k=n$ then $f:=1$\\
-else if $k>n$ then $f:=0$\\
-else\\
-$\mathrm{f}:=\mathrm{f}(\mathrm{n}-1, \mathrm{k}-1)+\mathrm{k} \boldsymbol{f}(\mathrm{n}-1, \mathrm{k})$;\\
-end;\\
-var n,k,s:integer;\\
-begin\\
-readln(n);s:=0;\\
-for $k:=1$ to $n$ do $s:=s+f(n, k)$;\\
-writeln(s) ; readln;\\
-end.\\
-a) $\boldsymbol{A}_{\boldsymbol{n}}^{\boldsymbol{k}}$\\
-b) numărul submulțimilor ordonate mulțimii $\{\mathbf{1 , 2 . . . n \}}$\\
-c) numărul total al partițiilor mulțimii $\{\mathbf{1 , 2 . . . \mathbf { n } \}}$\\
-d) numărul submulțimilor mulțimii $\{\mathbf{1 , 2} . . . \mathbf{n}\}$\\
-e) $\boldsymbol{C}_{\boldsymbol{n}}^{\boldsymbol{k}}$ f) numărul submulțimilor ordonate mulțimii $\{\mathbf{1 , 2 . . . k}\}$
+\\
+a) $\boldsymbol{A}_{\boldsymbol{n}}^{\boldsymbol{k}}$
+\\
+b) numărul submulțimilor ordonate mulțimii $\{\mathbf{1 , 2 . . . n \}}$
+\\
+c) numărul total al partițiilor mulțimii $\{\mathbf{1 , 2 . . . \mathbf { n } \}}$
+\\
+d) numărul submulțimilor mulțimii $\{\mathbf{1 , 2} . . . \mathbf{n}\}$
+\\
+e) $\boldsymbol{C}_{\boldsymbol{n}}^{\boldsymbol{k}}$
+\\
+f) numărul submulțimilor ordonate mulțimii $\{\mathbf{1 , 2 . . . k}\}$
+\\
 
 \section*{Varianta 13}
-\begin{enumerate}
-  \item Indicați câte dintre expresiile următoarele au valoarea $\mathbf{1}$ (Limbajul C++/ Limbajul C), respectiv true (Limbajul Pascal) dacă și numai dacă valorile variabilelor a și b sunt numere întregi pare consecutive.
-\end{enumerate}
 
-Limbajul C++/ Limbajul C
-
-\begin{enumerate}
-  \item $(a \% 2) \& \&(b \% 2) \& \&(a-b==2)$
-  \item $(a \% 2) \& \&(a-b==2| | b-a==2)$
-  \item $!(a \% 2) \& \& a b s(a-b)==2$
-  \item ! $(a \% 2) \& \&!(b \% 2) \& \& a b s(a-$ b) $==2$
-  \item !! $(a \% 2) \& \&(a-b==2)$
-  \item $(a \% 2==0) \& \&!(a b s(a-$ b) $==2$ )\\
-a) 0\\
-b) 1\\
-c) 2\\
-1\\
-2\\
-d) 3\\
-e) 4\\
-f) 5
-\end{enumerate}
-
+13.1. Indicați câte dintre expresiile următoarele au valoarea $\mathbf{1}$ (Limbajul C/C++), respectiv true (Limbajul Pascal) dacă și numai dacă valorile variabilelor a și b sunt numere întregi pare consecutive.
+Limbajul C/C++
+\begin{verbatim}
+1. (a%2)&&(b%2)&&(a-b==2) 
+2. (a%2)&&(a-b==2||b-a==2) 
+3. !(a%2)&& abs(a-b)==2 
+4. !(a%2)&&!(b%2)&& abs(a-b)==2 
+5. !!(a%2)&&(a-b==2) 
+6. (a%2==0)&&!(abs(a-b)==2)
+\end{verbatim}
 Limbajul Pascal
-
-\begin{enumerate}
-  \item (a mod $2<>0$ ) and (b mod $2<>0$ ) and ( $a-b=2$ )
-  \item $(a \bmod 2<>0)$ and $((a-b=2)$ or ( $b-a=2$ ) )
-  \item not $(a \bmod 2<>0)$ and (abs (a-b) $=2$ )
-  \item not $(a \bmod 2<>0)$ and not (b mod $2<>0$ ) and ( $a b s(a-b)=2$ )
-  \item not (not $(a \bmod 2<>0))$ and ( $a-b=2$ )
-  \item (a mod 2=0) and not (abs (ab) $=2$ )
-  \item Precizați ce se va afișa în urma rulării secvenței următoare, în care se consideră că variabilele a și b memorează numere reale.
-\end{enumerate}
-
+\begin{verbatim}
+1. (a mod 2<>0) and (b mod 2<>0) and (a-b=2) 
+2. (a mod 2<>0) and ((a-b=2) or (b-a=2)) 
+3. not(a mod 2<>0) and (abs(a-b)=2) 
+4. not(a mod 2<>0) and  not (b mod 2<>0) and  (abs(a-b)=2) 
+5. not(not(a mod 2<>0)) and  (a-b=2) 
+6. (a mod 2=0) and not(abs(a-b)=2)
+\end{verbatim}
+a) 0
+\\
+b) 1
+\\
+c) 2
+\\
+d) 3
+\\
+e) 4
+\\
+f) 5
+\\
+13.2. Precizați ce se va afișa în urma rulării secvenței următoare, în care se consideră că variabilele a și b memorează numere reale.
 \begin{verbatim}
 Limbajul C++
 a=5.2;
@@ -5644,32 +5986,35 @@ b*=2;
 cout<<ceil(a+b)<<" "<<
 floor(a-b);
 \end{verbatim}
-
-Limbajul Pascal
-
 \begin{verbatim}
+Limbajul Pascal
 a:=5.2;
 b:=-3.25;
 a:=a-b;
 b:=b*2;
 write(round(a+b),' ',trunc(a-
 b));
+Limbajul C 
+a=5.2; 
+b=-3.25; 
+a-=b;  
+b*=2; 
+printf("%g %g",ceil(a+b),floor(a-b));
 \end{verbatim}
-
-Limbajul C\\
-$a=5.2$;\\
-$b=-3.25$;\\
-$\mathrm{a}-=\mathrm{b}$;\\
-b *=2;\\
-printf("\%g \%g", ceil(a+b),floor(a-b));\\
-a) -58\\
-b) -48\\
-c) 114\\
-d) 115\\
-e) 214\\
-f) 215\\
-3. Precizați ce se afișează la sfârșitul executării secvenței următoare.
-
+\\
+a) -5 8
+\\
+b) -4 8
+\\
+c) 1 14
+\\
+d) 1 15
+\\
+e) 2 14
+\\
+f) 2 15
+\\
+13.3. Precizați ce se afișează la sfârșitul executării secvenței următoare.
 \begin{verbatim}
 Limbajul C++
 void p(int a, int &b)
@@ -5677,47 +6022,68 @@ void p(int a, int &b)
     b=b*a;
     b-=10;}
 int g(int a, int b)
+{ a*=10;  
+  b+=a; 
+  a=b;  
+  return a;} 
+int main() 
+{ int a=2,b=7; 
+  p(a,b); 
+  cout<<g(b,a);}
+Limbajul C 
+void p(int a, int *b) 
+{ a++; 
+  *b=*b*a; 
+  *b-=10;} 
+int g(int a, int b) 
+{ a*=10; 
+  b+=a; 
+  a=b; 
+  return a;} 
+int main() 
+{ int a=2,b=7; 
+  p(a,&b); 
+  printf("%d",g(b,a)); }
+Limbajul Pascal 
+var a,b:integer; 
+procedure p(a:integer; var 
+b:integer); 
+begin 
+   inc(a);
+   b:=b*a; 
+   b:=b-10; 
+end; 
+ 
+function 
+g(a,b:integer):integer; 
+begin 
+  a:=a*10; 
+  b:=b+a; 
+  a:=b; 
+  g:=a; 
+end; 
+ 
+begin 
+  a:=2; 
+  b:=7; 
+  p(a,b); 
+  write(g(b,a)); 
+end.
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var a,b:integer;
-procedure p(a:integer; var
-b:integer);
-begin
-    inc(a);
-\end{verbatim}
-
-\begin{verbatim}
-{ a*=10;
-    b+=a;
-    a=b;
-    return a;}
-int main()
-{ int a=2,b=7;
-    p(a,b) ;
-    cout<<g(b,a);}
-Limbajul C
-void p(int a, int *b)
-{ a++;
-    *b=*b*a;
-    *b-=10;}
-int g(int a, int b)
-{ a*=10;
-    b+=a;
-    a=b;
-    return a;}
-int main()
-{ int a=2,b=7;
-    p(a,&b);
-    printf("%d",g(b,a)); }
-\end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{3}
-  \item Se consideră subprogramul $\pounds$ definit mai jos. Precizați ce se afișează în urma apelului $f(8)$.
-\end{enumerate}
-
+\\
+a) 27
+\\
+b) 41
+\\
+c) 72
+\\
+d) 73
+\\
+e) 112
+\\
+f) 113
+\\
+13.4. Se consideră subprogramul f definit mai jos. Precizați ce se afișează în urma apelului $f(8)$.
 \begin{verbatim}
 Limbajul C++
 void f(int i)
@@ -5728,110 +6094,97 @@ void f(int i)
     else {i--;
             f(i);}
 }
-\end{verbatim}
-
-Limbajul C\\
-void $f(i n t$ i)\\
-\{ if (i>1)\\
-if (i\%2)\\
-\{f(i-1);\\
-printf("\%d ",i-1);\}\\
-else \{i--;\\
-f(i); \}\\
-\}\\
-a) 27\\
-b) 41\\
-c) 72\\
-d) 73\\
-e) 112\\
-f) 113\\
-a) 235\\
-b) 246\\
-c) 357\\
-d) 532\\
-e) 642\\
-f) 753
-
-\begin{verbatim}
-    b:=b*a;
-    b:=b-10;
-end;
-function
-g(a,b:integer) : integer;
-begin
-    a:=a*10;
-    b:=b+a;
-    a:=b;
-    g:=a;
-end;
-begin
-    a:=2;
-    b:=7 ;
-    p(a,b);
-    write(g(b,a));
-end.
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-procedure f(i:integer);
-begin
-    if i>1 then
-        if i mod 2<>0 then
-            begin
-                f(i-1);
-                write(i-1,' ');
-            end
-        else
-            begin
-                dec(i);
-                f(i);
-            end;
+Limbajul C 
+void f(int i) 
+{ if (i>1) 
+   if (i%2) 
+       {f(i-1); 
+        printf("%d ",i-1);} 
+   else {i--;  
+         f(i);} 
+}
+Limbajul Pascal 
+procedure f(i:integer); 
+begin 
+  if i>1 then 
+    if i mod 2<>0 then 
+        begin 
+          f(i-1); 
+          write(i-1,' '); 
+        end  
+    else 
+        begin 
+          dec(i); 
+          f(i); 
+        end; 
 end;
 \end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{4}
-  \item Precizați ce se va afișa în urma rulării secvenței date, în care se consideră că variabilele $\mathbf{x}$ și $\mathbf{y}$ sunt de tip întreg.
-\end{enumerate}
-
+\\
+a) 2 3 5
+\\
+b) 2 4 6
+\\
+c) 3 5 7
+\\
+d) 5 3 2
+\\
+e) 6 4 2
+\\
+f) 7 5 3
+\\
+13.5. Precizați ce se va afișa în urma rulării secvenței date, în care se consideră că variabilele $\mathbf{x}$ și $\mathbf{y}$ sunt de tip întreg.
 \begin{verbatim}
 Limbajul C++
-$\mathbf{x}=5$;
-$\mathrm{y}=2$;
-cout<<++x/y+++1;
+x=5; 
+y=2; 
+cout<<++x/y+++1; 
 cout<<endl<<x<<" "<<y;
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-x:=5;
-$y:=2$;
-inc (x);
-writeln(x div $\mathrm{y}+1$ );
-inc (y);
+Limbajul C 
+x=5; 
+y=2; 
+printf("%d",++x/y+++1); 
+printf("\n%d %d",x,y);
+Limbajul Pascal 
+x:=5; 
+y:=2; 
+inc(x); 
+writeln(x div y+1); 
+inc(y); 
 writeln(x,' ',y);
 \end{verbatim}
-
-Limbajul C
-
-\begin{verbatim}
-x=5;
-y=2;
-printf("%d",++x/y+++1);
-printf("\n%d %d",x,y);
+\\
+a) \begin{verbatim}
+    4
+    6
+3
 \end{verbatim}
-
-a) 4\\
-b) 4\\
-c) 4\\
-d) 3\\
-e) 3\\
-f) 3 6 62 52 63 62 52
-
-3\\
-6. Ș̦tiind că variabila s este de tip şir de caractere, precizați ce se va afișa după executarea următoarei secvențe de instrucţiuni.
-
+\\
+b) \begin{verbatim}
+    4
+    6 2
+\end{verbatim}
+\\
+c) \begin{verbatim}
+    4
+    5 2
+\end{verbatim}
+\\
+d) \begin{verbatim}
+    3
+    6 3
+\end{verbatim}
+\\
+e) \begin{verbatim}
+    3
+    6 2
+\end{verbatim}
+\\
+f) \begin{verbatim}
+    3
+    5 2
+\end{verbatim}
+\\
+13.6. Ș̦tiind că variabila s este de tip şir de caractere, precizați ce se va afișa după executarea următoarei secvențe de instrucţiuni.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 strcpy(s, "ExamenUPB");
@@ -5842,12 +6195,6 @@ strcpy(s+strlen(s)-2,
 s+strlen(s)-1);
 printf("%s",s); | cout<<s;
 \end{verbatim}
-
-a) UnenUB\\
-b) UnenUP\\
-c) neenUB\\
-d) neenUP e) nennUB f) nennUP
-
 \begin{verbatim}
 Limbajul Pascal
 s:='ExamenUPB';
@@ -5858,67 +6205,132 @@ delete(s,1,2);
 delete(s,length(s)-1,1);
 write(s);
 \end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{6}
-  \item Indicați care este numărul de comparații executate pentru ordonarea descrescătoare a unui tablou unidimensional cu 50 elemente, prin metoda interschimbării.\\
-a) 25\\
-b) 49\\
-c) 50\\
-d) 1225\\
-e) 1226\\
+\\
+a) UnenUB
+\\
+b) UnenUP
+\\
+c) neenUB
+\\
+d) neenUP
+\\
+e) nennUB
+\\
+f) nennUP
+\\
+13.7. Indicați care este numărul de comparații executate pentru ordonarea descrescătoare a unui tablou unidimensional cu 50 elemente, prin metoda interschimbării.
+\\
+a) 25
+\\
+b) 49
+\\
+c) 50
+\\
+d) 1225
+\\
+e) 1226
+\\
 f) 2450
-  \item Utilizând metoda backtracking se generează toate codurile formate din cinci caractere distincte ale mulțimii $\{\mathbf{a}, \mathbf{b}, \mathbf{c}, \mathbf{d}, \mathbf{e}, \mathbf{f}\}$. Primele cinci soluții generate sunt: $a b c d e, a b c d f, a b c e d, a b c e f, a b c f d$. Indicați care sunt codurile generate imediat în faţa soluţiei dcbae, dar și imediat după aceasta.\\
-a) dcaef; dcafe\\
-b) dcafe; dcbaf\\
-c) dcbaf ; dcbea\\
-d) dcbfe ; dceab\\
-e) dcbef; f)dcbfa; dcbfe dcbaf
-  \item La o cantină se prepară zilnic 5 sortimente pentru felul întâi, 10 pentru felul doi și 6 tipuri de desert. Precizați câte posibilități de a alege un meniu există, știind că un meniu este alcătuit din felul întâi, felul doi și facultativ desert.\\
-a) 50\\
-b) 80\\
-c) 90\\
-d) 250\\
-e) 300\\
+\\
+13.8. Utilizând metoda backtracking se generează toate codurile formate din cinci caractere distincte ale mulțimii $\{\mathbf{a}, \mathbf{b}, \mathbf{c}, \mathbf{d}, \mathbf{e}, \mathbf{f}\}$. Primele cinci soluții generate sunt: $a b c d e, a b c d f, a b c e d, a b c e f, a b c f d$. Indicați care sunt codurile generate imediat în faţa soluţiei dcbae, dar și imediat după aceasta.
+\\
+a) dcaef; dcafe
+\\
+b) dcafe; dcbaf
+\\
+c) dcbaf ; dcbea
+\\
+d) dcbfe ; dceab
+\\
+e) dcbef; dcbfe
+\\
+f)dcbfa; dcbaf
+\\
+13.9. La o cantină se prepară zilnic 5 sortimente pentru felul întâi, 10 pentru felul doi și 6 tipuri de desert. Precizați câte posibilități de a alege un meniu există, știind că un meniu este alcătuit din felul întâi, felul doi și facultativ desert.
+\\
+a) 50
+\\
+b) 80
+\\
+c) 90
+\\
+d) 250
+\\
+e) 300
+\\
 f) 350
-  \item Fie un graf neorientat cu 10 noduri. Gradele vârfurilor acestuia sunt reținute în șirul: 4,2,2,3,3,3,2,4,2,3. Precizați care este numărul de muchii ce trebuie adăugate pentru ca graful să devină complet.\\
-a) 45\\
-b) 41\\
-c) 31\\
-d) 27\\
-e) 26\\
+\\
+13.10. Fie un graf neorientat cu 10 noduri. Gradele vârfurilor acestuia sunt reținute în șirul: 4,2,2,3,3,3,2,4,2,3. Precizați care este numărul de muchii ce trebuie adăugate pentru ca graful să devină complet.
+\\
+a) 45
+\\
+b) 41
+\\
+c) 31
+\\
+d) 27
+\\
+e) 26
+\\
 f) 17
-  \item Fie un graf neorientat complet cu 50 noduri. Precizați care este numărul minim de muchii care trebuie eliminate pentru ca graful să fie hamiltonian.\\
-a) 0\\
-b) 25\\
-c) 50\\
-d) 612\\
-e) 1175\\
+\\
+13.11. Fie un graf neorientat complet cu 50 noduri. Precizați care este numărul minim de muchii care trebuie eliminate pentru ca graful să fie hamiltonian.
+\\
+a) 0
+\\
+b) 25
+\\
+c) 50
+\\
+d) 612
+\\
+e) 1175
+\\
 f) 1225
-  \item Precizați câți arbori binari cu $\mathbf{3}$ noduri, numerotate de la $\mathbf{1}$ la $\mathbf{3}$, se pot construi. Un arbore binar este un arbore în care fiecare nod are cel mult doi descendenți direcți (fii), ordonați: fiu stâng, fiu drept. Dacă un nod are un singur descendent trebuie specificat dacă este fiu stâng sau fiu drept.\\
-a) 6\\
-b) 8\\
-c) 9\\
-d) 21\\
-e) 24\\
+\\
+13.12. Precizați câți arbori binari cu $\mathbf{3}$ noduri, numerotate de la $\mathbf{1}$ la $\mathbf{3}$, se pot construi. Un arbore binar este un arbore în care fiecare nod are cel mult doi descendenți direcți (fii), ordonați: fiu stâng, fiu drept. Dacă un nod are un singur descendent trebuie specificat dacă este fiu stâng sau fiu drept.
+\\
+a) 6
+\\
+b) 8
+\\
+c) 9
+\\
+d) 21
+\\
+e) 24
+\\
 f) 30
-  \item Fie arborele cu rădăcină cu nodurile numerotate de la 1 la 15 , reprezentat prin vectorul de tați: $(10,8,4,10,1,4,5,10,8,0,3,5,3,12,3)$. Precizați câți descendenți are nodul 4.\\
-a) 6\\
-b) 5\\
-c) 4\\
-d) 3\\
-e) 2\\
+\\
+13.13. Fie arborele cu rădăcină cu nodurile numerotate de la 1 la 15 , reprezentat prin vectorul de tați: $(10,8,4,10,1,4,5,10,8,0,3,5,3,12,3)$. Precizați câți descendenți are nodul 4.
+\\
+a) 6
+\\
+b) 5
+\\
+c) 4
+\\
+d) 3
+\\
+e) 2
+\\
 f) 1
-  \item Precizați câte grafuri neorientate distincte cu 25 noduri, dintre care cel puțin un nod este izolat, se pot construi.\\
-a) $\mathbf{2}^{\mathbf{2 7 6}}$\\
-b) $2^{300}$\\
-c) $\mathbf{3} \cdot \mathbf{2}^{\mathbf{2 7 9}}$\\
-d) $5^{2} \cdot 2^{276}$\\
-e) $3 \cdot 2^{303}$\\
+\\
+13.14. Precizați câte grafuri neorientate distincte cu 25 noduri, dintre care cel puțin un nod este izolat, se pot construi.
+\\
+a) $2^{276}$
+\\
+b) $2^{300}$
+\\
+c) $3 \cdot 2^{279}$
+\\
+d) $5^{2} \cdot 2^{276}$
+\\
+e) $3 \cdot 2^{303}$
+\\
 f) $5^{2} \cdot 2^{300}$
-  \item Fie secvența de instrucțiuni folosită pentru ridicarea la puterea $\mathbf{p}$ a unei matrice pătratice $\mathbf{a}$, de ordin $\mathbf{n}$. Elementele tabloului a sunt numere întregi, iar $\mathbf{n}$ și $\mathbf{p}$ sunt numere naturale nenule. Variabilele $\mathbf{a}, \mathrm{b}, \mathrm{c}$ sunt tablouri bidimensionale, cu n linii și $\mathbf{n}$ coloane, iar variabilele $\mathbf{i}, \mathbf{j}, \mathbf{k}$ sunt de tip întreg.
-\end{enumerate}
-
+\\
+13.15. Fie secvența de instrucțiuni folosită pentru ridicarea la puterea $\mathbf{p}$ a unei matrice pătratice $\mathbf{a}$, de ordin $\mathbf{n}$. Elementele tabloului a sunt numere întregi, iar $\mathbf{n}$ și $\mathbf{p}$ sunt numere naturale nenule. Variabilele $\mathbf{a}, \mathrm{b}, \mathrm{c}$ sunt tablouri bidimensionale, cu n linii și $\mathbf{n}$ coloane, iar variabilele $\mathbf{i}, \mathbf{j}, \mathbf{k}$ sunt de tip întreg.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 for(i=1;i<=n;i++)
@@ -5935,8 +6347,8 @@ c[i][j]+b[i][k]*a[k][j];
 for(i=1;i<=n;i++)
     for(j=1;j<=n;j++)
         b[i][j]=c[i][j];
+}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 for i:=1 to n do
@@ -5953,42 +6365,75 @@ for q:=1 to p do
 c[i,j]:=c[i,j]+b[i,k]*a[k,j];
                 end;
             for i:=1 to n do
-\end{verbatim}
-
-\begin{verbatim}
-}
     for j:=1 to n do
         b[i,j]:=c[i,j];
 end;
 \end{verbatim}
-
-Precizați de câte ori se execută operația de înmulțire în cadrul secvenței date pentru ridicarea la puterea $\mathbf{p}$ a matricei pătratice a de ordin n .\\
-a) $\left(n^{3}\right)^{p}$\\
-b) $(p+1) \cdot n^{3}$\\
-c) $p \cdot n^{3}$\\
-d) $(\mathrm{p}-1) \cdot \mathrm{n}^{3}$\\
-e) $p \cdot n^{2}$\\
+Precizați de câte ori se execută operația de înmulțire în cadrul secvenței date pentru ridicarea la puterea $\mathbf{p}$ a matricei pătratice a de ordin n .
+\\
+a) $\left(n^{3}\right)^{p}$
+\\
+b) $(p+1) \cdot n^{3}$
+\\
+c) $p \cdot n^{3}$
+\\
+d) $(p-1) \cdot n^{3}$
+\\
+e) $p \cdot n^{2}$
+\\
 f) $n^{3}$
+\\
 
 \section*{Varianta 14}
-\begin{enumerate}
-  \item Indicaţi care expresie dintre următoarele are valoarea 1 (Limbajul C++/ Limbajul C), respectiv true (Limbajul Pascal) dacă și numai dacă valorile variabilelor a și b sunt numere întregi impare consecutive.\\
-Limbajul C++/ Limbajul C
-  \item $(\mathrm{a} \% 2==1) \& \&!(\mathrm{b} \% 2) \& \& \mathrm{abs}(\mathrm{a}-$ b) $==2$
-  \item ! (a\%2) $\& \&!(b \% 2) \& \& a b s(a-$ b) $==2$
-  \item ! (! (a\%2) \&\&! (b\%2)) \&\& abs $(a-b)==2$
-  \item $(a \% 2==1 \& \& b \% 2!=1) \& \&(a-$ $b==2| | b-a==2)$
-  \item ! (a\%2) \&\&! (b\%2) \&\&! (abs (ab) $==2$ )
-  \item $(\mathrm{a} \% 2) \& \&(\mathrm{~b} \% 2) \& \& \mathrm{abs}(\mathrm{a}-$ b) $!=2$\\
-a) 1\\
-b) 2\\
-c) 3\\
-d) 4\\
-e) 5\\
-f) 6
-  \item Precizați ce se va afișa în urma rulării secvenței următoare, dacă variabila întreagă x are valoarea inițială 1234 .
-\end{enumerate}
 
+14.1. Indicaţi care expresie dintre următoarele are valoarea 1 (Limbajul C/C++), respectiv true (Limbajul Pascal) dacă și numai dacă valorile variabilelor a și b sunt numere întregi impare consecutive.\\
+\begin{verbatim}
+Limbajul C/C++ 
+1. (a%2==1)&&!(b%2)&& abs(a-
+b)==2 
+2. !(a%2)&&!(b%2)&& abs(a-
+b)==2 
+3. !(!(a%2)&&!(b%2))&& 
+abs(a-b)==2 
+4. (a%2==1&&b%2!=1)&&(a-
+b==2|| b-a==2) 
+5. !(a%2)&&!(b%2)&&!(abs(a-
+b)==2) 
+6. (a%2)&&(b%2)&& abs(a-
+b)!=2 
+Limbajul Pascal 
+1. (a mod 2=1) and (not(b mod 
+2<>0)) and (abs(a-b)=2) 
+2. not(a mod 2<>0) and       
+not(b mod 2<>0) and     
+(abs(a-b)=2) 
+3. not(not(a mod 2<>0) and           
+(not(b mod 2<>0))) and       
+(abs(a-b)=2) 
+4. ((a mod 2=1) and            
+(b mod 2<>1)) and ((a-b=2) 
+or (b-a=2)) 
+5. not(a mod 2<>0) and       
+not(b mod 2<>0) and  
+not(abs(a-b)=2) 
+6. (a mod 2<>0) and (b mod 
+2<>0) and (abs(a-b)<>2)
+\end{verbatim}
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
+f) 6
+\\
+
+14.2. Precizați ce se va afișa în urma rulării secvenței următoare, dacă variabila întreagă x are valoarea inițială 1234 .
 \begin{verbatim}
 Limbajul C++
 x=x%100/10*10/10%10 +
@@ -5996,102 +6441,87 @@ x/10%10;
 cout<<ceil(sqrt(x)+0.5)<<
 " "<< floor(sqrt(x)-0.5);
 \end{verbatim}
-
-Limbajul C
-
 \begin{verbatim}
+Limbajul C
 x=x%100/10*10/10%10 +
 x/10%10;
 printf("%g %g",
 ceil(sqrt(x)+0.5),
 floor(sqrt(x)-0.5));
+Limbajul Pascal 
+x:= x mod 100 div 10*10 div 
+10 mod 10 +x div 10 mod 10; 
+write(round(sqrt(x)+0.5), 
+' ',trunc(sqrt(x)-0.5));
 \end{verbatim}
-
-a) 20\\
-b) 21\\
-c) 22\\
-d) 31\\
-e) 32\\
-f) 53\\
-3. Precizați ce se afișează la sfầrșitul executării secvenței următoare.
-
+\\
+a) 20
+\\
+b) 21
+\\
+c) 22
+\\
+d) 31
+\\
+e) 32
+\\
+f) 53
+\\
+14.3. Precizați ce se afișează la sfầrșitul executării secvenței următoare.
 \begin{verbatim}
 Limbajul C++
 void p(int a, int &b)
     { a+=a+b;
         b+=a;
         a=b-a; }
-\end{verbatim}
-
-Limbajul Pascal $x:=x \bmod 100$ div 10*10 div $10 \bmod 10+x$ div $10 \bmod 10 ;$ write (round (sqrt (x) +0.5 ), ' ',trunc (sqrt(x)-0.5));
-
-\begin{verbatim}
-Limbajul Pascal
-var a,b:integer;
-procedure p(a:integer; var
-b:integer);
+int main() 
+  { int a=5,b=10; 
+    p(a,b); 
+    cout<<a<<" "<<b; 
+    p(a,b); 
+    cout<<endl<<a<<" "<<b; 
+ }
+Limbajul C 
+void p(int a, int *b) 
+ { a+=a+(*b); 
+   *b+=a; 
+   a=*b-a; } 
+int main() 
+{ int a=5,b=10; 
+  p(a,&b);   
+  printf("%d %d",a,b); 
+  p(a,&b); 
+  printf("\n%d %d",a,b);}
+Limbajul Pascal 
+var a,b:integer; 
+procedure p(a:integer; var 
+b:integer); 
 begin
-\end{verbatim}
-
-Limbajul Pascal
-
-\begin{enumerate}
-  \item (a mod 2=1) and (not (b mod $2<>0$ ) ) and (abs (a-b)=2)
-  \item not $(a \bmod 2<>0)$ and not (b mod 2<>0) and (abs (a-b) =2)
-  \item not (not (a mod $2<>0$ ) and (not (b mod 2<>0))) and ( $\mathrm{abs}(\mathrm{a}-\mathrm{b})=2$ )
-  \item $((a \bmod 2=1)$ and (b mod 2<>1)) and ((a-b=2) or $(b-a=2))$
-  \item not $(a \bmod 2<>0)$ and not (b mod $2<>0$ ) and not (abs (a-b) $=2$ )
-  \item ( $\mathrm{a} \bmod 2<>0$ ) and ( b mod $2<>0$ ) and ( $a b s(a-b)<>2$ )
-\end{enumerate}
-
-\begin{verbatim}
-int main()
-        { int a=5,b=10;
-            p(a,b);
-            cout<<<a<<" "<<b;
-            p(a,b);
-            cout<<endl<<a<<" "<<b;
-    }
-\end{verbatim}
-
-Limbajul C\\
-void p(int a, int *b)\\
-\{ $a+=a+(* b)$;\\
-*b+=a;\\
-$a=* b-a ;\}$\\
-int main()\\
-\{ int $a=5, b=10$;\\
-p(a, \&b) ;\\
-printf("\%d \%d",a,b);\\
-p(a, \&b) ;\\
-printf("\textbackslash n\%d \%d", a,b);\}\\
-a) 530\\
-b) 530\\
-c) 530\\
-570\\
-580 1080\\
-d) $10 \quad 30$ 1030\\
-e) 1030 3070
-
-f) \begin{tabular}{l}
-$10 \quad 30$ \\
-$30 \quad 80$ \\
-\end{tabular}
-
-\begin{verbatim}
-    a:=a+a+b;
-    b:=b+a;
-    a:=b-a;
-end;
-begin
-    a:=5;
-    b:=10;
-    p(a,b);
-    writeln(a,' ',b);
-    p(a,b) ;
-    writeln(a,' ',b);
+   a:=a+a+b; 
+   b:=b+a; 
+   a:=b-a; 
+end; 
+ 
+begin 
+  a:=5; 
+  b:=10; 
+  p(a,b);  
+  writeln(a,' ',b); 
+  p(a,b);  
+  writeln(a,' ',b); 
 end.
 \end{verbatim}
+\\
+a) \begin{verbatim}
+5 30
+5 70
+\end{verbatim}
+\\
+b) \begin{verbatim}
+5 30
+5 80
+
+
 
 \begin{enumerate}
   \setcounter{enumi}{3}
