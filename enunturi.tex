@@ -8846,31 +8846,39 @@ f) O (1)
 \\
 
 \section*{Varianta 19}
-\begin{enumerate}
-  \item Ce se va afișa în urma rulării secvenței de cod de mai jos:
-\end{enumerate}
 
+19.1. Ce se va afișa în urma rulării secvenței de cod de mai jos:
 \begin{verbatim}
 Limbajul C++
 int main() {
     int p, *q; p = 45; q = &p;
 cout << q[0];
 }
+Limbajul C 
+int main() {  
+int p,*q; p = 45; q = &p;  
+printf("%d", q[0]);
+Limbajul Pascal 
+var  p:integer; q:^integer; 
+begin 
+      p := 45; q := @p;    
+      write(q^); 
+end.
 \end{verbatim}
-
-Limbajul C
-int main() {\\
-int $\mathrm{p}, * \mathrm{q} ; \mathrm{p}=45 ; \mathrm{q}=\mathrm{q} \mathrm{p}$;
-printf("\%d", q[0]);
-}\\
-a) 100\\
-b) 45\\
-c) Eroare\\
-d) 0\\
-e) 43\\
-f) 1\\
-2. Fie secvența de cod următoare, în care se consideră că variabilele $\mathbf{a}, \mathrm{i}, \mathrm{n}$ rețin numere întregi:
-
+\\
+a) 100
+\\
+b) 45
+\\
+c) Eroare
+\\
+d) 0
+\\
+e) 43
+\\
+f) 1
+\\
+19.2. Fie secvența de cod următoare, în care se consideră că variabilele $\mathbf{a}, \mathrm{i}, \mathrm{n}$ rețin numere întregi:
 \begin{verbatim}
 Limbajul C++
 cin>>n; a = 1; i = 2;
@@ -8884,16 +8892,6 @@ while (i<n && a>0) {
     if(n%i == 0) a = 0;
     else i++; printf("%d",i);}
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var p:integer; q:^integer;
-begin
-        p := 45; q := @p;
-        write(q^);
-end.
-\end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 read(n);
@@ -8907,34 +8905,49 @@ begin
         write(i);
 end;
 \end{verbatim}
-
-\begin{center}
-\includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-099}
-\end{center}
-
-Definim, în acest context, operație drept o instrucțiune de atribuire sau o expresie de incrementare. Care este numărul minim de operații ce se pot executa în secvența de mai sus, în funcție de valoarea citită pentru variabila $n$ ?\\
-a) $2 \mathrm{n}-1$\\
-b) $n-1$\\
-c) 5\\
-d) 3\\
-e) 2\\
-f) 4\\
-3. Fie graful orientat $\mathrm{G}=(\mathrm{V}, \mathrm{U})$ unde $\mathrm{V}={\mathbf{1}, \mathbf{2}, \mathbf{3}, \mathbf{4}, \mathbf{5}, \mathbf{6}, \mathbf{7}}$ este mulțimea vârfurilor, iar $\mathrm{U}={(2,1),(2,3),(5,2),(5,6),(3,4),(4,5),(4,7)$, $(6,7)$ } reprezintă mulțimea arcelor. Câte componente tare conexe conține graful?\\
-a) 6\\
-b) 2\\
-c) 3\\
-d) 1\\
-e) 5\\
-f) 4\\
-4. Fie arborele cu rădăcină cu nodurile numerotate de la 1 la 15 , reprezentat prin vectorul de tați: ${3,8,5,5,0,8,3,5,1,7,7,5,4,3,6}$. Câți descendenți are nodul 3?\\
-a) 3\\
-b) 4\\
-c) 5\\
-d) 6\\
-e) 2\\
-f) 7\\
-5. Fie secvența de cod următoare, în care se consideră că variabilele $\mathbf{x}$ și $\mathbf{y}$ rețin numere întregi:
-
+Definim, în acest context, operație drept o instrucțiune de atribuire sau o expresie de incrementare. Care este numărul minim de operații ce se pot executa în secvența de mai sus, în funcție de valoarea citită pentru variabila $n$ ?
+\\
+a) $2 \mathrm{n}-1$
+\\
+b) $n-1$
+\\
+c) 5
+\\
+d) 3
+\\
+e) 2
+\\
+f) 4
+\\
+19.3. Fie graful orientat $\mathrm{G}=(\mathrm{V}, \mathrm{U})$ unde $\mathrm{V}={\mathbf{1}, \mathbf{2}, \mathbf{3}, \mathbf{4}, \mathbf{5}, \mathbf{6}, \mathbf{7}}$ este mulțimea vârfurilor, iar $\mathrm{U}={(2,1),(2,3),(5,2),(5,6),(3,4),(4,5),(4,7)$, $(6,7)$ } reprezintă mulțimea arcelor. Câte componente tare conexe conține graful?
+\\
+a) 6
+\\
+b) 2
+\\
+c) 3
+\\
+d) 1
+\\
+e) 5
+\\
+f) 4
+\\
+19.4. Fie arborele cu rădăcină cu nodurile numerotate de la 1 la 15 , reprezentat prin vectorul de tați: ${3,8,5,5,0,8,3,5,1,7,7,5,4,3,6}$. Câți descendenți are nodul 3?
+\\
+a) 3
+\\
+b) 4
+\\
+c) 5
+\\
+d) 6
+\\
+e) 2
+\\
+f) 7
+\\
+19.5. Fie secvența de cod următoare, în care se consideră că variabilele $\mathbf{x}$ și $\mathbf{y}$ rețin numere întregi:
 \begin{verbatim}
 Limbajul C++
 void q (..... , .....)
@@ -8951,7 +8964,6 @@ q(&x,y);printf("%d%d",x,y);
 q(&y,x);printf("%d%d",x,y);
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 procedure q( ... , ...) ;
@@ -8964,56 +8976,99 @@ begin
     q(y,x); write(x,y);
 end.
 \end{verbatim}
-
 Care este varianta corectă a parametrilor formali din antetul subprogramului q pentru care se va afișa secvența 1021010?
-
-\section*{Limbajul C++}
-\begin{center}
-\begin{tabular}{llllll}
-a) & b) & c) & d) & e) & f) \\
-int $x$, int $y$ & int $\& x$, int \&y & int $\& x$, int & int $x$, int $\& y$ & int $y$, int $\& x$ & int $y$, int $x$ \\
-\end{tabular}
-\end{center} y
-
-\section*{Limbajul C}
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-a) & b) & c) & d) & e) & f) \\
-\hline
-int x , int y & int *x, int * y & int *x, int y & int x , int ${ }^{\text {\% }}$ \% & int y , int ${ }^{\text {* }}$ \% & int y , int x \\
-\hline
-\end{tabular}
-\end{center}
-
-\section*{Limbajul Pascal}
-\begin{center}
-\begin{tabular}{llllll}
-a) & b) & c) & d) & e) & f) \\
-x:integer; & var x:integer; & var x: & x:integer; & y:integer; & y:integer; \\
-y:integer; & var y: integer; & integer; & var y:integer; & var x:integer; & x:integer; \\
-\end{tabular}
-\end{center}
-
-\begin{enumerate}
-  \setcounter{enumi}{5}
-  \item Numărul grafurilor complete orientate cu $\mathbf{2 4}$ de noduri este:\\
-a) $\mathbf{2}^{276}$\\
-b) $9^{138}$\\
-c) $3^{138}$\\
-d) $4^{256}$\\
-e) $9^{276}$\\
+\\
+Limbajul C++
+a) 
+ int x, int y
+\\ 
+b) 
+int &x, int &y
+\\ 
+c)  
+int &x, int 
+y 
+\\
+d)  
+int x, int &y 
+\\
+e) 
+int y, int &x 
+\\
+f) 
+int y, int x
+\\
+Limbajul C 
+a)  
+int x,int y 
+\\
+b)  
+int *x, int *y
+\\ 
+c) 
+int *x, int y 
+\\
+d)  
+int x, int *y 
+\\
+e) 
+int y, int *x 
+\\
+f)  
+int y, int x
+\\
+Limbajul Pascal 
+a)  
+x:integer; 
+y:integer;
+\\ 
+b) 
+var x:integer; 
+var y: integer;
+\\ 
+c) 
+var x: 
+integer; 
+ y: integer; 
+\\
+d) 
+x:integer;  
+var y:integer; 
+\\
+e)  
+y:integer;  
+var x:integer; 
+\\
+f)  
+y:integer;  
+x:integer;
+\\
+19.6. Numărul grafurilor complete orientate cu 24 de noduri este:
+\\
+a) $\mathbf{2}^{276}$
+\\
+b) $9^{138}$\
+\
+c) $3^{138}$
+\\
+d) $4^{256}$
+\\
+e) $9^{276}$
+\\
 f) $\mathbf{2}^{256}$
-  \item Fie secvența de cod următoare în care se consideră că variabilele u și v rețin numere întregi:
-\end{enumerate}
-
+\\
+19.7. Fie secvența de cod următoare în care se consideră că variabilele u și v rețin numere întregi:
 \begin{verbatim}
 Limbajul C++
 int main() { u = 4; v = 4;
 cout << u++*++v;
 u>v ? cout<<"u" : cout <<"v";}
+Limbajul C 
+int main() {u = 4; v = 4; 
+printf("%d",u++*++v); 
+u>v ? printf("u") : 
+printf("v");} 
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 begin
@@ -9021,284 +9076,308 @@ begin
     write (u*v);
     if(u>v) then
         write('u')
-\end{verbatim}
-
-Limbajul C
-
-\begin{verbatim}
-int main() {u = 4; v = 4;
-printf("%d",u++*++v);
-u>v ? printf("u") :
-printf("v");}
-\end{verbatim}
-
-\begin{verbatim}
-    else
-        write('v');
+    else  
+        write('v');  
 end.
 \end{verbatim}
-
-Ce se va afișa în urma rulării secvenței:\\
-a) 20 v\\
-b) 25 v\\
-c) 20 u\\
-d) $25 u$\\
-e) $16 u$\\
-f) 16 v\\
-8. Se consideră graful orientat $\mathbf{G}=(\mathbf{V}, \mathbf{U})$ unde $\operatorname{card}(\mathbf{V})=\mathbf{6}$ și $\mathbf{U}={(\mathbf{3}, \mathbf{1}),(\mathbf{1}, \mathbf{2}),(\mathbf{2}, \mathbf{3})$, $(4,1),(2,5),(5,3),(3,4)}$. Indicați numărul minim de muchii ce trebuie eliminate pentru a deveni aciclic?\\
-a) 5\\
-b) 2\\
-c) 3\\
-d) 4\\
-e) 0\\
-f) 1\\
-9. Câte grafuri neorientate distincte cu 4 noduri care au adiacente nodurile 1 și 2, respectiv nodurile 3 și $\mathbf{4}$ sunt? Două grafuri se consideră distincte dacă matricile lor de adiacență sunt diferite.\\
-a) 18\\
-b) 15\\
-c) 20\\
-d) 12\\
-e) 16\\
-f) 10\\
-10. Fie secvența de cod următoare, unde toate variabilele rețin numere întregi și $\mathrm{n}<\mathrm{m}$ :
-
+Ce se va afișa în urma rulării secvenței:
+\\
+a) 20v
+\\
+b) 25v
+\\
+c) 20u
+\\
+d) 25u
+\\
+e) 16u
+\\
+f) 16v
+\\
+19.8. Se consideră graful orientat $\mathbf{G}=(\mathbf{V}, \mathbf{U})$ unde $\operatorname{card}(\mathbf{V})=\mathbf{6}$ și $\mathbf{U}={(\mathbf{3}, \mathbf{1}),(\mathbf{1}, \mathbf{2}),(\mathbf{2}, \mathbf{3})$, $(4,1),(2,5),(5,3),(3,4)}$. Indicați numărul minim de muchii ce trebuie eliminate pentru a deveni aciclic?
+\\
+a) 5
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 0
+\\
+f) 1
+\\
+19.9. Câte grafuri neorientate distincte cu 4 noduri care au adiacente nodurile 1 și 2, respectiv nodurile 3 și $\mathbf{4}$ sunt? Două grafuri se consideră distincte dacă matricile lor de adiacență sunt diferite.
+\\
+a) 18
+\\
+b) 15
+\\
+c) 20
+\\
+d) 12
+\\
+e) 16
+\\
+f) 10
+\\
+19.10. Fie secvența de cod următoare, unde toate variabilele rețin numere întregi și $\mathrm{n}<\mathrm{m}$ :
 \begin{verbatim}
-Limbajul C++
-int main()
-{k=0;
-    cin>>n>>m;
-for(i=1;i<=n;i++) cin>>v[i];
-    for(i=1;i<=m;i++)
-    {cin>>x; li=1;ls=n;
-        while(li<=ls)
-        { m1=(li+ls)/2;
-    if(x==v[m1]) {li=ls+1;k++;}
-        else
-        if(x>v[m1]) li=m1+1;
-        else ls=m1-1;}
-    }cout<<k; }
-Limbajul C
-int main( ){
-    k=0;scanf("%d%d",&n,&m);
-for(i=1;i<=n;i++)
-    scanf("%d",&v[i]);
-for(i=1;i<=m;i++)
-{scanf("%d",&x);li=1;ls=n;
-while(li<=ls) {m1=(li+ls)/2;
-    if(x==v[m1]) {li=ls+1;k++;}
-        else
-        if(x>v[m1])li=m1+1;
-    k:=0;
-    read(n,m);
-    for i:=1 to n do
-        read(v[i]);
-        for i:=1 to m do
-            begin
-                read(x);
-                li := 1; ls := n;
-                while(li <= ls) do
-                    begin
-                        m1 := (li+ls) div 2;
-                        if(x = v[m1]) then
-                            begin
-                                    li:=ls+1; inc(k);
-                            end
-                                    else
-                        if(x>v[m1]) then
-                                    li := m1+1
-                            else ls := m1-1;
-                        end;
-                        end;write(k);
+Limbajul C++ 
+int main() 
+{k=0; 
+ cin>>n>>m; 
+for(i=1;i<=n;i++)cin>>v[i]; 
+ for(i=1;i<=m;i++) 
+ {cin>>x; li=1;ls=n; 
+  while(li<=ls) 
+  { m1=(li+ls)/2; 
+ if(x==v[m1]){li=ls+1;k++;} 
+  else 
+  if(x>v[m1]) li=m1+1; 
+  else  ls=m1-1;}  
+ }cout<<k; }
+Limbajul C 
+int main( ){ 
+ k=0;scanf("%d%d",&n,&m); 
+for(i=1;i<=n;i++) 
+ scanf("%d",&v[i]); 
+for(i=1;i<=m;i++) 
+{scanf("%d",&x);li=1;ls=n;  
+while(li<=ls){m1=(li+ls)/2; 
+ if(x==v[m1]){li=ls+1;k++;} 
+  else 
+  if(x>v[m1])li=m1+1; 
+   else  ls = m1-1;} 
+}   printf("%d",k); 
+}
+Limbajul Pascal 
+begin 
+ k:=0;  
+ read(n,m); 
+ for i:=1 to n do     
+  read(v[i]); 
+  for i:=1 to m do 
+   begin 
+    read(x); 
+    li := 1;  ls := n; 
+    while(li <= ls) do     
+     begin 
+      m1 := (li+ls) div 2; 
+      if(x = v[m1]) then   
+       begin   
+        li:=ls+1; inc(k);        
+       end 
+        else 
+      if(x>v[m1]) then  
+        li := m1+1                                       
+       else ls := m1-1;    
+      end; 
+     end;write(k); 
 end.
 \end{verbatim}
-
-Limbajul Pascal
-begin
-
+Care este complexitatea acestei secvențe de cod?
+\\
+a) $\mathrm{O}(\mathrm{m} \cdot \log (\mathrm{n}))$
+\\
+b) $O(n \cdot \log m)$
+\\
+c) $O(n \cdot m)$
+\\
+d) $O(n \cdot m \cdot \log n)$
+\\
+e) $O(n \cdot n)$
+\\
+f) $\mathrm{O}(\mathrm{m} \cdot \mathrm{n})$
+\\
+19.11. Fie secvența de cod următoare:
 \begin{verbatim}
-    else ls = m1-1;}
-} printf("%d",k);
+Limbajul C++ 
+int f(int a[],int li,int ls) 
+{ if(li==ls) return a[li]; 
+  else 
+ return f(a,li,(li+ls)/2) + 
+f(a,(li+ls)/2+1, ls);} 
+int main() 
+{ int n, a[20],i; 
+cin>>n; 
+for(i=1;i<=n;i++) cin>>a[i]; 
+ cout<<f(a,1,n); 
 }
-\end{verbatim}
-
-Care este complexitatea acestei secvențe de cod?\\
-a) $\mathrm{O}(\mathrm{m} \cdot \log (\mathrm{n}))$\\
-b) $O(n \cdot \log m)$\\
-c) $O(n \cdot m)$\\
-d) $O(n \cdot m \cdot \log n)$\\
-e) $O(n \cdot n)$\\
-f) $\mathrm{O}(\mathrm{m} \cdot \mathrm{n})$\\
-11. Fie secvența de cod următoare:
-
-\begin{verbatim}
-Limbajul C++
-int f(int a[],int li,int ls)
-{ if(li==ls) return a[li];
-        else
-    return f(a,li,(li+ls)/2) +
-f(a,(li+ls)/2+1, ls);}
-int main()
-{ int n, a[20],i;
-cin>>n;
-for(i=1;i<=n;i++) cin>>a[i];
-    cout<<f(a,1,n);
+Limbajul C 
+int f(int a[],int li,int ls) 
+{ 
+ if(li == ls) return a[li]; 
+   else 
+ return f(a,li, (li+ls)/2) + 
+f(a,(li+ls)/2+1, ls); 
+  } 
+int main() 
+{int n,a[20],i; 
+scanf("%d", &n); 
+ for(i=1; i<=n; i++) 
+   scanf("%d", &a[i]); 
+printf("%d",f(a,1,n)); 
 }
-Limbajul C
-int f(int a[],int li,int ls)
-{
-    if(li == ls) return a[li];
-        else
-    return f(a,li, (li+ls)/2) +
-f(a,(li+ls)/2+1, ls);
-        }
-int main()
-{int n,a[20],i;
-scanf("%d", &n);
-    for(i=1; i<=n; i++)
-        scanf("%d", &a[i]);
-printf("%d",f(a,1,n));
-}
+Limbajul Pascal 
+type 
+  vector=array[1..20] of 
+integer; 
+var n,i:integer;a:vector; 
+function f(var a:vector; 
+li,ls:integer):integer; 
+begin 
+if(li=ls) then f:=a[li]      
+else  
+f:=f(a,li,(li+ls) div 2)+ 
+f(a,(li+ls) div 2+1, ls ) ; 
+ end; 
+ begin 
+     read(n); 
+     for i:=1 to n do   
+       read (a[i])   ; 
+       write(f(a,1,n)); 
+ end.
 \end{verbatim}
-
+Care este complexitatea acestei secvențe de cod?
+\\
+a) $\mathbf{O}(\mathbf{n} \cdot \log \mathbf{n})$
+\\
+b) $\mathbf{O}(\log n)$
+\\
+c) $\mathbf{O}(\mathbf{n})$
+\\
+d) $\mathbf{O}\left(\mathbf{n}^{2}\right)$
+\\
+e) $\mathbf{O}\left(\mathbf{n}^{2}+1\right)$
+\\
+f) $O\left(n^{2}-1\right)$
+\\
+19.12. Se consideră un arbore în care fiecare nod intern (nod care nu este pe ultimul nivel) are doi descendenți direcți. Dacă arborele are 38 niveluri (rădăcina se află pe nivelul 0) câte noduri are arborele?
+\\
+a) $\mathbf{2}^{37}$
+\\
+b) $4^{19}-1$
+\\
+c) $\mathbf{2}^{38}+1$
+\\
+d) $2^{37}+1$
+\\
+e) $2^{33}+1$
+\\
+f) $2^{39}$
+\\
+19.13. Ce se va afișa pentru secvența de cod:
 \begin{verbatim}
-Limbajul Pascal
-type
-    vector=array[1..20] of
-integer;
-var n,i:integer;a:vector;
-function f(var a:vector;
-li,ls:integer):integer;
-begin
-if(li=ls) then f:=a[li]
-else
-f:=f(a,li,(li+ls) div 2)+
-f(a,(li+ls) div 2+1, ls ) ;
-    end;
-begin
-        read(n);
-        for i:=1 to n do
-            read (a[i]) ;
-            write(f(a,1,n));
-end.
+Limbajul C++ 
+int x,y; 
+void f(int &y, int x)   
+     {x++; y=y+x;} 
+int main() { 
+x = 4; y = 2;cout<<x<<y<<" "; 
+f(x,y); cout<<x<<y<<" ";  
+f(x,x); cout<<x<<y<<" "; 
+f(y,x); cout<<x<<y<<" ";}
+Limbajul C 
+int x,y; 
+void f(int *y,int x) 
+{x++;*y=*y+x;} 
+int main() { 
+x = 4; y = 2;printf("%d%d ",x,y); 
+f(&x,y); printf("%d%d ", x,y); 
+f(&x,x); printf("%d%d ", x,y);  
+f(&y,x); printf("%d%d ", x,y);  } 
+Limbajul Pascal 
+var x,y:integer; 
+procedure f(var y:integer; 
+x:integer); 
+ begin 
+    inc(x); 
+    y:=y+x; 
+ end; 
+begin 
+ x:=4;y:=2;write(x,y,' '); 
+  f(x,y); write(x,y,' '); 
+  f(x,x); write(x,y,' '); 
+  f(y,x); write(x,y,' '); 
+  end.
 \end{verbatim}
-
-Care este complexitatea acestei secvențe de cod?\\
-a) $\mathbf{O}(\mathbf{n} \cdot \log \mathbf{n})$\\
-b) $\mathbf{O}(\log n)$\\
-c) $\mathbf{O}(\mathbf{n})$\\
-d) $\mathbf{O}\left(\mathbf{n}^{2}\right)$\\
-e) $\mathbf{O}\left(\mathbf{n}^{2}+1\right)$\\
-f) $O\left(n^{2}-1\right)$\\
-12. Se consideră un arbore în care fiecare nod intern (nod care nu este pe ultimul nivel) are doi descendenți direcți. Dacă arborele are 38 niveluri (rădăcina se află pe nivelul 0) câte noduri are arborele?\\
-a) $\mathbf{2}^{37}$\\
-b) $4^{19}-1$\\
-c) $\mathbf{2}^{38}+1$\\
-d) $2^{37}+1$\\
-e) $2^{33}+1$\\
-f) $2^{39}$\\
-13. Ce se va afișa pentru secvența de cod:
-
-\begin{verbatim}
-Limbajul C++
-int x,y;
-void f(int &y, int x)
-    {x++; y=y+x;}
-int main() {
-x = 4; y = 2;cout<<x<<<y<<" ";
-f(x,y); cout<<x<<<y<<" ";
-f(x,x) ; cout<<x<<<y<<" ";
-f(y,x); cout<<x<<<y<<" ";}
-Limbajul C
-int x,y;
-void f(int *y,int x)
-{x++;*y=*y+x;}
-int main() {
-x = 4; y = 2;printf("%d%d ",x,y);
-f(&x,y); printf("%d%d ", x,y);
-f(&x,x); printf("%d%d ", x,y);
-f(&y,x); printf("%d%d ", x,y); }
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var x,y:integer;
-procedure f(var y:integer;
-x:integer) ;
-    begin
-        inc(x);
-        y:=y+x;
-    end;
-begin
-    x:=4;y:=2;write(x,y,' ');
-        f(x,y) ; write(x,y,' ');
-        f(x,x) ; write(x,y,' ');
-        f(y,x); write(x,y,' ');
-        end.
-\end{verbatim}
-
-a) $42 \quad 72 \quad 152 \quad 1518$\\
-b) $42 \quad 215 \quad 42518$\\
-c) $42 \quad 27 \quad 415 \quad 158$\\
-d) $42 \quad 62 \quad 41 \quad 58$\\
-e) $42 \quad 62 \quad 45 \quad 58$\\
-f) $42 \quad 72 \quad 415 \quad 58$\\
-14. Folosind algoritmul de sortare prin inserție, pentru ordonarea crescătoare a tabloului unidimensional $v=[6,5,4,3,2,1]$ se efectuează 45 de pași (de exemplu pentru deplasarea elementului cu valoarea 6 pe poziția 2 se execută 5 pași):\\
+\\
+a) 42 72 152 1518
+\\
+b) 42 215 42 518
+\\
+c) 42 27 415 158
+\\
+d) 42 62 41 58
+\\
+e) 42 62 45 58
+\\
+f) 42 72 415 58
+\\
+19.14. Folosind algoritmul de sortare prin inserție, pentru ordonarea crescătoare a tabloului unidimensional $v=[6,5,4,3,2,1]$ se efectuează 45 de pași (de exemplu pentru deplasarea elementului cu valoarea 6 pe poziția 2 se execută 5 pași):
 \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-103}
-
+P1: i\leftarrow 2
+P2: x\leftarrow v[i]
+P3: j\leftarrow i-1;
+P4: v[j+1]\leftarrow v[j;
+P5: v[j]\leftarrow x.
+Precizați câți pași se execută folosind același algoritm pentru ordonarea crescătoare a tabloului $\mathrm{v}=[1000,999, \ldots, 3,2,1]$
+\\
+a) 1001999
+\\
+b) 1001997
+\\
+c) 1001998
+\\
+d) 1002000
+\\
+e) 1001897
+\\
+f) 1001887
+\\
+19.15. Fie subprogramul de mai jos:
 \begin{verbatim}
-P1: i\leftarrow2
-P2: }x\leftarrowv[i
-P3: j\leftarrowi-1;
-P4: v[j+1]}\leftarrowv[j]
-P5: v[j]}\leftarrowx
+Limbajul C++ 
+void f(int n,int k) {int i; 
+for(i = 1; i <= n; i++)  
+ {if(i%k == 0)cout<<i<<" ";  
+     f(n-1,k);}}
+Limbajul C
+void f(int n,int k){int i;  
+for(i = 1; i <= n; i++) 
+{if(i%k==0)printf("%d  
+",i);  
+    f(n-1,k);}     }
+Limbajul Pascal 
+procedure f (n,k:integer); 
+var i : integer; 
+  begin 
+    for i := 1 to n do 
+     begin 
+     if(i mod k = 0) then 
+         write(i,' ');
+        f(n-1,k); 
+     end; 
+  end;
 \end{verbatim}
+De câte ori se execută instrucțiunea de decizie în cadrul subprogramului, dacă apelul este $\mathbf{f}(3,1)$ ?
+\\
+a) 15 ori
+\\
+b) 14 ori
+\\
+c) 16 ori
+\\
+d) 8 ori
+\\
+e) 9 ori
+\\
+f) 10 ori
+\\
 
-Precizați câți pași se execută folosind același algoritm pentru ordonarea crescătoare a tabloului $\mathrm{v}=[1000,999, \ldots, 3,2,1]$\\
-a) $\mathbf{1 0 0 1 9 9 9}$\\
-b) 1001997\\
-c) $\mathbf{1 0 0 1 9 9 8}$\\
-d) $\mathbf{1 0 0 2 0 0 0}$\\
-e) 1001897\\
-f) 1001887\\
-15. Fie subprogramul de mai jos:
-
-\begin{verbatim}
-Limbajul C++
-void f(int n,int k) {int i;
-for(i = 1; i <= n; i++)
-    {if(i%k == O) cout<<i<<" ";
-        f(n-1,k);}}
-\end{verbatim}
-
-\section*{Limbajul C}
-\begin{verbatim}
-Limbajul Pascal
-procedure f (n,k:integer);
-var i : integer;
-    begin
-        for i := 1 to n do
-            begin
-            if(i mod k = O) then
-                write(i,' ');
-\end{verbatim}
-
-\begin{verbatim}
-void f(int n,int k) {int i;
-for(i = 1; i <= n; i++)
-{if(i%k==0) printf("%d
-",i);
-    f(n-1,k);} }
-        f(n-1,k);
-    end;
-end;
-\end{verbatim}
-
-De câte ori se execută instrucțiunea de decizie în cadrul subprogramului, dacă apelul este $\mathbf{f}(3,1)$ ?\\
-a) $\mathbf{1 5} \mathrm{ori}$\\
-b) $\mathbf{1 4}$ ori\\
-c) $\mathbf{1 6} \mathbf{~ o r i}$\\
-d) 8 ori\\
-e) 9 ori\\
-f) $\mathbf{1 0} \mathbf{~ o r i}$
+\section*{Varianta 20}
 
 \begin{enumerate}
   \item Fie subprogramul:
