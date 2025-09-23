@@ -94,17 +94,19 @@ for match in exercise_pattern.finditer(data):
 
     # Trio mode
     if rest.lstrip().startswith("Limbajul C++"):
-        # Split but keep the markers
-        lang_split = re.split(r'(?=Limbajul (?:C\+\+|C|Pascal))', rest)
-        if len(lang_split) >= 3:
-            cpp_block = next((s for s in lang_split if s.startswith("Limbajul C++")), "")
-            c_block   = next((s for s in lang_split if s.startswith("Limbajul C\n")), "")
-            pascal_block = next((s for s in lang_split if s.startswith("Limbajul Pascal")), "")
+        # Use safer regex groups
+        m_cpp = re.search(r'(?s)Limbajul C\+\+\s*(.*?)(?=(?:Limbajul C\b|Limbajul Pascal\b|\Z))', rest)
+        m_c   = re.search(r'(?s)Limbajul C\s*(.*?)(?=(?:Limbajul Pascal\b|\Z))', rest)
+        m_pas = re.search(r'(?s)Limbajul Pascal\s*(.*)', rest)
 
-            ok = check_all_opts(cpp_block) and check_all_opts(c_block) and check_all_opts(pascal_block)
-            msg = f"{exercise_number} {'matches' if ok else 'does not match'} (trio mode)"
-            print(msg)
-            continue # skip to the next exercise
+        cpp_block = m_cpp.group(1) if m_cpp else ""
+        c_block   = m_c.group(1)   if m_c   else ""
+        pascal_block = m_pas.group(1) if m_pas else ""
+
+        ok = check_all_opts(cpp_block) and check_all_opts(c_block) and check_all_opts(pascal_block)
+        msg = f"{exercise_number} {'matches' if ok else 'does not match'} (trio mode)"
+        print(msg)
+        continue # skip to the next exercise
 
     # Single mode
     ok = check_all_opts(rest)

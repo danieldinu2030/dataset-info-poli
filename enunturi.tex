@@ -8979,76 +8979,56 @@ end.
 Care este varianta corectă a parametrilor formali din antetul subprogramului q pentru care se va afișa secvența 1021010?
 \\
 Limbajul C++
-a) 
- int x, int y
+a) int x, int y
 \\ 
-b) 
-int &x, int &y
+b) int &x, int &y
 \\ 
-c)  
-int &x, int 
-y 
+c) int &x, int y 
 \\
-d)  
-int x, int &y 
+d) int x, int &y 
 \\
-e) 
-int y, int &x 
+e) int y, int &x 
 \\
-f) 
-int y, int x
+f) int y, int x
 \\
 Limbajul C 
-a)  
-int x,int y 
+a) int x, int y 
 \\
-b)  
-int *x, int *y
+b) int *x, int *y
 \\ 
-c) 
-int *x, int y 
+c) int *x, int y 
 \\
-d)  
-int x, int *y 
+d) int x, int *y 
 \\
-e) 
-int y, int *x 
+e) int y, int *x 
 \\
-f)  
-int y, int x
+f) int y, int x
 \\
 Limbajul Pascal 
-a)  
-x:integer; 
-y:integer;
+a) x:integer; 
+   y:integer;
 \\ 
-b) 
-var x:integer; 
-var y: integer;
+b) var x:integer; 
+   var y:integer;
 \\ 
-c) 
-var x: 
-integer; 
- y: integer; 
+c) var x:integer; 
+       y: integer; 
 \\
-d) 
-x:integer;  
+d) x:integer;  
 var y:integer; 
 \\
-e)  
-y:integer;  
+e) y:integer;  
 var x:integer; 
 \\
-f)  
-y:integer;  
-x:integer;
+f) y:integer;  
+   x:integer;
 \\
 19.6. Numărul grafurilor complete orientate cu 24 de noduri este:
 \\
 a) $\mathbf{2}^{276}$
 \\
-b) $9^{138}$\
-\
+b) $9^{138}$
+\\
 c) $3^{138}$
 \\
 d) $4^{256}$
@@ -17455,37 +17435,38 @@ else write('nu');
 b) verifică dacă numărul $\mathbf{x}$ este divizibil cu b-1
 
 \section*{Varianta 40}
-\begin{enumerate}
-  \item Se consideră subprogramul $\mathbf{f}$ având definiția următoare. Stabiliți valoarea variabilei n de tip întreg știind că, la apelul $f(n)$, subprogramul returnează valoarea 2014 ?
-\end{enumerate}
 
+40.1. Se consideră subprogramul $\mathbf{f}$ având definiția următoare. Stabiliți valoarea variabilei $n$ de tip întreg știind că, la apelul $f(n)$, subprogramul returnează valoarea 2014 ?
 \begin{verbatim}
 Limbajul C++/C
 int f(int x)
-{ if (x>=5)
-            return f(x-1)+x;
+{   if (x>=5)
+        return f(x-1)+x;
     return 2*x;
 }
 \end{verbatim}
-
-a) 16\\
-b) 30\\
-c) 62\\
-d) 63\\
-e) 88\\
-f) 100
-
 \begin{verbatim}
 Limbajul Pascal
 function f(x:integer):integer;
-    begin
-        if }x<5\mathrm{ then f:=2*x
-            else f:=f(x-1)+x;
-\end{verbatim}
-
+begin
+    if x<5 then f:=2*x
+    else f:=f(x-1)+x;
 end;
-2. În următoarea secvenţă de program, variabilele $\mathbf{k}$, $\mathbf{i}$ şi $\mathbf{j}$ sunt de tip întreg, iar variabila A memorează un tablou bidimensional cu 7 linii şi 7 coloane (numerotate de la 1 la 7 ) cu elemente de tip întreg. Precizați care este cea mai mare valoare memorată în matricea A la finalul executării secvenței?
-
+\end{verbatim}
+\\
+a) 16
+\\
+b) 30
+\\
+c) 62
+\\
+d) 63
+\\
+e) 88
+\\
+f) 100
+\\
+40.2. În următoarea secvenţă de program, variabilele $\mathbf{k}$, $\mathbf{i}$ şi $\mathbf{j}$ sunt de tip întreg, iar variabila $A$ memorează un tablou bidimensional cu 7 linii şi 7 coloane (numerotate de la 1 la 7 ) cu elemente de tip întreg. Precizați care este cea mai mare valoare memorată în matricea $A$ la finalul executării secvenței?
 \begin{verbatim}
 Limbajul C++/C
 k=1;
@@ -17494,7 +17475,6 @@ for(i=1;i<=7;i++)
         { A[i][j]=k++;
             A[i][8-j]=k;}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 k:=1;
@@ -17505,82 +17485,116 @@ for i:=1 to 7 do
             A[i][8-j]:=k;
         end;
 \end{verbatim}
-
-a) 0\\
-b) 7\\
-c) 10\\
-d) 37\\
-e) 50\\
-f) 51\\
-3. Se consideră următoarea secvență de cod. Identificați ce se va afișa dacă de la tastatură se vor introduce, în ordine, șirurile de caractere student, carte și birou:
-
+\\
+a) 0
+\\
+b) 7
+\\
+c) 10
+\\
+d) 37
+\\
+e) 50
+\\
+f) 51
+\\
+40.3. Se consideră următoarea secvență de cod. Identificați ce se va afișa dacă de la tastatură se vor introduce, în ordine, șirurile de caractere student, carte și birou:
 \begin{verbatim}
 Limbajul C++/C Limbajul Pascal
-char a[256], b[256]; int i; var a,b:string; i:integer;
-strcpy(b, ""); begin
-for(i=0;i<3;i++) b:='';
-{cin>>a; | scanf("%s",a); for i:=0 to 2 do
-strcat(b, a+i); begin
-} readln(a);
-cout<<b; | printf("%s",b); b:=b+copy(a,i+1,length(a));
-        end;
-        write(b) ;
-            end.
+char a[256], b[256]; int i;
+strcpy(b, "");
+for(i=0;i<3;i++)
+{   cin>>a; | scanf("%s",a);
+    strcat(b, a+i);
+}
+cout<<b; | printf("%s",b);
+Limbajul Pascal
+var a,b:string; i:integer;
+begin
+b:='';
+for i:=0 to 2 do
+begin
+    readln(a);
+    b:=b+copy(a,i+1,length(a));
+end;
+write(b);
+end.
 \end{verbatim}
-
-a) scb\\
-b) studencartbiro\\
-c) studentarterou\\
-d) studentcartbir\\
-e) tudenartiro\\
-f) tudentrteou\\
-4. Se consideră definite trei variabile întregi $\mathbf{x}, \mathbf{y}$ și $\mathbf{z}$ și următoarele două expresii. Stabiliți afirmația adevărată.
-
+\\
+a) scb
+\\
+b) studencartbiro
+\\
+c) studentarterou
+\\
+d) studentcartbir
+\\
+e) tudenartiro
+\\
+f) tudentrteou
+\\
+40.4. Se consideră definite trei variabile întregi $\mathbf{x}$, $\mathbf{y}$ și $\mathbf{z}$ și următoarele două expresii. Stabiliți afirmația adevărată.
 \begin{verbatim}
 Limbajul C++/C
 p=!((x == y)&&(x == z));
 q=(x!=y)||(x!=z);
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
-p:=NOT ( (x = y) AND (x = z) );
-$\mathrm{q}:=(\mathrm{x}<>\mathrm{y}) \operatorname{OR}(\mathrm{x}<>z)$;
+p:=NOT((x = y) AND (x = z));
+q:=(x<>y) OR (x<>z);
 \end{verbatim}
-
-a) $\quad \mathrm{p}$ egal cu $q$ dacă și numai dacă x egal cu y\\
-c) oricare ar fi $\mathbf{x}, \mathbf{y}, \mathbf{z} \mathbf{p}$ este diferit de q\\
-e) există $\mathbf{x}, \mathbf{y}, \mathbf{z}$ astfel încât $\mathbf{p}$ diferit de q\\
-b) $\quad \mathrm{p}$ egal cu q dacă și numai dacă $\mathbf{x}$ egal cu z\\
-d) oricare ar fi $\mathbf{x}, \mathbf{y}, \mathbf{z} \mathbf{p}$ este egal cu q\\
-f) niciuna dintre variantele anterioare\\
-5. Subprogramul $f$ primeşte prin intermediul parametrului $n$ un număr natural şi returnează numărul maxim de cifre consecutive situate pe poziții alăturate în scrierea numărului $n$. De exemplu, la apelul $f(\mathbf{2 3 5 2 3 4 5} 5)$ subprogramul returnează numărul 4. Determinați numărul de valori distincte $n$ cu exact 4 cifre pentru care expresia $f(n)$ are valoarea 3.\\
-a) 63\\
-b) 121\\
-c) 130\\
-d) 152\\
-e) 160\\
-f)\\
-181\\
-6. Un tip de date întreg pe $n$ biți ( $n>1$, număr natural) va putea reține valori întregi din intervalul:\\
-a) $\left[-2^{\mathrm{n}-1}, 2^{\mathrm{n}-1}-1\right]$\\
-b) $\quad\left[-2^{n}, 2^{n}-1\right]$\\
-c) $\quad\left[-2^{n}, 2^{n}\right]$\\
-d) $\left[0,2^{\mathrm{n}-1}\right]$\\
-e) $\left[0,2^{n}\right]$\\
-f) $\left[0,2^{\mathrm{n}-1}-1\right]$\\
-7. Precizați valoarea afișată în urma executării secvenței de program:
-
+\\
+a) p egal cu q dacă și numai dacă x egal cu y
+\\
+b) p egal cu q dacă și numai dacă x egal cu z
+\\
+c) oricare ar fi x, y, z, p este diferit de q
+\\
+d) oricare ar fi x, y, z, p este egal cu q
+\\
+e) există x, y, z astfel încât p diferit de q
+\\
+f) niciuna dintre variantele anterioare
+\\
+40.5. Subprogramul $f$ primeşte prin intermediul parametrului $n$ un număr natural şi returnează numărul maxim de cifre consecutive situate pe poziții alăturate în scrierea numărului $n$. De exemplu, la apelul $f(23523455)$, subprogramul returnează numărul 4. Determinați numărul de valori distincte $n$ cu exact 4 cifre pentru care expresia $f(n)$ are valoarea 3.
+\\
+a) 63
+\\
+b) 121
+\\
+c) 130
+\\
+d) 152
+\\
+e) 160
+\\
+f) 181
+\\
+40.6. Un tip de date întreg pe $n$ biți ($n>1$, număr natural) va putea reține valori întregi din intervalul:
+\\
+a) $\left[-2^{n-1}, 2^{n-1}-1\right]$
+\\
+b) $\left[-2^{n}, 2^{n}-1\right]$
+\\
+c) $\left[-2^{n}, 2^{n}\right]$
+\\
+d) $\left[0,2^{n-1}\right]$
+\\
+e) $\left[0,2^{n}\right]$
+\\
+f) $\left[0,2^{n-1}-1\right]$
+\\
+40.7. Precizați valoarea afișată în urma executării secvenței de program:
 \begin{verbatim}
 Limbajul C++/C
 int i, p=16;
 while(1)
 { if (i=5) break;
-p+=i;
-i+=2; }
+    p+=i;
+    i+=2; }
 cout<<p; | printf("%d",p);
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 var i, p:integer;
@@ -17595,98 +17609,155 @@ while TRUE do
 write(p);
 end.
 \end{verbatim}
-
-a) 10\\
-b) 16\\
-d) 20\\
-e) 24\\
-C) 17\\
-f) instrucțiunea while rulează la infinit\\
-8. Se consideră un tablou unidimensional a în care elementele sunt, în ordine: $1,3,5,7,10,16,21$. Pentru a afla poziția pe care se află valoarea $\mathbf{x}=10$ în tablou, se aplică metoda căutării binare. Identificați succesiunea corectă de elemente a căror valoare se compară cu valoarea $\mathbf{x}$.\\
-a) $21,16,10$\\
-b) $7,16,10$\\
-c) $1,3,5,7,10$\\
-d) $5,7,10$\\
-e) 7,10\\
-f) 10\\
-9. Un tablou bidimensional cu 8 linii, format doar din elemente 0 și 1 , are următoarele proprietăți:
-
+\\
+a) 10
+\\
+b) 16
+\\
+c) 17
+\\
+d) 20
+\\
+e) 24
+\\
+f) instrucțiunea while rulează la infinit
+\\
+40.8. Se consideră un tablou unidimensional $a$ în care elementele sunt, în ordine: $1,3,5,7,10,16,21$. Pentru a afla poziția pe care se află valoarea $\mathbf{x}=10$ în tablou, se aplică metoda căutării binare. Identificați succesiunea corectă de elemente a căror valoare se compară cu valoarea $\mathbf{x}$.
+\\
+a) 21,16,10
+\\
+b) 7,16,10
+\\
+c) 1,3,5,7,10
+\\
+d) 5,7,10
+\\
+e) 7,10
+\\
+f) 10
+\\
+40.9. Un tablou bidimensional cu 8 linii, format doar din elemente 0 și 1, are următoarele proprietăți:
 Prima linie conține un singur element cu valoarea 1;
-
-Linia $\mathbf{j}$ conține de două ori mai multe valori nenule decât linia $\mathbf{j} \mathbf{- 1}, 2 \leq j \leq 8$; Ultima linie conține un singur element cu valoare 0 .\\
-Determinați numărul total de elemente cu valoare $\mathbf{0}$ din tabloul bidimensional.\\
-a) 528\\
-b) 600\\
-c) 688\\
-d) 769\\
-e) 777\\
-f) $\quad \mathrm{Nu}$ există un tablou bidimensional cu aceste proprietăți\\
-10. Tabloul unidimensional $A$ conţine, începând cu indicele 1, elementele: (1, 2, 2, 212 , 12212, 21212212, 1221221212212,...). Stabiliți numărul de cifre de 2 conținute de cel de-al 15-lea element al tabloului?\\
-a) 377\\
-b) 391\\
-c) 400\\
-d) 520\\
-e) 588\\
-f) 610\\
-11. Matricea de adiacenţă asociată unui graf neorientat cu 17 noduri are 40 elemente nenule. Numărul maxim de componente conexe în graf este:\\
-a) 9\\
-b) 10\\
-c) 11\\
-d) 12\\
-e) 13 f)\\
-f) 14\\
-12. Fie un număr a care aparține intervalului $[410,681]$. Pentru a verifica dacă a este prim, numărul minim de numere care trebuie testate pentru a fi divizori ai lui a este:\\
-a) 10\\
-b) 13\\
-C) 25\\
-d) 205\\
-e) 339\\
-f) 640\\
-13. Utilizând metoda backtracking se generează toate permutările mulțimii ${1,2,3,4$, 5} în ordine lexicografică. Primele cinci soluții generate sunt 12345 , 12354, 12435, 12453, 12534. Spunem că o permutare $p$ a mulțimii ${1,2,3,4,5}$ are numărul de ordine $\mathbf{k}$, dacă este a $\mathbf{k}$-a permutare generată astfel. Permutarea 12354 are numărul de ordine 2, iar permutarea 12534 are numărul de ordine 5. Precizați numărul de ordine al permutării 51423.\\
-a) 98\\
-b) 99\\
-c) 100\\
-d) 101\\
-e) 110\\
-f) 111\\
-14. Variabilele $\mathbf{m}$ și $\mathbf{n}$ rețin valori numere natural nenule. Precizați ce execută secvența de cod de mai jos, unde c, d și $\mathbf{x}$ sunt variabile întregi.
-
+Linia $\mathbf{j}$ conține de două ori mai multe valori nenule decât linia $j-1$, $2 \leq j \leq 8$; Ultima linie conține un singur element cu valoare 0.
+Determinați numărul total de elemente cu valoare $\mathbf{0}$ din tabloul bidimensional.
+\\
+a) 528
+\\
+b) 600
+\\
+c) 688
+\\
+d) 769
+\\
+e) 777
+\\
+f) Nu există un tablou bidimensional cu aceste proprietăți
+\\
+40.10. Tabloul unidimensional $A$ conţine, începând cu indicele 1, elementele: (1, 2, 2, 212 , 12212, 21212212, 1221221212212,...). Stabiliți numărul de cifre de 2 conținute de cel de-al 15-lea element al tabloului?
+\\
+a) 377
+\\
+b) 391
+\\
+c) 400
+\\
+d) 520
+\\
+e) 588
+\\
+f) 610
+\\
+40.11. Matricea de adiacenţă asociată unui graf neorientat cu 17 noduri are 40 elemente nenule. Numărul maxim de componente conexe în graf este:
+\\
+a) 9
+\\
+b) 10
+\\
+c) 11
+\\
+d) 12
+\\
+e) 13
+\\
+f) 14
+\\
+40.12. Fie un număr $a$ care aparține intervalului $[410,681]$. Pentru a verifica dacă $a$ este prim, numărul minim de numere care trebuie testate pentru a fi divizori ai lui $a$ este:
+\\
+a) 10
+\\
+b) 13
+\\
+c) 25
+\\
+d) 205
+\\
+e) 339
+\\
+f) 640
+\\
+40.13. Utilizând metoda backtracking se generează toate permutările mulțimii ${1,2,3,4,5}$ în ordine lexicografică. Primele cinci soluții generate sunt 12345, 12354, 12435, 12453, 12534. Spunem că o permutare $p$ a mulțimii ${1,2,3,4,5}$ are numărul de ordine $\mathbf{k}$, dacă este a k-a permutare generată astfel. Permutarea 12354 are numărul de ordine 2, iar permutarea 12534 are numărul de ordine 5. Precizați numărul de ordine al permutării 51423.
+\\
+a) 98
+\\
+b) 99
+\\
+c) 100
+\\
+d) 101
+\\
+e) 110
+\\
+f) 111
+\\
+40.14. Variabilele $\mathbf{m}$ și $\mathbf{n}$ rețin valori numere natural nenule. Precizați ce execută secvența de cod de mai jos, unde $c$, $d$ și $x$ sunt variabile întregi.
 \begin{verbatim}
 Limbajul C++/C
 c=m; d=n;
 while (c!=d)
-if (c>d) c=c-d;
+    if (c>d) c=c-d;
     else d=d-c;
 x=m*n/c;
-cout<<x;| printf("%d",x);
+cout<<x; | printf("%d",x);
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 c:=m; d:=n;
 while c<>d do
-if c>d then c:=c-d
+    if c>d then c:=c-d
     else d:=d-c;
 x:=m*n div c;
 write(x);
 \end{verbatim}
-
-A. Calculează și afișează cel mai mic multiplu comun al numerelor natuale nenule m și n\\
-B. Dacă $\mathrm{m}=9$ si $\mathrm{n}=12$, atunci afișează $\mathrm{x}=36$\\
-C. Dacă $\mathrm{m}=11$ si $\mathrm{n}=6$, atunci afișează $\mathrm{x}=17$\\
-a) A\\
-b) $A, B$\\
-c) $\mathrm{A}, \mathrm{B}, \mathrm{C}$\\
-d) B\\
-e) B,C
-f) $\quad \mathrm{C}$\\
-15. Determinați numărul de grafuri neorientate cu mulţimea nodurilor ${1,2,3,4,5,6,7,8}$ în care, atât nodurile 2 și 3 , cât și nodurile 2 și 4 sunt neadiacente.\\
-a) $\quad 4^{4}$\\
-b) $4^{10}$\\
-c) $\quad 2^{23}$\\
-d) $2^{24}-2$\\
-e) $\mathbf{2}^{25}$\\
-f) $\mathbf{4}^{13}$
+A. Calculează și afișează cel mai mic multiplu comun al numerelor natuale nenule $m$ și $n$
+B. Dacă $m=9$ și $n=12$, atunci afișează $x=36$
+C. Dacă $m=11$ și $n=6$, atunci afișează $x=17$
+\\
+a) A
+\\
+b) A, B
+\\
+c) A, B, C
+\\
+d) B
+\\
+e) B, C
+\\
+f) C
+\\
+40.15. Determinați numărul de grafuri neorientate cu mulţimea nodurilor ${1,2,3,4,5,6,7,8}$ în care, atât nodurile 2 și 3, cât și nodurile 2 și 4 sunt neadiacente.
+\\
+a) $4^{4}$
+\\
+b) $4^{10}$
+\\
+c) $2^{23}$
+\\
+d) $2^{24}-2$
+\\
+e) $2^{25}$
+\\
+f) $4^{13}$
+\\
 
 \section*{Varianta 41}
 
