@@ -4678,7 +4678,7 @@ f) 9
 
 \section*{Varianta 11}
 
-11.1 Precizaţi care este numărul elementelor egale cu 1 (pentru limbajul $\mathbf{C} / \mathbf{C}++$ )/true (pentru limbajul Pascal) aflate pe diagonala principală în urma executării secvenței de mai jos, în care a este un tablou bidimensional cu $\mathbf{n}$ linii și $\mathbf{n}$ coloane, iar $\mathbf{i}, \mathbf{j}$ sunt variabile de tip întreg.
+11.1. Precizaţi care este numărul elementelor egale cu 1 (pentru limbajul $\mathbf{C} / \mathbf{C}++$ )/true (pentru limbajul Pascal) aflate pe diagonala principală în urma executării secvenței de mai jos, în care a este un tablou bidimensional cu $\mathbf{n}$ linii și $\mathbf{n}$ coloane, iar $\mathbf{i}, \mathbf{j}$ sunt variabile de tip întreg.
 \begin{verbatim}
 Limbajul C++
 for(i=n;i>=1;i--)
@@ -5201,7 +5201,7 @@ e) 4
 \\
 f) 7
 \\
-14. Indicați pentru ce valori ale lui $\mathbf{n}$ și $\mathbf{p}$, valoarea variabilei întregi $\mathbf{x}$ este 164 , în urma apelului $f(1)$ al subprogramului $f$ definit mai jos.
+11.14. Indicați pentru ce valori ale lui $\mathbf{n}$ și $\mathbf{p}$, valoarea variabilei întregi $\mathbf{x}$ este 164 , în urma apelului $f(1)$ al subprogramului $f$ definit mai jos.
 \begin{verbatim}
 Limbajul C++
 int s[100],n,p,x;
@@ -5259,7 +5259,7 @@ c) 328 și 4
 d) 41 si 123
 \\
 e) 41 și 
-1\
+\\
 f) 81 și 2
 \\
 11.15. Precizați care este valoarea produsă de subprogramul $f$, definit mai jos, în urma apelului f(1999, 7) .
@@ -8296,10 +8296,8 @@ f) $\mathbf{O}(1)$
 \\
 
 \section*{Varianta 18}
-\begin{enumerate}
-  \item Precizați care dintre următoarele secvențe de instrucțiuni atribuie variabilei întregi pc valoarea 100, unde $\mathbf{a}=559020$.
-\end{enumerate}
 
+18.1. Precizați care dintre următoarele secvențe de instrucțiuni atribuie variabilei întregi pc valoarea 100, unde $\mathbf{a}=559020$.
 \begin{verbatim}
 Limbajul C
 1. pc=a/100*a%10;
@@ -8325,97 +8323,101 @@ Limbajul C++
     pc*=a%100;
 6. pc=a;while(pc>0) pc=pc/10;
     pc*=a%100;
+Limbajul Pascal 
+1. pc:=a div 10 * a mod 10; 
+2. pc:=a;  
+while (pc>9) do 
+     pc:=pc div 10;  
+pc:=pc*(a mod 100); 
+3. pc:=a mod 100; 
+4. pc:=a;  
+while (pc>9) do 
+ pc:=pc mod 10; 
+pc:=pc*(a mod 100); 
+5. pc:=a/10;  
+while (pc>0) do 
+      pc:=pc div 10;  
+pc:=pc*(a mod 100); 
+6. pc:=a;  
+while (pc>0) do 
+      pc:=pc div 10;  
+pc:=pc*(a mod 100);
 \end{verbatim}
-
-a) 1\\
-b) 2\\
-c) 3\\
-d) 4\\
-e) 5\\
-f) 6\\
-2. Precizați care dintre următoarele secvențe de instrucțiuni de mai jos, atribuie variabilei întregi $\mathbf{p}$ valoarea împărțirii întregi a numărului $\mathbf{a}$ la numărul $\mathbf{b}$, unde variabilele $\mathbf{a}$ și $\mathbf{b}$ reprezintă două numere întregi date.
-
-\begin{verbatim}
-Limbajul C
-    p=1;s=0;
-    for(i=1;i<=b;i++)
-    p-=b;s++;
-2. p=a;
-    for(i=1;i<=b;i++)p-=i;
-3. p=1;i=0;
-    while(i<b) p-=a;i++;
-4. p=0;s=a;
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-    pc:=a div 10 * a mod 10;
-2. pc:=a;
-    while (pc>9) do
-        pc:=pc div 10;
-    pc:=pc*(a mod 100);
-    pc:=a mod 100;
-4. pc:=a;
-    while (pc>9) do
-        pc:=pc mod 10;
-    pc:=pc*(a mod 100);
-5. pc:=a/10;
-    while (pc>0) do
-            pc:=pc div 10;
-    pc:=pc*(a mod 100);
-6. pc:=a;
-    while (pc>0) do
-        pc:=pc div 10;
-    pc:=pc*(a mod 100);
-\end{verbatim}
-
-\section*{Limbajul Pascal}
-\begin{enumerate}
-  \item $p:=1 ; s:=0$;for $i:=1$ to $b$ do $p:=p-n$;inc (s);
-  \item $p:=a ; f o r ~ i:=1$ to $b$ do p:=p-i;
-  \item $p:=1 ; i:=0$; while i<b do p:=p*a;inc(i);
-  \item $\mathrm{p}:=0$;s:=a;while (s>0)
-\end{enumerate}
-
-\begin{verbatim}
-for(i=1;i<=b&&s>0;i++)
-{p++;s-=b;}
-5. p=a;
-for(i=0;i<=b;i++)p-=b;
-6. p=1;
-for(i=0;i<=b;i++)p-=b;
-\end{verbatim}
-
-Limbajul C++
-
-\begin{verbatim}
-1. p=1;s=0;
-    for(i=1;i<=b;i++)
-    p-=b;s++;
-\end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{1}
-  \item $\mathrm{p}=\mathrm{a}$;
-for (i=1;i<=b;i++)p-=i;
-  \item $p=1$; $i=0$; while ( $i<b) p-=a$;
-i++;
-  \item $\mathrm{p}=0$; $\mathrm{s}=\mathrm{a}$;
-for (i=1;i<=b\&\&s>0;i++)\\
-{p++;s-=b; }
-  \item $\mathrm{p}=\mathrm{a}$;
-for (i=0;i<=b;i++)p-=b;
-  \item $\mathrm{p}=1$;
-for (i=0; i<=b;i++)p-=b;
-a) 1\\
-b) 2\\
-c) 3\\
-d) 4\\
-e) 5\\
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
 f) 6
-  \item Precizați care este valoarea returnată de funcția definită mai jos, la apelul sp (5).
-\end{enumerate}
-
+\\
+18.2. Precizați care dintre următoarele secvențe de instrucțiuni de mai jos, atribuie variabilei întregi $\mathbf{p}$ valoarea împărțirii întregi a numărului $\mathbf{a}$ la numărul $\mathbf{b}$, unde variabilele $\mathbf{a}$ și $\mathbf{b}$ reprezintă două numere întregi date.
+\begin{verbatim}
+Limbajul C
+1. p=1;s=0; 
+for(i=1;i<=b;i++) 
+p-=b;s++; 
+2. p=a; 
+for(i=1;i<=b;i++)p-=i; 
+3. p=1;i=0; 
+while(i<b) p-=a;i++;  
+4. p=0;s=a; 
+for(i=1;i<=b&&s>0;i++) 
+{p++;s-=b;} 
+5. p=a; 
+for(i=0;i<=b;i++)p-=b; 
+6. p=1; 
+for(i=0;i<=b;i++)p-=b;
+Limbajul C++ 
+1. p=1;s=0; 
+for(i=1;i<=b;i++) 
+p-=b;s++; 
+2. p=a; 
+for(i=1;i<=b;i++)p-=i; 
+3. p=1;i=0;while(i<b)p-=a; 
+i++;  
+4. p=0;s=a; 
+for(i=1;i<=b&&s>0;i++) 
+{p++;s-=b;} 
+5. p=a; 
+for(i=0;i<=b;i++)p-=b; 
+6. p=1; 
+for(i=0;i<=b;i++)p-=b;
+Limbajul Pascal 
+1. p:=1;s:=0;for i:=1 to b 
+do p:=p-n;inc(s); 
+2. p:=a;for i:=1 to b do 
+p:=p-i; 
+3. p:=1;i:=0; 
+while i<b do 
+p:=p*a;inc(i); 
+4. p:=0;s:=a;while(s>0)
+begin inc(p);s:=s-b; 
+end; 
+5. p:=a;for i:=0 to b do 
+p:=p-b; 
+6. p:=1;for i:=0 to b do 
+p:=p-b;
+\end{verbatim}
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
+f) 6
+\\
+18.3. Precizați care este valoarea returnată de funcția definită mai jos, la apelul sp (5).
 \begin{verbatim}
 Limbajul C++
 float sp(int n)
@@ -8427,410 +8429,421 @@ float sp(int n)
 {if(n>1)
 return sp (n-1)+1./(n* (n+1));
     else return 0.5;}
-\end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{3}
-  \item Precizați care dintre următoarele expresii de mai jos reprezintă valoare polinomului sunt introduse de la tastatură.
-\end{enumerate}
-
-Limbajul C
-
-\begin{verbatim}
-1. p=0; for (k=0;k<=n;k++)
-        p=p+(n-k) *pow (x,k) ;
-2. p=1; for (k=0;k<=n;k++)
-\end{verbatim}
-
-a) 0.83\\
-b) 0.82\\
-c) 0.81\\
-d) 0.38\\
-d) 0.38\\
-e) 0.28\\
-e) 0.28\\
-f) 0.18 $p=\sum_{k=0}^{n}(n-k) \cdot X^{k}$, pentru un număr $\mathbf{x}$ real pozitiv, iar $\mathbf{n}$ este un număr natural, $\mathbf{x}$ și $\mathbf{n}$
-
-\begin{verbatim}
-Limbajul Pascal
-function
-sp (n:integer) :real;
-Begin
-if(n>1) then
-sp:=sp (n-1)+1/(n* (n+1))
-    else
-        sp:=0.5;
+Limbajul Pascal 
+function 
+sp(n:integer):real; 
+Begin 
+if(n>1) then 
+sp:=sp(n-1)+1/(n*(n+1)) 
+   else  
+     sp:=0.5; 
 end;
 \end{verbatim}
-
-Limbajul Pascal
-
-\begin{enumerate}
-  \item $\mathrm{p}:=0$; for $\mathrm{k}:=0$ to n do $\mathrm{p}:=\mathrm{p}+(\mathrm{n}-\mathrm{k}) * \exp (\mathrm{k} * \ln (\mathrm{x}))$;
-  \item $p:=1$; for $k:=0$ to $n$ do
-\end{enumerate}
-
+\\
+a) 0.83
+\\
+b) 0.82
+\\
+c) 0.81
+\\
+d) 0.38
+\\
+e) 0.28
+\\
+f) 0.18
+\\
+18.4. Precizați care dintre următoarele expresii de mai jos reprezintă valoare polinomului $p=\sum_{k=0}^{n}(n-k) \cdot X^{k}$, pentru un număr $\mathbf{x}$ real pozitiv, iar $\mathbf{n}$ este un număr natural, $\mathbf{x}$ și $\mathbf{n}$ sunt introduse de la tastatură.
 \begin{verbatim}
-    p=p+(n-k) *pow (x,k);
-3. p=1; for (k=0;k<n;k++)
-    p=p+(n-k) *pow (x,k) ;
-4. p=0; for (k=0;k<=n+1;k++)
-        p=p+(n-k) *pow (x,k) ;
-5. p=1; for (k=0;k<=n+1;k++)
-    p=p+(n-k) *pow (x,k) ;
-6. p=0;for (k=0;k<n;k++)
-    p=p+(n-k) *pow (x,k) ;
+Limbajul C 
+1. p=0;for(k=0;k<=n;k++) 
+     p=p+(n-k)*pow(x,k); 
+2. p=1;for(k=0;k<=n;k++)
+     p=p+(n-k)*pow(x,k); 
+3. 3. p=1;for(k=0;k<n;k++) 
+    p=p+(n-k)*pow(x,k); 
+4. 4. p=0;for(k=0;k<=n+1;k++) 
+     p=p+(n-k)*pow(x,k); 
+5. p=1;for(k=0;k<=n+1;k++) 
+    p=p+(n-k)*pow(x,k); 
+6. p=0;for(k=0;k<n;k++) 
+    p=p+(n-k)*pow(x,k);
+Limbajul C++ 
+1. p=0;for(k=0;k<=n;k++)p=p+(n-k)*pow(x,k); 
+2. p=1;for(k=0;k<=n;k++)p=p+(n-k)*pow(x,k); 
+3. p=1;for(k=0;k<n;k++)p=p+(n-k)*pow(x,k); 
+4. p=0;for(k=0;k<=n+1;k++)p=p+(n-k)*pow(x,k); 
+5. p=1;for(k=0;k<=n+1;k++)p=p+(n-k)*pow(x,k); 
+6. p=0;for(k=0;k<n;k++)p=p+(n-k)*pow(x,k);
+Limbajul Pascal 
+1. p:=0;for k:=0 to n do  
+ p:=p+(n-k)*exp(k*ln(x)); 
+2. p:=1;for k:=0 to n do
+ p:=p+(n-k)*exp(k*ln(x)); 
+3. p:=1;for k:=0 to n-1 do 
+ p:=p+(n-k)*exp(k*ln(x)); 
+4. p:=0;for k:=0 to n+1 do 
+ p:=p+(n-k)*exp(k*ln(x)); 
+5. p:=1;for k:=0 to n+1 do 
+ p:=p+(n-k)*exp(k*ln(x)); 
+6. p:=0;for k:=0 to n-1 do 
+ p:=p+(n-k)*exp(k*ln(x)); 
 \end{verbatim}
-
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
+f) 6
+\\
+18.5. Fie graful neorientat $\mathrm{G}=(\mathrm{V}, \mathrm{M})$, unde V este mulțimea nodurilor grafului, $\operatorname{card}(\mathrm{V})=\mathrm{n}$, respectiv, $\mathbf{M}$ este mulțimea muchiilor grafului, $\operatorname{iar} \operatorname{card}(\mathbf{M})=\mathrm{m}$. Având la dispoziție cele n noduri se pot construi 32768 de grafuri neorintate distincte, precizați valoarea variabilei $n$.
+\\
+a) 15
+\\
+b) 14
+\\
+c) 13
+\\
+d) 8
+\\
+e) 7
+\\
+f) 6
+\\
+18.6. Precizați care este valoare variabilei text după executarea instrucțiunilor de mai jos.
 \begin{verbatim}
-    p:=p+(n-k) * exp (k*ln(x));
-3. p:=1;for k:=0 to n-1 do
-    p:=p+(n-k) * exp (k*ln(x));
-4. p:=0;for k:=0 to n+1 do
-    p:=p+(n-k) * exp (k* ln (x));
-5. p:=1;for k:=0 to n+1 do
-    p:=p+(n-k) * exp (k*ln(x));
-6. p:=0;for k:=0 to n-1 do
-    p:=p+(n-k)*exp (k*ln(x));
-\end{verbatim}
-
-Limbajul C++
-
-\begin{verbatim}
-p=0;for (k=0;k<=n;k++)p=p+(n-k) *pow (x,k);
-p=1 ; for (k=0;k<=n;k++) p=p+(n-k) *pow (x,k);
-p=1;for (k=0;k<n;k++) p=p+(n-k) *pow (x,k) ;
-p=0;for (k=0;k<=n+1;k++) p=p+(n-k) *pow (x,k);
-p=1;for (k=0;k<=n+1;k++) p=p+(n-k) *pow (x,k);
-p=0;for (k=0;k<n;k++) p=p+(n-k) *pow (x,k);
-\end{verbatim}
-
-a) 1\\
-b) 2\\
-c) 3\\
-d) 4\\
-e) 5\\
-f) 6\\
-5. Fie graful neorientat $\mathrm{G}=(\mathrm{V}, \mathrm{M})$, unde V este mulțimea nodurilor grafului, $\operatorname{card}(\mathrm{V})=\mathrm{n}$, respectiv, $\mathbf{M}$ este mulțimea muchiilor grafului, $\operatorname{iar} \operatorname{card}(\mathbf{M})=\mathrm{m}$. Având la dispoziție cele n noduri se pot construi 32768 de grafuri neorintate distincte, precizați valoarea variabilei $n$.\\
-a) 15\\
-b) 14\\
-c) 13\\
-d) 8\\
-e) 7\\
-f) 6\\
-6. Precizați care este valoare variabilei text după executarea instrucțiunilor de mai jos.
-
-\begin{verbatim}
-Limbajul C
-char text[250]="";
-strncpy(text,strstr("Admitere Poli 2020","Poli"),9);
-text[9]='\0';
-for(int k=strlen(text)-1;k>=0;k--) printf("%c",text[k]);
-Limbajul C++
-char text[250];
-strncpy(text,strstr("Admitere Poli 2020","Poli"),9);
-text[9]='\0';
-for(int k=strlen(text)-1;k>=0;k--) cout<<text[k];
-cout<<text;
-Limbajul Pascal
-var text:string[250];
-c:char;
-p,k:integer;
-Begin
+Limbajul C 
+char text[250]=""; 
+strncpy(text,strstr("Admitere Poli 2020","Poli"),9); 
+text[9]='\0'; 
+for(int k=strlen(text)-1;k>=0;k--) printf("%c",text[k]); 
+ 
+Limbajul C++ 
+char text[250]; 
+strncpy(text,strstr("Admitere Poli 2020","Poli"),9); 
+text[9]='\0'; 
+for(int k=strlen(text)-1;k>=0;k--) cout<<text[k]; 
+cout<<text; 
+ 
+Limbajul Pascal  
+var text:string[250]; 
+c:char; 
+p,k:integer; 
+Begin 
 text:='Admitere Poli 2020'; p:=pos('Poli',text);
-\end{verbatim}
-
-\begin{verbatim}
-text:=copy(text, p,length(text)) ;
-for k:=1 to length(text) div 2 do
-    begin
-        c:=text[k]; text[k]:=text[length(text) -k+1];
-        text[length(text) -k+1]:=c;
-    end;
-writeln(text);
+text:=copy(text,p,length(text)); 
+for k:=1 to length(text) div 2 do 
+ begin 
+   c:=text[k];text[k]:=text[length(text)-k+1]; 
+   text[length(text)-k+1]:=c; 
+ end; 
+writeln(text); 
 End.
 \end{verbatim}
-
-a) Poli 2020\\
-b) oli 2020\\
-c) Admitere Poli\\
-d) 0202 iloP eretimdA\\
-e) 0202 eretimdA\\
-f) 0202 iloP\\
-7. Precizați ce valoare are variabila text după executarea instrucţiunii de mai jos.
-
+\\
+a) Poli 2020
+\\
+b) oli 2020
+\\
+c) Admitere Poli
+\\
+d) 0202 iloP eretimdA
+\\
+e) 0202 eretimdA
+\\
+f) 0202 iloP
+\\
+18.7. Precizați ce valoare are variabila text după executarea instrucţiunii de mai jos.
 \begin{verbatim}
-Limbajul C
-char text[250], nou[250];
-strcpy(text,strstr("Admitere Politehnica Bucuresti 2020",
-"ere")+strlen("2408")) ;
-strcpy(nou,text) ; strnset(nou,'X',12);
-strncat(text,nou,12); printf("%s \n", text);
-Limbajul C++
-char text[250], nou[250];
-strcpy(text,strstr("Admitere Politehnica Bucuresti 2020",
-"ere")+strlen("2408")) ;
-strcpy(nou,text) ; strnset(nou,'X',12);
-strncat(text,nou,12); cout<<text;
-Limbajul Pascal
-var text:string[250];
-c:char;
-p,i:integer;
-Begin
-text:='Admitere Poli 2020'; p:=pos('Poli',text);
-text:=copy(text, p,length (text)) ;
-for i:=1 to length(text) div 2 do
-begin
-c:=text[i]; text[i]:=text[length(text)-i+1];
-text[length(text)-i+1]:=c;
-end;
-writeln(text);
-End.
+Limbajul C 
+char text[250],nou[250]; 
+strcpy(text,strstr("Admitere Politehnica Bucuresti 2020", 
+"ere")+strlen("2408")); 
+strcpy(nou,text); strnset(nou,'X',12); 
+strncat(text,nou,12); printf("%s \n", text); 
+ 
+Limbajul C++ 
+char text[250],nou[250]; 
+strcpy(text,strstr("Admitere Politehnica Bucuresti 2020", 
+"ere")+strlen("2408")); 
+strcpy(nou,text); strnset(nou,'X',12); 
+strncat(text,nou,12); cout<<text; 
+ 
+Limbajul Pascal 
+var text:string[250]; 
+c:char; 
+p,i:integer; 
+Begin 
+text:='Admitere Poli 2020'; p:=pos('Poli',text); 
+text:=copy(text,p,length(text)); 
+for i:=1 to length(text) div 2 do 
+begin 
+c:=text[i]; text[i]:=text[length(text)-i+1]; 
+text[length(text)-i+1]:=c; 
+end; 
+writeln(text); 
+End. 
 \end{verbatim}
-
-a) Bucuresti 2020 XXXXXX\\
-b) Politehnica Bucuresti 2020XXXXXX\\
-c) Politehnica 2020XXXXXXXXXX\\
-d) Politehnica Bucuresti 2020XXXXXXXXXXXX\\
-e) Bucuresti 2020 XXXXXXXXXXXX\\
-f) Bucuresti 2020XXXXXX\\
-8. Utilizând metoda backtracking, se generează toate modalitățile de a se forma o echipă de ingineri cu 5 membrii. Echipa trebuie să fie mixtă, formată din exact 2 ingineri și restul\\
-inginere. Știind că instituția are 24 ingineri, iar inginere de 3 ori mai multe, care este numărul de echipe de ingineri care se pot forma?\\
-a) 283946040\\
-b) 283948060\\
-c)283946080\\
-d) 16832340\\
-e) $\mathbf{1 6 8 3 2 3 8 0}$\\
-f) $\mathbf{1 6 4 6 0 6 4 0}$\\
-9. Fiind date două tablouri unidimensionale ordonate, fiecare cu n valori, se dorește obținerea unui al treilea tablou unidimensional ordonat, care va conține, toate elementele celor două tablouri în ordine descrescătoare. Algoritmul descris, efectuează în medie, nr comparații pentru a ordona elementele celor doi vectori. Numărul nr reprezintă complexitatea algoritmului de sortare și este:\\
-a) $\mathbf{O}\left(\mathbf{n}^{2}\right)$\\
-b) $\mathbf{O}\left(\mathbf{n}^{3}\right)$\\
-c) $\mathbf{O}(\mathbf{n})$\\
-d) $\mathbf{O}\left(\mathbf{n}^{2}+\mathbf{n}\right)$\\
-e) $\mathbf{O}(\log (3) \cdot n)$\\
-f) $\mathbf{O}(\log (2))$\\
-10. Fie trei tije numerotate cu 1, $\mathbf{2}$ și $\mathbf{3}$. Problema constă în mutarea celor $\mathbf{n}$ discuri de pe tija 1, pe tija 2, prin intermediul tijei 3, cu următoarele restricții: la fiecare mutare se deplasează un singur disc; discurile se mută numai de pe o tijă pe alta; un disc cu diametru mai mare nu poate fi așezat peste un disc cu diametru mai mic. Pentru $n=1$, mutăm discul pe ultima tije. Pentru n=2, se fac mutările $1 \rightarrow 3,1 \rightarrow 2,3 \rightarrow 2$. În cazul în care n>3 problema se complică. Respectând restricțiile date se realizează un algoritm de rezolvare a problemei. Precizați complexitatea algoritmului de rezolvare al problemei prezentate.\\
-a) $\theta\left(n \cdot \log 3\left(n^{3}\right)\right)$\\
-b) $\theta\left(3^{n} \cdot \log 3(n)\right)$\\
-c) $\theta\left(3^{n}\right)$\\
-d) $\theta\left(2^{n}\right)$\\
-e) $\theta\left(n^{2} \cdot \log \left(n^{2}\right)\right)$\\
-f) $\theta\left(2^{n} \cdot \log \left(2^{n}\right)\right)$\\
-11. Se construiește un tablou bidimensional cu $\mathbf{n} \times \mathbf{n}$ elemente, în variabila $\mathbf{A}$ prin secvența de mai jos, unde variabila $\mathbf{n}$ este un număr natural nenul dat de la tastatură.
-
+\\
+a) Bucuresti 2020XXXXXX
+\\
+b) Politehnica Bucuresti 2020XXXXXX
+\\
+c) Politehnica 2020XXXXXXXXXX
+\\
+d) Politehnica Bucuresti 2020XXXXXXXXXXXX
+\\
+e) Bucuresti 2020XXXXXXXXXXXX
+\\
+f) Bucuresti 2020XXXXXX
+\\
+18.8. Utilizând metoda backtracking, se generează toate modalitățile de a se forma o echipă de ingineri cu 5 membrii. Echipa trebuie să fie mixtă, formată din exact 2 ingineri și restul inginere. Știind că instituția are 24 ingineri, iar inginere de 3 ori mai multe, care este numărul de echipe de ingineri care se pot forma?
+\\
+a) 283946040
+\\
+b) 283948060
+\\
+c) 283946080
+\\
+d) 16832340
+\\
+e) 16832380
+\\
+f) 16460640 
+\\
+18.9. Fiind date două tablouri unidimensionale ordonate, fiecare cu n valori, se dorește obținerea unui al treilea tablou unidimensional ordonat, care va conține, toate elementele celor două tablouri în ordine descrescătoare. Algoritmul descris, efectuează în medie, nr comparații pentru a ordona elementele celor doi vectori. Numărul nr reprezintă complexitatea algoritmului de sortare și este:
+\\
+a) $\mathbf{O}\left(\mathbf{n}^{2}\right)$
+\\
+b) $\mathbf{O}\left(\mathbf{n}^{3}\right)$
+\\
+c) $\mathbf{O}(\mathbf{n})$
+\\
+d) $\mathbf{O}\left(\mathbf{n}^{2}+\mathbf{n}\right)$
+\\
+e) $\mathbf{O}(\log (3) \cdot n)$
+\\
+f) $\mathbf{O}(\log (2))$
+\\
+18.10. Fie trei tije numerotate cu 1, $\mathbf{2}$ și $\mathbf{3}$. Problema constă în mutarea celor $\mathbf{n}$ discuri de pe tija 1, pe tija 2, prin intermediul tijei 3, cu următoarele restricții: la fiecare mutare se deplasează un singur disc; discurile se mută numai de pe o tijă pe alta; un disc cu diametru mai mare nu poate fi așezat peste un disc cu diametru mai mic. Pentru $n=1$, mutăm discul pe ultima tije. Pentru n=2, se fac mutările $1 \rightarrow 3,1 \rightarrow 2,3 \rightarrow 2$. În cazul în care n>3 problema se complică. Respectând restricțiile date se realizează un algoritm de rezolvare a problemei. Precizați complexitatea algoritmului de rezolvare al problemei prezentate.
+\\
+a) $\theta\left(n \cdot \log 3\left(n^{3}\right)\right)$
+\\
+b) $\theta\left(3^{n} \cdot \log 3(n)\right)$
+\\
+c) $\theta\left(3^{n}\right)$
+\\
+d) $\theta\left(2^{n}\right)$
+\\
+e) $\theta\left(n^{2} \cdot \log \left(n^{2}\right)\right)$
+\\
+f) $\theta\left(2^{n} \cdot \log \left(2^{n}\right)\right)$
+\\
+18.11. Se construiește un tablou bidimensional cu $\mathbf{n} \times \mathbf{n}$ elemente, în variabila $\mathbf{A}$ prin secvența de mai jos, unde variabila $\mathbf{n}$ este un număr natural nenul dat de la tastatură.
 \begin{verbatim}
-Limbajul C
-for (i=1;i<=n;i++)
-for ( $\mathbf{j = 1 ; j < = n ; j + + )}$
+Limbajul C for(i=1;i<=n;i++) 
+for(j=1;j<=n;j++) 
 A[i][j]=(3*i+2*j)/2;
 \end{verbatim}
-
 \begin{verbatim}
-Limbajul C++
-for (i=1;i<=n;i++)
-for ( $\mathrm{j}=1$; $\mathrm{j}<=\mathrm{n} ; \mathrm{j}++$ )
+Limbajul C++ for(i=1;i<=n;i++) 
+for(j=1;j<=n;j++) 
 A[i][j]=(3*i+2*j)/2;
 \end{verbatim}
-
-Limbajul Pascal
-for $\mathrm{i}:=1$ to n do for $i:=1$ to $n$ do
-A[i,j]:=(3\textit{i+2}j)/2
-
-Precizați care este suma elementelor de pe diagonala secundară a tabloului bidimensional A, în urma execuției secvenței de mai sus.\\
-a) $\frac{5}{4} \cdot(n+1) \cdot n$\\
-b) $\frac{3}{4} \cdot(n+1) \cdot n$\\
-c) $\frac{5}{4} \cdot n^{2}$\\
-d) $\frac{3}{4} \cdot n^{2}$\\
-e) $\frac{3}{4} \cdot(n-1) \cdot n$\\
-f) $\frac{5}{4} \cdot(n-1) \cdot n$\\
-12. Se consideră declarările de mai jos. Precizați care este tipul expresiei bb.b.b.
-
 \begin{verbatim}
-Limbajul C
-struct S1{ int a;char b;};
-struct S2{ float a;double b;};
-struct S3{struct S1 a;
-        struct S2 b;} aa, bb;
-Limbajul C++
-struct S1{ int a;char b;};
-struct S2{ float a;double b;};
-struct S3{struct S1 a;
-    struct S2 b;} aa, bb;
+Limbajul Pascal for i:=1 to n do 
+for i:=1 to n do 
+A[i,j]:=(3*i+2*j)/2
+;
 \end{verbatim}
-
+Precizați care este suma elementelor de pe diagonala secundară a tabloului bidimensional A, în urma execuției secvenței de mai sus.
+\\
+a) $\frac{5}{4} \cdot(n+1) \cdot n$
+\\
+b) $\frac{3}{4} \cdot(n+1) \cdot n$
+\\
+c) $\frac{5}{4} \cdot n^{2}$
+\\
+d) $\frac{3}{4} \cdot n^{2}$
+\\
+e) $\frac{3}{4} \cdot(n-1) \cdot n$
+\\
+f) $\frac{5}{4} \cdot(n-1) \cdot n$
+\\
+18.12. Se consideră declarările de mai jos. Precizați care este tipul expresiei bb.b.b.
 \begin{verbatim}
-Limbajul Pascal
-Type S1=Record
-        a: integer;
-        b: char; End;
-    S2=Record
-        a: real;
-        b: real;
-    End;
-    S3=Record
-        a: S1;
-        b: S2;
+Limbajul C 
+struct S1{ int a;char b;}; 
+struct S2{ float a;double b;}; 
+struct S3{struct S1 a; 
+         struct S2 b;} aa, bb;
+Limbajul C++ 
+struct S1{ int a;char b;}; 
+struct S2{ float a;double b;}; 
+struct S3{struct S1 a; 
+     struct S2 b;} aa, bb;
+Limbajul Pascal Type S1=Record 
+       a: integer; 
+       b: char; End; 
+     S2=Record 
+       a: real; 
+       b: real;  
+   End; 
+     S3=Record 
+       a: S1; 
+       b: S2; 
+   End; 
+var  aa,bb:S3; 
 \end{verbatim}
-
-\begin{verbatim}
-    End;
-var aa,bb:S3;
+\\
+a) long/ long/ longint
+\\
+b) float/ float/ real
+\\
 c) double/double/ real
-f) nu putem avea în înregistrări diferite, câmpuri cu același nume
-\end{verbatim}
-
-a) long/ long/ longint\\
-b) float/ float/ real\\
-d) int/ int/ integer\\
-e) char/ char/ char\\
-13. Precizați care vor fi valorile afișate în urma rulării programului de mai jos pentru variabilele $\mathrm{a}=2020$, iar $\mathrm{b}=17$.
-
+\\
+d) int/ int/ integer
+\\
+e) char/ char/ char
+\\
+f) nu putem avea în înregistrări diferite, 
+câmpuri cu același nume
+\\
+18.13. Precizați care vor fi valorile afișate în urma rulării programului de mai jos pentru variabilele $\mathrm{a}=2020$, iar $\mathrm{b}=17$.
 \begin{verbatim}
 Limbajul C
-#include<stdio.h>
-    int a,b;
-void f(int n,int m)
-{
-if(n!=m)
-        if(n>m)
-                f(n-m,m);
-            else
-            f(n,m-n);
-else
-    {printf("%i",a*b/n);
-    printf("%i ",m);
-    }
+#include<stdio.h> 
+ int a,b; 
+void f(int n,int m) 
+{ 
+if(n!=m) 
+  if(n>m) 
+    f(n-m,m); 
+   else 
+   f(n,m-n); 
+else 
+ {printf("%i",a*b/n); 
+ printf("%i ",m); 
+ } 
+} 
+int main() 
+{scanf("%i ",&a); 
+ scanf("%i ",&b); 
+ f(a,b); 
+ return 0;
 }
-int main()
-{scanf("%i ",&a);
-    scanf("%i ",&b);
-    f(a,b) ;
-    return 0;
-}
-\end{verbatim}
-
-a) $\mathbf{8 0 8 0} \mathbf{4}$\\
-b) $\mathbf{6 0 6 0} 5$\\
-c) $\mathbf{4 0 4 0} \mathbf{6}$ d) $\mathbf{2 0 2 0} 2020$\\
-c) 40406\\
-d) 20202020\\
-e) 343401\\
-f) 161442
-
-\begin{verbatim}
 Limbajul C++
-#include<iostream>
-using namespace
-std;
-    int a,b;
-void f(int n,int m)
-{
-if(n!=m)
-        if(n>m)
-                    f(n-m,m);
-                else
-                    f(n,m-n);
-            else
-cout<<a*b/n<<"
-"<<m;
+#include<iostream> 
+using namespace 
+std; 
+ int a,b; 
+void f(int n,int m) 
+{ 
+if(n!=m) 
+  if(n>m) 
+     f(n-m,m); 
+    else 
+     f(n,m-n); 
+  else 
+cout<<a*b/n<<" 
+"<<m; 
+} 
+int main() 
+{ cin>>a>>b; 
+  f(a,b); 
+return 0; 
 }
-int main()
-{ cin>>a>>b;
-        f(a,b);
-return 0;
-}
+Limbajul Pascal var a,b:integer; 
+procedure 
+f(n,m:integer); 
+Begin 
+if n<>m then 
+ if n>m then 
+  f(n-m,m) 
+ else 
+  f(n,m-n) 
+else 
+ write(a*b div n,' 
+',m); 
+end; 
+begin 
+ readln(a,b); 
+ f(a,b); 
+end. 
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var a,b:integer;
-procedure
-f(n,m:integer);
-Begin
-if n<>m then
-    if n>m then
-        f(n-m,m)
-    else
-        f(n,m-n)
-else
-    write(a*b div n,'
-',m);
-end;
-begin
-    readln(a,b);
-    f(a,b);
-end.
-\end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{13}
-  \item Se consideră un graf neorientat conex cu noduri și m muchii, iar gradul fiecărui nod este par. Precizați care este complexitatea temporală pentru determinarea unui ciclu eulerian în acest graf pentru algoritmii care pornesc de la o parcurgere. Graful este reprezentat folosind liste de adiaceță.\\
-a) $\mathbf{O}(\mathbf{n}+\mathbf{m})$\\
-b) $\mathbf{O}(\mathrm{n})$\\
-c) $\mathbf{O}(\mathbf{n} \cdot \mathbf{m})$\\
-d) $\mathbf{O}(\mathrm{m})$\\
-e) $\mathbf{O}(\mathrm{m} \cdot \log (2))$\\
+\\
+a) 8080 4
+\\
+b) 6060 5
+\\
+c) 4040 6
+\\
+d) 2020 2020
+\\
+e) 34340 1
+\\
+f) 16144 2
+\\
+18.14. Se consideră un graf neorientat conex cu noduri și m muchii, iar gradul fiecărui nod este par. Precizați care este complexitatea temporală pentru determinarea unui ciclu eulerian în acest graf pentru algoritmii care pornesc de la o parcurgere. Graful este reprezentat folosind liste de adiaceță.
+\\
+a) $\mathbf{O}(\mathbf{n}+\mathbf{m})$
+\\
+b) $\mathbf{O}(\mathrm{n})$
+\\
+c) $\mathbf{O}(\mathbf{n} \cdot \mathbf{m})$
+\\
+d) $\mathbf{O}(\mathrm{m})$
+\\
+e) $\mathbf{O}(\mathrm{m} \cdot \log (2))$
+\\
 f) $\mathbf{O}(\mathrm{n} \cdot \log (2))$
-  \item Precizați complexitatea timp pentru secvența de program de mai jos.
-\end{enumerate}
-
+\\
+18.15. Precizați complexitatea timp pentru secvența de program de mai jos.
 \begin{verbatim}
-Limbajul C
-k=0;
-for(int a=n;a>=1;a--)
-    for(int b=n;b>=1;b--)
-        k++;
+Limbajul C 
+k=0; 
+for(int a=n;a>=1;a--) 
+  for(int b=n;b>=1;b--) 
+      k++; 
 printf("%i \n",k);
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-k:=0;
-a:=n;
-while(a>=1) do
-begin
-    b:=n;
-| Limbajul Pascal
-\end{verbatim}
-
-muchii, iar gra\\
-O(m•log(2)) $\mathbf{1}$ f) $\mathbf{1 6 1 4 4} 2$\\
-gradul fiecărui nod\\
-minarea unui ciclu\\
-urgere. Graful este\\
-f) $\mathbf{O}(\mathbf{n} \cdot \log (\mathbf{2}))$\\
-$a:=n ;$\\
-while $(a>=1)$ do\\
-begin\\
-$b:$
-
-\begin{verbatim}
-Limbajul C++
-k=0;
-for(int a=n;a>=1;a--)
-    for(int b=n;b>=1;b--)
-        k++;
+Limbajul C++ 
+k=0; 
+for(int a=n;a>=1;a--) 
+  for(int b=n;b>=1;b--) 
+      k++; 
 cout<<k;
+Limbajul Pascal 
+k:=0; 
+a:=n; 
+while(a>=1) do  
+begin 
+    while(b>=1) do 
+       begin 
+        k++;  
+        dec(b); 
+      end; 
+  dec(a); 
+end; 
+write(k); 
 \end{verbatim}
-
-a) $O(n \cdot \log n)$\\
-b) $0\left(2^{n}\right)$\\
+\\
+a) $O(n \cdot \log n)$
+\\
+b) $0\left(2^{n}\right)$
+\\
 c) $O\left(n^{3}\right)$
-
-\begin{verbatim}
-while(b>=1) do
-        begin
-        k++;
-        dec (b) ;
-    end;
-    dec(a);
-end;
-write(k) ;
-\end{verbatim}
-
-d) $O\left(n^{2}\right)$\\
-e) $\mathrm{O}(\mathrm{n})$\\
+\\
+d) $O\left(n^{2}\right)$
+\\
+e) $\mathrm{O}(\mathrm{n})$
+\\
 f) O (1)
+\\
 
 \section*{Varianta 19}
 \begin{enumerate}
