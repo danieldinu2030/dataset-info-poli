@@ -9379,10 +9379,8 @@ f) 10 ori
 
 \section*{Varianta 20}
 
-\begin{enumerate}
-  \item Fie subprogramul:
-\end{enumerate}
 
+20.1. Fie subprogramul:
 \begin{verbatim}
 Limbajul C++/ Limbajul C
     int f (int n, int s){
@@ -9394,7 +9392,6 @@ Limbajul C++/ Limbajul C
             return f(n/s,s);
     }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 function f(n,s:integer):
@@ -9406,16 +9403,21 @@ begin
         else f:= f(n div s,s);
     end;
 \end{verbatim}
-
-Subprogramul se execută pentru următoarele seturi de valori $n=720, s=2$; $\mathrm{n}=120, \mathrm{~s}=3 ; \mathrm{n}=120, \mathrm{~s}=1$; $\mathrm{n}=720, \mathrm{~s}=1$. Pentru câte dintre apeluri subprogramul f va returna valoarea 5 ?\\
-a) un apel\\
-b) 2 apeluri\\
-c) 3 apeluri\\
-d) niciun apel\\
-e) 4 apeluri\\
-f) 5 apeluri\\
-2. Fie subprogramul de mai jos unde $\mathbf{n}$ și $\mathbf{c}$ sunt variabile întregi:
-
+Subprogramul se execută pentru următoarele seturi de valori $n=720, s=2$; $\mathrm{n}=120, \mathrm{~s}=3 ; \mathrm{n}=120, \mathrm{~s}=1$; $\mathrm{n}=720, \mathrm{~s}=1$. Pentru câte dintre apeluri subprogramul f va returna valoarea 5 ?
+\\
+a) un apel
+\\
+b) 2 apeluri
+\\
+c) 3 apeluri
+\\
+d) niciun apel
+\\
+e) 4 apeluri
+\\
+f) 5 apeluri
+\\
+20.2. Fie subprogramul de mai jos unde $\mathbf{n}$ și $\mathbf{c}$ sunt variabile întregi:
 \begin{verbatim}
 Limbajul C++
 int f(int &n, int c) {
@@ -9440,151 +9442,246 @@ return 1+f(n,c);}
     {*n=(*n)/10%10;
             return f(n,c);}
     }
+Limbajul Pascal 
+function f(var n:integer; 
+c:integer) : integer; 
+var a : integer; 
+begin 
+ a := n mod 10;   
+ if(n = 0) then f := 0 
+   else 
+    if(a = c) then 
+     begin  
+      n:=n div 10;  
+      f:=1+f(n , c);  
+     end 
+    else  
+     begin  
+      n:=n div 10 mod 10;   
+      f:=f(n,c);      
+     end;      
+end; 
 \end{verbatim}
-
-Care sunt variabilele ale căror valori sunt reținute în stiva subprogramului?\\
-a) $\mathrm{n}, \mathrm{c}, \mathrm{a}$\\
-b) c , a\\
-c) $n, c$\\
-d) a\\
-e) C
-f) $n, a$
-
-Limbajul Pascal function $f(v a r \quad n$ :integer; c:integer) : integer; var a : integer; begin a $:=\mathrm{n} \bmod 10$; if $(\mathrm{n}=0)$ then $\mathrm{f}:=0$ else if ( $a=c$ ) then begin $\mathrm{n}:=\mathrm{n} \operatorname{div} 10 ;$ $\mathrm{f}:=1+\mathrm{f}(\mathrm{n}, \mathrm{c})$; end else begin $\mathrm{n}:=\mathrm{n}$ div $10 \bmod 10 ;$ $\mathrm{f}:=\mathrm{f}(\mathrm{n}, \mathrm{c})$; end; end;
-3. Fie $\mathbf{G}$ un graf neorientat $\mathrm{cu} \mathrm{n}>0$ vârfuri și $\mathrm{m}>0$ muchii, reprezentat prin liste de adiacență. Complexitatea unui algoritm care afișează matricea de adiacență asociată grafului este:\\
-a) $\mathbf{O}(m \cdot \log n)$\\
-b) $\mathbf{O}(\mathbf{m} \cdot \mathbf{n})$\\
-c) $\mathbf{O}\left(\mathbf{n}^{2}\right)$\\
-d) $\mathbf{O}\left(\mathrm{m}^{2}\right)$\\
-e) $\mathbf{O}\left(\mathrm{m}^{2}+\mathbf{1}\right)$\\
-f) $\mathbf{O}\left(\mathrm{m}^{2}-1\right)$\\
-4. Variabilele $\mathbf{x}$ și $\mathbf{y}$ rețin numere întregi.Care dintre expresiile de mai jos are valoarea 1 (Limbajul C++/ Limbajul C), True (Limbajul Pascal) știind că $\mathbf{x}>-1$ și $\mathbf{y}<3$ ?\\
+Care sunt variabilele ale căror valori sunt reținute în stiva subprogramului?
+\\
+a) n,c,a
+\\
+b) c,a
+\\
+c) n,c
+\\
+d) a
+\\
+e) c
+\\
+f) n,a
+\\
+20.3. Fie $\mathbf{G}$ un graf neorientat $\mathrm{cu} \mathrm{n}>0$ vârfuri și $\mathrm{m}>0$ muchii, reprezentat prin liste de adiacență. Complexitatea unui algoritm care afișează matricea de adiacență asociată grafului este:
+\\
+a) $\mathbf{O}(m \cdot \log n)$
+\\
+b) $\mathbf{O}(\mathbf{m} \cdot \mathbf{n})$
+\\
+c) $\mathbf{O}\left(\mathbf{n}^{2}\right)$
+\\
+d) $\mathbf{O}\left(\mathrm{m}^{2}\right)$
+\\
+e) $\mathbf{O}\left(\mathrm{m}^{2}+\mathbf{1}\right)$
+\\
+f) $\mathbf{O}\left(\mathrm{m}^{2}-1\right)$
+\\
+20.4. Variabilele $\mathbf{x}$ și $\mathbf{y}$ rețin numere întregi.Care dintre expresiile de mai jos are valoarea 1 (Limbajul C++/ Limbajul C), True (Limbajul Pascal) știind că $\mathbf{x}>-1$ și $\mathbf{y}<3$ ?
+\\
 Limbajul C++/ Limbajul C
-a) $\mathbf{x *} \mathbf{y}+\mathbf{y}-3 * \mathbf{x}-3>0$\\
-b)! ( $\left.x^{*} y+y-3 * x-3>=0\right)$\\
-c) $(x-1) *(y-3)<0$\\
-d) $(x+1) *(y-3)>0$\\
-e) $(x-1) *(y+3)>0$\\
-f) $(x+1) *(y+3)>0$
-
+a) x*y+y-3*x-3>0
+\\
+b) !(x*y+y-3*x-3>=0)
+\\
+c) (x-1)*(y-3)<0
+\\
+d) (x+1)*(y-3)>0
+\\
+e) (x-1)*(y+3)>0
+\\
+f) (x+1)*(y+3)>0
+\\
 Limbajul Pascal
-a) $\mathbf{x *} \mathbf{y}+\mathbf{y}-3 * \mathbf{x}-3>0$\\
-b)NOT ( $x$ * $y+y-3 * x-3>=0$ )\\
-c) $(x-1) *(y-3)<0$\\
-d) $(x+1) *(y-3)>0$\\
-e) $(x-1) *(y+3)>0$\\
-f) $(x+1) *(y+3)>0$\\
-5. Se consideră numărul natural $\mathrm{n}=231045$. Dacă se determină toate submulțimile formate din cifrele lui $\mathbf{n}$ care au suma valorilor componentelor egală cu 10 , câte submulțimi conțin cifra 0 ?\\
-a) 3\\
-b) 5\\
-c) 2\\
-d) 1\\
-e) 4\\
-f) 6\\
-6. Se consideră șirul ${\mathbf{a}, \mathbf{b}, \mathbf{c}, \mathbf{u}, \mathbf{i}, \mathbf{e}}$. Se generează folosind metoda backtracking, în ordine lexicografică, toate cuvintele de trei litere distincte, care conțin două vocale. Dacă primele trei soluții sunt abe , abi , abu care este a 9 -a soluție?\\
-a) aiC
-b) aib\\
-c) $a e c$\\
-d) $a u b$\\
-e) ace\\
-f) aei\\
-7. În câte moduri se poate scrie numărul 12 ca sumă de numere prime?\\
-a) 5\\
-b) 3\\
-c) 7\\
-d) 6\\
-e) 5\\
-f) 4\\
-8. Se consideră mulțimea de cuvinte {info, mate, fizica, chimie, biologie}. Se generează folosind metoda backtracking, lexicografic, în ordinea inversă citirii cuvântului, submultimi de câte trei cuvinte distincte. Dacă primele trei soluții sunt: {fizica, biologie, chimie};{fizica, biologie, mate};{fizica, biologie, info}; înaintea soluției {chimie, mate, info} este soluția:\\
-a) ${$ biologie, mate,info $}$\\
-b) {biologie, chimie,mate}\\
-c) ${$ chimie, biologie, info $}$\\
-d) {chimie,mate,biologie}\\
-e) {fizica, mate,biologie}\\
-f) ${$ chimie,fizica, biologie $}$\\
-9. Se consideră un arbore cu rădăcină în care fiecare nod intern (nod care nu este pe ultimul nivel) are doi descendenți direcți. Dacă arborele are $\mathbf{k}$ niveluri (rădăcina se află pe nivelul 0) câte noduri sunt pe nivelul $\mathbf{k}$ ?\\
-a) $2^{\mathrm{k}+1}$\\
-b) $2^{\mathrm{k}-1}+1$\\
-c) $\mathbf{2}^{k}$\\
-d) $2^{\mathrm{k}-1}$\\
-e) $\mathbf{2}^{\mathrm{k}-2}+\mathbf{1}$\\
-f) $2^{k+1}+1$\\
-10. Se consideră șirul primelor $n \times m$ numere naturale unde $n \geq 1$ și $m \geq 1$. Dacă se afișează câte $\mathbf{m}$ numere pe o linie, numărul 123 se află pe linia 4 și coloana 3 , atunci pe ce linie și coloană se află numărul 167?\\
-a) linia 5 ,\\
-b) linia 4,\\
-c) linia 6,\\
-d) linia 6,\\
-e) linia 5,\\
-f) linia 5, coloana 7 coloana 7 coloana 4 coloana 2 coloana 2 coloana 3\\
-11. Fie secvența de cod următoare în care se consideră că variabilele $\mathbf{a}, \mathbf{i}, \mathrm{n}$ rețin numere întregi.
-
+a) x*y+y-3*x-3>0
+\\
+b) NOT(x*y+y-3*x-3>=0)
+\\
+c) (x-1)*(y-3)<0
+\\
+d) (x+1)*(y-3)>0
+\\
+e)(x-1)*(y+3)>0
+\\
+f)(x+1)*(y+3)>0
+\\
+20.5. Se consideră numărul natural $\mathrm{n}=231045$. Dacă se determină toate submulțimile formate din cifrele lui $\mathbf{n}$ care au suma valorilor componentelor egală cu 10 , câte submulțimi conțin cifra 0 ?
+\\
+a) 3
+\\
+b) 5
+\\
+c) 2
+\\
+d) 1
+\\
+e) 4
+\\
+f) 6
+\\
+20.6. Se consideră șirul ${\mathbf{a}, \mathbf{b}, \mathbf{c}, \mathbf{u}, \mathbf{i}, \mathbf{e}}$. Se generează folosind metoda backtracking, în ordine lexicografică, toate cuvintele de trei litere distincte, care conțin două vocale. Dacă primele trei soluții sunt abe , abi , abu care este a 9 -a soluție?
+\\
+a) aic
+\\
+b) aib
+\\
+c) aec
+\\
+d) aub
+\\
+e) ace
+\\
+f) aei
+\\
+20.7. În câte moduri se poate scrie numărul 12 ca sumă de numere prime?
+\\
+a) 5
+\\
+b) 3
+\\
+c) 7
+\\
+d) 6
+\\
+e) 5
+\\
+f) 4
+\\
+20.8. Se consideră mulțimea de cuvinte {info, mate, fizica, chimie, biologie}. Se generează folosind metoda backtracking, lexicografic, în ordinea inversă citirii cuvântului, submultimi de câte trei cuvinte distincte. Dacă primele trei soluții sunt: {fizica, biologie, chimie};{fizica, biologie, mate};{fizica, biologie, info}; înaintea soluției {chimie, mate, info} este soluția:
+\\
+a) {biologie, mate,info}
+\\
+b) {biologie, chimie,mate}
+\\
+c) {chimie, biologie,  info}
+\\
+d) {chimie,mate,biologie}
+\\
+e) {fizica, mate,biologie}
+\\
+f) {chimie,fizica, biologie}
+\\
+20.9. Se consideră un arbore cu rădăcină în care fiecare nod intern (nod care nu este pe ultimul nivel) are doi descendenți direcți. Dacă arborele are $\mathbf{k}$ niveluri (rădăcina se află pe nivelul 0) câte noduri sunt pe nivelul $\mathbf{k}$ ?
+\\
+a) $2^{\mathrm{k}+1}$
+\\
+b) $2^{\mathrm{k}-1}+1$
+\\
+c) $\mathbf{2}^{k}$
+\\
+d) $2^{\mathrm{k}-1}$
+\\
+e) $\mathbf{2}^{\mathrm{k}-2}+\mathbf{1}$
+\\
+f) $2^{k+1}+1$
+\\
+20.10. Se consideră șirul primelor $n \times m$ numere naturale unde $n \geq 1$ și $m \geq 1$. Dacă se afișează câte $\mathbf{m}$ numere pe o linie, numărul 123 se află pe linia 4 și coloana 3 , atunci pe ce linie și coloană se află numărul 167?
+\\
+a) linia 5, coloana 7
+\\
+b) linia 4, coloana 7
+\\
+c) linia 6, coloana 4
+\\
+d) linia 6, coloana 2
+\\
+e) linia 5, coloana 2
+\\
+f) linia 5, coloana 3
+\\
+20.11. Fie secvența de cod următoare în care se consideră că variabilele $\mathbf{a}, \mathbf{i}, \mathrm{n}$ rețin numere întregi.
 \begin{verbatim}
-Limbajul C++
-int main() {
-    cin>>n; a = 1; i = 2;
-while (i<n && a>0) {
-    if(n%i == 0) a = 0;
-            else i++; cout<<i;
+Limbajul C++ 
+int main(){ 
+ cin>>n; a = 1; i = 2; 
+while (i<n && a>0) {      
+ if(n%i ==  0)  a = 0; 
+       else   i++; cout<<i;  
 }}
-Limbajul C
-int main(){ scanf("%d",&n);
-a = 1; i = 2;
-    while (i<n &&a>0){
-        if(n%i == 0) a = 0;
-            else i++;
-printf("%d",i);
-} }
+Limbajul C 
+int main(){ scanf("%d",&n);  
+a = 1; i = 2; 
+ while (i<n &&a>0){ 
+    if(n%i ==  0) a = 0; 
+       else i++; 
+printf("%d",i);  
+}}
+Limbajul Pascal 
+read(n); a := 1; i := 2; 
+while (i<n) and (a>0) do 
+    begin 
+    if(n mod i = 0) then 
+            a:=0 
+         else 
+            inc(i); 
+         write(i); 
+   end;
 \end{verbatim}
-
+Definim, în acest context, operație drept o instrucțiune de atribuire sau o expresie de incrementare. Care este numărul maxim de operații ce se pot executa în secvența de mai sus, în funcție de valoarea citită pentru variabila $n$ ?
+\\
+a) $2 n+2$
+\\
+b) 2 n
+\\
+c) $\mathrm{n}-1$
+\\
+d) $2 n+3$
+\\
+e) $n$
+\\
+f) $n+1$
+\\
+20.12. Fie secvența de program unde variabila i reține un număr întreg:
 \begin{verbatim}
-Limbajul Pascal
-read(n); a := 1; i := 2;
-while (i<n) and (a>0) do
-        begin
-        if(n mod i = 0) then
-                a:=0
-            else
-                inc(i);
-            write(i);
-    end;
-\end{verbatim}
-
-Definim, în acest context, operație drept o instrucțiune de atribuire sau o expresie de incrementare. Care este numărul maxim de operații ce se pot executa în secvența de mai sus, în funcție de valoarea citită pentru variabila $n$ ?\\
-a) $2 n+2$\\
-b) 2 n\\
-c) $\mathrm{n}-1$\\
-d) $2 n+3$\\
-e) $n$\\
-f) $n+1$\\
-12. Fie secvența de program unde variabila i reține un număr întreg:
-
-\begin{verbatim}
-Limbajul C++
-    i = 4;
-while (i <= 25)
-    {cout<<i/10+i%10<<" ";
-i+=2;
+Limbajul C++ 
+ i = 4;  
+while (i <= 25) 
+{cout<<i/10+i%10<<" "; 
+i+=2; 
 }
-\end{verbatim}
-
-Limbajul C
-
-\begin{verbatim}
-i = 4;
-while (i <= 25)
-{printf("%d ",i/10+i%10);
-i+=2;
+Limbajul C 
+i = 4; 
+while (i <= 25)  
+{printf("%d ",i/10+i%10); 
+i+=2; 
 }
+Limbajul Pascal 
+i := 4;   
+while i<=25 do 
+  begin 
+write(i div 10+i mod 10,' 
+');  
+       i:=i+2;     
+  end;
 \end{verbatim}
-
-Ultimele trei numere afișate sunt:\\
-a) 247\\
-b) 249\\
-c) 624\\
-e) 246\\
-f) 921\\
-13. Fie secvența de cod de mai jos:
-
+Ultimele trei numere afișate sunt:
+\\
+a) 2 4 7
+\\
+b) 2 4 9
+\\
+c) 6 2 4
+\\
+d) 9 2 4
+\\
+e) 2 4 6
+\\
+f) 9 2 1
+\\
+20.13. Fie secvența de cod de mai jos:
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 float s,p;
@@ -9595,7 +9692,6 @@ return s*s1(n-1)-
     p*s1(n-2);
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 var s,p : float;
@@ -9608,71 +9704,69 @@ if (n = 1) then s1:=s
 else s1:=s*s1(n-1)-p*s1(n-2);
 end;
 \end{verbatim}
-
-Dacă la apelul subprogramului s1 se returnează valoarea 82, ce valori inițiale au variabilele $\mathbf{n}, \mathbf{s}$ și $\mathbf{p}$ în această ordine?\\
-a) 434\\
-b) 443\\
-c) 423\\
-d) 332\\
-e) 312\\
-f) 342\\
-14. Fie secvența de cod unde toate variabilele sunt întregi:
-
+Dacă la apelul subprogramului s1 se returnează valoarea 82, ce valori inițiale au variabilele $\mathbf{n}, \mathbf{s}$ și $\mathbf{p}$ în această ordine?
+\\
+a) 4 3 4
+\\
+b) 4 4 3
+\\
+c) 4 2 3
+\\
+d) 3 3 2
+\\
+e) 3 1 2
+\\
+f) 3 4 2
+\\
+20.14. Fie secvența de cod unde toate variabilele sunt întregi:
 \begin{verbatim}
-Limbajul C++
-s=0; cin>>n>>k;
-for(i=1;i<=n;i++)
-    for(j=1;j<=n;j++)
-{ if (i > j) t = i - j;
-        else t = j - i;
-        if(i==j || t<=k || j==n-i+1 || (i+j>=n-k+1 && i+j<=n+k+1))
-                a[i][j] = 1;
-        else a[i][j] = 2;
-    if(a[i][j] == 2) s++;}
-\end{verbatim}
-
-Limbajul C
-
-\begin{verbatim}
-s=0; scanf("%d%d",&n,&k);
-for(i=1;i<=n;i++)
-    for (j=1;j<=n;j++)
-    {if (i > j) t = i - j;
-        else t = j - i;
-        if(i==j || t<=k || j==n-i+1 || (i+j>=n-k+1 && i+j<=n+k+1))
-                    a[i][j] = 1;
-            else a[i][j] = 2;
-                if(a[i][j] == 2) s++;}
-\end{verbatim}
-
-Limbajul Pascal
-
-\begin{verbatim}
-s:=0; read(n,k);
-for i:=1 to n do
-    for j:=1 to n do
-        begin
-            if(i>j) then t:=i-j
-            else t:=j-i;
-            if((i=j) or (t<=k) or (j=n-i+1) or ((i+j>=n-k+1) and (i+j<=
-n+k+1))) then a[i,j]:=1
-\end{verbatim}
-
-\begin{verbatim}
-else a[i,j]:=2;
-if(a[i,j] = 2) then inc(s);
+Limbajul C++ s=0; cin>>n>>k; 
+for(i=1;i<=n;i++) 
+ for(j=1;j<=n;j++)  
+{ if (i > j) t = i - j; 
+  else t = j - i; 
+  if(i==j || t<=k || j==n-i+1 || (i+j>=n-k+1 && i+j<=n+k+1)) 
+     a[i][j] = 1; 
+  else a[i][j] = 2; 
+ if(a[i][j] == 2) s++;} 
+ 
+Limbajul C s=0; scanf("%d%d",&n,&k); 
+for(i=1;i<=n;i++) 
+ for(j=1;j<=n;j++) 
+ {if (i > j) t = i - j; 
+  else t = j - i; 
+  if(i==j || t<=k || j==n-i+1 || (i+j>=n-k+1 && i+j<=n+k+1)) 
+       a[i][j] = 1; 
+   else a[i][j] = 2; 
+    if(a[i][j] == 2) s++;} 
+ 
+Limbajul Pascal s:=0; read(n,k); 
+for i:=1 to n do 
+ for j:=1 to n do 
+  begin 
+   if(i>j) then  t:=i-j 
+   else  t:=j-i; 
+   if((i=j) or (t<=k) or (j=n-i+1) or ((i+j>=n-k+1) and (i+j<= 
+n+k+1))) then  a[i,j]:=1
+ else  a[i,j]:=2; 
+   if(a[i,j] = 2) then inc(s); 
     end;
 \end{verbatim}
-
-Pentru ce valori ale lui $\mathbf{n}$ și $\mathbf{k}$ variabila $\mathbf{s}$ va avea valoarea $\mathbf{8}$ ?\\
-a) $\mathbf{n}=\mathbf{6 ; ~} \mathrm{k}=\mathbf{2}$\\
-b) $\mathrm{n}=6$; $k=1$\\
-c) $\mathbf{n}=5 ; \mathbf{k}=\mathbf{2}$\\
-d) $\mathbf{n}=7 ; \mathbf{k}=1$\\
-e) $\mathbf{n}=\mathbf{4} ; \mathbf{k}=\mathbf{2}$\\
-f) $\mathbf{n}=6 ; k=3$\\
-15. Se consideră un tablou bidimensional în care $\mathbf{a}$ [i] [j]=j+3(i-1), $(1 \leq i, j \leq 3)$ Fie secvența de cod de mai jos:
-
+Pentru ce valori ale lui $\mathbf{n}$ și $\mathbf{k}$ variabila $\mathbf{s}$ va avea valoarea $\mathbf{8}$ ?
+\\
+a) n=6; k=2
+\\
+b) n=6; k=1
+\\
+c) n=5; k=2
+\\
+d)  n=7; k=1
+\\
+e) n=4;  k=2
+\\
+f) n=6;  k=3
+\\
+20.15. Se consideră un tablou bidimensional în care $\mathbf{a}$ [i] [j]=j+3(i-1), $(1 \leq i, j \leq 3)$ Fie secvența de cod de mai jos:
 \begin{verbatim}
 Limbajul C++
 k = 0;
@@ -9680,36 +9774,40 @@ for(i=1; i<=3; i++)
 {for(j =1; j<=3-k; j++)
         cout<<a[\alpha][\beta]<<" ";
             k++; }
+Limbajul C 
+k=0; 
+for(i=1; i<=3; i++)  
+{for(j =1;j<=3-k; j++)  
+  printf("%d ",a[\alpha][\beta]); 
+   k++;}
+Limbajul Pascal 
+k := 0; 
+for i:=1 to 3 do 
+ begin 
+   for j:=1 to 3-k do 
+     write(a[\alpha,\beta],' '); 
+   inc(k); end;
 \end{verbatim}
-
-Limbajul C
-k=0;
-for (i=1; i<=3; i++)\\
-{for (j =1; $\mathrm{j}<=3-\mathrm{k} ; \mathrm{j}++$ )\\
-printf("\%d ",a[ $\alpha$ ] [ $\beta$ ]);
-k++; }
-
-\begin{verbatim}
-Limbajul Pascal
-$$
-\mathrm{k}:=0 \text {; }
-$$
-$$
-\text { for i:=1 to } 3 \text { do }
-$$
-    begin
-        for j:=1 to 3-k do
-            write(a[\alpha,\beta],' ');
-        inc(k); end;
-\end{verbatim}
-
-\includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-109}\\
-а) $\boldsymbol{\alpha}=\mathbf{3}-\mathbf{j}-\mathbf{k}$;
-b) $\boldsymbol{\alpha}=\mathrm{j}$;
-c) $\alpha=\mathrm{j}$;
-d) $\boldsymbol{\alpha}=4-j-k$;
-e) $\boldsymbol{\alpha}=\mathbf{4}+\mathbf{j}-\mathbf{k}$;
-f) $\alpha=4+j+k ;$ $\boldsymbol{\beta}=\mathbf{j}$ $\beta=3-j-k$ $\beta=4-j-k$ $\boldsymbol{\beta}=\mathbf{j}$ $\boldsymbol{\beta}=\mathbf{j}-\mathbf{1}$ $\boldsymbol{\beta}=\mathbf{j}+1$
+Ce valori au \alpha și \beta dacă la execuția secvenței se afișează șirul  3 5 7 2 4 1?
+\\
+a) \alpha=3-j-k;   
+\beta= j 
+\\
+b) \alpha=j; 
+ \beta= 3-j-k 
+\\
+c)  \alpha=j; 
+    \beta= 4-j-k 
+\\ 
+d) \alpha=4-j-k;  
+    \beta= j
+\\
+e) \alpha=4+j-k;  
+    \beta= j-1 
+\\
+f) \alpha=4+j+k;  
+    \beta= j+1 
+\\
 
 \section*{Varianta 21}
 \begin{enumerate}
