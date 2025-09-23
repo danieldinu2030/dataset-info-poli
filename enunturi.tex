@@ -17689,184 +17689,167 @@ e) $\mathbf{2}^{25}$\\
 f) $\mathbf{4}^{13}$
 
 \section*{Varianta 41}
-\begin{enumerate}
-  \item Numim graf complementar al unui graf neorientat $\mathbf{G}$ graful neorientat $\mathbf{G}_{1} \mathrm{cu}$ aceeaşi mulţime a nodurilor ca şi $\mathbf{G}$ şi cu proprietatea că două noduri sunt adiacente în $\mathbf{G}_{1}$ dacă şi numai dacă nu sunt adiacente în $\mathbf{G}$. Dacă $\mathbf{G}$ are $\mathbf{n}$ noduri şi $m$ muchii, câte muchii are $\mathbf{G}_{1}$ ?\\
-a) exact $n(n-1) / 2-m$\\
-b) exact $n-m$\\
-c) exact ( $\mathrm{n}-1$ )/2\\
-d) minimum $n(n-1) / 2-m$\\
-e) minimum $n-m$\\
-f) maximum $n(n-1) / 2-m$
-  \item Cu ce expresie trebuie completată secvența lipsă (marcată prin...) din funcția următoare pentru ca $\mathbf{f ( x , 2 )}$ să aibă ca rezultat suma exponenților factorilor primi ce intră în descompunerea lui $\mathbf{x}$ ?
-\end{enumerate}
 
+41.1. Numim graf complementar al unui graf neorientat $\mathbf{G}$ graful neorientat $\mathbf{G}_{1}$ cu aceeaşi mulţime a nodurilor ca şi $\mathbf{G}$ şi cu proprietatea că două noduri sunt adiacente în $\mathbf{G}_{1}$ dacă şi numai dacă nu sunt adiacente în $\mathbf{G}$. Dacă $\mathbf{G}$ are $\mathbf{n}$ noduri şi $m$ muchii, câte muchii are $\mathbf{G}_{1}$ ?
+\\
+a) exact $n(n-1)/2-m$
+\\
+b) exact $n-m$
+\\
+c) exact ($n-1)/2$
+\\
+d) minimum $n(n-1)/2-m$
+\\
+e) minimum $n-m$
+\\
+f) maximum $n(n-1)/2-m$
+\\
+41.2. Cu ce expresie trebuie completată secvența lipsă (marcată prin ...) din funcția următoare pentru ca $f(x,2)$ să aibă ca rezultat suma exponenților factorilor primi ce intră în descompunerea lui $\mathbf{x}$ ?
 \begin{verbatim}
 Limbajul C++/C
 int f(int x, int d)
 {
     if(...) return 1;
-    if(x%d==0) return 1+f(x/d,
-d); return f(x, d+1);
+    if(x%d==0) return 1+f(x/d,d);
+    return f(x, d+1);
 }
 \end{verbatim}
-
-a) $x==1$\\
-(Limbajul C++/C)\\
-b) $x==0$\\
-(Limbajul C++/C)\\
-c) $x<d / 2$\\
-a) $x=1$\\
-(Limbajul Pascal)\\
-b) $x=0$\\
-(Limbajul Pascal)\\
-d) $x<d$\\
-e) $x>d$\\
-f) $x<=d$
-
 \begin{verbatim}
-        if x mod d=0
-        then f:= 1+f(x div d, d)
-    else f:=f(x, d+1);
-        end;
 Limbajul Pascal
-function f(x,
-d:integer):integer;
+function f(x,d:integer):integer;
 begin
     if ... then f:=1
     else
+        if x mod d=0
+            then f:= 1+f(x div d, d);
+        else f:=f(x, d+1);
+    end;
 \end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{2}
-  \item Instrucțiunea care afişează cea mai din stânga poziţie unde se află valoarea întreagă $\mathbf{x}$, sau afişează $\mathbf{- 1}$, dacă $\mathbf{x}$ nu apare în tabloul unidimensional a cu $n$ elemente numere întregi, este:
-\end{enumerate}
-
+\\
+Limbajul C++/ Limbajul C
+a) $x==1$
+\\
+b) $x==0$
+\\
+c) $x<d/2$
+\\
+d) $x<d$
+\\
+e) $x>d$
+\\
+f) $x<=d$
+\\
+Limbajul Pascal
+a) $x=1$
+\\
+b) $x=0$
+\\
+c) $x<d/2$
+\\
+d) $x<d$
+\\
+e) $x>d$
+\\
+f) $x<=d$
+\\
+41.3. Instrucțiunea care afişează cea mai din stânga poziţie unde se află valoarea întreagă $\mathbf{x}$, sau afişează $-1$, dacă $\mathbf{x}$ nu apare în tabloul unidimensional $a$ cu $n$ elemente numere întregi, este:
 \begin{verbatim}
 Limbajul C++/C
-1.
-for(i=0;i<n&&a[i]==x;i++)
-        if (i<n) cout<<i; l
-                            printf("%d",i);
-                else cout<<-1; |
-                        printf("-1");
-2.
+1) for(i=0;i<n&&a[i]==x;i++)
+        if (i<n) cout<<i; | printf("%d",i);
+        else cout<<-1; | printf("-1");
+2) for(i=0;i<n&&a[i]!=x;i++);
+        if (i==n) cout<<i; | printf("%d",i);
+        else cout<<-1; | printf("-1");
+3) for(i=0;i<n&&a[i]==x;i++)
+        if (i==n) cout<<i; | printf("%d",i);
+        else cout<<-1; | printf("-1");
+4)
 for(i=0;i<n&&a[i]!=x;i++);
-        if (i==n) cout<<i;
-|printf("%d",i);
-            else cout<<-1; |
-                    printf("-1");
-3.
-for(i=0;i<n&&a[i]==x;i++)
-    if (i==n) cout<<i; |
-                        printf("%d",i);
-        else cout<<-1; |
+    if (i<n) cout<<i; | printf("%d",i);
+    else cout<<-1; | printf("-1");
+5)
+for(i=0;i==n&&a[i]!=x;i++);
+    if (i==n) cout<<i; | printf("%d",i);
+    else cout<<-1; | printf("-1");
+6) for (i=0;i<n;i++)
+    if (a[i]==x)cout<<i; | printf("%d",i);
+    else cout<<-1; | printf("-1");
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
-1.i:=0;
+1) i:=0;
 while (i<n) and(a[i]=x) do
 begin
-        if(i<n) then write(i)
-                    else write(-1);
-        i:=i+1; end;
-2. i:=0;
+    if(i<n) then write(i)
+    else write(-1);
+    i:=i+1; end;
+2) i:=0;
 while (i<n) and (a[i]<>x) do
-        i:=i+1;
-if i=n then write(i)
-                else write(-1);
-3. i:=0;
+    i:=i+1;
+    if i=n then write(i)
+    else write(-1);
+3) i:=0;
 while (i<n) and (a[i]=x) do
 begin
-        if i=n then write(i)
-        else write(-1) ;
-\end{verbatim}
-
-\begin{verbatim}
-        printf("-1"); i:=i+1; end;
-4.
-for(i=0;i<n&&a[i]!=x;i++);
-    if (i<n) cout<<i; |
-printf("%d",i);
-        else cout<<-1; |
-            printf("-1");
-5.
-for(i=0;i==n&&a[i]!=x;i++);
-            if (i==n) cout<<i; |
-printf("%d",i);
-else cout<<-1; |
-printf("-1");
-    . for (i=0;i<n;i++)
-    if (a[i]==x)cout<<i;|
-printf("%d",i);
-    else cout<<-1; |printf("-
-1");
-4. i:=0;
-    while (i<n) and (a[i]<>x)
-do i:=i+1;
+    if i=n then write(i)
+    else write(-1);
+    i:=i+1; end;
+4) i:=0;
+while (i<n) and (a[i]<>x) do
+    i:=i+1;
     if i < n then write( i)
-        else write(-1);
-5. i:=0;
+    else write(-1);
+5) i:=0;
 while (i=n) and (a[i]<>x) do
     i:=i+1;
-if i=n then write(i)
-else write(-1) ;
-\end{verbatim}
-
-\begin{verbatim}
-6. for i: = 0 to n-1 do
+    if i=n then write(i)
+    else write(-1);
+6) for i:= 0 to n-1 do
     if a[i] = x then write(i)
-    else write(-1) ;
-        ()
+    else write(-1);
 \end{verbatim}
-
-\begin{verbatim}
-                        *
-\end{verbatim}
-
-\begin{verbatim}
-            *
-\end{verbatim}
-
-a) 1\\
-b) 2\\
-C) 3\\
-d) 4\\
-e) 5\\
-f) 6\\
-4. Apelul F (7) returnează:
-
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
+f) 6
+\\
+41.4. Apelul $F(7)$ returnează:
 \begin{verbatim}
 Limbajul C++/C
 int F(int N)
 { if (N==0) return 1;
 return F(N-1) + F(N-1);
 }
-\end{verbatim}
-
-a) 60\\
-b) 64\\
-C) 120
-
 Limbajul Pascal
-
-\begin{verbatim}
 function F(N:integer):integer;
-\end{verbatim}
-
 begin
-
-\begin{verbatim}
-if N=0 then F:= 1
+if N=0 then F:=1
     else F:= F(N-1) + F(N-1);
 end;
 \end{verbatim}
-
-d) 128\\
-e) 240\\
-f) 256\\
-5. Se consideră un șir de caractere s. Stabiliți rezultatul afișării pe ecran, în urma executării următoarei secvențe de program:
-
+\\
+a) 60
+\\
+b) 64
+\\
+c) 120
+\\
+d) 128
+\\
+e) 240
+\\
+f) 256
+\\
+41.5. Se consideră un șir de caractere $s$. Stabiliți rezultatul afișării pe ecran, în urma executării următoarei secvențe de program:
 \begin{verbatim}
 Limbajul C++/C
 char
@@ -17877,93 +17860,89 @@ strcpy (x,s+2);
 strcat(x,p);
 cout<<x; | printf("%s",x);
 \end{verbatim}
-
-\begin{verbatim}
-        iți
-            Limbajul Pascal
-var s,p,x:string;
-begin
-$s:=$ 'ABCDEFG';p:=s;
-$\mathrm{p}:=\operatorname{copy}(\mathrm{p}, 5$, length (s) ) ;
-x:=copy (s, 3, length (s)) ;
-$\mathrm{x}:=\mathrm{x}+\mathrm{p}$;
-write (x) ;
-\end{verbatim}
-
-路\\
-\includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-219}\\
-\includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-219(1)}\\
-end.\\
-a) ABCEFG\\
-b) BCDEFGDEFG\\
-c) CDEFGEFG\\
-d) CDEFGABCD\\
-e) DEFGDEFG\\
-f) EFGEFG\\
-6. Precizați care dintre următoarele expresii are valoarea $1 \mid$ TRUE dacă și numai dacă numărul natural $n$ este divizibil cu 3 și are ultima cifră 4 sau 6.
-
-\begin{verbatim}
-Limbajul C++/C
-A.n/3==0&&(n%10==4||n%10==6)
-B. n%3==0 &&(n%10==4 ||
-n%10==6)
-C. (n%3==0 && n%10==4)||
-(n%3==0 && n%10==6)
-D. (n%3==0 && n%10==4) | |
-n%10==6
-\end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
-A. (n DIV 3=0) AND ( (n MOD
-10=4) OR (n MOD 10=6))
-B. (n MOD 3=0)AND ((n MOD
-10=4) OR (n MOD 10=6))
+var s,p,x:string;
+begin
+s:='ABCDEFG'; p:=s;
+p:=copy(p, 5, length(s));
+x:=copy (s, 3, length(s));
+x:=x+p;
+write(x);
+end.
 \end{verbatim}
-
+\\
+a) ABCEFG
+\\
+b) BCDEFGDEFG
+\\
+c) CDEFGEFG
+\\
+d) CDEFGABCD
+\\
+e) DEFGDEFG
+\\
+f) EFGEFG
+\\
+41.6. Precizați care dintre următoarele expresii are valoarea $1 \mid TRUE$ dacă și numai dacă numărul natural $n$ este divizibil cu 3 și are ultima cifră 4 sau 6.
 \begin{verbatim}
-C. ((n MOD 3=0) AND (n MOD
-10=4)) OR((n MOD 3=0) AND (n
-MOD 10=6))
-D. ( (n MOD 3=0) AND (n MOD
-10=4)) OR (n MOD 10=6)
+Limbajul C++/C
+A. n/3==0&&(n%10==4||n%10==6)
+B. n%3==0&&(n%10==4||n%10==6)
+C. (n%3==0&&n%10==4)||(n%3==0&&n%10==6)
+D. (n%3==0&&n%10==4)||n%10==6
 \end{verbatim}
-
-a)\\
-b) $B$\\
-c) $A, B$\\
-d) $\mathrm{B}, \mathrm{C}$\\
-e) $B, D$\\
-f) $D$
-
-A\\
-7. Se generează în ordine lexicografică toate tripletele vocală-consoană-vocală formate cu literele mari A, B,C,D,E: ABA,ABE, ACA, ACE, ADA, ADE, EBA, EBE, ECA, ECE, EDA, EDE. Dacă se generează, folosind aceeași metodă și aceleași litere, toate tripletele consoană-vocală-consoană, stabiliți care dintre următoarele variante este o secvență de triplete generate unul imediat după celălalt:\\
-a) ACE ADA ADE\\
-b) BEC BED CAB\\
+\begin{verbatim}
+Limbajul Pascal
+A. (n DIV 3=0) AND ( (n MOD 10=4) OR (n MOD 10=6))
+B. (n MOD 3=0)AND ((n MOD 10=4) OR (n MOD 10=6))
+C. ((n MOD 3=0) AND (n MOD 10=4)) OR((n MOD 3=0) AND (n MOD 10=6))
+D. ( (n MOD 3=0) AND (n MOD 10=4)) OR (n MOD 10=6)
+\end{verbatim}
+\\
+a) A
+\\
+b) B
+\\
+c) A, B
+\\
+d) B, C
+\\
+e) B, D
+\\
+f) D
+\\
+41.7. Se generează în ordine lexicografică toate tripletele vocală-consoană-vocală formate cu literele mari A,B,C,D,E: ABA,ABE, ACA, ACE, ADA, ADE, EBA, EBE, ECA, ECE, EDA, EDE. Dacă se generează, folosind aceeași metodă și aceleași litere, toate tripletele consoană-vocală-consoană, stabiliți care dintre următoarele variante este o secvență de triplete generate unul imediat după celălalt:
+\\
+a) ACE ADA ADE
+\\
+b) BEC BED CAB
+\\
 c) BEC CEC DEC
+\\
 d) CEA CEB CEC
-e) DAC DAB DEB\\
-f) DAD DAC DAB\\
-8. Se consideră numerele naturale m și $\mathrm{n}(0 \leq \mathrm{m} \leq 10$, $0 \leq \mathrm{n} \leq 10)$ și subprogramul Ack ( $\mathrm{m}, \mathrm{n}$ ), care calculează valoarea funcției Ackermann pentru valorile m și n . Precizați numărul de apeluri recursive ale subprogramului Ack pentru valorile m=1 și n=2, Ack (1,2).
-
+\\
+e) DAC DAB DEB
+\\
+f) DAD DAC DAB
+\\
+41.8. Se consideră numerele naturale $m$ și $n$ ($0 \leq m \leq 10$, $0 \leq n \leq 10)$ și subprogramul Ack(m, n), care calculează valoarea funcției Ackermann pentru valorile m și n. Precizați numărul de apeluri recursive ale subprogramului Ack pentru valorile m=1 și n=2, Ack(1,2).
 \begin{verbatim}
 Limbajul C++/C
 int Ack(int m, int n)
 {if(m==0)
     return n+1;
+else
+    if(m>0 && n==0)
+        return Ack (m-1,1);
     else
-        if(m>0 && n==0)
-                return Ack (m-1,1);
-            else
-return Ack(m-1,Ack (m,n-
-1));
+        return Ack(m-1,Ack (m,n-1));
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 Function
-Ack(m,n:integer) :integer;
+Ack(m,n:integer):integer;
 begin
     if m=0 then
         Ack:=n+1
@@ -17974,30 +17953,41 @@ begin
             Ack:=Ack(m-1,Ack(m,n-1));
 end;
 \end{verbatim}
-
-a) de 5 ori\\
-b) de 6 ori\\
-c) de 7 ori\\
-d) de 8 ori\\
-e) de 9 ori\\
-f) de 10 ori\\
-9. Un arbore cu rădăcină are 359 de noduri numerotate de la 1 la 359 . Dacă vectorul de tați al acestui arbore (vector notat cu $t$ ) are proprietatea că $t[i]=\left[\frac{i}{2}\right]$, pentru orice $i$ de la 1 la 359 , unde [x] reprezintă partea întreagă a numărului $x$, atunci numărul de noduri care au exact un descendent direct în acest arbore este:\\
-a) 178\\
-b) 9\\
-c) 4\\
-d) 3\\
-e) 1\\
+\\
+a) de 5 ori
+\\
+b) de 6 ori
+\\
+c) de 7 ori
+\\
+d) de 8 ori
+\\
+e) de 9 ori
+\\
+f) de 10 ori
+\\
+41.9. Un arbore cu rădăcină are 359 de noduri numerotate de la 1 la 359. Dacă vectorul de tați al acestui arbore (vector notat cu $t$) are proprietatea că $t[i]=\left[\frac{i}{2}\right]$, pentru orice $i$ de la 1 la 359, unde [x] reprezintă partea întreagă a numărului $x$, atunci numărul de noduri care au exact un descendent direct în acest arbore este:
+\\
+a) 178
+\\
+b) 9
+\\
+c) 4
+\\
+d) 3
+\\
+e) 1
+\\
 f) 0
-10. Fie A un tablou unidimensional cu n elemente și subprogramul Swap care realizează interschimbarea valorilor pe care le primește. Atunci următoarea secvență de cod sortează descrescător tabloul A. Câte apeluri ale subrogramului Swap vor fi făcute dacă inițial A[i]=i pentru i=1,2, ..., n?
-
+\\
+41.10. Fie A un tablou unidimensional cu n elemente și subprogramul Swap care realizează interschimbarea valorilor pe care le primește. Atunci următoarea secvență de cod sortează descrescător tabloul A. Câte apeluri ale subrogramului Swap vor fi făcute dacă inițial A[i]=i pentru i=1,2, ..., n?
 \begin{verbatim}
 Limbajul C++/C
 for (j=1;j<=n-1;j++)
-for (k=1;k<=n-j;k++)
-    if (A[k]<A[k+1])
-        Swap(A[k],A[k+1]);
+    for (k=1;k<=n-j;k++)
+        if (A[k]<A[k+1])
+            Swap(A[k],A[k+1]);
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 for j:=1 to n-1 do
@@ -18005,161 +17995,153 @@ for j:=1 to n-1 do
         if A[k]<A[k+1] then
             Swap(A[k],A[k+1]);
 \end{verbatim}
-
-a) $n / 2$\\
-b) $n$\\
-c) $\mathrm{n}-1$\\
-d) $n(n-1)$\\
-e) $n(n-1) / 2$\\
-f) $n * n$\\
-11. Care dintre următoarele grafuri neorientate este un graf eulerian, dar nu este hamiltonian? Grafurile sunt precizate prin n numărul de noduri și mulțimea U a muchiilor.\\
-a) $n=3, U={[1,2],[1,3],[2,3]}$\\
-b) $\mathrm{n}=4, \mathrm{U}={[1,2],[1,3],[2,3],[1$ ,4], [2,4],[3,4]}\\
-c) $\mathrm{n}=5, \mathrm{U}={[1,3],[1,4],[3,4]$, [2,4],[4,5],[2,5]}\\
-d) $\mathrm{N}=6, \mathrm{U}={[1,2],[2,3],[3,4]$, [5,4],[6,5],[2,6]}\\
-e) $\mathrm{N}=6, \mathrm{U}={[1,2],[2,3],[3,4]$, [5,4],[6,5],[1,6]}\\
-f) nici unul din grafurile anterioare\\
-12. Care este instrucțiunea echivalentă cu instrucțiunea de mai jos care să conțină o singură instrucțiune if, unde $\mathbf{x}, \mathbf{y}$ și $\mathbf{z}$ sunt variabile care rețin valori întregi:
-
-\section*{Limbajul C++/C}
+\\
+a) $n/2$
+\\
+b) $n$
+\\
+c) $n-1$
+\\
+d) $n(n-1)$
+\\
+e) $n(n-1)/2$
+\\
+f) $n*n$
+\\
+41.11. Care dintre următoarele grafuri neorientate este un graf eulerian, dar nu este hamiltonian? Grafurile sunt precizate prin $n$ numărul de noduri și mulțimea $U$ a muchiilor.
+\\
+a) $n=3, U={[1,2],[1,3],[2,3]}$
+\\
+b) $n=4, U={[1,2],[1,3],[2,3],[1,4],[2,4],[3,4]}$
+\\
+c) $n=5, U={[1,3],[1,4],[3,4],[2,4],[4,5],[2,5]}$
+\\
+d) $n=6, U={[1,2],[2,3],[3,4],[5,4],[6,5],[2,6]}$
+\\
+e) $n=6, U={[1,2],[2,3],[3,4],[5,4],[6,5],[1,6]}$
+\\
+f) nici unul din grafurile anterioare
+\\
+41.12. Care este instrucțiunea echivalentă cu instrucțiunea de mai jos care să conțină o singură instrucțiune if, unde $\mathbf{x}$, $\mathbf{y}$ și $\mathbf{z}$ sunt variabile care rețin valori întregi:
+Limbajul C++/C}
 \begin{verbatim}
 if(x>y)
+    if(y>z)
         if(z>x) s=x+y+z;
             else p=x*y*z;
 \end{verbatim}
-
-\begin{verbatim}
-if $(y>z) \quad$ if $y>z$ then
-\end{verbatim}
-
-\section*{Limbajul Pascal}
+Limbajul Pascal
 \begin{verbatim}
 if x>y then
+    if y>z then
         if z>x then s:=x+y+z
             else p:=x*y*z;
 \end{verbatim}
-
-Limbajul C++/C
-a) if $(x>y \& \& y>z)$\\
-b) if $(x>y \& \& y>z)$\\
-c) if( $x>y$ || $y>z$ )
-
-\begin{verbatim}
-        s=x+y+z; p=x*y*z; s=x+y+z;
-    else p=x*y*z;
-d) if(x>y && y>z)
-            s=x+y+z;
+\\
+Limbajul C++/ Limbajul C
+a) \begin{verbatim}
+if (x>y && y>z)
+    s=x+y+z;
+else
+    p=x*y*z;
+\end{verbatim}
+\\
+b) \begin{verbatim}
+if (x>y && y>z)
+    p=x*y*z;
+\end{verbatim}
+\\
+c) \begin{verbatim}
+if(x>y || y>z)
+    s=x+y+z;
+\end{verbatim}
+\\
+d) \begin{verbatim}
+if(x>y && y>z)
+    s=x+y+z;
+\end{verbatim}
+\\
+e) \begin{verbatim}
+if(!(x>y)&& y>z)
+    s=x+y+z;
+else
+    p=x*y*z;
+\end{verbatim}
+\\
+f) \begin{verbatim}
+if(!(x>y&&y>z))
+    s=x+y+z;
+else
+    p=x*y*z;
+\end{verbatim}
+\\
 Limbajul Pascal
-a)
-if (x>y)AND (y>z)
+a) \begin{verbatim}
+if (x>y) AND (y>z)
     then s:=x+y+z
-            else
+        else
     p:=x*y*z;
-d)
+\end{verbatim}
+\\
+b) \begin{verbatim}
+if (x>y) AND (y>z)
+    then p:=x*y*z;
+\end{verbatim}
+\\
+c) \begin{verbatim}
+if (x>y)OR(y>z)
+       then
+    s:=x+y+z;
+\end{verbatim}
+\\
+d) \begin{verbatim}
 if (x>y)AND (y>z)
         then
-s:=x+y+z;
+    s:=x+y+z;
 \end{verbatim}
-
-\begin{verbatim}
-e) if(!(x>y)&& y>z)
-            s=x+y+z;
-b)
-if (x>y)AND (y>z)
-            then p:=x*y*z;
-e)
-if not(x>y)AND (y>z)
+\\
+e) \begin{verbatim}
+if not(x>y) AND (y>z)
     then s:=x+y+z
         else p:=x*y*z;
 \end{verbatim}
-
-\begin{verbatim}
-        else p=x*y*z; else p=x*y*z;
-                            y+z
-    else p:=x*y*z;
+\\
+f) \begin{verbatim}
+if not((x>y) AND (y>z))
+    then s:=x+y+z
+        else p:=x*y*z;
 \end{verbatim}
-
-\begin{verbatim}
-f)if(!(x>y&&y>z))
-                s=x+y+z;
-    else p=x*y*z;
-\end{verbatim}
-
-\begin{verbatim}
-C)
-if (x>y)OR(y>z)
-            then
-    s:=x+y+z;
-f)
-if not((x>y)AND
-(y>z))
-\end{verbatim}
-
-\begin{verbatim}
-            0 de elemente, folosindtii)
-va fi:
-\end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{12}
-  \item Dacă se doreşte căutarea unui număr într-un şir ordonat de 100 algoritmul căutării binare, atunci numărul maxim al paşilor efectuaţi (comparații) va fi:
-\end{enumerate}
-
-\begin{center}
-\begin{tabular}{lll}
-a) cuprins între 1 & b) cuprins între 7 si & c) cuprins intre \\
-și 6 & 12 &  \\
-d) Cuprins între & e) exact 500 & s) cuprins intre \\
-450 şi 500 &  & 999 și 1001 \\
-\end{tabular}
-\end{center}
-
-\begin{enumerate}
-  \setcounter{enumi}{13}
-  \item Precizați care dintre următoarele subprograme calculează corect cifra de control a unui număr natural asociat $\mathbf{x}$ (Cifra de control a unui număr natural se determină calculând suma cifrelor numărului, apoi suma cifrelor sumei și așa mai departe până când suma obținută reprezintă un număr cu o singură cifră).
-\end{enumerate}
-
-\begin{verbatim}
+\\
+41.13. Dacă se doreşte căutarea unui număr într-un şir ordonat de 1000 de elemente folosind algoritmul căutării binare, atunci numărul maxim al paşilor efectuaţi (comparații) va fi:
+\\
+a) cuprins între 1 și 6
+\\
+b) cuprins între 7 și 12
+\\
+c) cuprins între 13 și 18
+\\
+d) cuprins între 450 și 500
+\\
+e) exact 500
+\\
+f) cuprins între 999 și 1001
+\\
+41.14. Precizați care dintre următoarele subprograme calculează corect cifra de control a unui număr natural asociat $\mathbf{x}$ (Cifra de control a unui număr natural se determină calculând suma cifrelor numărului, apoi suma cifrelor sumei și așa mai departe până când suma obținută reprezintă un număr cu o singură cifră).
 Limbajul C++/C
-A.
-    int Control(int x)
-        {int s;
-            if (x>9){
-                s=x%10+Control (x/10);
-                if(s<10) return s;
-                    else
-                        return Control(s);
-                    }
-                    else return x;
-        }
-\end{verbatim}
-
-B.
-
-\begin{verbatim}
+A. \begin{verbatim}
 int Control(int x)
+    {int s;
+        if (x>9){
+            s=x%10+Control (x/10);
+            if(s<10) return s;
+            else
+                return Control(s);
+        }
+        else return x;
+    }
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-.
-    function
-    Control(x:integer): integer;
-\end{verbatim}
-
-var s:integer;
-begin\\
-if $x>9$ then\\
-begin\\
-$\mathrm{s}:=\mathrm{x} \bmod 10+$ Control ( x div 10);
-if $s<10$ then Control:=s\\
-else\\
-Control:=Control(s);
-end\\
-else Control:=x;
-end;
-
-\begin{verbatim}
+B. \begin{verbatim}
+int Control(int x)
 {int s;
         if (x>9) {
             s=x%10+Control (x/10) ;
@@ -18169,39 +18151,81 @@ end;
                 return Control(s);
             }
             return s;
-                            s
     }
 \end{verbatim}
-
-\begin{verbatim}
-                                                                                                                                        else
-                                Control:=Control(s) ;
-                                    c.
+C. \begin{verbatim}
+int Control(int x)
+{int s;
+    if (x>10)
+        s=x%10 + Control(x/10);
+    return x;
+}
 \end{verbatim}
-
-int Control (int $x$ )\\
-fint s;
-if ( $x>10$ )\\
-$\mathbf{s = x \% 1 0 + C o n t r o l ( x / 1 0 ) ; ~}$\\
-return $\mathbf{x}$;
-}\\
-if $x>10$ then $s:=x \bmod 10$\\
-+Control (x div 10) ;
-Control:=x\\
+Limbajul Pascal
+A. \begin{verbatim}
+function Control(x:integer):integer;
+var s:integer;
+begin
+if x>9 then
+begin
+    s:=x mod 10 + Control(x div 10);
+    if s<10 then Control:=s
+    else Control:=Control(s);
+end
+else Control:=x;
 end;
-a) A\\
-b) $\mathrm{A}, \mathrm{B}$\\
-c) $B$\\
-d) $B, C$\\
+\end{verbatim}
+B. \begin{verbatim}
+function Control(x:integer):integer;
+var s:integer
+begin
+if x>9 then
+begin
+    s:=x mod 10 + Control(x div 10);
+    if s<10 then
+        Control:=s;
+    else
+        Control:=Control(s);
+end;
+Control:=s;
+end;
+\end{verbatim}
+C. \begin{verbatim}
+function Control(x:integer):integer
+var s:integer;
+begin
+if x>10 then
+    s:=x mod 10 + Control (x div 10);
+Control:=x
+end;
+\end{verbatim}
+\\
+a) A
+\\
+b) A, B
+\\
+c) B
+\\
+d) B, C
+\\
 e) C
-f) niciunul\\
-15. Fie $\mathbf{G}$ un graf neorientat conex, cu mulțimea de vârfuri V , având proprietățile: (1) fiecare vârf are cel mult 3 vecini și (2) există un vârf $\mathbf{u} \in \mathbf{V}$ astfel încât pentru orice $\mathbf{v} \in \mathbf{V}$ avem $d(u ; v) \leq 5$, unde $d(u ; v)$ reprezintă lungimea celui mai scurt drum dintre vârfurile $u$ și v (ca număr de muchii). Care este numărul maxim de vârfuri din $\mathbf{G}$ ?\\
-a) 46\\
-b) 64\\
-c) 94\\
-d) 100\\
-e) 150\\
+\\
+f) niciunul
+\\
+41.15. Fie $\mathbf{G}$ un graf neorientat conex, cu mulțimea de vârfuri $V$, având proprietățile: (1) fiecare vârf are cel mult 3 vecini și (2) există un vârf $\mathbf{u} \in \mathbf{V}$ astfel încât pentru orice $\mathbf{v} \in \mathbf{V}$ avem $d(u ; v) \leq 5$, unde $d(u ; v)$ reprezintă lungimea celui mai scurt drum dintre vârfurile $u$ și v (ca număr de muchii). Care este numărul maxim de vârfuri din $\mathbf{G}$?
+\\
+a) 46
+\\
+b) 64
+\\
+c) 94
+\\
+d) 100
+\\
+e) 150
+\\
 f) 194
+\\
 
 \section*{Varianta 42}
 
