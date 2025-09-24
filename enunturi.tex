@@ -17375,24 +17375,16 @@ e) interschimbarea elementelor de pe coloana i și linia $n-i+1$;
 f) înlocuirea elementelor de pe diagonala secundară cu cele de pe diagonala principală.
 
 \section*{Varianta 39}
-\begin{enumerate}
-  \item Fie un șir alcătuit din 100 de elemente numere naturale (componentele șirului se citesc de la tastatură prin intermediul variabilei întregi a). Următoarea secvență de cod determină, în variabila întreagă $n r$, numărul tuturor elementelor din șir care memorează un număr alcătuit din cel puțin două cifre. Stabiliți expresiile care pot înlocui punctele de suspensie.
-\end{enumerate}
 
+39.1. Fie un șir alcătuit din 100 de elemente numere naturale (componentele șirului se citesc de la tastatură prin intermediul variabilei întregi $a$). Următoarea secvență de cod determină, în variabila întreagă $nr$, numărul tuturor elementelor din șir care memorează un număr alcătuit din cel puțin două cifre. Stabiliți expresiile care pot înlocui punctele de suspensie.
 \begin{verbatim}
 Limbajul C++/C
 nr=100;
 for(i=1;i<=100;i++)
-{cin>>a; | scanf("%d",&a);
-if(9>=...)
-    nr=...+nr;}
+{   cin>>a; | scanf("%d",&a);
+    if(9>=...)
+        nr=...+nr;}
 \end{verbatim}
-
-a) a și i\\
-b) a și -i\\
-d) a și 1\\
-e) a și a
-
 \begin{verbatim}
 Limbajul Pascal
 nr:=100;
@@ -17402,12 +17394,20 @@ for i:=1 to 100 do begin
         nr:=...nnr;
     end;
 \end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{1}
-  \item Variabila i memorează un număr întreg, iar s memorează un șir alcătuit din cel mult 20 de caractere. Rezultatul obținut, în urma rulării secvenței de ma jos, este:
-\end{enumerate}
-
+\\
+a) a și i
+\\
+b) a și -i
+\\
+c) a și -1
+\\
+d) a și 1
+\\
+e) a și a
+\\
+f) a și -a
+\\
+39.2. Variabila $i$ memorează un număr întreg, iar $s$ memorează un șir alcătuit din cel mult 20 de caractere. Rezultatul obținut, în urma rulării secvenței de mai jos, este:
 \begin{verbatim}
 Limbajul C++/C
 strcpy(s,"VAPOARE");
@@ -17420,10 +17420,9 @@ while(i<strlen(s)-1)
     i++;}
 cout<<s; | printf("%s",s);
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
-s:='VAPOARE' ;
+s:='VAPOARE';
 i:=1;
 while i<= length(s)-1 do
 begin
@@ -17436,148 +17435,177 @@ i:=i+1;
 end;
 write(s);
 \end{verbatim}
-
-a) VARE\\
-b) VBPOR\\
-d) VBPRO\\
-e) VBPRE\\
-c) VBPRF\\
-f) VPRBO\\
-3. După execuția următoarei secvențe, stabiliți numărul elementelor cu valoarea 9 din tabloul unidimensional a.
-
+\\
+a) VARE
+\\
+b) VBPOR
+\\
+c) VBPRF
+\\
+d) VBPRO
+\\
+e) VBPRE
+\\
+f) VPRBO
+\\
+39.3. După execuția următoarei secvențe, stabiliți numărul elementelor cu valoarea 9 din tabloul unidimensional $a$.
 \begin{verbatim}
 Limbajul C++/C
-int a[] = {0, 1, 2, 3, 0, 4,
-        5, 6};
+int a[] = {0, 1, 2, 3, 0, 4, 5, 6};
 int i = 0, x = 9;
 do{
         a[i++] = x;
     }
 while(i<6&&a[i]);
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
-type vector=array[1..8] of
-        integer;
-var
-a:vector = (0,1,2,3,0,4,
-        5,6);
-            i,x:integer;
+type vector=array[1..8] of integer;
+var a:vector = (0,1,2,3,0,4,5,6);
+    i,x:integer;
 begin
-\end{verbatim}
-
-\begin{verbatim}
-    i := 1; x := 9;
-    repeat
-        a[i]:= x; i:=i+1;
-    until (i>6) or (a[i]=0);
+i := 1; x := 9;
+repeat
+    a[i]:= x; i:=i+1;
+until (i>6) or (a[i]=0);
 end.
 \end{verbatim}
+\\
+a) niciunul
+\\
+b) unul
+\\
+c) două
+\\
+d) trei
+\\
+e) patru
+\\
+f) cinci
+\\
+39.4. În vederea sortării crescătoare a unui șir de valori întregi, folosind metoda bulelor (bubble sort), un program citește valorile următoare $2,40,17,1,51,34,20,63$ și le memorează într-un tablou unidimensional. După câte parcurgeri ale șirului, valoarea 40 ajunge pe locul final în tabloul unidimensional sortat crescător?
+\\
+a) 0
+\\
+b) 1
+\\
+c) 2
+\\
+d) 3
+\\
+e) 4
+\\
+f) 5
+\\
+39.5. Într-un tablou bidimensional de dimensiuni $n \times n$, având liniile și coloanele numerotate de la 1 la n, condiţia pentru ca elementul de pe linia i și coloana j să fie situat deasupra diagonalei principale și deasupra diagonalei secundare este:
+\\
+Limbajul C++/ Limbajul C
 
-a) niciunul\\
-b) unul\\
-c) două\\
-d) trei\\
-e) patru\\
-f) cinci\\
-4. În vederea sortării crescătoare a unui șir de valori întregi, folosind metoda bulelor (bubble sort), un program citește valorile următoare $2,40,17,1,51,34,20,63$ și le memorează într-un tablou unidimensional. După câte parcurgeri ale șirului, valoarea 40 ajunge pe locul final în tabloul unidimensional sortat crescător?\\
-a) 0\\
-b) 1\\
-c) 2\\
-d) 3\\
-e) 4\\
-f) 5\\
-5. Într-un tablou bidimensional de dimensiuni nxn , având liniile și coloanele numerotate de la 1 la n, condiţia pentru ca elementul de pe linia i și coloana j să fie situat deasupra diagonalei principale și deasupra diagonalei secundare este:\\
-Limbajul C++/C
-
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-a) & $(i<=j) \& \&(i+j<n$ & b) & $(i<j) \& \&(i+j<n+1$ & c) & $(\mathrm{i}<\mathrm{n}) \& \&(\mathrm{i}+\mathrm{j}<\mathrm{n}-$ \\
-\hline
-) &  & ) &  & 1) &  \\
-\hline
-d) & (i<j)||(i+j<n+ & e) & (i<=j) \& \& ${ }^{\text {( }}+\mathbf{j}<=$ n & f) & i<n+j \\
-\hline
-1) &  & +1) &  &  &  \\
-\hline
-\end{tabular}
-\end{center}
-
+a) (i<=j) \&\& (i+j<n)
+\\
+b) (i<j) \&\& (i+j<n+1)
+\\
+c) (i<n) \&\& (i+j<n-1)
+\\
+d) (i<j) || (i+j<n+1)
+\\
+e) (i<=j) \&\& (i+j<=n+1)
+\\
+f) i<n+j
+\\
 Limbajul Pascal
-
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-a) & (i<=j) AND (i+j b) & (i<j) AND (i+j<n+1 & c) & (i<n) AND ( $\mathrm{i}+\mathrm{j}<\mathrm{n}-$ \\
-\hline
-<n) & ) &  & 1) &  \\
-\hline
-d) & (i<j)OR(i+j<n e) & (i<=j)AND (i+j<=n & f) & i<n+j \\
-\hline
-+1) & +1) &  &  &  \\
-\hline
-\end{tabular}
-\end{center}
-
-\begin{enumerate}
-  \setcounter{enumi}{5}
-  \item Se consideră un graf neorientat cu 8 noduri şi 28 de muchii. Indicaţi numărul minim de muchii care pot fi eliminate, astfel încât graful parţial obţinut să conțină două componente conexe, cu cel puțin două noduri fiecare.\\
-a) 4\\
-b) 6\\
-C) 8\\
-d) 10\\
-e) 12\\
+a) (i<=j) AND (i+j<n)
+\\
+b) (i<j) AND (i+j<n+1)
+\\
+c) (i<n) AND (i+j<n-1)
+\\
+d) (i<j) OR (i+j<n+1)
+\\
+e) (i<=j) AND (i+j<=n+1)
+\\
+f) i<n+j
+\\
+39.6. Se consideră un graf neorientat cu 8 noduri şi 28 de muchii. Indicaţi numărul minim de muchii care pot fi eliminate, astfel încât graful parţial obţinut să conțină două componente conexe, cu cel puțin două noduri fiecare.
+\\
+a) 4
+\\
+b) 6
+\\
+c) 8
+\\
+d) 10
+\\
+e) 12
+\\
 f) 16
-  \item Variabilele $\mathbf{x}, \mathbf{y}$ și $\mathbf{z}$ sunt de tip întreg și memorează numere naturale din intervalul [ $1,1 \mathbf{1 0}^{3}$ ]. Indicați o expresie care are valoarea 1 în C++/C sau valoarea TRUE în Pascal, dacă și numai dacă valoarea variabilei $\mathbf{x}$ este strict mai mare decât valoarea oricăreia dintre variabilele y și z.\\
-Limbajul C++/C
-a) $\quad x * y>y * z \& \& x * z>y * z$\\
-b) $\quad x * z>x * y \& \& y^{*} z>y^{*} x$\\
-c) $y * z>x * z \& \& y^{*} x>z^{*}$\\
-d) $y^{*} z>y * x \& \& y^{*} z>z * x$\\
-e) $\quad x * y>y * z$ || $x * z>y * z$\\
-f) $\quad y^{*} z>y * x$ || $y^{*} z>z * x$
-\end{enumerate}
-
+\\
+39.7. Variabilele $\mathbf{x}$, $\mathbf{y}$ și $\mathbf{z}$ sunt de tip întreg și memorează numere naturale din intervalul [$1, 10^{3}$]. Indicați o expresie care are valoarea 1 în C++/C sau valoarea TRUE în Pascal, dacă și numai dacă valoarea variabilei $\mathbf{x}$ este strict mai mare decât valoarea oricăreia dintre variabilele y și z.
+\\
+Limbajul C++/ Limbajul C
+a) x*y>y*z \&\& x*z>y*z
+\\
+b) x*z>x*y \&\& y*z>y*x
+\\
+c) y*z>x*z \&\& y*x>z*
+\\
+d) y*z>y*x \&\& y*z>z*x
+\\
+e) x*y>y*z || x*z>y*z
+\\
+f) y*z>y*x || y*z>z*x
+\\
 Limbajul Pascal
-a) ( $\left.x^{*} y>y * z\right)$ AND ( $x * z>y * z$ )\\
-b) ( $\left.x^{*} z>x * y\right)$ AND ( $y * z>y * x$ )\\
-c) ( $\left.y^{*} z>x * z\right)$ AND ( $y * x>z * x$ )\\
-d) ( $\left.y^{*} z>y * x\right)$ AND ( $y^{*} z>z * x$ )\\
-e) ( $x * y>y * z) O R(x * z>y * z)$\\
-f) ( $\left.y^{*} z>y^{*} x\right) O R\left(y^{*} z>z * x\right)$\\
-8. O variabilă întreagă $\mathbf{x}$ conține cel mai mic număr natural nenul, multiplu de 36 , divizibil cu toate numerele prime mai mici decât 10. Indicați o expresie care are valoarea 1 în C++/C sau valoarea TRUE în Pascal.\\
-Limbajul C++/C
-a) $(x<1000) \& \&(x \div 27=$\\
-b) $(x>1000) \& \&((x * x * x) \% 1000==0)$\\
-0)\\
-c) $((x * x) / 16) \% 2=0$\\
-d) $(x \% 100==0)|\mid(x / 100==0)$\\
-e) $(x \div 9==0) \& \&(x \% 25=$\\
-f) $\quad(x!=1260)|\mid(x<1200)$\\
-0)
-
+a) (x*y>y*z) AND (x*z>y*z)
+\\
+b) (x*z>x*y) AND (y*z>y*x)
+\\
+c) (y*z>x*z) AND (y*x>z*x)
+\\
+d) (y*z>y*x) AND (y*z>z*x)
+\\
+e) (x*y>y*z) OR (x*z>y*z)
+\\
+f) (y*z>y*x) OR (y*z>z*x)
+\\
+39.8. O variabilă întreagă $\mathbf{x}$ conține cel mai mic număr natural nenul, multiplu de 36, divizibil cu toate numerele prime mai mici decât 10. Indicați o expresie care are valoarea 1 în C++/C sau valoarea TRUE în Pascal.
+\\
+Limbajul C++/ Limbajul C
+a) (x<1000) \&\& (x \% 27==0)
+\\
+b) (x>1000) \&\& ((x*x*x) \% 1000==0)
+\\
+c) ((x*x) / 16) \% 2==0
+\\
+d) (x \% 100==0) || (x / 100==0)
+\\
+e) (x \% 9==0) \&\& (x \% 25==0)
+\\
+f) (x!=1260) || (x<1200)
+\\
 Limbajul Pascal
-a) $(x<1000)$ AND ( $x$ MOD\\
-b) ( $x>1000$ ) AND ( ( $x$ \textit{x}x) MOD $27=0$ ) $1000=0$ )\\
-c) ( ( $\mathrm{x}^{*} \mathrm{x}$ ) DIV 16) MOD 2=0\\
-d) ( $x$ MOD 100=0) OR ( $x$ DIV 100=0)\\
-e) ( $x$ MOD 9=0) AND ( $x$ MOD\\
-f) ( $x<>1260$ ) $O R(x<1200)$ $25=0$ )\\
-9. Știind că variabila $\mathbf{n}$ reține un număr întreg strict pozitiv, indicați semnificația valorii variabilei întregi $\mathbf{x}$ după execuția următoarei secvențe:
-
+a) (x<1000) AND (x MOD 27=0)
+\\
+b) (x>1000) AND ((x*x*x) MOD 1000=0)
+\\
+c) ((x*x) DIV 16) MOD 2=0
+\\
+d) (x MOD 100=0) OR (x DIV 100=0)
+\\
+e) (x MOD 9=0) AND (x MOD 25=0)
+\\
+f) (x<>1260) OR (x<1200)
+\\
+39.9. Știind că variabila $\mathbf{n}$ reține un număr întreg strict pozitiv, indicați semnificația valorii variabilei întregi $\mathbf{x}$ după execuția următoarei secvențe:
 \begin{verbatim}
 Limbajul C++/C
 x=1 ;
 while(n>1)
 {
-n=n/2; x++;
+    n=n/2; x++;
 }
-cout<<x; |
-printf("%d",x);
+cout<<x; | printf("%d",x);
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 x:=1;
@@ -17588,165 +17616,204 @@ while n>1 do
     end;
 write(x);
 \end{verbatim}
-
-a) suma puterilor din descompunerea în $\quad$ b) puterea la care apare 2 în factori primi a numărului n descompunerea în factori primi a numărului $n$\\
-c) numărul divizorilor pozitivi ai lui $\mathbf{n}$\\
-d) $[\log 2 \mathbf{n}]-1$\\
-e) $\left[\log _{2} \mathbf{n}\right]$\\
-f) $[\log 2 n]+1$
-
-Notație: [a] partea întreagă a numarului real a\\
-10. Fie $\mathbf{f}$ și $\mathbf{g}$ două subprograme având următoarele definiții. Precizați valoarea returnată de apelul $\mathrm{g}(6)$.
-
+Notație: [a] este partea întreagă a numarului real $a$
+\\
+a) suma puterilor din descompunerea în factori primi a numărului $n$
+\\
+b) puterea la care apare 2 în descompunerea în factori primi a numărului $n$
+\\
+c) numărul divizorilor pozitivi ai lui $n$
+\\
+d) $[\log _{2} n]-1$
+\\
+e) $[\log _{2} n]$
+\\
+f) $[\log _{2} n]+1$
+\\
+39.10. Fie $\mathbf{f}$ și $\mathbf{g}$ două subprograme având următoarele definiții. Precizați valoarea returnată de apelul $g(6)$.
 \begin{verbatim}
 Limbajul C++/C
 int f(int x) {
     if (x%2==0)
             return f(x/2);
         else return x;
-                }
+}
 int g(int x) {
     if(x<1) return 1;
         else return f(x*g(x-1));
+}
 \end{verbatim}
-
 \begin{verbatim}
-                } g(x:integer):integer;
-                        begin
 Limbajul Pascal
-function
-f(x:integer):integer;
+function f(x:integer):integer;
 begin
-    if x mod 2=0
-        then f:=f(x div 2)
-        else f:= x;
+    if x mod 2=0 then f:=f(x div 2)
+    else f:= x;
 end;
-function
-g(xim
-\end{verbatim}
-
-\begin{verbatim}
-if x<1 then g:=1
+function g(x:integer):integer;
+begin
+    if x<1 then g:=1
     else g:=f(x*g(x-1));
 end;
 \end{verbatim}
-
-a) 3\\
-b) 9\\
-C) 30\\
-d) 45\\
-e) 210\\
-f) 315\\
-11. Un graf neorientat este eulerian dacă:\\
-a) este conex și conține cel puțin un ciclu\\
-b) este conex și nu conține cicluri elementar\\
-c) este conex și suma elementelor de pe fiecare coloană a matricei de adiacență este număr par\\
-e) conține cel puțin un ciclu hamiltonian\\
-d) matricea de adiacență este simetrică față de diagonala principală\\
-f) conține un singur ciclu elementar\\
-12. În urma executării următorului program, valorile afișate pe ecran sunt:
-
+\\
+a) 3
+\\
+b) 9
+\\
+c) 30
+\\
+d) 45
+\\
+e) 210
+\\
+f) 315
+\\
+39.11. Un graf neorientat este eulerian dacă:
+\\
+a) este conex și conține cel puțin un ciclu
+\\
+b) este conex și nu conține cicluri elementare
+\\
+c) este conex și suma elementelor de pe fiecare coloană a matricei de adiacență este număr par
+\\
+d) matricea de adiacență este simetrică față de diagonala principală
+\\
+e) conține cel puțin un ciclu hamiltonian
+\\
+f) conține un singur ciclu elementar
+\\
+39.12. În urma executării următorului program, valorile afișate pe ecran sunt:
 \begin{verbatim}
 Limbajul C++
 #include <iostream>
 using namespace std;
 int x,y;
-void g(int &a,
-int &b)
+void g(int &a,int &b)
 {a=a+5; b=b+a;}
 int main()
+{ x=1; y=2;
+g(y, x);
+cout<<x<<" "<<y;
+cout<<" ";
+g(y, x);
+cout<<x<<" "<<y;
+return 0;
+}
 \end{verbatim}
-
+\begin{verbatim}
 Limbajul C
-#include <stdio.h> int $x, y$; void g(int *a, int *b)\\
+#include <stdio.h>
+int x, y;
+void g(int *a, int *b)
 {*a=*a+5;
-*b=*b+*a; }\\
-int main()\\
-{ $x=1$; $y=2$; g(\&y, \&x) ;
-printf("\%d \%d",x,y);
+*b=*b+*a; }
+int main()
+{ x=1; y=2; g(&y, &x);
+printf("%d %d",x,y);
 printf(" ");
-g(\&y,\&x);
-printf("\%d \%d",x,y); return 0;
-
+g(&y,&x);
+printf("%d %d",x,y);
+return 0;}
+\end{verbatim}
+\begin{verbatim}
 Limbajul Pascal
-var $x, y$ :integer;
-procedure g(var\\
-a,b: integer) ;
-begin a:=a+5;
-$\mathrm{b}:=\mathrm{b}+\mathrm{a}$; end;
-begin\\
-$\mathrm{x}:=1 ; \mathrm{y}:=2$;
+var x, y:integer;
+procedure g(var a,b: integer);
+begin
+a:=a+5;
+b:=b+a;
+end;
+begin
+x:=1; y:=2;
 g(y,x);
 write (x,' ',y);
 write(' ');
 g(y,x);
 write (x,' ',y);
 end.
-
-\begin{verbatim}
-{ $\mathrm{x}=1$; $\mathrm{y}=2$;
-$g(y, x)$;
-cout<<x<<" "<<y;
-cout<<" ";
-$g(y, x)$;
-cout<<x<<" "<<y;
-return 0;
 \end{verbatim}
-
-$\begin{array}{lllll}\text { a) } & 8 & 7 & 20 & 12 \\ \text { d) } & 7 & 8 & 20 & 12\end{array}$\\
-$\begin{array}{lllll}\text { b) } & \left.\begin{array}{lllll}8 & 7 & 12 & 20 \\ \text { e) } & 12 & 20 & 7 & 8\end{array}\right)\end{array}$\\
-C) $7 \quad 8 \quad 12 \quad 20$\\
-f) $12 \quad 20 \quad 8 \quad 7$\\
-13. Precizați numărul de șiruri distincte formate din exact o literă $\mathbf{A}$, două litere $\mathbf{B}$, trei litere C și patru litere D.\\
-a) 2500\\
-b) 3600\\
-C) 7560\\
-d) 10300\\
-e) 12600\\
-f) 151200\\
-14. Fie arborele cu 8 noduri și cu muchiile $[1,2]$, $[1,3],[1,4],[4,5]$, $[6,4]$, $[1,8],[4,7]$. Câți vectori de tați distincți se pot construi pentru acest arbore? Doi vectori de tați sunt distincți dacă există cel puțin o poziție pentru care elementele din respectivele poziții sunt distincte.\\
-a) 7\\
-b) 8\\
-C) 28\\
-d) 36\\
-e) 8\\
-f) 40320\\
-15. Stabiliți rezultatul execuției secvenței de mai jos, unde variabilele $\mathbf{x}$ și $\mathbf{b}$ rețin numere naturale cunoscute ( $1 \leq x \leq 1000,1<b \leq 10)$, iar $s$ este $o$ variabilă întreagă:
-
+\\
+a) 8 7 20 12
+\\
+b) 8 7 12 20
+\\
+c) 7 8 12 20
+\\
+d) 7 8 20 12
+\\
+e) 12 20 7 8
+\\
+f) 12 20 8 7
+\\
+39.13. Precizați numărul de șiruri distincte formate din exact o literă $A$, două litere $B$, trei litere $C$ și patru litere $D$.
+\\
+a) 2500
+\\
+b) 3600
+\\
+c) 7560
+\\
+d) 10300
+\\
+e) 12600
+\\
+f) 151200
+\\
+39.14. Fie arborele cu 8 noduri și cu muchiile $[1,2]$, $[1,3]$, $[1,4]$, $[4,5]$, $[6,4]$, $[1,8]$, $[4,7]$. Câți vectori de tați distincți se pot construi pentru acest arbore? Doi vectori de tați sunt distincți dacă există cel puțin o poziție pentru care elementele din respectivele poziții sunt distincte.
+\\
+a) 7
+\\
+b) 8
+\\
+c) 28
+\\
+d) 36
+\\
+e) 8
+\\
+f) 40320
+\\
+39.15. Stabiliți rezultatul execuției secvenței de mai jos, unde variabilele $\mathbf{x}$ și $\mathbf{b}$ rețin numere naturale cunoscute ($1 \leq x \leq 1000$, $1<b \leq 10$), iar $s$ este o variabilă întreagă:
 \begin{verbatim}
 Limbajul C++/C
 s=0;
 while (x>0)
-    {
-s=s+ x % b;
-x=x / b;
-    }
+{
+    s=s+ x % b;
+    x=x / b;
+}
 if (s % (b-1)==0)
-cout<<"da"; | printf("da");
-cout<<"nu"; | printf("nu");
+    cout<<"da"; | printf("da");
+else
+    cout<<"nu"; | printf("nu");
 \end{verbatim}
-
-a) verifică dacă suma cifrelor reprezentării în baza b-1 a numărului $\mathbf{x}$ este divizibilă cu b1\\
-c) verifică dacă suma cifrelor reprezentării în baza ba numărului $\mathbf{x}$ este divizibilă cu b\\
-e) verifică dacă suma cifrelor lui $\mathbf{x}$ este divizibilă cu b-1\\
-d) verifică dacă numărul $\mathbf{x}$ este divizibil cub\\
-f) niciuna dintre variantele anterioare
-
 \begin{verbatim}
-            else write((da')
 Limbajul Pascal
 s:=0;
 while x>0 do
-    begin
-s:=s+ x mod b;
-x:=x div b;
-    end;
+begin
+    s:=s+ x mod b;
+    x:=x div b;
+end;
 if s mod (b-1)=0 then
-        write('da')
-else write('nu');
+    write('da')
+else
+    write('nu');
 \end{verbatim}
-
-b) verifică dacă numărul $\mathbf{x}$ este divizibil cu b-1
+\\
+a) verifică dacă suma cifrelor reprezentării în baza $b-1$ a numărului $x$ este divizibilă cu $b-1$
+\\
+b) verifică dacă numărul $x$ este divizibil cu $b-1$
+\\
+c) verifică dacă suma cifrelor reprezentării în baza $b$ a numărului $x$ este divizibilă cu $b$
+\\
+d) verifică dacă numărul $x$ este divizibil cu $b$
+\\
+e) verifică dacă suma cifrelor lui $x$ este divizibilă cu $b-1$
+\\
+f) niciuna dintre variantele anterioare
+\\
 
 \section*{Varianta 40}
 
