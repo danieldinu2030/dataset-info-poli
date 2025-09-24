@@ -9790,35 +9790,55 @@ f) \alpha=4+j+k;
 \\
 
 \section*{Varianta 21}
-\begin{enumerate}
-  \item Precizați care dintre următoarele expresii are valoarea true în Pascal sau 1 în C/C++ dacă și numai dacă numărul întreg $\mathbf{x}$ are exact trei cifre?
-\end{enumerate}
 
-Limbajul C++\\
-a) $(x \% 1000==0)$ || $(x \% 100!=0)$\\
-b) $(x / 10==0) \& \&(x / 100==0)$\\
-c) $(x \% 10==0) \& \&(x / 10==0)$\\
-d) $(x / 1000==0) \& \&(x / 100!=0)$\\
-e) $(x / 1000==0)$ || $(x / 100==0)$\\
-f) ! ( $(x / 1000==0) \& \&(x / 100!=0))$
-
+21.1. Precizați care dintre următoarele expresii are valoarea true în Pascal sau 1 în C/C++ dacă și numai dacă numărul întreg $\mathbf{x}$ are exact trei cifre?
+\\
+Limbajul C++
+a) (x%1000==0) || (x%100!=0)
+\\
+b) (x/10==0) && (x/100==0)
+\\
+c) (x%10==0) && (x/10==0)
+\\
+d) (x/1000==0) && (x/100!=0)
+\\
+e) (x/1000==0) || (x/100==0)
+\\
+f) !((x/1000==0) && (x/100!=0))
+\\
 Limbajul C
-a) $(x \% 1000==0)|\mid(x \% 100!=0)$\\
-b) $(x / 10==0) \& \&(x / 100==0)$\\
-c) $(x \% 10==0) \& \&(x / 10==0)$\\
-d) $(x / 1000==0) \& \&(x / 100!=0)$\\
-e) $(x / 1000==0)$ || $(x / 100==0)$\\
-f)! ( $(x / 1000==0) \& \&(x / 100!=0))$
-
-\section*{Limbajul Pascal}
-a) ( $x \bmod 1000=0$ ) or ( $x$ mod 100<>0)\\
-b) ( $x \operatorname{div} 10=0$ ) and ( $x$ div 100=0)\\
-c) ( $x \bmod 10=0$ ) and ( $x$ div 10=0)\\
-d) ( $x$ div $1000=0$ ) and ( $x$ div 100<>0)\\
-e) ( $x \operatorname{div} 1000=0$ ) or ( $x$ div 100=0)\\
-f) $\operatorname{not}((x \operatorname{div} 1000=0)$ and (x div 100<>0))\\
-2. Roboțelul Bob se mișcă într-un plan cartezian. Pentru a reține poziția robotului definim următoarea structură:
-
+a) (x%1000==0)|| (x%100!=0)
+\\ 
+b) (x/10==0) && (x/100==0)
+\\
+c) (x%10==0) && (x/10==0)
+\\
+d) (x/1000==0) && (x/100!=0)
+\\
+e) (x/1000==0) || (x/100==0)
+\\
+f) !((x/1000==0) && (x/100!=0))
+\\
+Limbajul Pascal
+a) (x mod 1000=0) or  
+(x mod 100<>0) 
+\\
+b) (x div 10=0) and  
+(x div 100=0) 
+\\
+c) (x mod 10=0) and  
+(x div 10=0) 
+\\
+d) (x div 1000=0) and  
+(x div 100<>0) 
+\\
+e) (x div 1000=0) or  
+(x div 100=0) 
+\\
+f) not((x div 1000=0) and  
+(x div 100<>0))
+\\
+21.2. Roboțelul Bob se mișcă într-un plan cartezian. Pentru a reține poziția robotului definim următoarea structură:
 \begin{verbatim}
 Limbajul C
 typedef struct
@@ -9827,7 +9847,6 @@ typedef struct
 } robot;
 robot bob;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C++
 struct robot
@@ -9836,7 +9855,6 @@ struct robot
 };
 robot bob;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 type robot=record
@@ -9844,33 +9862,51 @@ type robot=record
     end;
 var bob:robot;
 \end{verbatim}
-
-Precizați care dintre expresiile de mai jos este adevărată dacă și numai dacă roboțelul se află în interiorul sau pe laturile pătratului de coordonate $(-2,-2),(-2,2)$, $(2,2),(2,-2)$ ?\\
-Limbajul C++\\
-a) (robot. $x>=-2) \& \&($ robot $. x<=2) \& \&($ robot. $y>=-2) \& \&($ robot. $y<=2)$\\
-b) (robot. $x<=-2$ ) || (robot. $x>=2$ ) || (robot. $y<=-2$ ) || (robot.y>=2)\\
-c) (bob. $x<=-2$ ) || (bob $\cdot x>=2$ ) || (bob. $y>=-2$ ) || (bob. $y<=2$ )\\
-d) (bob $\cdot x>=-2) \& \&(b o b . x<=2) \& \&(b o b . y>=-2) \& \&(b o b . y<=2)$\\
-e) (bob $\cdot x>=-2) \& \&(b o b . x<=2)|\mid(b o b . x>=-2) \& \&(b o b . x<=2)$\\
-f) (robot. $x>=-2$ ) $\& \&($ robot $. x<=2)|\mid($ robot $. x>=-2) \& \&($ robot $. x<=2)$
-
-\section*{Limbajul C}
-a) (robot. $x>=-2$ ) $\& \&($ robot $. x<=2) \& \&($ robot. $y>=-2) \& \&($ robot. $y<=2)$\\
-b) (robot. $x<=-2$ ) || (robot. $x>=2$ ) || (robot. $y<=-2$ ) || (robot. $y>=2$ )\\
-c) (bob $\cdot x<=-2)||(b o b . x>=2)||(b o b . y>=-2)|\mid(b o b . y<=2)$\\
-d) (bob $\cdot x>=-2) \& \&(b o b . x<=2) \& \&(b o b . y>=-2) \& \&(b o b . y<=2)$\\
-e) (bob $\cdot x>=-2) \& \&(b o b . x<=2)|\mid(b o b . x>=-2) \& \&(b o b . x<=2)$\\
-f) (robot. $x>=-2$ ) \&\& (robot. $x<=2$ ) || (robot. $x>=-2$ ) $\& \&($ robot. $x<=2)$
-
+Precizați care dintre expresiile de mai jos este adevărată dacă și numai dacă roboțelul se află în interiorul sau pe laturile pătratului de coordonate $(-2,-2),(-2,2)$, $(2,2),(2,-2)$ ?
+\\
+Limbajul C++
+a) (robot.x>=-2)&&(robot.x<=2)&&(robot.y>=-2)&&(robot.y<=2) 
+\\
+b) (robot.x<=-2)||(robot.x>=2)||(robot.y<=-2)||(robot.y>=2) 
+\\
+c) (bob.x<=-2)||(bob.x>=2)||(bob.y>=-2)||(bob.y<=2) 
+\\
+d) (bob.x>=-2)&&(bob.x<=2)&&(bob.y>=-2)&&(bob.y<=2) 
+\\
+e) (bob.x>=-2)&&(bob.x<=2)||(bob.x>=-2)&&(bob.x<=2) 
+\\
+f) (robot.x>=-2)&&(robot.x<=2)||(robot.x>=-2)&&(robot.x<=2)
+\\
+Limbajul C
+a) (robot.x>=-2)&&(robot.x<=2)&&(robot.y>=-2)&&(robot.y<=2) 
+\\
+b) (robot.x<=-2)||(robot.x>=2)||(robot.y<=-2)||(robot.y>=2) 
+\\
+c) (bob.x<=-2)||(bob.x>=2)||(bob.y>=-2)||(bob.y<=2) 
+\\
+d) (bob.x>=-2)&&(bob.x<=2)&&(bob.y>=-2)&&(bob.y<=2) 
+\\
+e) (bob.x>=-2)&&(bob.x<=2)||(bob.x>=-2)&&(bob.x<=2) 
+\\
+f) (robot.x>=-2)&&(robot.x<=2)||(robot.x>=-2)&&(robot.x<=2)
+\\
 Limbajul Pascal
-a) (robot. $x>=-2$ ) and (robot. $x<=2$ ) and (robot.y>=-2) and (robot. $\mathrm{y}<=2$ )\\
-b) (robot. $x<=-2$ ) or (robot. $x>=2$ ) or (robot. $y<=-2$ ) or (robot. $\mathrm{y}>=2$ )\\
-c) (bob. $x<=-2$ ) or (bob. $x>=2$ ) or (bob.y>=-2) or (bob.y<=2)\\
-d) (bob. $x>=-2$ ) and (bob. $x<=2$ ) and (bob. $y>=-2$ ) and (bob. $y<=2$ )\\
-e) (bob. $x>=-2$ ) and (bob. $x<=2$ ) or (bob. $x>=-2$ ) and (bob. $x<=2$ )\\
-f) (robot. $x>=-2$ ) and (robot. $x<=2$ ) or (robot. $x>=-2$ ) and (robot. $x<=2$ )\\
-3. Precizați ce se va afișa în urma execuției următorului program?
-
+a) (robot.x>=-2) and (robot.x<=2) and (robot.y>=-2) and 
+(robot.y<=2) 
+\\
+b) (robot.x<=-2) or (robot.x>=2) or (robot.y<=-2) or  
+(robot.y>=2) 
+\\
+c) (bob.x<=-2) or (bob.x>=2) or (bob.y>=-2) or (bob.y<=2) 
+\\
+d) (bob.x>=-2) and (bob.x<=2) and (bob.y>=-2) and (bob.y<=2) 
+\\
+e) (bob.x>=-2) and (bob.x<=2) or (bob.x>=-2) and (bob.x<=2) 
+\\
+f) (robot.x>=-2) and (robot.x<=2) or (robot.x>=-2) and 
+(robot.x<=2)
+\\
+21.3. Precizați ce se va afișa în urma execuției următorului program?
 \begin{verbatim}
 Limbajul C++
 #include <iostream>
@@ -9880,8 +9916,14 @@ int main()
     for(i=1;i<=5;i++);
         s=s+i;
     cout<<s; return 0;}
+Limbajul C 
+#include <stdio.h> 
+int main() 
+{ int i,s=0; 
+   for(i=1;i<=5;i++); 
+         s=s+i; 
+    printf("%d",s);  return 0; }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 var i,s:integer;
@@ -9892,174 +9934,169 @@ for i:=1 to 5 do;
 s:=s+i; write(s);
 end.
 \end{verbatim}
-
+\\
+a) Programul nu va afișa nimic, va genera eroare de compilare.
+\\
+b) 15
+\\
+c) 6
+\\
+d) 5
+\\
+e) 0
+\\
+f) 10
+\\
+21.4. Precizați ce se va afișa pe ecran în urma execuției următorului program?
 \begin{verbatim}
-Limbajul C
-#include <stdio.h>
-int main()
-{ int i,s=0;
-    for(i=1;i<=5;i++);
-        s=s+i;
-    printf("%d",s); return 0; }
-\end{verbatim}
-
-a) Programul nu va afișa nimic, va\\
-b) 15\\
-c) 6\\
-d) 5\\
-e) 0\\
-f) 10 genera eroare de compilare.\\
-4. Precizați ce se va afișa pe ecran în urma execuției următorului program?
-
-\begin{verbatim}
-Limbajul C++
-#include <iostream>
-using namespace std;
-int main()
-{
-    char sir[]="ANA";
-        int i=0;
-        while(sir[i])
-            sir[i++]++;
-        cout<<sir;
-        return 0;
+Limbajul C++ 
+#include <iostream> 
+using namespace std; 
+int main() 
+{  
+  char sir[]="ANA"; 
+    int i=0; 
+    while(sir[i]) 
+        sir[i++]++; 
+    cout<<sir; 
+    return 0; 
 }
+Limbajul C 
+#include <stdio.h> 
+int main() 
+{   char sir[]="ANA"; 
+    int i=0; 
+    while(sir[i]) 
+        sir[i++]++; 
+    printf("%s",sir); 
+    return 0; 
+}
+Limbajul Pascal 
+var sir:string; 
+    i:integer; 
+begin 
+  sir:='ANA'; 
+  for i:=1 to length(sir) do 
+      sir[i]:=succ(sir[i]); 
+  write(sir); 
+end. 
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var sir:string;
-        i:integer;
-begin
-    sir:='ANA';
-    for i:=1 to length(sir) do
-            sir[i]:=succ(sir[i]);
-    write(sir);
-end.
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-#include <stdio.h>
-int main()
-{ char sir[]="ANA";
-    int i=0;
-    while(sir[i])
-        sir[i++]++;
-    printf("%s",sir);
-    return 0;
-\end{verbatim}
-
-}\\
-a) ANA\\
-b) $\mathbf{A}$\\
-c) AN\\
-d) BOB\\
-e) $B A B$\\
+\\
+a) ANA
+\\
+b) A
+\\
+c) AN
+\\
+d) BOB
+\\
+e) BAB
+\\
 f) COC
-5. Precizați ce se va afișa pe ecran în urma execuției următorului program?
-
+\\
+21.5. Precizați ce se va afișa pe ecran în urma execuției următorului program?
 \begin{verbatim}
-Limbajul C++
-#include <iostream>
-using namespace std;
-struct coordonate{
-    int abscisa,ordonata;
-};
-int main()
-{ coordonate abscisa;
-    abscisa.abscisa=100;
-    abscisa.ordonata=200;
-cout<<abscisa.abscisa<<" ";
-    cout<<abscisa.ordonata;
-    return 0;}
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-type coordonate=record
-abscisa,ordonata:integer;
-end;
-var abscisa:coordonate;
-begin
-abscisa.abscisa:=100;
-abscisa.ordonata:=200;
-write(abscisa.abscisa,' ');
-write(abscisa.ordonata);
-end.
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-#include <stdio.h>
-typedef struct { int abscisa,ordonata;
-} coordonate;
-int main()
-{
-coordonate abscisa;
-    abscisa.abscisa=100;
-    abscisa.ordonata=200;
-    printf("%d ",abscisa.abscisa);
-    printf("%d", abscisa.ordonata);
-    return 0;
+Limbajul C++ 
+#include <iostream> 
+using namespace std; 
+struct coordonate{ 
+   int abscisa,ordonata; 
+}; 
+int main() 
+{ coordonate abscisa; 
+  abscisa.abscisa=100; 
+  abscisa.ordonata=200; 
+cout<<abscisa.abscisa<<" "; 
+  cout<<abscisa.ordonata; 
+  return 0;}
+Limbajul C 
+#include <stdio.h> 
+typedef struct { 
+     int abscisa,ordonata; 
+}coordonate; 
+int main() 
+{ 
+  coordonate abscisa; 
+  abscisa.abscisa=100; 
+  abscisa.ordonata=200; 
+  printf("%d ",abscisa.abscisa);     
+  printf("%d", abscisa.ordonata); 
+  return 0; 
 }
+Limbajul Pascal 
+type coordonate=record 
+abscisa,ordonata:integer; 
+end; 
+ 
+var abscisa:coordonate; 
+ 
+begin 
+abscisa.abscisa:=100; 
+abscisa.ordonata:=200; 
+write(abscisa.abscisa,' '); 
+write(abscisa.ordonata); 
+end. 
 \end{verbatim}
-
-a) Programul nu va afișa\\
-b) 00\\
-c) $\mathbf{1 0 0} \mathbf{2 0 0}$\\
-d) 200100\\
-e) 100100\\
-f) 200200
-
+\\
+a) Programul nu va afișa 
+nimic, va genera eroare 
+de compilare deoarece 
+numele variabilei de tip 
+struct nu poate coincide 
+cu numele câmpului.
+\\
+b) 0 0
+\\
+c) 100 200
+\\
+d) 200 100
+\\
+e) 100 100
+\\
+f) 200 200
+\\
+21.6. Care va fi valoarea returnată de funcția f prezentată mai jos?
 \begin{verbatim}
-
+Limbajul C/C++ 
+char f() 
+{ int i,j,mat[5][5]; 
+ char v='a'; 
+ for(i=0;i<5;i++) 
+  for(j=0;j<5;j++) 
+   { mat[i][j]=v; 
+       v++; } 
+    return mat[2][3]; }
+Limbajul Pascal 
+type matrice=array[0..4,0..4] of 
+             char;    
+function  f:char; 
+  var i,j:integer; 
+   mat:matrice; 
+   v:char; 
+begin 
+  v:='a'; 
+  for i:=0 to 4 do 
+   for j:=0 to 4 do 
+    begin 
+     mat[i,j]:=v;v:=succ(v); 
+    end; 
+  f:=mat[2,3]; 
+end; 
 \end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{5}
-  \item Care va fi valoarea returnată de funcția f prezentată mai jos?
-\end{enumerate}
-
-\begin{verbatim}
-Limbajul C++/ Limbajul C
-char f()
-{ int i,j,mat[5][5];
-    char v='a';
-    for(i=0;i<5;i++)
-        for(j=0;j<5;j++)
-            { mat[i][j]=v;
-                    v++; }
-            return mat[2][3]; }
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-type matrice=array[0..4,0..4] of
-                    char;
-function f:char;
-    var i,j:integer;
-        mat:matrice;
-        v:char;
-begin
-    v:='a';
-    for i:=0 to 4 do
-        for j:=0 to 4 do
-            begin
-            mat[i,j]:=v;v:=succ(v);
-            end;
-    f:=mat[2,3];
-end;
-\end{verbatim}
-
-a) e\\
-b) i\\
-c) $n$\\
-d) $m$\\
-e) 0\\
-f) $p$\\
+\\
+a) e
+\\
+b) i
+\\
+c) n
+\\
+d) m
+\\
+e) o
+\\
+f) p
+\\
 7. Se consideră graful neorientat $G$ reprezentat prin următoarea matrice de adiacență:
-
 $$
 A=\left(\begin{array}{lllllll}
 0 & 1 & 1 & 0 & 0 & 0 & 0 \\
@@ -10071,394 +10108,454 @@ A=\left(\begin{array}{lllllll}
 0 & 0 & 0 & 0 & 0 & 0 & 0
 \end{array}\right)
 $$
-
-Precizați numărul componentelor conexe ale grafului $\mathbf{G}$.\\
-a) 1\\
-b) 2\\
-c) 3\\
-d) 4\\
-e) 5\\
-f) 6\\
-8. Corectați secvența de program de mai jos astfel încât să realizeze corect căutarea unui număr întreg $\mathbf{x}$ într-un vector $\mathbf{v}$ cu $n$ elemente numere intregi ordonate crescător.
-
+Precizați numărul componentelor conexe ale grafului $\mathbf{G}$.
+\\
+a) 1
+\\
+b) 2
+\\
+c) 3
+\\
+d) 4
+\\
+e) 5
+\\
+f) 6
+\\
+21.8. Corectați secvența de program de mai jos astfel încât să realizeze corect căutarea unui număr întreg $\mathbf{x}$ într-un vector $\mathbf{v}$ cu $n$ elemente numere intregi ordonate crescător.
 \begin{verbatim}
-Limbajul C++/ Limbajul C
-p=0;
-u=n-1;
-q=0;
-while(p<=u && q==0)
-{
-    m=(p+u)/2;
-    if(x==v[m]) q=1;
-    else if(x<v[m]) u=m-1;
-            else p=m-1;
-    }
-if(q==1)
-        printf("Elementul a fost
-gasit");
-    else
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-p:=0;
-u:=n-1;
-q:=0;
-while (p<=u) and (q=0) do
-begin
-    m:=(p+u) div 2;
-    if(x=v[m]) then q:=1
-    else if x<v[m] then u:=m-1
-            else p:=m-1;
-    end;
-    if q=1 then
-write('Elementul a fost
-gasit')
-    else
-\end{verbatim}
-
-\begin{verbatim}
-    printf("Elementul nu a
+Limbajul C/C++ 
+p=0; 
+u=n-1; 
+q=0; 
+while(p<=u && q==0) 
+{ 
+ m=(p+u)/2; 
+ if(x==v[m]) q=1; 
+ else if(x<v[m]) u=m-1; 
+      else p=m-1; 
+ } 
+if(q==1) 
+  printf("Elementul a fost 
+gasit"); 
+ else 
+  printf("Elementul nu a 
 fost gasit");
-Limbajul C++/ Limbajul C
-a) Instrucțiunea
-    while(p<=u && q==0)
-    trebuie înlocuită cu
-    while(p>=u && q==0)
-b) Instrucțiunea m=(p+u)/2;
-    trebuie înlocuită cu m= (p+u) %2;
-c) Instrucțiunea p=m-1; trebuie
-    înlocuită cu p=m+1;
-d) Instrucțiunea u=m-1; trebuie
-    înlocuită cu u=m+1;
-e) Instrucțiunea if (x<v [m]) trebuie
-    înlocuită cu if (x>v [m])
-f) Instrucțiunea q=1 ; trebuie îlocuită
-    cu q=0 ;
-\end{verbatim}
-
-\begin{verbatim}
-9. Precizați ce se va afișa pe ecran în urma execuției programului următor?
-Limbajul C++
-#include <iostream>
-using namespace std;
-int main()
-{ const int m=4,n=5;
-        int i,j,aux;
-        char a[m][n]=
-            {{'a','b','c','d','e'},
-            {'f','g','h','i','j'},
-            {'k','l','m','n','o'},
-            {'p','q','r','s','t'}};
-for(i=0;i<2;i++)
-    { aux=a[2][n-1];
-        for(j=n-1;j>0;j--)
-                    a[2][j]=a[2][j-1];
-        a[2][0]=aux; }
-for(i=0;i<2;i++)
-        { aux=a[m-1][2];
-                for(j=m-1;j>0;j--)
-                        a[j][2]=a[j-1][2];
-                a[0][2]=aux; }
-for(i=0;i<m;i++) {
-        for(j=0;j<n;j++)
-                cout<<a[i][j]<<" ";
-\end{verbatim}
-
-\begin{verbatim}
-write('Elementul nu a
+Limbajul Pascal 
+p:=0; 
+u:=n-1; 
+q:=0; 
+while (p<=u) and (q=0) do 
+begin 
+ m:=(p+u) div 2; 
+ if(x=v[m]) then  q:=1 
+ else if x<v[m] then u:=m-1 
+      else p:=m-1; 
+ end; 
+ if q=1 then 
+write('Elementul a fost 
+gasit') 
+  else
+write('Elementul nu a 
 fost gasit');
 \end{verbatim}
+\\
+Limbajul C++/ Limbajul C
+a) Instrucțiunea  
+while(p<=u && q==0) 
+trebuie înlocuită cu 
+while(p>=u && q==0)
+\\ 
+b) Instrucțiunea   m=(p+u)/2;  
+trebuie înlocuită cu m=(p+u)%2; 
+\\
+c) Instrucțiunea p=m-1; trebuie 
+înlocuită cu p=m+1; 
+\\
+d) Instrucțiunea  u=m-1; trebuie 
+înlocuită cu u=m+1; 
+\\
+e) Instrucțiunea if(x<v[m]) trebuie 
+înlocuită cu if(x>v[m]) 
+\\
+f) Instrucțiunea q=1; trebuie înlocuită 
+cu q=0;
+\\
+Limbajul Pascal 
+a) Instrucțiunea 
+while (p<=u) and (q=0) do 
+trebuie înlocuită cu 
+while (p>=u) and (q=0) do 
+\\
+b) Instrucțiunea  
+m:=(p+u) div 2; trebuie 
+înlocuită cu  m:=(p+u) mod 2; 
+\\
+c) Instrucțiunea p:=m-1; trebuie 
+înlocuită cu p:=m+1; 
+\\
+d) Instrucțiunea u:=m-1; trebuie 
+înlocuită cu u:=m+1; 
+\\
+e) Instrucțiunea if x<v[m] trebuie 
+înlocuită cu if x>v[m] 
+\\
+f) Instrucțiunea q:=1; trebuie înlocuită 
+cu q:=0;
+\\
 
-\section*{Limbajul Pascal}
-a) Instrucțiunea while ( $p<=u$ ) and ( $q=0$ ) do trebuie înlocuită cu
-
+21.9. Precizați ce se va afișa pe ecran în urma execuției programului următor?
 \begin{verbatim}
-while (p>=u) and (q=O) do
-\end{verbatim}
-
-b) Instrucțiunea $\mathrm{m}:=(\mathrm{p}+\mathrm{u}) \operatorname{div} 2$; trebuie înlocuită cu m:=(p+u) mod 2;
-c) Instrucțiunea $p:=m-1$; trebuie înlocuită cu p:=m+1;
-d) Instrucțiunea $u:=m-1$; trebuie înlocuită cu u:=m+1;
-e) Instrucțiunea if $\mathbf{x}<\mathbf{v}$ [m] trebuie înlocuită cu if $x>v[m]$\\
-f) Instrucțiunea $\mathrm{q}:=1$; trebuie înlocuită cu q: =0;
-
-\begin{verbatim}
-Limbajul Pascal
-const m=4; n=5;
-var i,j:integer;
-        aux:char;
-    a:array[0..m-1,0..n-1]
-        of char=
-(('a','b','c','d','e'),
-('f','g','h','i','j'),
-('k','l','m','n','o'),
-('p','q','r','s','t'));
-begin
-for i:=0 to 1 do
-    begin
-            aux:=a[2,n-1];
-        for j:=n-1 downto 1 do
-                    a[2,j]:=a[2,j-1];
-            a[2,0]:=aux; end;
-for i:=0 to 1 do
-    begin
-            aux:=a[m-1,2];
-        for j:=m-1 downto 1 do
-                    a[j,2]:=a[j-1,2];
-            a[0,2]:=aux; end;
-for i:=0 to m-1 do
-\end{verbatim}
-
-\begin{verbatim}
-    cout<<endl; }
+Limbajul C++ 
+#include <iostream> 
+using namespace std; 
+int main() 
+{ const int m=4,n=5; 
+    int i,j,aux; 
+    char a[m][n]=  
+     {{'a','b','c','d','e'},  
+     {'f','g','h','i','j'},    
+     {'k','l','m','n','o'},   
+     {'p','q','r','s','t'}};                                                                              
+for(i=0;i<2;i++) 
+  { aux=a[2][n-1]; 
+    for(j=n-1;j>0;j--) 
+        a[2][j]=a[2][j-1]; 
+    a[2][0]=aux;  } 
+for(i=0;i<2;i++) 
+    { aux=a[m-1][2]; 
+      for(j=m-1;j>0;j--) 
+          a[j][2]=a[j-1][2]; 
+      a[0][2]=aux;    } 
+for(i=0;i<m;i++){ 
+   for(j=0;j<n;j++) 
+       cout<<a[i][j]<<" ";
+  cout<<endl;  } 
 return 0; }
-\end{verbatim}
-
-\begin{verbatim}
-begin
-    for j:=0 to n-1 do
-        write(a[i,j],' ');
-    writeln; end;
-end.
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-#include <stdio.h>
-int main()
-{ const int m=4,n=5;
-    int i,j,aux;
-    char a[4][5]={{'a','b','c','d','e'},
-                {'f','g','h','i','j'},
-                {'k','l','m','n','o'},
-                {'p','q','r','s','t'}};
-for(i=0;i<2;i++)
-    { aux=a[2][n-1];
-        for(j=n-1;j>0;j--)
-            a[2][j]=a[2][j-1];
-        a[2][0]=aux;
-        }
-for(i=0;i<2;i++)
-    {
-        aux=a[m-1][2];
-        for(j=m-1;j>0;j--)
-            a[j][2]=a[j-1][2];
-        a[0][2]=aux;
-        }
-for(i=0;i<m;i++) {
-        for(j=0;j<n;j++)
-    printf("%c %c",a[i][j],' ');
-            printf("\n");
-        }
-return 0;
+Limbajul C 
+#include <stdio.h> 
+int main() 
+{ const int m=4,n=5; 
+  int i,j,aux; 
+  char a[4][5]={{'a','b','c','d','e'},   
+                {'f','g','h','i','j'},  
+                {'k','l','m','n','o'},   
+                {'p','q','r','s','t'}};                                                                                      
+for(i=0;i<2;i++) 
+  { aux=a[2][n-1]; 
+    for(j=n-1;j>0;j--) 
+        a[2][j]=a[2][j-1]; 
+    a[2][0]=aux; 
+   } 
+for(i=0;i<2;i++) 
+  { 
+    aux=a[m-1][2]; 
+    for(j=m-1;j>0;j--) 
+        a[j][2]=a[j-1][2]; 
+    a[0][2]=aux; 
+    } 
+for(i=0;i<m;i++){ 
+   for(j=0;j<n;j++) 
+ printf("%c %c",a[i][j],' ');            
+    printf("\n"); 
+  } 
+return 0; 
 }
+Limbajul Pascal 
+const m=4; n=5; 
+var i,j:integer; 
+    aux:char; 
+  a:array[0..m-1,0..n-1]   
+    of  char=       
+(('a','b','c','d','e'),                 
+('f','g','h','i','j'),               
+('k','l','m','n','o'),                
+('p','q','r','s','t')); 
+begin 
+for i:=0 to 1 do 
+ begin 
+   aux:=a[2,n-1]; 
+  for j:=n-1 downto 1 do 
+      a[2,j]:=a[2,j-1]; 
+   a[2,0]:=aux; end; 
+for i:=0 to 1 do 
+ begin 
+   aux:=a[m-1,2]; 
+  for j:=m-1 downto 1 do 
+     a[j,2]:=a[j-1,2]; 
+   a[0,2]:=aux; end; 
+for i:=0 to m-1 do
+begin 
+   for j:=0 to n-1 do 
+      write(a[i,j],' '); 
+   writeln; end; 
+end. 
 \end{verbatim}
-
-\begin{center}
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline
-a) & b) & c) & d) & e) & f) \\
-\hline
-abcde & abmde & deabc & abkde & edcba & abcde \\
-\hline
-fghij & fgrij & ijfgh & fgrij & fghij & fghij \\
-\hline
-noklm & klcno & lmnok & noclm & klmo & klmo \\
-\hline
-pqrst & pqhst & stpqr & pqhst & pqrst & tsrqp \\
-\hline
-\end{tabular}
-\end{center}
-
-\begin{enumerate}
-  \setcounter{enumi}{9}
-  \item Precizați ce se va afișa pe ecran în urma execuției următorului program?
-\end{enumerate}
-
+\\
+a) \begin{verbatim}
+a b c d e 
+f g h i j 
+n o k l m 
+p q r s t 
+\end{verbatim}
+\\
+b) \begin{verbatim}
+a b m d e 
+f g r i j 
+k l c n o 
+p q h s t
+\end{verbatim}
+\\
+c) \begin{verbatim}
+d e a b c 
+i j f g h 
+l m n o k 
+s t p q r
+\end{verbatim}
+\\
+d) \begin{verbatim}
+a b k d e  
+f g r i j  
+n o c l m  
+p q h s t 
+\end{verbatim}
+\\
+e) \begin{verbatim}
+e d c b a 
+f g h i j 
+k l m n o 
+p q r s t
+\end{verbatim}
+\\
+f) \begin{verbatim}
+a b c d e 
+f g h i j 
+k l m n o 
+t s r q p 
+\end{verbatim}
+\\
+21.10. Precizați ce se va afișa pe ecran în urma execuției următorului program?
 \begin{verbatim}
-Limbajul C++
-#include <iostream>
-using namespace std;
-int a=5, b=10, c=15;
-void f(int a,int &b,int &c)
+Limbajul C++ 
+#include <iostream> 
+using namespace std; 
+int a=5, b=10, c=15; 
+void f(int a,int &b,int &c) 
 { a=a+5; b=b+10; c=c+15;
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal var a,b,c:integer;
-procedure f(a:integer;var
-b:integer; var
-c:integer);
+} 
+int main() 
+{ f(a,b,c);f(a,a,b); 
+  cout<<"a="<<a; 
+  cout<<"b="<<b; 
+  cout<<"c="<<c; 
+  return 0; 
+} 
+Limbajul C 
+#include <stdio.h> 
+int a=5, b=10, c=15; 
+void f(int a, int *b, int *c) 
+{  a=a+5; *b=*b+10; *c=*c+15; } 
+int main() 
+{ f(a,&b,&c); f(a,&a,&b); 
+  printf("a=%d",a ); printf("b=%d",b); printf("c=%d",c); 
+    return 0; }
+Limbajul Pascal 
+var a,b,c:integer; 
+procedure f(a:integer;var 
+b:integer; var 
+c:integer); 
 begin
-\end{verbatim}
-
-\begin{verbatim}
-}
-int main()
-{f(a,b,c);f(a,a,b);
-    cout<<"a="<<a;
-    cout<<"b="<<b;
-    cout<<"c="<<c;
-    return 0;
-}
-\end{verbatim}
-
-\begin{verbatim}
-    a:=a+5;b:=b+10;c:=c+15;
-end;
-begin
-    a:=5; b:=10; c:=15;
-    f(a,b,c);f(a,a,b) ;
-    write('a=',a);
-    write('b=',b);
-    write('c=',c);
+  a:=a+5;b:=b+10;c:=c+15; 
+end; 
+begin 
+ a:=5; b:=10; c:=15; 
+ f(a,b,c);f(a,a,b); 
+ write('a=',a); 
+ write('b=',b); 
+ write('c=',c); 
 end.
 \end{verbatim}
-
-Limbajul C
-#include <stdio.h>\\
-int $a=5, b=10, c=15$;
-\includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-116}\\
-${a=a+5 ; * b=* b+10 ; * c=* c+15 ;}$\\
-int main()\\
-${\mathrm{f}(\mathrm{a}, \& \mathrm{~b}, \& \mathrm{c}) ; \mathrm{f}(\mathrm{a}, \& \mathrm{a}, \& \mathrm{~b})$;
-printf("a=\%d", a ) ; printf("b=\%d",b) ; printf("c=\%d",c);
-return 0; }\\
-a) $\mathbf{a}=5$\\
-b) $\mathbf{a}=15$\\
-c) $\mathbf{a}=10$\\
-d) $\mathbf{a}=5$\\
-e) $\mathbf{a}=15$\\
-f) $\mathbf{a}=10$\\
-$b=5$\\
-$b=35$\\
-$b=20$\\
-$b=10$\\
-b=5\\
-$b=5$\\
-$c=20$\\
-$\mathrm{c}=30$\\
-$\mathrm{c}=30$\\
-$\mathrm{c}=15$\\
-$c=30$\\
-$\mathrm{c}=30$\\
-11. Un echipaj va pleca spre Marte în misiunea POLI. El este alcătuit din căpitan 1 - Andrei, căpitan 2 - Marian și cercetătorii Alina, Dana și Marius. Săptămânal membrii echipajului trebuie să transmită un raport respectând o anumită ordine: întotdeauna raportul căpitanului 1 trebuie să fie înaintea raportului căpitanului 2. Știind că primele trei soluții posibile de raportare sunt:\\
-Andrei Marian Alina Dana Marius\\
-Andrei Marian Alina Marius Dana\\
-Andrei Marian Dana Alina Marius\\
-afișați a zecea soluție.\\
-a) Marius\\
-Dana\\
-Alina\\
-Andrei\\
-Marian\\
-b) Dana\\
-Marius\\
-Alina\\
-Andrei\\
-Marian\\
-c) Marius\\
-Andrei\\
-Marian\\
-Alina\\
-Dana\\
-d) Andrei\\
-Alina\\
-Dana\\
-Marius\\
-Marian\\
-e) Andrei Alina\\
-Dana\\
-Marian\\
-Marius\\
-f) Andrei Alina Marius\\
-Marian\\
+\\
+a) \begin{verbatim}
+a=5  
+b=5      
+c=20
+\end{verbatim}
+\\
+b) \begin{verbatim}
+a=15  
+b=35      
+c=30
+\end{verbatim}
+\\
+c) \begin{verbatim}
+a=10  
+b=20  
+c=30 
+\end{verbatim}
+\\
+d) \begin{verbatim}
+a=5 
+b=10 
+c=15 
+\end{verbatim}
+\\
+e) \begin{verbatim}
+a=15 
+b=5 
+c=30
+\end{verbatim}
+\\
+f) \begin{verbatim}
+a=10 
+b=5 
+c=30
+\end{verbatim}
+\\
+21.11. Un echipaj va pleca spre Marte în misiunea POLI. El este alcătuit din căpitan 1 - Andrei, căpitan 2 - Marian și cercetătorii Alina, Dana și Marius. Săptămânal membrii echipajului trebuie să transmită un raport respectând o anumită ordine: întotdeauna raportul căpitanului 1 trebuie să fie înaintea raportului căpitanului 2. Știind că primele trei soluții posibile de raportare sunt:
+\begin{verbatim}
+Andrei Marian Alina Dana Marius
+Andrei Marian Alina Marius Dana
+Andrei Marian Dana Alina Marius
+afișați a zecea soluție.
+\end{verbatim}
+\\
+a) \begin{verbatim}
+Marius 
+Dana  
+Alina 
+Andrei 
+Marian
+\end{verbatim}
+\\
+b) \begin{verbatim}
+Dana 
+Marius  
+Alina 
+Andrei 
+Marian
+\end{verbatim}
+\\
+c) \begin{verbatim}
+Marius 
+Andrei 
+Marian  
+Alina 
 Dana
-12. Înlocuiți valoarea lui v[3] cu una dintre următoarele valori astfel încât funcția să returneze 0 în C/C++ sau false în Pascal pentru apelul $f(5)$.
-
-\begin{verbatim}
-Limbajul C++
-int $v[]={15,12,7,20,-1,-5}$;
-int $f(i n t n)$
-{if(n==0) return 0;
-else
-return
-$v[n-1]<v[n]| | f(n-1) ;}$
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var v:array[0..5] of
-integer $=(15,12,7,20,-1,-5)$;
-function
-$\mathrm{f}(\mathrm{n}$ :integer) : boolean;
-begin
-
-if $n=0$ then $f:=f a l s e$
+\\
+d) \begin{verbatim}
+Andrei  
+Alina  
+Dana  
+Marius 
+Marian
 \end{verbatim}
-
-Limbajul C
-
+\\
+e) \begin{verbatim}
+Andrei 
+Alina 
+Dana 
+Marian 
+Marius
+\end{verbatim}
+\\
+f) \begin{verbatim}
+Andrei 
+Alina 
+Marius 
+Marian 
+Dana 
+\end{verbatim}
+\\
+21.12. Înlocuiți valoarea lui v[3] cu una dintre următoarele valori astfel încât funcția să returneze 0 în C/C++ sau false în Pascal pentru apelul $f(5)$.
 \begin{verbatim}
-int v[]={15,12,7,20,-1,-5};
-int f(int n)
-{ if(n==0) return 0;
-    else
-return
+Limbajul C++ 
+int v[]={15,12,7,20,-1,-5}; 
+int f(int n) 
+{if(n==0)  return 0; 
+ else  
+return  
+v[n-1]<v[n] || f(n-1);}
+Limbajul C 
+int v[]={15,12,7,20,-1,-5}; 
+int f(int n) 
+{ if(n==0) return 0; 
+   else  
+return  
 v[n-1]<v[n] || f(n-1); }
+Limbajul Pascal 
+var v:array[0..5] of 
+integer=(15,12,7,20,-1,-5); 
+function 
+f(n:integer):boolean; 
+begin 
+  if n=0 then f:=false 
+ else  
+f:=(v[n-1]<v[n]) or f(n-1); 
+end;
 \end{verbatim}
-
-a) -2\\
-b) -3\\
-c) 16\\
-d) 4\\
-e) 24\\
-f) 30\\
-13. Se consideră graful neorientat $\mathbf{G}=({\mathbf{1 , 2 , 3 , 4 , 5 , 6 }},{(\mathbf{1 , 2}),(\mathbf{1}, \mathbf{3}),(\mathbf{1}, 4),(2,3)})$.
-
-Precizați care este numărul grafurilor parțiale ale grafului $\mathbf{G}$ ?\\
-a) 10\\
-b) 12\\
-c) 8\\
-d) 16\\
-e) 2\\
-f) 4\\
-14. Precizați de câte ori se va executa instrucțiunea de afișare (cout, printf sau write) în secvența de cod de mai jos?
-
+\\
+a) -2
+\\
+b) -3
+\\
+c) 16
+\\
+d) 4
+\\
+e) 24
+\\
+f) 30
+\\
+21.13. Se consideră graful neorientat $\mathbf{G}=({\mathbf{1 , 2 , 3 , 4 , 5 , 6 }},{(\mathbf{1 , 2}),(\mathbf{1}, \mathbf{3}),(\mathbf{1}, 4),(2,3)})$.
+Precizați care este numărul grafurilor parțiale ale grafului $\mathbf{G}$ ?
+\\
+a) 10
+\\
+b) 12
+\\
+c) 8
+\\
+d) 16
+\\
+e) 2
+\\
+f) 4
+\\
+21.14. Precizați de câte ori se va executa instrucțiunea de afișare (cout, printf sau write) în secvența de cod de mai jos?
 \begin{verbatim}
 Limbajul C++
 for(i=1;i<=10;i++)
     for(j=1;j<=i;j++)
             for(k=1;k<=j;k++)
                 cout<<i+j+k;
+Limbajul C 
+for(i=1;i<=10;i++) 
+   for(j=1;j<=i;j++) 
+      for(k=1;k<=j;k++)    
+          printf("%d",i+j+k);
+Limbajul Pascal 
+for i:=1 to 10 do 
+  for j:=1 to i do 
+    for k:=1 to j do 
+        write(i+j+k);
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-for i:=1 to 10 do
-    for j:=1 to i do
-        for k:=1 to j do
-            write(i+j+k);
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-for(i=1;i<=10;i++)
-    for(j=1;j<=i;j++)
-        for(k=1;k<=j;k++)
-            printf("%d",i+j+k);
-\end{verbatim}
-
-a) $\mathbf{2 2 0}$\\
-b) 110\\
-c) 100\\
-d) 55\\
-e) 150\\
-f) 200\\
-15. Dorim să criptăm un cuvânt scris cu litere mari astfel: fiecare literă este codificată prin codul ei la care se adaugă un număr $\mathbf{k}(k>=0)$. Numărul $\mathbf{k}$ se numește cheie de criptare. De exemplu, dacă avem litera C și $\mathbf{k}$ este 6, vom obține după criptare litera I. Vom considera literele așezate pe un cerc, după $\mathbf{Z}$ vine $\mathbf{A}$. Presupunem că șirul inițial este reținut în variabila sir iar rezultatul obținut în urma criptării tot în variabila sir.\\
+\\
+a) 220
+\\
+b) 110
+\\
+c) 100
+\\
+d) 55
+\\
+e) 150
+\\
+f) 200
+\\
+21.15. Dorim să criptăm un cuvânt scris cu litere mari astfel: fiecare literă este codificată prin codul ei la care se adaugă un număr $\mathbf{k}(k>=0)$. Numărul $\mathbf{k}$ se numește cheie de criptare. De exemplu, dacă avem litera C și $\mathbf{k}$ este 6, vom obține după criptare litera I. Vom considera literele așezate pe un cerc, după $\mathbf{Z}$ vine $\mathbf{A}$. Presupunem că șirul inițial este reținut în variabila sir iar rezultatul obținut în urma criptării tot în variabila sir.
 Considerând prima parte a programului cea de mai jos, precizați care dintre următoarele secvențe realizează criptarea corectă a unui șir de caractere citit de la tastatură cu o cheie $\mathbf{k}$ citită de la tastatură?
-
 \begin{verbatim}
 Limbajul C++
 char sir[255];
@@ -10466,61 +10563,78 @@ unsigned int k,i;
 cin>>sir;
 cin>>k;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul C
 char sir[255];
 unsigned int k,i;
 scanf("%s",sir);
 scanf("%u",&k);
+Limbajul Pascal 
+var sir:string; 
+      i,k:word; 
+begin 
+    read(sir); 
+    read(k);
 \end{verbatim}
-
-Limbajul C++/C
-a) for(i=0;i<strlen(sir) ;i++) sir[i]=sir[i]+k;
-b) for(i=0;i<strlen(sir);i++) sir[i]=sir[i+k-'A'];
-
-\begin{verbatim}
-c) for(i=0;i<strlen(sir);i++) sir[i]=sir['Z'-'A'+k];
-d) for(i=0;i<strlen(sir);i++)
-        sir[i]='A'+(sir[i]-'A'+k)%('Z'-'A'+1);
-e) for(i=0;i<strlen(sir);i++)
-    sir[i]='A'+(sir[i]-'A'+'Z'-'A')%('Z'-'A'+1);
-f) for(i=0;i<strlen(sir);i++)
-        sir[i]='A'+(sir[i]-'A'+k)%('Z'-'A'+k);
-\end{verbatim}
-
+\\
+Limbajul C++/ Limbajul C
+a) for(i=0;i<strlen(sir);i++) sir[i]=sir[i]+k; 
+\\
+b) for(i=0;i<strlen(sir);i++) sir[i]=sir[i+k-'A']; 
+\\
+c) for(i=0;i<strlen(sir);i++) sir[i]=sir['Z'-'A'+k]; 
+\\
+d) for(i=0;i<strlen(sir);i++) 
+      sir[i]='A'+(sir[i]-'A'+k)%('Z'-'A'+1); 
+\\
+e) for(i=0;i<strlen(sir);i++) 
+    sir[i]='A'+(sir[i]-'A'+'Z'-'A')%('Z'-'A'+1);    
+\\
+f) for(i=0;i<strlen(sir);i++) 
+     sir[i]='A'+(sir[i]-'A'+k)%('Z'-'A'+k);
+\\
 Limbajul Pascal
-a) for i:=1 to length(sir) do
-sir[i]:=chr(ord(sir[i])+k);
-b) for $i:=1$ to length(sir) do
-sir[i]:=chr(ord(sir[i+k-ord('A')]));
-c) for i:=1 to length(sir) do
-sir[i]:=chr(ord(sir[ord('Z')-ord('A')+k]));
-d) for i:=1 to length(sir) do
-sir[i]:=chr(ord('A')+(ord(sir[i])-ord('A')+k) mod\\
-(ord('Z')-ord('A')+1));
-e) for i:=1 to length(sir) do
-sir[i]:=chr(ord('A')+(ord(sir[i])- ord('A')+\\
-ord('Z')-ord('A')) mod (ord('Z')- ord('A')+1));
-f) for i:=1 to length(sir) do
-sir[i]:=chr(ord('A')+(ord(sir[i])- ord('A')+k)\\
-mod (ord('Z')-ord('A')+k));
+a) for i:=1 to length(sir) do 
+   sir[i]:=chr(ord(sir[i])+k); 
+\\
+b) for i:=1 to length(sir) do 
+   sir[i]:=chr(ord(sir[i+k-ord('A')])); 
+\\
+c) for i:=1 to length(sir) do   
+      sir[i]:=chr(ord(sir[ord('Z')-ord('A')+k]));
+\\ 
+d) for i:=1 to length(sir) do                     
+      sir[i]:=chr(ord('A')+(ord(sir[i])-ord('A')+k) mod       
+        (ord('Z')-ord('A')+1));
+\\
+e) for i:=1 to length(sir) do    
+   sir[i]:=chr(ord('A')+(ord(sir[i])- ord('A')+   
+ord('Z')-ord('A')) mod (ord('Z')- ord('A')+1));        
+\\             
+f) for i:=1 to length(sir) do                     
+     sir[i]:=chr(ord('A')+(ord(sir[i])- ord('A')+k)    
+     mod (ord('Z')-ord('A')+k));
+\\
 
 \section*{Varianta 22}
-\begin{enumerate}
-  \item Considerăm descompunerea în factori primi a unui număr reprezentată prin intermediul unui arbore, ca în exemplul de mai jos.\\
+
+22.1. Considerăm descompunerea în factori primi a unui număr reprezentată prin intermediul unui arbore, ca în exemplul de mai jos.
 \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-119}
-\end{enumerate}
-
-Folosind aceeași reprezentare, precizați câte frunze are arborele obținut pentru numărul 4800.\\
-a) 10\\
-b) 12\\
-c) 9\\
-d) 15\\
-e) 6\\
-f) 16\\
-2. Precizați ce se va afișa în urma execuției următorului program?
-
+Folosind aceeași reprezentare, precizați câte frunze are arborele obținut pentru numărul 4800.
+\\
+a) 10
+\\
+b) 12
+\\
+c) 9
+\\
+d) 15
+\\
+e) 6
+\\
+f) 16
+\\
+22.2. Precizați ce se va afișa în urma execuției următorului program?
 \begin{verbatim}
 Limbajul C++
 #include <iostream>
@@ -10548,44 +10662,47 @@ int calcul(int n)
                 if(v[i]>max)
             { max=v[i]; poz=i;}
             return poz; }
-var n:integer;
-        v:array[0..5] of
-        integer=(5,2,9,11,22,17);
-function
-calcul(n:integer):integer;
-var i,poz,max:integer;
-begin
-    max:=v[0]; poz:=0;
-    for i:=1 to n-1 do
-        if v[i]>max then
-            begin
-                    max:=v[i];
-                    poz:=i;
-                end;
-        calcul:=poz;
-end;
-begin
-n:=6;
-write(v[calcul(n)]);
-end.
+int main() 
+{printf("%d",v[calcul(n)]);  
+  return 0; }
+Limbajul Pascal 
+var n:integer; 
+    v:array[0..5] of    
+    integer=(5,2,9,11,22,17); 
+                 
+function 
+calcul(n:integer):integer; 
+var i,poz,max:integer; 
+begin 
+  max:=v[0]; poz:=0; 
+  for i:=1 to n-1 do 
+    if v[i]>max then 
+     begin 
+        max:=v[i]; 
+        poz:=i; 
+      end; 
+    calcul:=poz; 
+end; 
+ 
+begin 
+n:=6; 
+write(v[calcul(n)]); 
+end. 
 \end{verbatim}
-
-Limbajul Pascal
-
-\begin{verbatim}
-int main()
-{printf("%d",v[calcul(n)]);
-    return 0; }
-\end{verbatim}
-
-a) Programul nu va afișa nimic, va genera eroare de compilare deoarece apelul de funcții nu este permis ca indice într-un tablou unidimensional.\\
-b) 22\\
-c) 17\\
-d) 2\\
-e) 11\\
-f) 9\\
-3. Pentru care dintre următoarele apeluri funcția f va returna valoarea 1 ?
-
+\\
+a) Programul nu va afișa nimic, va genera eroare de compilare deoarece apelul de funcții nu este permis ca indice într-un tablou unidimensional.
+\\
+b) 22
+\\
+c) 17
+\\
+d) 2
+\\
+e) 11
+\\
+f) 9
+\\
+22.3. Pentru care dintre următoarele apeluri funcția f va returna valoarea 1 ?
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 int f(int n)
@@ -10599,7 +10716,6 @@ int f(int n)
     else return 0;
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 function f(n:integer):integer;
@@ -10613,462 +10729,521 @@ begin
     if m=n1 then f:=1
         else f:=0; end;
 \end{verbatim}
-
-a) $f(123)$\\
-b) $f(24)$\\
-c) $\mathbf{f}$ (2112)\\
-d) $f(17)$\\
-e) $f(75)$\\
-f) $f(1592)$\\
-4. Într-un plan cartezian se găsesc 8 roboți dați prin coordonatele lor. Coordonatele celor 8 roboți sunt: $(2,2),(2,4),(2,6),(2,8),(4,2),(6,2),(6,-2)$, $(-2,-2)$. Doi roboți A și B se numesc vecini dacă se găsesc pe o paralelă la axele de coordonate și nu există un robot C situat între A și B pe aceeași paralelă. Ținând cont de regulile de mai sus, construiți un graf neorientat cu 8 noduri. Nodurile grafului sunt numerotate în ordinea coordonatelor (nodul 1 are coordonatele $(2,2)$, nodul 2 coordonatele $(2,4)$ ș.a.m.d.). Dacă robotul 1 este vecin cu robotul 2 atunci va exista muchie de la 1 la 2 în graf.\\
-Precizați care dintre următoarele afirmații despre graful astfel obținut este adevărată?\\
-a) Graful\\
-b) Graful\\
-c) Graful\\
-d) Graful\\
-e) Graful\\
-f) Graful este este este este conține două conține trei eulerian. hamiltonian. complet. aciclic. componente componente conexe. conexe.\\
-5. Corectați secvența de program de mai jos astfel încât ea să reprezinte calculul corect al valorii polinomului $P(x)=a_{0}+a_{1} x+a_{2} x^{2}+\ldots+a_{n} x^{n}$ într-un punct $c$ dat.
-
+\\
+a) $f(123)$
+\\
+b) $f(24)$
+\\
+c) $f(2112)$
+\\
+d) $f(17)$
+\\
+e) $f(75)$
+\\
+f) $f(1592)$
+\\
+22.4. Într-un plan cartezian se găsesc 8 roboți dați prin coordonatele lor. Coordonatele celor 8 roboți sunt: $(2,2),(2,4),(2,6),(2,8),(4,2),(6,2),(6,-2)$, $(-2,-2)$. Doi roboți A și B se numesc vecini dacă se găsesc pe o paralelă la axele de coordonate și nu există un robot C situat între A și B pe aceeași paralelă. Ținând cont de regulile de mai sus, construiți un graf neorientat cu 8 noduri. Nodurile grafului sunt numerotate în ordinea coordonatelor (nodul 1 are coordonatele $(2,2)$, nodul 2 coordonatele $(2,4)$ ș.a.m.d.). Dacă robotul 1 este vecin cu robotul 2 atunci va exista muchie de la 1 la 2 în graf.
+Precizați care dintre următoarele afirmații despre graful astfel obținut este adevărată?
+\\
+a) Graful  
+este  
+eulerian.
+\\
+b) Graful 
+este 
+hamiltonian.
+\\
+c) Graful  
+este  
+complet. 
+\\
+d) Graful 
+este 
+aciclic.
+\\
+e) Graful 
+conține două 
+componente 
+conexe.
+\\
+f) Graful 
+conține trei 
+componente 
+conexe.
+\\
+22.5. Corectați secvența de program de mai jos astfel încât ea să reprezinte calculul corect al valorii polinomului $P(x)=a_{0}+a_{1} x+a_{2} x^{2}+\ldots+a_{n} x^{n}$ într-un punct $c$ dat.
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 p=0;
 for(i=0;i<=n;i++)
     p=p*c+a[i];
+Limbajul Pascal 
+p:=0; 
+for i:=0 to n do 
+   p:=p*c+a[i];
 \end{verbatim}
-
+\\
 Limbajul C++/ Limbajul C
-a) Instrucțiunea $p=p * c+a[i]$; trebuie
-
-\begin{verbatim}
-Limbajul Pascal
-p:=0;
-for i:=0 to n do
-    p:=p*c+a[i];
-\end{verbatim}
-
-Limbajul Pascal
-
-\begin{verbatim}
-înlocuită cu p=p*a[i]+c;
-b) Instrucțiunea for(i=0;i<=n;i++)
-trebuie înlocuită cu
-for(i=n;i>=0;i--)
-c) Instrucțiunea p=p*c+a [i];
-trebuie înlocuită cu p=c*a [i]+p;
+a) Instrucțiunea p=p*c+a[i]; trebuie
+înlocuită cu p=p*a[i]+c; 
+\\
+b) Instrucțiunea  for(i=0;i<=n;i++) 
+trebuie înlocuită cu  
+for(i=n;i>=0;i--) 
+\\
+c) Instrucțiunea p=p*c+a[i];  
+trebuie înlocuită cu p=c*a[i]+p;
+\\ 
 d) Variabila p trebuie inițializată cu -1.
-e) Variabila p trebuie inițializată cu 1.
-f) Instrucțiunea for(i=0;i<=n;i++)
-trebuie înlocuită cu
+\\ 
+e) Variabila p trebuie inițializată cu 1. 
+\\
+f) Instrucțiunea  for(i=0;i<=n;i++) 
+trebuie înlocuită cu 
 for(i=1;i<=n;i++)
-\end{verbatim}
-
-a) Instrucțiunea $p:=p * c+a[i]$; trebuie înlocuită cu p:=p\textit{a[i]+c;
-b) Instrucțiunea for $\mathrm{i}:=0$ to n do trebuie înlocuită cu\\
-for i:=n downto 0 do\\
-c) Instrucțiunea $p:=p * c+a[i]$; trebuie înlocuită cu\\
-p:=c}a[i]+p;
-d) Variabila $p$ trebuie inițializată cu -1.\\
-e) Variabila $p$ trebuie inițializată cu 1.\\
-f) Instrucțiunea for i:=0 to n do trebuie înlocuită cu\\
-for i:=1 to n do\\
-6. Precizați ce se va afișa pe ecran în urma execuției următorului program?
-
-\begin{verbatim}
-Limbajul C++
-#include <iostream>
-using namespace std;
-int i;
-int g(int i)
-{ return i+3; }
-int f(int i)
-{ return i+g(i); }
-int main()
-{ i=3;
-    cout<<i+f(g(i));
-    return 0; }
-\end{verbatim}
-
-\begin{verbatim}
+\\
 Limbajul Pascal
-var i:integer;
-function g(i:integer):integer;
-begin
-    g:=i+3;
-end;
-function f(i:integer):integer;
-begin
-    f:=i+g(i);
-end;
-begin
-    i:=3; write(i+f(g(i))); end.
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-#include <stdio.h>
-int i;
-int g(int i)
-{ return i+3; }
-int f(int i)
-{ return i+g(i); }
-int main()
-{ i=3; printf("%d",i+f(g(i))); return 0; }
-\end{verbatim}
-
-a) 18\\
-b) 6\\
-c) 15\\
-d) 0\\
-e) 9\\
-f) 12\\
-7. Precizați care dintre următoarele șiruri de numere poate reprezenta șirul gradelor nodurilor unui graf neorientat cu 7 noduri?\\
-a) $(1,1,0,1,2,1,6)$\\
-b) $(1,1,1,2,2,5,6)$\\
-C) $(1,1,1,1,2,1,6)$\\
-d) $(3,3,3,3,3,3,6)$\\
-e) $(1,2,0,0,2,1,5)$\\
-f) $(0,0,0,1,1,2,3)$\\
-8. Robotul Robi se află într-un plan cartezian și are în jurul lui un grup de n roboți. El "mănâncă" robotul cel mai apropiat din grupul de roboți. Atât robotul Robi cât și ceilalți\\
-roboți sunt identificați prin coordonatele lor. Datele de intrare se citesc de la tastatură astfel: n, numărul roboților din grup, apoi coordonatele robotului Robi și în continuare coordonatele celor n roboți. Corectați programul de mai jos astfel încât să afișeze corect coordonatele robotului care va fi "mâncat". În cazul în care există mai mulți roboți la aceeași distanță față de Robi, este mâncat primul robot întâlnit la distanța respectivă.
-
-\begin{verbatim}
-Limbajul C++
-#include <iostream>
-#include <cmath>
-using namespace std;
-struct robot{
-    float x,y;
-    };
-float distanta (robot r1,
-                    robot r2)
-{
-        return sqrt((r1.x-r2.x)*
-            (r1.x-r2.x)+
-            (r1.y-r2.y)*(r1.y-
-r2.y));
-}
-int gaseste(robot robi,
-robot a[], int n)
-{
-        float min,d;
-        int i,poz;
-        min=distanta(robi,a[0]);
-        poz=1;
-        for(i=1;i<n;i++)
-        {
-d=distanta(robi,a[i]);
-            if(d<min){
-                min=d;
-                poz=i;
-            }
-        }
-    return poz;
-}
-int main()
-{ int n,i,k;
-        robot robi,a[21];
-        cin>>n;
-        cin>>robi.x>>robi.y;
-        for(i=0;i<n;i++)
-            cin>>a[i].x>>a[i].y;
-        k=gaseste(robi,a,n);
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-type robot=record
-                x,y:real;
-            end;
-            vector=array[0..20] of
-robot;
-var a:vector;
-            robi:robot;
-            n,i,k:integer;
-function
-distanta(r1,r2:robot):real;
-begin
-        distanta:=
-    sqrt((r1.x-r2.x)*(r1.x-
-r2.x) +
-                    (r1.y-r2.y)*(r1.y-
-r2.y));
-end;
-function gaseste(robi:robot;
-a:vector;n:integer):integer;
-var min,d:real;
-            i,poz:integer;
-begin
-    min:=distanta(robi,a[0]);
-    poz:=1;
-    for i:=1 to n-1 do
-    begin
-            d:=distanta(robi,a[i]);
-            if d<min then
-                    begin
-                        min:=d;
-                            poz:=i;
-                        end;
-        end;
-    gaseste:=poz;
-end;
-begin
-    read(n);
-    read(robi.x,robi.y);
-    for i:=0 to n-1 do
-            readln(a[i].x,a[i].y);
-\end{verbatim}
-
-\begin{verbatim}
-        cout<<a[k].x<<"
-"<<a[k].y;
-        return 0;
-}
-Limbajul C
-#include <stdio.h>
-#include <math.h>
-typedef struct {
-        float x,y;
-        } robot;
-float distanta (robot r1, robot r2)
-{
-        return sqrt((r1.x-r2.x)*
-            (r1.x-r2.x)+
-            (r1.Y-r2.y)*(r1.Y-r2.y));
-}
-int gaseste(robot robi,
-            robot a[],int n)
-{
-                float min,d;
-                int i,poz;
-                min=distanta(robi,a[0]);
-                poz=1;
-                for(i=1;i<n;i++)
-                {
-                        d=distanta(robi,a[i]);
-                    if(d<min) {
-                        min=d;
-                        poz=i;
-                    }
-                }
-        return poz;
-}
-int main()
-{
-    int n,i,k;
-    robot robi,a[21];
-    scanf("%d",&n) ;
-    scanf("%f %f",&robi.x,&robi.y);
-    for(i=0;i<n;i++)
-            scanf("%f %f", &a[i].x, &a[i].y);
-    k=gaseste(robi,a,n) ;
-    printf("%f %f",a[k].x,a[k].y);
-    return 0;}
-\end{verbatim}
-
-\section*{Limbajul C++}
-a) Instrucțiunea if (d<min) trebuie înlocuită cu if (d>min)\\
-b) Instrucțiunea min=d; trebuie înlocuită cu $d=m i n$;
-c) Instrucțiunea min=distanta (robi,a[0]); trebuie înlocuită cu
-
-\begin{verbatim}
-min=distanta(robi,a[1]);
-\end{verbatim}
-
-d) Instrucțiunea $\mathbf{p o z = 1}$; trebuie înlocuită cu $\mathbf{p o z = 0 ; ~}$\\
-e) Secvența de instrucțiuni
-
-\begin{verbatim}
-for(i=0;i<n;i++) scanf("%f%f",&a[i].x,&a[i].y);
-\end{verbatim}
-
-trebuie înlocuită cu
-
-\begin{verbatim}
-for(i=0;i<n;i++) scanf("%f%f",&a.x[i],&a.y[i]);
-\end{verbatim}
-
-f) Instrucțiunea poz=i; trebuie înlocuită cu i=poz;
-
-\section*{Limbajul C}
-a) Instrucțiunea if (d<min) trebuie înlocuită cu if (d>min)\\
-b) Instrucțiunea min=d; trebuie înlocuită cu d=min;
-c) Instrucțiunea min=distanta (robi, a [0]) ; trebuie înlocuită cu min=distanta(robi,a[1]);
-d) Instrucțiunea $\mathbf{p o z = 1}$; trebuie înlocuită cu $\mathbf{p o z = 0 ; ~}$\\
-e) Secvența de instrucțiuni
-
-\begin{verbatim}
-for(i=0;i<n;i++) cin>>a[i].x>>a[i].y;
-\end{verbatim}
-
-trebuie înlocuită cu
-
-\begin{verbatim}
-for(i=0;i<n;i++) cin>>a.x[i]>>a.y[i];
-\end{verbatim}
-
-f) Instrucțiunea $\mathbf{p o z = i}$; trebuie înlocuită cu $i=p o z$;
-
-\section*{Limbajul Pascal}
-a) Instrucțiunea if $d<m i n$ then trebuie înlocuită cu if $d>m i n$ then\\
-b) Instrucțiunea $\min :=d$; trebuie înlocuită cu $\mathrm{d}:=\mathrm{min}$;
-c) Instrucțiunea min:=distanta (robi,a[0]) ; trebuie înlocuită cu
-
-\begin{verbatim}
-min:=distanta(robi,a[1]);
-\end{verbatim}
-
-d) Instrucțiunea poz:=1; trebuie înlocuită cu poz:=0;
-e) Secvența de instrucțiuni
-for i:=0 to n-1 do readln(a[i].x, a[i].y);
-trebuie înlocuită cu\\
-for $i:=0$ to $n-1$ do readln(a.x[i], a.y[i]);
-f) Instrucțiunea poz:=i; trebuie înlocuită cu i:=poz;
-9. Precizați ce se va afișa pe ecran în urma execuției următorului program?
-
-\begin{verbatim}
-Limbajul C++
-#include <iostream>
-using namespace std;
-int $f()$
-{cout<<1<<" ";
-    return 3; }
-int main()
-{ int s=0,i;
-for (i=1;i<=f();i++)
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-#include <stdio.h>
-int f()
-{ printf("1 ");
-    return 3; }
-int main()
-{ int s=0,i;
-for(i=1;i<=f();i++)
-        s=s+i;
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var s,i:integer;
-function f:integer;
-begin
-    write('1 ');f:=3;
-end;
-begin
-s:=0;
-for i:=1 to f do
-\end{verbatim}
-
-\begin{center}
-\begin{tabular}{|l|l|l|}
-\hline
-$s=s+i ;$ cout<<s; return 0;} & printf("\%d",s); return 0; } & s:=s+i; writeln(s) ;end. \\
-\hline
-Limbajul C++ & Limbajul C & Limbajul Pascal \\
-\hline
-a) Programul nu va afișa nimic, va genera eroare de compilare deoarece nu este permis apelul unei funcții ca valoare finală a contorului. & a) Programul nu va afișa nimic, va genera eroare de compilare deoarece nu este permis apelul unei funcții ca valoare finală a contorului. & a) Programul nu va afișa nimic, va genera eroare de compilare deoarece nu este permis apelul unei funcții ca valoare finală a contorului. \\
-\hline
-b) 11116 & b) 111116 & b) 16 \\
-\hline
-c) 1116 & c) 1116 & c) 1116 \\
-\hline
-d) 116 & d) 116 & d) 116 \\
-\hline
-e) 110 & e) 110 & e) 110 \\
-\hline
-f) 10 & f) 10 & f) 10 \\
-\hline
-\end{tabular}
-\end{center}
-
-\begin{enumerate}
-  \setcounter{enumi}{9}
-  \item Ce se va afișa pe ecran în urma execuției următorului program dacă de la tastatură se citește cuvântul caiet?
-\end{enumerate}
-
-\begin{verbatim}
-Limbajul C++
-#include <iostream>
-#include <string.h>
-using namespace std;
-int main()
-{char a[255];
-int i,j,l,n;
-cin.get(a,255);i=0;
-n=strlen(a);
-while(i<n)
-if(strchr("aeiou",a[i]))
-    { for(l=1;l<=2;l++)
-        { n++;
-            for(j=n;j>i;j--)
-                a[j]=a[j-1];
-                    }
-                a[i+1]='p';
-                a[i+2]=a[i]; i=i+3;
-                }
-                else i++;
-        cout<<a; return 0; }
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var a:string[255];
-        i,j,l,n:integer;
-begin
-    readln(a); i:=1;
-    n:=length(a);
-    while i<=n do
-if pos(a[i],'aeiou')<>0 then
-        begin
-            for l:=1 to 2 do
-                begin
-                    n:=n+1;
-                for j:=n downto i+1 do
-                        a[j]:=a[j-1];
-                        end;
-        a[i+1]:='p';a[i+2]:=a[i];
-        i:=i+3; end
-    else i:=i+1;
+a) Instrucțiunea p:=p*c+a[i]; trebuie 
+înlocuită cu p:=p*a[i]+c;
+\\ 
+b) Instrucțiunea for i:=0 to n do 
+trebuie înlocuită cu  
+for i:=n downto 0 do 
+\\
+c) Instrucțiunea p:=p*c+a[i];  
+trebuie înlocuită cu  
+p:=c*a[i]+p; 
+\\
+d) Variabila p trebuie inițializată cu -1.
+\\ 
+e) Variabila p trebuie inițializată cu 1. 
+\\
+f) Instrucțiunea for i:=0 to n do  
+trebuie înlocuită cu 
 for i:=1 to n do
-        write(a[i]);
+\\
+22.6. Precizați ce se va afișa pe ecran în urma execuției următorului program?
+\begin{verbatim}
+Limbajul C++ 
+#include <iostream> 
+using namespace std; 
+int i; 
+int g(int i) 
+{    return i+3; } 
+int f(int i) 
+{    return i+g(i); } 
+int main() 
+{   i=3; 
+    cout<<i+f(g(i)); 
+    return 0; }
+Limbajul C 
+#include <stdio.h> 
+int i; 
+int g(int i) 
+{   return i+3; } 
+int f(int i) 
+{    return i+g(i); } 
+int main() 
+{    i=3; printf("%d",i+f(g(i))); return 0; }
+Limbajul Pascal 
+var i:integer; 
+function g(i:integer):integer; 
+begin 
+  g:=i+3;  
+end; 
+function f(i:integer):integer; 
+begin 
+  f:=i+g(i);  
+end; 
+begin 
+  i:=3; write(i+f(g(i))); end.
+\end{verbatim}
+\\
+a) 18
+\\
+b) 6
+\\
+c) 15
+\\
+d) 0
+\\
+e) 9
+\\
+f) 12
+\\
+22.7. Precizați care dintre următoarele șiruri de numere poate reprezenta șirul gradelor nodurilor unui graf neorientat cu 7 noduri?
+\\
+a) $(1,1,0,1,2,1,6)$
+\\
+b) $(1,1,1,2,2,5,6)$
+\\
+c) $(1,1,1,1,2,1,6)$
+\\
+d) $(3,3,3,3,3,3,6)$
+\\
+e) $(1,2,0,0,2,1,5)$
+\\
+f) $(0,0,0,1,1,2,3)$
+\\
+22.8. Robotul Robi se află într-un plan cartezian și are în jurul lui un grup de n roboți. El "mănâncă" robotul cel mai apropiat din grupul de roboți. Atât robotul Robi cât și ceilalți
+roboți sunt identificați prin coordonatele lor. Datele de intrare se citesc de la tastatură astfel: n, numărul roboților din grup, apoi coordonatele robotului Robi și în continuare coordonatele celor n roboți. Corectați programul de mai jos astfel încât să afișeze corect coordonatele robotului care va fi "mâncat". În cazul în care există mai mulți roboți la aceeași distanță față de Robi, este mâncat primul robot întâlnit la distanța respectivă.
+\begin{verbatim}
+Limbajul C++
+#include <iostream> 
+#include <cmath> 
+using namespace std; 
+struct robot{ 
+   float x,y; 
+   }; 
+float distanta (robot r1,  
+                robot r2) 
+{ 
+    return sqrt((r1.x-r2.x)* 
+      (r1.x-r2.x)+ 
+      (r1.y-r2.y)*(r1.y-
+r2.y)); 
+} 
+int gaseste(robot robi,  
+robot a[], int n) 
+{ 
+    float min,d; 
+    int i,poz; 
+    min=distanta(robi,a[0]); 
+    poz=1; 
+    for(i=1;i<n;i++) 
+    { 
+        
+d=distanta(robi,a[i]); 
+        if(d<min){ 
+            min=d; 
+            poz=i; 
+        } 
+    } 
+  return poz; 
+} 
+int main() 
+{   int n,i,k; 
+    robot robi,a[21]; 
+    cin>>n; 
+    cin>>robi.x>>robi.y; 
+    for(i=0;i<n;i++) 
+        cin>>a[i].x>>a[i].y; 
+    k=gaseste(robi,a,n);
+    cout<<a[k].x<<" 
+"<<a[k].y; 
+    return 0; 
+}
+Limbajul C 
+#include <stdio.h> 
+#include <math.h> 
+typedef struct { 
+   float x,y; 
+   }robot; 
+ 
+float distanta (robot r1, robot r2) 
+{ 
+  return sqrt((r1.x-r2.x)* 
+   (r1.x-r2.x)+ 
+   (r1.y-r2.y)*(r1.y-r2.y)); 
+} 
+ 
+int gaseste(robot robi,  
+   robot a[],int n) 
+{ 
+    float min,d; 
+    int i,poz; 
+    min=distanta(robi,a[0]); 
+    poz=1; 
+    for(i=1;i<n;i++) 
+    { 
+        d=distanta(robi,a[i]); 
+        if(d<min){ 
+            min=d; 
+            poz=i; 
+        } 
+    } 
+  return poz; 
+} 
+int main() 
+{ 
+ int n,i,k; 
+ robot robi,a[21]; 
+ scanf("%d",&n); 
+ scanf("%f %f",&robi.x,&robi.y); 
+ for(i=0;i<n;i++) 
+   scanf("%f %f", &a[i].x, &a[i].y); 
+ k=gaseste(robi,a,n); 
+ printf("%f %f",a[k].x,a[k].y); 
+ return 0;}
+Limbajul Pascal 
+type robot=record 
+        x,y:real; 
+     end; 
+     vector=array[0..20] of 
+robot; 
+var a:vector; 
+    robi:robot; 
+    n,i,k:integer; 
+ 
+function 
+distanta(r1,r2:robot):real; 
+begin 
+   distanta:= 
+ sqrt((r1.x-r2.x)*(r1.x-
+r2.x)+  
+      (r1.y-r2.y)*(r1.y-
+r2.y)); 
+end; 
+function gaseste(robi:robot;                              
+a:vector;n:integer):integer; 
+var min,d:real; 
+    i,poz:integer; 
+begin 
+  min:=distanta(robi,a[0]); 
+  poz:=1; 
+  for i:=1 to n-1 do 
+  begin 
+     d:=distanta(robi,a[i]);
+    if d<min then 
+       begin 
+          min:=d; 
+          poz:=i; 
+        end; 
+   end; 
+ gaseste:=poz; 
+end; 
+begin 
+  read(n); 
+  read(robi.x,robi.y); 
+  for i:=0 to n-1 do 
+     readln(a[i].x,a[i].y);
+    k:=gaseste(robi,a,n); 
+  write(a[k].x,' ',a[k].y); 
+end. 
+\end{verbatim}
+\\
+Limbajul C++ 
+a) Instrucțiunea if(d<min) trebuie înlocuită cu if(d>min) 
+\\
+b) Instrucțiunea min=d; trebuie înlocuită cu  d=min; 
+\\
+c)  Instrucțiunea min=distanta(robi,a[0]);  trebuie înlocuită cu 
+min=distanta(robi,a[1]); 
+\\
+d) Instrucțiunea   poz=1;  trebuie înlocuită cu  poz=0; 
+\\
+e) Secvența de instrucțiuni 
+for(i=0;i<n;i++)scanf("%f%f",&a[i].x,&a[i].y);  
+trebuie înlocuită cu 
+  for(i=0;i<n;i++) scanf("%f%f",&a.x[i],&a.y[i]);   
+\\
+f) Instrucțiunea poz=i;  trebuie înlocuită cu i=poz; 
+\\
+Limbajul C 
+a) Instrucțiunea if(d<min)trebuie înlocuită cu if(d>min) 
+\\
+b) Instrucțiunea min=d; trebuie înlocuită cu d=min; 
+\\
+c) Instrucțiunea min=distanta(robi,a[0]); trebuie înlocuită cu 
+min=distanta(robi,a[1]);    
+\\
+d) Instrucțiunea   poz=1;  trebuie înlocuită cu poz=0; 
+\\
+e) Secvența de instrucțiuni  
+for(i=0;i<n;i++) cin>>a[i].x>>a[i].y;  
+trebuie înlocuită cu  
+for(i=0;i<n;i++) cin>>a.x[i]>>a.y[i]; 
+\\
+f) Instrucțiunea poz=i; trebuie înlocuită cu i=poz; 
+\\
+Limbajul Pascal 
+a) Instrucțiunea if d<min then  trebuie înlocuită cu  if d>min then 
+\\
+b) Instrucțiunea   min:=d; trebuie înlocuită cu d:=min; 
+\\
+c) Instrucțiunea min:=distanta(robi,a[0]); trebuie înlocuită cu 
+ min:=distanta(robi,a[1]); 
+\\
+d) Instrucțiunea   poz:=1;  trebuie înlocuită cu poz:=0; 
+\\
+e) Secvența de instrucțiuni  
+for i:=0 to n-1 do readln(a[i].x, a[i].y);  
+trebuie înlocuită cu 
+ for i:=0 to n-1 do readln(a.x[i], a.y[i]); 
+\\
+f) Instrucțiunea  poz:=i; trebuie înlocuită cu i:=poz;
+\\
+22.9. Precizați ce se va afișa pe ecran în urma execuției următorului program?
+\begin{verbatim}
+Limbajul C++ #include <iostream> 
+using namespace std; 
+int f() 
+{cout<<1<<" ";  
+    return 3; } 
+int main() 
+{ int s=0,i; 
+for(i=1;i<=f();i++)
+  s=s+i; 
+cout<<s; return 0;}
+Limbajul C #include <stdio.h> 
+int f() 
+{ printf("1 "); 
+  return 3; } 
+int main() 
+{ int s=0,i;  
+for(i=1;i<=f();i++) 
+   s=s+i;
+printf("%d",s); 
+return 0;}
+Limbajul Pascal var s,i:integer; 
+function f:integer; 
+begin 
+ write('1 ');f:=3; 
+end; 
+begin 
+s:=0; 
+for i:=1 to f do 
+  s:=s+i; 
+writeln(s);end.
+\end{verbatim}
+\\
+Limbajul C++ 
+a) Programul nu va afișa 
+nimic, va genera 
+eroare de compilare 
+deoarece nu este 
+permis apelul unei 
+funcții ca valoare 
+finală a contorului. 
+\\
+b) 1 1 1 1 6 
+\\
+c) 1 1 1 6 
+\\
+d) 1 1 6 
+\\
+e) 1 10 
+\\
+f) 1 0
+\\
+Limbajul C 
+a) Programul nu va afișa 
+nimic, va genera 
+eroare de compilare 
+deoarece nu este 
+permis apelul unei 
+funcții ca valoare 
+finală a contorului. 
+\\
+b) 1 1 1 1 6 
+\\
+c) 1 1 1 6 
+\\
+d) 1 1 6 
+\\
+e) 1 10 
+\\
+f) 1 0
+\\
+Limbajul Pascal 
+a) Programul nu va 
+afișa nimic, va genera 
+eroare de compilare 
+deoarece nu este 
+permis apelul unei 
+funcții ca valoare 
+finală a contorului. 
+\\
+b) 1 6 
+\\
+c) 1 1 1 6 
+\\
+d) 1 1 6 
+\\
+e) 1 10 
+\\
+f) 1 0 
+\\
+22.10. Ce se va afișa pe ecran în urma execuției următorului program dacă de la tastatură se citește cuvântul caiet?
+\begin{verbatim}
+Limbajul C++ 
+#include <iostream> 
+#include <string.h> 
+using namespace std; 
+int main() 
+{char a[255]; 
+int i,j,l,n; 
+cin.get(a,255);i=0; 
+n=strlen(a); 
+while(i<n) 
+if(strchr("aeiou",a[i])) 
+ { for(l=1;l<=2;l++) 
+   { n++; 
+     for(j=n;j>i;j--) 
+       a[j]=a[j-1]; 
+         } 
+      a[i+1]='p';  
+      a[i+2]=a[i]; i=i+3; 
+      } 
+      else i++; 
+   cout<<a; return 0; }
+Limbajul C 
+#include <stdio.h> 
+#include <string.h> 
+int main() 
+{   char a[255]; 
+    int i,j,l,n; 
+    scanf("%s",a); i=0; n=strlen(a); 
+    while(i<n) 
+      if(strchr("aeiou",a[i])) 
+      { 
+         for(l=1;l<=2;l++) 
+         { 
+           n++; 
+           for(j=n;j>i;j--) 
+              a[j]=a[j-1]; 
+         } 
+         a[i+1]='p'; a[i+2]=a[i]; i=i+3; 
+      } 
+      else i++; 
+   printf("%s",a); return 0; 
+}
+Limbajul Pascal 
+var a:string[255]; 
+    i,j,l,n:integer; 
+begin 
+ readln(a); i:=1; 
+ n:=length(a); 
+ while i<=n do 
+if pos(a[i],'aeiou')<>0 then 
+   begin 
+    for l:=1 to 2 do 
+      begin 
+       n:=n+1; 
+     for j:=n downto i+1 do 
+           a[j]:=a[j-1]; 
+       end; 
+  a[i+1]:='p';a[i+2]:=a[i]; 
+  i:=i+3; end 
+ else i:=i+1; 
+for i:=1 to n do 
+   write(a[i]); 
 end.
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-#include <stdio.h>
-#include <string.h>
-int main()
-{ char a[255];
-    int i,j,l,n;
-    scanf("%s",a); i=0; n=strlen(a);
-    while(i<n)
-        if(strchr("aeiou",a[i]))
-        {
-            for(l=1;l<=2;l++)
-            {
-                n++;
-                for(j=n;j>i;j--)
-                    a[j]=a[j-1];
-            }
-            a[i+1]='p'; a[i+2]=a[i]; i=i+3;
-        }
-        else i++;
-    printf("%s",a); return 0;
-}
-\end{verbatim}
-
-a) cpapipet\\
-b) $c t$\\
-c) cpcapaipiepetpt\\
-d) capaipiepet\\
+\\
+a) cpapipet
+\\
+b) ct
+\\
+c) cpcapaipiepetpt
+\\
+d) capaipiepet
+\\
 e) tepeipiapaC
-f) pcpaieptp\\
-11. Ce va afișa următoarea funcție la apelul $f(30)$ ?
-
+\\
+f) pcpaieptp
+\\
+22.11. Ce va afișa următoarea funcție la apelul $f(30)$ ?
 \begin{verbatim}
 Limbajul C++/ Limbajul C
 int f(int n)
@@ -11078,7 +11253,6 @@ int f(int n)
         return f(f(n+7));
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 function f(n:integer):integer;
@@ -11089,293 +11263,376 @@ begin
             f:=f(f(n+7));
 end;
 \end{verbatim}
-
-a) 47\\
-b) 50\\
-c) 150\\
-d) 42\\
-e) 44\\
-f) 60\\
-12. Fie $\mathbf{f}: \mathbf{A} \rightarrow \mathbf{B}$. Funcția $\mathbf{f}$ este injectivă dacă $\forall \mathbf{x}, \mathbf{y} \in \mathbf{A}, \mathbf{x} \neq \mathbf{y} \mathbf{f}(\mathbf{x}) \neq \boldsymbol{f}(\mathbf{y})$
-
-\section*{Pentru funcția $\pounds:{1,2,3} \rightarrow{1,2,3,4,5}$, folosind metoda backtracking, primele trei funcții injective generate sunt:\\
-x: 123\\
-f(x): 123}
-\section*{x: 123\\
-f(x): 124}
-x: 123\\
-f(x): 125
-
-Precizați care este a zecea funcție generată.\\
-a) 543\\
-b) 432\\
-c) 213\\
-d) 152\\
-e) 145\\
-f) 153\\
-13. Numărul ciclurilor hamiltoniene distincte ale unui graf neorientat complet $\mathrm{G} \mathrm{cu} \mathrm{n} \geq 3$ noduri este egal cu\\
-a) $n$\\
-b) $\frac{(n-1)!}{2}$\\
-c) n !\\
-d) $\frac{n *(n-1)}{2}$\\
-e) $\mathrm{n}^{*}(\mathrm{n}-1)$\\
-f) $\frac{n}{2}$\\
-14. Precizați ce se va afișa pe ecran în urma execuției următorului program?
-
+\\
+a) 47
+\\
+b) 50
+\\
+c) 150
+\\
+d) 42
+\\
+e) 44
+\\
+f) 60
+\\
+22.12. Fie $\mathbf{f}: \mathbf{A} \rightarrow \mathbf{B}$. Funcția $\mathbf{f}$ este injectivă dacă $\forall \mathbf{x}, \mathbf{y} \in \mathbf{A}, \mathbf{x} \neq \mathbf{y} \mathbf{f}(\mathbf{x}) \neq \boldsymbol{f}(\mathbf{y})$
+Pentru funcția $f:{1,2,3} \rightarrow{1,2,3,4,5}$, folosind metoda backtracking, primele trei funcții injective generate sunt:
 \begin{verbatim}
-Limbajul C++
-#include <iostream>
-using namespace std;
-int v[]={15,12,7,20,-1,-5};
-int f(int n)
-{ cout<<n<<" ";
-        if(n==0) return 0;
-    else
-    return
-        v[n-1]<v[n] || f(n-1);
-}
-int main()
-{ cout<<f(5); return 0; }
+x:     1 2 3 
+f(x): 1 2 3 
+-------------- 
+x:     1 2 3 
+f(x): 1 2 4 
+-------------- 
+x:     1 2 3 
+f(x): 1 2 5 
+
 \end{verbatim}
-
+Precizați care este a zecea funcție generată.
+\\
+a) 5 4 3
+\\
+b) 4 3 2
+\\
+c) 2 1 3
+\\
+d) 1 5 2
+\\
+e) 1 4 5
+\\
+f) 1 5 3
+\\
+22.13. Numărul ciclurilor hamiltoniene distincte ale unui graf neorientat complet $\mathrm{G} \mathrm{cu} \mathrm{n} \geq 3$ noduri este egal cu
+\\
+a) $n$
+\\
+b) $\frac{(n-1)!}{2}$
+\\
+c) n !
+\\
+d) $\frac{n *(n-1)}{2}$
+\\
+e) $\mathrm{n}^{*}(\mathrm{n}-1)$
+\\
+f) $\frac{n}{2}$
+\\
+22.14. Precizați ce se va afișa pe ecran în urma execuției următorului program?
 \begin{verbatim}
-Limbajul Pascal
-var v:array[0..5] of
-integer=(15,12,7,20,-1,-5);
-function
-f(n:integer):boolean;
-begin
-    write(n,' ');
-    if n=0 then f:=false
-    else f:=(v[n-1]<v[n]) or
-f(n-1);
-end;
-begin
-        write(f(5));
+Limbajul C++ 
+#include <iostream> 
+using namespace std; 
+int v[]={15,12,7,20,-1,-5}; 
+int f(int n) 
+{ cout<<n<<" "; 
+  if(n==0) return 0; 
+ else  
+ return  
+  v[n-1]<v[n] || f(n-1); 
+} 
+int main() 
+{ cout<<f(5); return 0; }
+Limbajul C 
+#include <stdio.h> 
+int v[]={15,12,7,20,-1,-5}; 
+int f(int n) 
+{ 
+  printf("%d ",n); 
+  if(n==0)return 0; 
+  else return v[n-1]<v[n] || f(n-1); 
+} 
+int main() 
+{  printf("%d",f(5)); return 0; }
+Limbajul Pascal 
+var v:array[0..5] of 
+integer=(15,12,7,20,-1,-5); 
+ 
+function 
+f(n:integer):boolean; 
+begin 
+  write(n,' '); 
+  if n=0 then f:=false 
+  else f:=(v[n-1]<v[n]) or 
+f(n-1); 
+end; 
+begin 
+   write(f(5)); 
 end.
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul C
-#include <stdio.h>
-int $v[]={15,12,7,20,-1,-5}$;
-int $f($ int $n)$
-{
-    printf("%d ",n);
-    if(n==0) return 0;
-    else return v[n-1]<v[n] || f(n-1);
-}
-int main()
-{ printf("%d",f(5)); return 0; }
-Limbajul C Limbajul C++
-\end{verbatim}
-
-a) 543210\\
-b) 5432101\\
-a) 543210\\
-b) 5432101\\
-c) 543\\
-c) 543\\
-d) 5431\\
-e) 431\\
-f) 54300\\
-d) 5431\\
-e) 431\\
-f) 54300
-
-Limbajul Pascal
-a) 54321 false\\
-b) 543210 true\\
-c) 543\\
-d) 543 true\\
-e) 43 true\\
-f) 5430 false\\
-15. Dorim să decriptăm un cuvânt scris cu litere mari astfel: fiecare literă este codificată prin codul ei din care se scade un număr $\mathbf{k}(\mathbf{k}>=0)$. Numărul $\mathbf{k}$ se numește cheie de decriptare. De exemplu, dacă avem litera $\mathbf{I}$ și $\mathbf{k}$ este $\mathbf{6}$, vom obține după decriptare litera C. Vom considera literele așezate pe un cerc, după $\mathbf{Z}$ vine $\mathbf{A}$. Presupunem că șirul inițial este\\
+\\
+Limbajul C++ 
+a) 5 4 3 2 1 0 
+\\
+b) 5 4 3 2 1 0 1 
+\\
+c) 5 4 3 
+\\
+d) 5 4 3 1 
+\\
+e) 4 3 1 
+\\
+f) 5 4 3 0 0
+\\
+Limbajul C 
+a) 5 4 3 2 1 0 
+\\
+b) 5 4 3 2 1 0 1 
+\\
+c) 5 4 3 
+\\
+d) 5 4 3 1 
+\\
+e) 4 3 1 
+\\
+f) 5 4 3 0 0
+\\
+Limbajul Pascal 
+a) 5 4 3 2 1 false 
+\\
+b) 5 4 3 2 1 0 true 
+\\
+c) 5 4 3 
+\\
+d) 5 4 3 true 
+\\
+e) 4 3 true 
+\\
+f) 5 4 3 0 false
+\\
+22.15. Dorim să decriptăm un cuvânt scris cu litere mari astfel: fiecare literă este codificată prin codul ei din care se scade un număr $\mathbf{k}(\mathbf{k}>=0)$. Numărul $\mathbf{k}$ se numește cheie de decriptare. De exemplu, dacă avem litera $\mathbf{I}$ și $\mathbf{k}$ este $\mathbf{6}$, vom obține după decriptare litera C. Vom considera literele așezate pe un cerc, după $\mathbf{Z}$ vine $\mathbf{A}$. Presupunem că șirul inițial este
 reținut în variabila sir iar rezultatul obținut în urma decriptării tot în variabila sir. Considerând prima parte a programului cea de mai jos, care dintre următoarele secvențe realizează decriptarea corectă a unui șir de caractere citit de la tastatură cu o cheie k citită de la tastatură?
-
 \begin{verbatim}
-Limbajul C++
-char sir[255];
-int d;
-unsigned int k,i;
-cin>>sir;
+Limbajul C++ 
+char sir[255]; 
+int d; 
+unsigned int k,i; 
+cin>>sir; 
 cin>>k;
-\end{verbatim}
-
-Limbajul C++/C
-
-\begin{verbatim}
-Limbajul C
-char sir[255];
-int d;
-unsigned int k,i;
-scanf("%s",sir);
+Limbajul C    
+char sir[255]; 
+int d; 
+unsigned int k,i; 
+scanf("%s",sir); 
 scanf("%u",&k);
+Limbajul Pascal 
+var sir:string; 
+    d:integer; 
+    i,k:word; 
+begin 
+    read(sir); 
+    read(k); 
 \end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-var sir:string;
-    d:integer;
-    i,k:word;
-begin
-    read(sir);
-    read(k);
-\end{verbatim}
-
-\begin{verbatim}
-a) d = 'Z'-'A';
-    for(i=0;i<strlen(sir);i++)
-            sir[i]='A'+(sir[i]-'A'+d)%('Z'-'A'+1);
-b) d = k;
-    for(i=0;i<strlen(sir);i++)
-        sir[i]='A'+(sir[i]-'A'+d)%('Z'-'A'+1);
-c) d = 'Z'-'A'+1-k;
-    for(i=0;i<strlen(sir);i++)
-        sir[i]='A'+(sir[i]-'A'-d)%('Z'-'A'+1);
-d) d = 'Z'-'A'+1-k;
-    for(i=0;i<strlen(sir);i++)
-        sir[i]='A'+(sir[i]-'A'+d)%('Z'-'A'+1);
-e) d = k;
-    for(i=0;i<strlen(sir);i++)
-        sir[i]='A'+(sir[i]-'A'+d)%('Z'-'A'+26);
-f) d = 'Z'-'A';
-    for(i=0;i<strlen(sir);i++)
-        sir[i]='A'+(sir[i]-'A'+d)%('Z'-'A'-25);
-\end{verbatim}
-
-\section*{Limbajul Pascal}
-a) d:=ord('Z')-ord('A');
-for i:=1 to length(sir) do sir[i]:=chr(ord('A')+(ord(sir[i])- ord('A')+d ) mod
-
-\begin{verbatim}
-(ord('Z')-ord('A')+1));
-\end{verbatim}
-
-b) $\mathrm{d}:=\mathrm{k}$;
-for $i:=1$ to length(sir) do
-sir[i]:=chr(ord('A')+(ord(sir[i])-ord('A')-d) mod\\
-(ord('Z')-ord('A')+1));
-c) $d:=o r d(' Z ')-o r d(' A ')+1-k ;$\\
-for i:=1 to length(sir) do
-sir[i]:=chr(ord('A')+(ord(sir[i])-ord('A')-d) mod\\
-(ord('Z')-ord('A')+1)) ;
-d) $d:=o r d(' Z ')-o r d(' A ')+1-k ;$\\
-for i:=1 to length(sir) do
-
-\begin{verbatim}
-        sir[i]:=chr(ord('A')+(ord(sir[i])-ord('A')+d) mod
-    (ord('Z')-ord('A')+1)) ;
-e) d:=k;
-    for i:=1 to length(sir) do
-    sir[i]:=chr(ord('A')+(ord(sir[i])-ord('A')-d) mod
-    (ord('Z')-ord('A')+26)) ;
-f) d:=ord('Z')-ord('A');
-    for i:=1 to length(sir) do
-    sir[i]:=chr(ord('A')+(ord(sir[i])-ord('A')+d)mod
-(ord('Z')-ord('A')-25)) ;
-\end{verbatim}
+\\
+Limbajul C++/ Limbajul C 
+a) d = 'Z'-'A'; 
+  for(i=0;i<strlen(sir);i++) 
+       sir[i]='A'+(sir[i]-'A'+d)%('Z'-'A'+1); 
+\\
+b) d = k; 
+  for(i=0;i<strlen(sir);i++) 
+    sir[i]='A'+(sir[i]-'A'+d)%('Z'-'A'+1); 
+\\
+c) d = 'Z'-'A'+1-k; 
+  for(i=0;i<strlen(sir);i++) 
+    sir[i]='A'+(sir[i]-'A'-d)%('Z'-'A'+1); 
+\\
+d) d = 'Z'-'A'+1-k; 
+  for(i=0;i<strlen(sir);i++) 
+    sir[i]='A'+(sir[i]-'A'+d)%('Z'-'A'+1); 
+\\
+e) d = k; 
+  for(i=0;i<strlen(sir);i++) 
+    sir[i]='A'+(sir[i]-'A'+d)%('Z'-'A'+26);
+\\
+f) d = 'Z'-'A'; 
+  for(i=0;i<strlen(sir);i++) 
+    sir[i]='A'+(sir[i]-'A'+d)%('Z'-'A'-25);
+\\
+Limbajul Pascal 
+a) d:=ord('Z')-ord('A'); 
+  for i:=1 to length(sir) do 
+  sir[i]:=chr(ord('A')+(ord(sir[i])- ord('A')+d ) mod     
+(ord('Z')-ord('A')+1)); 
+\\
+b) d:=k; 
+  for i:=1 to length(sir) do 
+  sir[i]:=chr(ord('A')+(ord(sir[i])-ord('A')-d) mod  
+(ord('Z')-ord('A')+1)); 
+\\
+c) d:=ord('Z')-ord('A')+1-k; 
+  for i:=1 to length(sir) do 
+  sir[i]:=chr(ord('A')+(ord(sir[i])-ord('A')-d) mod 
+(ord('Z')-ord('A')+1)); 
+\\
+d) d:=ord('Z')-ord('A')+1-k; 
+  for i:=1 to length(sir) do 
+  sir[i]:=chr(ord('A')+(ord(sir[i])-ord('A')+d) mod 
+(ord('Z')-ord('A')+1)); 
+\\
+e) d:=k; 
+  for i:=1 to length(sir) do 
+  sir[i]:=chr(ord('A')+(ord(sir[i])-ord('A')-d) mod 
+(ord('Z')-ord('A')+26)); 
+\\
+f) d:=ord('Z')-ord('A'); 
+  for i:=1 to length(sir) do 
+  sir[i]:=chr(ord('A')+(ord(sir[i])-ord('A')+d)mod 
+(ord('Z')-ord('A')-25));
+\\
 
 \section*{Varianta 23}
-\begin{enumerate}
-  \item Trei variabile de tip întreg au valorile $a=13, b=5, c=3$. Dintre expresiile următoare, cea care are valoarea 1 ( $\mathrm{C}++/ \mathrm{C}$ ) respectiv true (Pascal) este:\\
-Limbajul C++/C
-a) $a / c * 2<5+c * 4 \% 5$\\
-b) $c \% b=a \% c$\\
-c) $b+a / 10!=b \% c * a / c$\\
-d) $(b>c) \& \&!(b * c \% 7==2 * a-b * b)$\\
-e) $c \% b * 10<a * 2$\\
-f) $c / b * b / c==1$
-\end{enumerate}
 
-Limbajul Pascal
-a) a div $c * 2<(5+c * 4 \bmod 5)$\\
-b) $c \bmod b=a \bmod c$\\
-c) $b+a \operatorname{div} 10<>b \bmod c * a \operatorname{div} c$\\
-d) $(b>c)$ and $\operatorname{not}((b * c \bmod 7)=(2 * a-b * b))$\\
-e) $c \bmod b * 10<a * 2$\\
-f) $c \operatorname{div} b * b \operatorname{div} c=1$\\
-2. Într-un graf neorientat cu 13 noduri, fiecare nod are gradul d. Valoarea lui d nu poate fi:\\
-a) 2\\
-b) 4\\
-c) 6\\
-d) 8\\
-e) 10\\
-f) 11\\
-3. Variabila i este de tip întreg. Numărul total al atribuirilor care se execută în urma rulării secvenței următoare este:
-
+23.1. Trei variabile de tip întreg au valorile $a=13, b=5, c=3$. Dintre expresiile următoare, cea care are valoarea 1 ( $\mathrm{C}++/ \mathrm{C}$ ) respectiv true (Pascal) este:
+\\
+Limbajul C++/C 
+a) a/c*2<5+c*4%5 
+\\
+b) c%b==a%c 
+\\
+c) b+a/10!=b%c*a/c 
+\\
+d) (b>c) && !(b*c%7==2*a-b*b)
+\\ 
+e) c%b*10<a*2 
+\\
+f) c/b*b/c==1 
+\\
+Limbajul Pascal 
+a) a div c *2 < (5+c*4 mod 5) 
+\\
+b) c mod b =a mod c 
+\\
+c) b+a div 10 <>b mod c *a div c
+\\ 
+d) (b>c) and not((b*c mod 7)=(2*a-b*b))
+\\
+e) c mod b*10 < a*2 
+\\
+f) c div b * b div c = 1 
+\\
+23.2. Într-un graf neorientat cu 13 noduri, fiecare nod are gradul d. Valoarea lui d nu poate fi:
+\\
+a) 2
+\\
+b) 4
+\\
+c) 6
+\\
+d) 8
+\\
+e) 10
+\\
+f) 11
+\\
+23.3. Variabila i este de tip întreg. Numărul total al atribuirilor care se execută în urma rulării secvenței următoare este:
 \begin{verbatim}
 Limbajul C++/C
 i=1;
 while(i*i<2020)
     i=i*2;
+Limbajul Pascal 
+i:=1; 
+while i*i<2020 do 
+   i:=i*2;
 \end{verbatim}
-
-a) 5\\
-b) 6\\
-c) 7\\
-d) 9\\
-e) 11\\
-f) 12\\
-4. Considerând că variabila spoate reține un șir cu cel mult 100 de caractere și variabila i este de tip întreg, în urma executării următoarei secvențe de instrucțiuni, lungimea efectivă a șirului s este:
-
+\\
+a) 5
+\\
+b) 6
+\\
+c) 7
+\\
+d) 9
+\\
+e) 11
+\\
+f) 12
+\\
+23.4. Considerând că variabila spoate reține un șir cu cel mult 100 de caractere și variabila i este de tip întreg, în urma executării următoarei secvențe de instrucțiuni, lungimea efectivă a șirului s este:
 \begin{verbatim}
 Limbajul C++/C
-strcpy(s,"2020+2020=4040");
-for(i=0;i<strlen(s);i++)
-if(strchr("0123456789",s[i]))
-    strcpy(s+i,s+i+1);
+strcpy(s,"2020+2020=4040"); 
+for(i=0;i<strlen(s);i++) 
+if(strchr("0123456789",s[i])) 
+  strcpy(s+i,s+i+1); 
+Limbajul Pascal s:=’2020+2020=4040’; 
+for i:=1 to length(s) do 
+ if pos(s[i],’0123456789’)<>0 
+then delete(s,i,1); 
 \end{verbatim}
-
-a) 0\\
-b) 2\\
-c) 5\\
-d) 6\\
-e) 8\\
-f) 11\\
-5. Pentru a verifica dacă elementele unui tablou unidimensional cu $\mathbf{n}$ elemente numere întregi sunt distincte două câte două, numărul de comparații executate este:\\
-a) $2 n$\\
-b) $n(n-1) / 2$\\
-c) $n(n-1)$\\
-d) $(n-1)^{2}$\\
-e) $n^{2}$\\
-f) $n$ !\\
-6. În urma executării următoarei secvențe de program, variabila $\mathbf{x}$, de tip întreg, va avea valoarea:
-
+\\
+a) 0
+\\
+b) 2
+\\
+c) 5
+\\
+d) 6
+\\
+e) 8
+\\
+f) 11
+\\
+23.5. Pentru a verifica dacă elementele unui tablou unidimensional cu $\mathbf{n}$ elemente numere întregi sunt distincte două câte două, numărul de comparații executate este:
+\\
+a) $2 n$
+\\
+b) $n(n-1) / 2$
+\\
+c) $n(n-1)$
+\\
+d) $(n-1)^{2}$
+\\
+e) $n^{2}$
+\\
+f) $n$ !
+\\
+23.6. În urma executării următoarei secvențe de program, variabila $\mathbf{x}$, de tip întreg, va avea valoarea:
 \begin{verbatim}
-Limbajul C++/C
-x=15;
-x=x*3/4*4/3;
-do {if(x%2==0) x=x/2;
-        else x=x-5;
-    }while(x>0);
+Limbajul C++/C 
+x=15; 
+x=x*3/4*4/3; 
+do {if(x%2==0) x=x/2; 
+    else x=x-5; 
+   }while(x>0);
 \end{verbatim}
-
 \begin{verbatim}
-Limbajul Pascal
-x:=15;
-x:=x*3 div 4*4 div 3;
-repeat
-if x mod 2=0 then x:=x div 2
-else x:=x-5;
-until x<=0;
+Limbajul Pascal 
+x:=15; 
+x:=x*3 div 4*4 div 3; 
+repeat  
+if x mod 2=0 then x:=x div 2 
+else x:=x-5; 
+until x<=0; 
 \end{verbatim}
-
-a) -6\\
-b) -5\\
-c) $\mathbf{- 4}$\\
-d) 0\\
-e) 2\\
-f) 5\\
-7. Utilizând un algoritm backtracking se generează în ordine crescătoare toate numerele naturale cu patru cifre care au suma cifrelor egală cu 4. Primele trei soluții sunt: 1003, 1012, 1021. În șirul generat, numărul 2020 ocupă poziția:\\
-a) 10\\
-b) 11\\
-c) 12\\
-d) 13\\
-e) 14\\
-f) 15\\
-8. Dacă $\mathbf{s}, \mathbf{i}, \mathbf{j}, \mathbf{n}$ sunt variabile de tip întreg și a este un tablou bidimensional cu $\mathbf{n}$ linii și n coloane numerotate de la 1 la n, următorul algoritm calculează:
-
+\\
+a) -6
+\\
+b) -5
+\\
+c) -4
+\\
+d) 0
+\\
+e) 2
+\\
+f) 5
+\\
+23.7. Utilizând un algoritm backtracking se generează în ordine crescătoare toate numerele naturale cu patru cifre care au suma cifrelor egală cu 4. Primele trei soluții sunt: 1003, 1012, 1021. În șirul generat, numărul 2020 ocupă poziția:
+\\
+a) 10
+\\
+b) 11
+\\
+c) 12
+\\
+d) 13
+\\
+e) 14
+\\
+f) 15
+\\
+23.8. Dacă $\mathbf{s}, \mathbf{i}, \mathbf{j}, \mathbf{n}$ sunt variabile de tip întreg și a este un tablou bidimensional cu $\mathbf{n}$ linii și n coloane numerotate de la 1 la n, următorul algoritm calculează:
 \begin{verbatim}
 Limbajul C++/C
 s=0;
@@ -11383,7 +11640,6 @@ for(i=1;i<=n;i++)
     for(j=1;j<i;j++)
         s=s+a[i][j];
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 s:=0;
@@ -11391,15 +11647,20 @@ for i:=1 to n do
     for j:=1 to i-1 do
         s:=s+a[i,j];
 \end{verbatim}
-
-a) suma elementelor de sub diagonala principală exclusiv elementele diagonalei principale\\
-b) suma elementelor de sub diagonala secundară exclusiv elementele diagonalei secundare\\
-c) numărul elementelor de deasupra diagonalei principale inclusiv elementele diagonalei principale\\
-d) suma elementelor de pe diagonala principală\\
-e) suma elementelor de sub diagonala principală inclusiv elementele diagonalei principale\\
-f) suma elementelor de deasupra diagonalei secundare inclusiv elementele diagonalei secundare\\
-9. Se consideră următoarele declarații de tipuri și variabile:
-
+\\
+a) suma elementelor de sub diagonala principală exclusiv elementele diagonalei principale
+\\
+b) suma elementelor de sub diagonala secundară exclusiv elementele diagonalei secundare
+\\
+c) numărul elementelor de deasupra diagonalei principale inclusiv elementele diagonalei principale
+\\
+d) suma elementelor de pe diagonala principală
+\\
+e) suma elementelor de sub diagonala principală inclusiv elementele diagonalei principale
+\\
+f) suma elementelor de deasupra diagonalei secundare inclusiv elementele diagonalei secundare
+\\
+23.9. Se consideră următoarele declarații de tipuri și variabile:
 \begin{verbatim}
 Limbajul C++
 struct a
@@ -11410,94 +11671,102 @@ struct d
     { char e[10];
         float f;
         a g;
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-type a=record
-    b:integer;
-    c:string[10]
-end;
-    d=record
-        e: string[10];
-        f: real;
-        g:a
-\end{verbatim}
-
-\begin{verbatim}
-    } h;
-Limbajul C
-typedef struct
-    { int b;
-        char c[10];
-    }a;
-typedef struct
-    { char e[10];
-        float f;
-        a g;
-    }d;
+ } h; 
+Limbajul C 
+typedef struct   
+ { int b;  
+   char c[10]; 
+ }a; 
+typedef struct  
+ { char e[10];  
+   float f;  
+   a g; 
+ }d; 
 d h;
 \end{verbatim}
-
 \begin{verbatim}
-end;
+Limbajul Pascal 
+type a=record  
+   b:integer; 
+   c:string[10]  
+end; 
+ d=record  
+   e: string[10];  
+   f: real;  
+   g:a   
+end; 
 var h:d;
 \end{verbatim}
-
 Dintre următoarele expresii, de tip caracter este:
-a) g.e[2]\\
+\\
+a) g.e[2]
+\\
 b) h.a.c
+\\
 c) h.a.c[0]
-d) h.c [2]
-e) h.g.c [2]
-f)d.e[2]\\
-10. Se consideră un arbore cu 8 noduri și muchiile $[1,2]$, $[2,3]$, $[3,6],[4,3]$, $[5,7],[7,2],[8,2]$. Pentru ca arborele să conțină un număr maxim de lanțuri elementare de lungime 3 care nu conțin rădăcina, se poate alege ca rădăcină oricare dintre nodurile:\\
-a) $1,2,4,5$\\
-b) $1,2,5,6$\\
-c) $1,3,6,7$\\
-d) $2,3,4,5,6$\\
-e) $1,4,5,6,8$\\
-f) $2,3,4,7,8$\\
-11. În urma executării următoarei secvențe de program tabloul unidimensional a, cu 6 elemente numerotate de la 1 la 6, va conține valorile:
-
+\\
+d) h.c[2]
+\\
+e) h.g.c[2]
+\\
+f)d.e[2]
+\\
+23.10. Se consideră un arbore cu 8 noduri și muchiile $[1,2]$, $[2,3]$, $[3,6],[4,3]$, $[5,7],[7,2],[8,2]$. Pentru ca arborele să conțină un număr maxim de lanțuri elementare de lungime 3 care nu conțin rădăcina, se poate alege ca rădăcină oricare dintre nodurile:
+\\
+a) $1,2,4,5$
+\\
+b) $1,2,5,6$
+\\
+c) $1,3,6,7$
+\\
+d) $2,3,4,5,6$
+\\
+e) $1,4,5,6,8$
+\\
+f) $2,3,4,7,8$
+\\
+23.11. În urma executării următoarei secvențe de program tabloul unidimensional a, cu 6 elemente numerotate de la 1 la 6, va conține valorile:
 \begin{verbatim}
-Limbajul C++/C
-for (i=1;i<=6;i++)
-    if (i%2!=0) a[i]=i/2;
-    else a[i]=7-i;
-for(i=6;i>=3;i--)
-    a[a[i]]=2*i%7;
+Limbajul C++/C 
+for (i=1;i<=6;i++) 
+ if (i%2!=0) a[i]=i/2; 
+ else a[i]=7-i; 
+for(i=6;i>=3;i--) 
+  a[a[i]]=2*i%7;
 \end{verbatim}
-
 \begin{verbatim}
-Limbajul Pascal
-for i:=1 to 6 do
-if i mod 2<>0 then a[i]:=i div 2
-else a[i]:=7-i;
-for i:=6 downto 3 do
+Limbajul Pascal 
+for i:=1 to 6 do 
+if i mod 2<>0 then a[i]:=i div 2 
+else a[i]:=7-i; 
+for i:=6 downto 3 do  
 a[a[i]]:=2*i mod 7;
 \end{verbatim}
-
-a) 056135\\
-b) 531321\\
-c) 636223\\
-d) 615263\\
-e) 631221\\
-f) 631321\\
-12. Pentru apelul $\mathbf{s}(\mathbf{2 0 2 0}, \mathbf{2})$ al subprogramului de mai jos, enunțul adevărat este:
-
+\\
+a) 0 5 6 1 3 5
+\\
+b) 5 3 1 3 2 1
+\\
+c) 6 3 6 2 2 3
+\\
+d) 6 1 5 2 6 3
+\\
+e) 6 3 1 2 2 1
+\\
+f) 6 3 1 3 2 1
+\\
+23.12. Pentru apelul $s(2020,2)$ al subprogramului de mai jos, enunțul adevărat este:
 \begin{verbatim}
-Limbajul C++/C
-int s(int n, int d)
-{
-    if(n==1) return 0;
-    if (n%d==0)
-        return 1+s(n/d,d);
-    else
-        return s(n,d+1);
+Limbajul C++/C 
+int s(int n, int d) 
+{ 
+    if(n==1) return 0; 
+    if (n%d==0) 
+       return 1+s(n/d,d); 
+    else  
+       return s(n,d+1); 
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 function s(n,d:integer): integer;
@@ -11509,69 +11778,114 @@ else if n mod d=0 then
     else s:=s(n,d+1)
 end;
 \end{verbatim}
-
-a) $s(2020,2)=3$ și reprezintă numărul divizorilor primi ai numărului 2020\\
-b) $s(2020,2)=4$ și reprezintă numărul divizorilor primi ai numărului 2020\\
-c) $\mathbf{s}(\mathbf{2 0 2 0}, \mathbf{2})=\mathbf{4}$ și reprezintă suma exponenților divizorilor primi din descompunerea în factori primi a numărului 2020\\
-d) $\mathbf{s}(\mathbf{2 0 2 0}, \mathbf{2})=6$ și reprezintă suma exponenților divizorilor primi din descompunerea în factori primi a numărului 2020\\
-e) $s(2020,2)=10$ și reprezintă numărul divizorilor proprii ai numărului 2020\\
-f) $s(2020,2)=12$ și reprezintă numărul divizorilor numărului 2020\\
-13. Numărul de grafuri neorientate cu șase noduri, în care nodul $\mathbf{1}$ are gradul 1 și nodul 2 are gradul 2 este:\\
-a) 92\\
-b) 1280\\
-c) 1536\\
-d) 1792\\
-e) 1920\\
-f) 2560\\
-14. În urma rulării programului următor vor fi afișate valorile:
-
+\\
+a) $s(2020,2)=3$ și reprezintă numărul divizorilor primi ai numărului 2020
+\\
+b) $s(2020,2)=4$ și reprezintă numărul divizorilor primi ai numărului 2020
+\\
+c) $\mathbf{s}(\mathbf{2 0 2 0}, \mathbf{2})=\mathbf{4}$ și reprezintă suma exponenților divizorilor primi din descompunerea în factori primi a numărului 2020
+\\
+d) $\mathbf{s}(\mathbf{2 0 2 0}, \mathbf{2})=6$ și reprezintă suma exponenților divizorilor primi din descompunerea în factori primi a numărului 2020
+\\
+e) $s(2020,2)=10$ și reprezintă numărul divizorilor proprii ai numărului 2020
+\\
+f) $s(2020,2)=12$ și reprezintă numărul divizorilor numărului 2020
+\\
+23.13. Numărul de grafuri neorientate cu șase noduri, în care nodul $\mathbf{1}$ are gradul 1 și nodul 2 are gradul 2 este:
+\\
+a) 92
+\\
+b) 1280
+\\
+c) 1536
+\\
+d) 1792
+\\
+e) 1920
+\\
+f) 2560
+\\
+23.14. În urma rulării programului următor vor fi afișate valorile:
 \begin{verbatim}
-Limbajul C++
-#include <iostream>
-using namespace std;
-void f (int &a, int b)
-{ int x=3;
-    a--;
-    b++;
-    x--;
-    cout<<<a<<' '<<<b<<' '<<<x<<' ';
+Limbajul C++ 
+#include <iostream> 
+using namespace std; 
+void f (int &a, int b) 
+{ int x=3; 
+  a--;  
+  b++; 
+  x--; 
+ cout<<a<<' '<<b<<' '<<x<<' '; 
+} 
+int main() 
+{ int i, x=4, y=6; 
+  for(i=1;i<=3;i++) 
+     f(x,x+y); 
+  cout<<x<<' '<<y; 
+   return 0; 
 }
-int main()
-{ int i, x=4, y=6;
-    for(i=1;i<=3;i++)
-        f(x,x+y) ;
-    cout<<x<<<' '<<y ;
-        return 0;
+Limbajul Pascal 
+program main; 
+var x, y, i: integer; 
+procedure f (var a: integer; b:integer); 
+var x:integer; 
+begin 
+  x:=3; 
+  dec(a); inc(b); dec(x); 
+  write(a,’ ’,b,’ ’,x,’ ’); 
+end; 
+begin 
+  x:=4; 
+  y:=6; 
+  for i:=1 to 3 do  
+      f(x,x+y); 
+  write(x,’ ’,y) 
+end.
+Limbajul C 
+#include <stdio.h> 
+#include <stdlib.h> 
+void f (int *a, int b) 
+{ int x=3; 
+  (*a)--;  
+   b++; 
+   x--; 
+   printf("%d %d %d ",*a,b,x); 
+} 
+int main() 
+{ int i, x=4, y=6; 
+  for(i=1; i<=3; i++) 
+      f(&x,x+y); 
+  printf("%d %d",x,y); 
+  return 0; 
 }
 \end{verbatim}
-
-Limbajul Pascal
-program main;
-var $x, y, i: i n t e g e r ;$\\
-procedure $f$ (var a: integer; b:integer);
-var x:integer;
-begin\\
-x:=3;
-$\operatorname{dec}(a)$; inc (b) ; $\operatorname{dec}(x)$;
-write (a,' ',b,' ', x,' ');
-end;
-begin\\
-x:=4;
-$\mathrm{y}:=6$;
-for i:=1 to 3 do\\
-$\mathrm{f}(\mathrm{x}, \mathrm{x}+\mathrm{y})$;
-write ( x, ' $\quad$, y )\\
-end.\\
-a) 311236\\
-b) 311246\\
-$\begin{array}{llllllllllllllllllllll}\text { c) } 3 & 11 & 3 & 2 & 10 & 2 & 1 & 9 & 1 & 1 & 6 & \text { d) } 2 & 11 & 2 & 0 & 9 & 0 & -2 & 7 & -2 & -2 & 6 \\ \text { e) } 3 & 11 & 2 & 3 & 11 & 2 & 3 & 11 & 2 & 4 & 6 & \text { f) } 3 & 11 & 2 & 2 & 10 & 2 & 1 & 9 & 2 & 1 & 6\end{array}$\\
-15. Se sortează crescător tabloul v=(3, 4, 2, 5, 1, 7, 6). O propoziție falsă este:\\
-a) Sortând prin metoda Bubble Sort se fac $\mathbf{7}$ interschimbări.\\
-b) Aplicând metoda de sortare prin interclasare numerele 1 și 4 nu se compară.\\
-c) Aplicând metoda de sortare prin selecție se execută cel mult 6 interschimbări.\\
-d) Sortând prin selecția minimului, numerele 2 și 3 se compară de două ori.\\
-e) Aplicând metoda de sortare Bubble Sort se poate obține ca etapă intermediară tabloul $\mathrm{v}=(3,2,4,1,5,6,7)$.\\
+\\
+a) 3 11 2 3 6
+\\
+b) 3 11 2 4 6
+\\
+c) 3 11 3 2 10 2 1 9 1 1 6
+\\
+d) 2 11 2 0 9 0 -2 7 -2 -2 6
+\\
+e) 3 11 2 3 11 2 3 11 2 4 6
+\\
+f) 3 11 2 2 10 2 1 9 2 1 6
+\\
+23.15. Se sortează crescător tabloul v=(3, 4, 2, 5, 1, 7, 6). O propoziție falsă este:
+\\
+a) Sortând prin metoda Bubble Sort se fac $\mathbf{7}$ interschimbări.
+\\
+b) Aplicând metoda de sortare prin interclasare numerele 1 și 4 nu se compară.
+\\
+c) Aplicând metoda de sortare prin selecție se execută cel mult 6 interschimbări.
+\\
+d) Sortând prin selecția minimului, numerele 2 și 3 se compară de două ori.
+\\
+e) Aplicând metoda de sortare Bubble Sort se poate obține ca etapă intermediară tabloul $\mathrm{v}=(3,2,4,1,5,6,7)$.
+\\
 f) Aplicând metoda de sortare prin inserție se poate obține ca etapă intermediară tabloul $\mathrm{v}=(1,3,4,2,5,7,6)$.
+\\
 
 \section*{Varianta 24}
 \begin{enumerate}
