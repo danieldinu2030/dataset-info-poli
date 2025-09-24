@@ -16853,17 +16853,22 @@ f) Limbajul C++/C: medie (note, $n$ ) $>(m-n$ )
 Limbajul Pascal: medie (note, $n$ ) $>(m-n)$
 
 \section*{Varianta 38}
-\begin{enumerate}
-  \item Se consideră A, o mulțime de numere naturale. Cardinalul minim al acestei mulțimi, dacă o partiționăm în 5 partiții, iar numerele de elemente ale acestor partiții reprezintă termeni impari diferiţi ai șirului lui Fibonacci este:\\
-a) 12\\
-b) 43\\
-c) 20\\
-d) 55\\
-e) 6\\
-f) 43
-  \item Se consideră un arbore cu rădacină având următoarele caracteristici:
-\end{enumerate}
 
+38.1. Se consideră $A$, o mulțime de numere naturale. Cardinalul minim al acestei mulțimi, dacă o partiționăm în 5 partiții, iar numerele de elemente ale acestor partiții reprezintă termeni impari diferiţi ai șirului lui Fibonacci este:
+\\
+a) 12
+\\
+b) 43
+\\
+c) 20
+\\
+d) 55
+\\
+e) 6
+\\
+f) 43
+\\
+38.2. Se consideră un arbore cu rădacină având următoarele caracteristici:
 \begin{itemize}
   \item numărul de noduri este 12;
   \item înălțimea este 4;
@@ -16871,44 +16876,57 @@ f) 43
   \item lungimea celui mai lung lanț elementar este egală cu 6;
   \item numărul de noduri de grad 1 este 7.
 \end{itemize}
-
-Un posibil vector de taţi asociat acestui arbore ar putea fi:\\
-a) 895185104514\\
-b) 96101091651210\\
-c) 4180125151225\\
-d) 011125546544\\
-e) 7657015373811\\
-f) 12460121221764\\
-3. Se consideră o parolă de șase caractere, nu neapărat distincte, formată doar din litere mici şi mari ale alfabetului englez ( 52 de caractere) și cifre. Numărul minim, respectiv maxim de încercări pentru a identifica respectiva parolă este:\\
-a) $6 \quad 62$\\
-b) 1\\
-$6^{62}$\\
-c) 1\\
-$6^{61}$\\
-d) $1 \quad 62^{6}$\\
-e) 6\\
-62\\
-f) 6\\
-52\\
-4.
-
-Numărul de muchii care trebuie mutate din graful neorientat hamiltonian alăturat astfel încât acesta să devina eulerian, dar să rămână și hamiltonian este:\\
-a) 0\\
-b) 1\\
-c) 2\\
-d) 3\\
-e) 4\\
-f) 5\\
-5. Variabilele a și d memorează numere naturale. Se consideră următoarea secvență de program:
-
+Un posibil vector de taţi asociat acestui arbore ar putea fi:
+\\
+a) 8 9 5 1 8 5 1 0 4 5 1 4
+\\
+b) 9 6 10 1 0 9 1 6 5 1 2 10
+\\
+c) 4 1 8 0 1 2 5 1 5 12 2 5
+\\
+d) 0 1 1 1 2 5 5 4 6 5 4 4
+\\
+e) 7 6 5 7 0 1 5 3 7 3 8 11
+\\
+f) 12 4 6 0 1 2 12 2 1 7 6 4
+\\
+38.3. Se consideră o parolă de șase caractere, nu neapărat distincte, formată doar din litere mici şi mari ale alfabetului englez ( 52 de caractere) și cifre. Numărul minim, respectiv maxim de încercări pentru a identifica respectiva parolă este:
+\\
+a) $6$ $62$
+\\
+b) $1$ $6^{62}$
+\\
+c) $1$ $6^{61}$
+\\
+d) $1$ $62^{6}$
+\\
+e) $6$ $62$
+\\
+f) $6$ $52$
+\\
+38.4. Numărul de muchii care trebuie mutate din graful neorientat hamiltonian alăturat astfel încât acesta să devina eulerian, dar să rămână și hamiltonian este:
+\includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-336.jpg}
+\\
+a) 0
+\\
+b) 1
+\\
+c) 2
+\\
+d) 3
+\\
+e) 4
+\\
+f) 5
+\\
+38.5. Variabilele $a$ și $d$ memorează numere naturale. Se consideră următoarea secvență de program:
 \begin{verbatim}
 Limbajul C++/C
-cin>>a;| scanf("%d",&a);
+cin>>a; | scanf("%d",&a);
 d=0;
 for (i=-a;i<=a;i++)
     if (a%i==0) d++;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 read(a);
@@ -16916,128 +16934,135 @@ d:=0;
 for i:=-a to a do
     if a mod i=0 then d:=d+1;
 \end{verbatim}
-
-În urma executării secvenței de program alăturate valoarea variabilei d este:\\
-a) numărul de divizori pozitivi ai lui $\mathbf{a}$; $\mathbf{b}$ ) numărul de divizori pozitivi și negativi ai lui a;
-c) numărul de divizori negativi ai lui $\mathbf{a}$;d) cel mai mare divizor al lui $\mathbf{a}$;
-e) numărul de divizori proprii ai lui a; f) valoarea variabilei d nu va putea fi calculată.\\
-6. Fișierul \href{http://date.in}{date.in} conține următoarele numere:
-
-Se consideră următoarea secvență de program în care tabloul unidimensional va fost declarat parametru global:
-
+În urma executării secvenței de program alăturate valoarea variabilei $d$ este:
+\\
+a) numărul de divizori pozitivi ai lui $a$
+\\
+b) numărul de divizori pozitivi și negativi ai lui $a$
+\\
+c) numărul de divizori negativi ai lui $a$
+\\
+d) cel mai mare divizor al lui $a$
+\\
+e) numărul de divizori proprii ai lui $a$
+\\
+f) valoarea variabilei $d$ nu va putea fi calculată
+\\
+38.6. Fișierul date.in conține următoarele numere:
+\begin{verbatim}
+10
+1 2 3 4 5 6 7 8 9 10
+\end{verbatim}
+Se consideră următoarea secvență de program în care tabloul unidimensional $v$ a fost declarat parametru global:
 \begin{verbatim}
 Limbajul C++/C
 int i, n, v[100];
-ifstream f("date.in");|
-FILE *f,*g; f=fopen("date.in","r");
+ifstream f("date.in"); | FILE *f,*g; f=fopen("date.in","r");
 f>>n; | fscanf(f,"%d",&n);
 for (i=1;i<=n;i=i+2)
     f>>v[i]; | fscanf(f,"%d",&v[i]);
-f.close();|fclose(f);
-ofstream g("date.in"); |
-g=fopen("date.in","w");
-g<<v[8];| fprintf(g,"%d",v[8]);
-g.close() ; |fclose(g) ;
+f.close(); | fclose(f);
+ofstream g("date.in"); | g=fopen("date.in","w");
+g<<v[8]; | fprintf(g,"%d",v[8]);
+g.close(); | fclose(g) ;
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 var f:text; i,n:byte;
 v:array [1..100] of integer;
-assign(f,'date.in') ;reset(f);
+assign(f,'date.in'); reset(f);
 readln(f,n);
 for i:= 1 to n do
-    if i mod 2<>Othen
+    if i mod 2<>O then
         read(f,v[i]);
 close(f);rewrite(f);
 write(f,v[8]);
 close(f);
 \end{verbatim}
-
-Conținutul fișierului după executarea secvenței de program alăturate este:\\
-a) 8\\
-b) o valoare reziduală\\
-c) 1\\
-d) 8910\\
-e) 10\\
-f) 0\\
-7. Se consideră următoarea secvență de program:
-
+Conținutul fișierului după executarea secvenței de program alăturate este:
+\\
+a) 8
+\\
+b) o valoare reziduală
+\\
+c) 1
+\\
+d) 8 9 10
+\\
+e) 10
+\\
+f) 0
+\\
+38.7. Se consideră următoarea secvență de program:
 \begin{verbatim}
 Limbajul C++/C
 typedef int sir[5];
-sir v[100];int i,j;
+sir v[100]; int i,j;
 for (i=1;i<=4;i++)
-    for (j=1;j<=3;j++) v[i][j]=i+j;
+    for (j=1;j<=3;j++)
+        v[i][j]=i+j;
 for (i=1;i<=4;i++)
     for (j=1;j<=3;j++)
         if (j==3)
-cout<<v[i][j]<<endl;
-                |printf("%d\n",v[i][j]);
-            else cout<<v[i][j]<<' ';
-                |printf("%d ",v[i][j]);
+            cout<<v[i][j]<<endl; | printf("%d\n",v[i][j]);
+        else cout<<v[i][j]<<' '; | printf("%d ",v[i][j]);
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 type sir=array [1..5] of
 integer;
 var v:array [1..100] of sir;
-        i,j:integer;
+    i,j:integer;
 for i:=1 to 4 do
-    for j:=1 to 3 do v[i][j]:=i+j;
+    for j:=1 to 3 do
+        v[i][j]:=i+j;
 for i:=1 to 4 do
     for j:=1 to 3 do
         if j=3 then writeln(v[i][j])
         else write(v[i][j],' ');
 \end{verbatim}
-
-În urma executării secvenței de program alăturate se afişează:\\
-a)
-
-\begin{center}
-\begin{tabular}{rll}
-d) &  &  \\
-2 & 3 & 4 \\
-3 & 4 & 5 \\
-4 & 5 & 6 \\
-5 & 6 & 7 \\
-\end{tabular}
-\end{center}
-
-\begin{center}
-\begin{tabular}{cccccccccc}
-1 & 2 & 3 & 4 & 5 & 6 & 2 & 3 & 4 & 5 \\
-7 & 8 & 9 & 10 & 11 & 12 & 3 & 4 & 5 & 6 \\
-4 & 5 & 6 & 7 &  &  &  &  &  &  \\
-5 &  & 6 & 7 & 8 &  &  &  &  &  \\
-\end{tabular}
-\end{center}
-
-\begin{center}
-\begin{tabular}{rlll}
-C) &  &  &  \\
-2 & 3 & 4 & 5 \\
-3 & 4 & 5 & 6 \\
-4 & 5 & 6 & 7 \\
-\end{tabular}
-\end{center}
-
-\begin{center}
-\begin{tabular}{llllll}
-e) &  &  &  & f) &  \\
-3 & 4 & 5 &  & 3 &  \\
-4 & 5 & 6 &  & 4 & 5 \\
-5 & 6 & 7 &  & 7 &  \\
-6 & 7 & 8 &  & 8 & 9 \\
-\end{tabular}
-\end{center}
-
-\begin{enumerate}
-  \setcounter{enumi}{7}
-  \item Se consideră următoarea secvență de program:
-\end{enumerate}
-
+În urma executării secvenței de program alăturate se afişează:
+\\
+a) \begin{verbatim}
+1 2 3 4 5 6
+7 8 9 10 11 12
+\end{verbatim}
+\\
+b) \begin{verbatim}
+2 3 4 5
+3 4 5 6
+4 5 6 7
+5 6 7 8
+\end{verbatim}
+\\
+c) \begin{verbatim}
+2 3 4 5
+3 4 5 6
+4 5 6 7
+\end{verbatim}
+\\
+d) \begin{verbatim}
+2 3 4
+3 4 5
+4 5 6
+5 6 7
+\end{verbatim}
+\\
+e) \begin{verbatim}
+3 4 5
+4 5 6
+5 6 7
+6 7 8
+\end{verbatim}
+\\
+f) \begin{verbatim}
+2 3
+4 5
+6 7
+8 9
+\end{verbatim}
+\\
+38.8. Se consideră următoarea secvență de program:
 \begin{verbatim}
 Limbajul C++/C
 void f(int k,int p)
@@ -17046,11 +17071,11 @@ if (k*p>=0)
     if (p!=0)
     { ...
         cout<<k<<<"* "<<p<<"= ";
-        cout <<k*p<<endl;
-        |printf("%d* %d=%d\n",k,p,k*p);
+        cout <<k*p<<endl; | printf("%d* %d=%d\n",k,p,k*p);
     }
+else f(k-1,10);
+}
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 procedure f(k,p:integer);
@@ -17059,79 +17084,72 @@ if k*p>=0 then
     begin
         if p<>0 then
             begin
+                ...
                 writeln(k,'* ',p,'= ',k*p)
             end
-\end{verbatim}
-
-\begin{verbatim}
-else f(k-1,10);
-}
-    else f(k-1,10);
+        else f(k-1,10);
     end
 end;
 \end{verbatim}
-
-Pentru a obține afișarea tablei înmulțirii de la 0 la 10 în urma apelului $f(10,10)$, apelul corespunzător punctelor de suspensie din secvența de program alăturată este:\\
-a) $f(k, p)$\\
-b) $f(10, p)$\\
-c) $f(k, 1)$\\
-d) $f(k-1, p-1)$\\
-e) $f(k, p-1)$\\
-f) $f(k-1, p)$\\
-9. Variabila s memorează un şir de caractere. Se consideră următoarea secvență de program:
-
-\section*{Limbajul C++/C}
+Pentru a obține afișarea tablei înmulțirii de la 0 la 10 în urma apelului $f(10,10)$, apelul corespunzător punctelor de suspensie din secvența de program alăturată este:
+\\
+a) $f(k, p)$
+\\
+b) $f(10, p)$
+\\
+c) $f(k, 1)$
+\\
+d) $f(k-1, p-1)$
+\\
+e) $f(k, p-1)$
+\\
+f) $f(k-1, p)$
+\\
+38.9. Variabila $s$ memorează un şir de caractere. Se consideră următoarea secvență de program:
+Limbajul C++/C
 \begin{verbatim}
 char s[101], cuv[5]="test";
 while (strstr(s,cuv))
-    strcpy(s+(strstr(s,cuv)-s),
-    s+(strstr(s,cuv)-s+strlen (cuv))) ;
+    strcpy(s+(strstr(s,cuv)-s),s+(strstr(s,cuv)-s+strlen (cuv)));
 \end{verbatim}
-
 \begin{verbatim}
-        ,los(cuv, s)
-f(cuv));
 var s:string[101];
 cuv:string[5];
-    cuv:='test';
-    while pos(cuv,s)<>0 do
-        delete(s,pos(cuv, s)
+cuv:='test';
+while pos(cuv,s)<>0 do
+    delete(s,pos(cuv, s),length(cuv));
 \end{verbatim}
-
-În urma executării secvenței de program alăturate se realizează:\\
-a) eliminarea tuturor subşirurilor test;
-b) eliminarea ultimului subșir test;
-c) dublarea tuturor subşirurilor test;
-d) eliminarea primului subşir test;
-e) dublarea ultimei apariţii a subşirului test;
-f) dublarea primei apariţii a subşirului test.
-
-\section*{Limbajul Pascal}
-\begin{enumerate}
-  \setcounter{enumi}{9}
-  \item Variabilele $\mathbf{m}, \mathbf{n}, \mathbf{i}, \mathbf{j}, \mathbf{p}, \mathbf{s}$ și $\mathbf{k}$ memorează numere naturale. Tablourile bidimensionale $\mathrm{A}_{\mathrm{n}} \mathrm{*}_{\mathrm{m}}$ ( n linii şi m coloane), $\mathrm{B}_{\mathrm{m} \star_{\mathrm{p}}}$ ( m linii şi p coloane) memorează numere naturale. Numerotarea liniilor şi a coloanelor începe cu valoarea 1.\\
+În urma executării secvenței de program alăturate se realizează:
+\\
+a) eliminarea tuturor subşirurilor test
+\\
+b) eliminarea ultimului subșir test
+\\
+c) dublarea tuturor subşirurilor test
+\\
+d) eliminarea primului subşir test
+\\
+e) dublarea ultimei apariţii a subşirului test
+\\
+f) dublarea primei apariţii a subşirului test
+\\
+38.10. Variabilele $\mathbf{m}$, $\mathbf{n}$, $\mathbf{i}$, $\mathbf{j}$, $\mathbf{p}$, $\mathbf{s}$ și $\mathbf{k}$ memorează numere naturale. Tablourile bidimensionale $\mathrm{A}_{\mathrm{n}} \mathrm{*}_{\mathrm{m}}$ ( n linii şi m coloane), $\mathrm{B}_{\mathrm{m} \star_{\mathrm{p}}}$ ( m linii şi p coloane) memorează numere naturale. Numerotarea liniilor şi a coloanelor începe cu valoarea 1.
 Se consideră următoarea secvență de program:
-\end{enumerate}
-
 \begin{verbatim}
-            Limbajul C++/C
-    for (i=1;i<=n;i++)
+Limbajul C++/C
+for (i=1;i<=n;i++)
     for (j=1;j<=p;j++)
     {
         s=0;
         for (k=1;k<=m;k++)
-                s=s+A[i][k]*B[k][j];
-        cout<<s<<' ';
-            | printf("%d ",s);
+            s=s+A[i][k]*B[k][j];
+        cout<<s<<' '; | printf("%d ",s);
         if (j==p)
-                cout<<endl;
-            |printf("\n");
+            cout<<endl; | printf("\n");
     }
 \end{verbatim}
-
-Limbajul Pascal
-
 \begin{verbatim}
+Limbajul Pascal
 for i:=1 to n do
     for j:=1 to p do
         begin
@@ -17140,83 +17158,95 @@ for i:=1 to n do
                 s:=s+A[i][k]*B[k][j];
             write(s,' ');
             if j=p then
-                    writeln
+                writeln
             end;
 \end{verbatim}
-
-În urma executării secvenței de program alăturate se afișează:\\
-a) tabloul bidimensional sumă dintre A şi B;
-b) transpusa tabloului bidimensional $\mathbf{A}$;
-c) tabloul bidimensional produs dintre $\mathbf{A}$ şi $\mathbf{B}$;
-d) tabloul bidimensional diferență dintre A şi B;
-e) suma elementelor de pe ambele diagonale ale celor două tablouri bidimensionale;
-f) produsul elementelor de pe ambele diagonale ale celor două tablouri bidimensionale.\\
-11. Se consideră următoarea secvență de program:
-
-\section*{Limbajul C++/C}
-\section*{Limbajul Pascal}
+În urma executării secvenței de program alăturate se afișează:
+\\
+a) tabloul bidimensional sumă dintre $A$ şi $B$
+\\
+b) transpusa tabloului bidimensional $A$
+\\
+c) tabloul bidimensional produs dintre $A$ şi $B$
+\\
+d) tabloul bidimensional diferență dintre $A$ şi $B$
+\\
+e) suma elementelor de pe ambele diagonale ale celor două tablouri bidimensionale
+\\
+f) produsul elementelor de pe ambele diagonale ale celor două tablouri bidimensionale
+\\
+38.11. Se consideră următoarea secvență de program:
 \begin{verbatim}
+Limbajul C++/C
 char c;
 for(c='m';c<='r';c++)
-cout<<char(c- 5);
-    |printf("%c",c-5) ;
+    cout<<char(c- 5); | printf("%c",c-5) ;
 \end{verbatim}
-
 \begin{verbatim}
+Limbajul Pascal
 var c:char;
 for c:= 'm' to 'r' do
-    write(chr(ord(c)- 5)) ;
+    write(chr(ord(c)- 5));
 \end{verbatim}
-
-Şirul de caractere afișat în urma executării secvenței de program alăturate este:\\
-a) 104\\
-b) mnopqr\\
-c) abcdef\\
-d) 109\\
-e) hijklm\\
-f) 104105106107108109\\
-12. Se consideră următoarea secvență de program:
-
+Şirul de caractere afișat în urma executării secvenței de program alăturate este:
+\\
+a) 104
+\\
+b) mnopqr
+\\
+c) abcdef
+\\
+d) 109
+\\
+e) hijklm
+\\
+f) 104105106107108109
+\\
+38.12. Se consideră următoarea secvență de program:
 \begin{verbatim}
-        Limbajul C++/C
-char s[101];int k, p, c;
-cin.getline(s,101); lgets(s);
-k=0;p=strlen(s)-1;
+Limbajul C++/C
+char s[101]; int k, p, c;
+cin.getline(s,101); | gets(s);
+k=0; p=strlen(s)-1;
 while (k!=strlen(s))
     { c=s[k]+s[p];
         s[k]=c-s[k];
         s[p]=c-s[k];
-        k++;p--;
+        k++; p--;
     }
-    cout<<s; |printf("%s",s);
+    cout<<s; | printf("%s",s);
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
-var s: string[100]; k,p,c: integer;
+var s:string[100]; k,p,c:integer;
 readln(s);
-k:=1;p:=length(s);
-while (k<= length(s)) do
+k:=1; p:=length(s);
+while (k<=length(s)) do
     begin
         c:=ord(s[k])+ord(s[p]);
         s[k]:=chr(c-ord(s[k]));
         s[p]:=chr(c-ord(s[k]));
-        k:=k+1;p:=p-1
+        k:=k+1; p:=p-1
     end;
 write(s);
 \end{verbatim}
-
-În urma executării secvenței de program alăturate se afişează:\\
-a) șirul de caractere dat de la tastatură;
-b) șirul de caractere dat de la tastatură, răsturnat;
-c) șirul de caractere fară cele de pe pozițiile $\mathbf{k}$ și $\mathbf{p}$;
-d) subşirul de caractere aflate între poziţiile $\mathbf{k}$ și $\mathbf{p}$;
-e) toate caracterele din şirul $\mathbf{s}$ care nu se află între poziţiile $\mathbf{k}$ şi $\mathbf{p}$;
-f) primul şi ultimul caracter din $\mathbf{s}$.\\
-13. Fișierul \href{http://date.in}{date.in} conţine informaţii despre trei elevi. Pentru fiecare elev sunt precizate următoarele: numele; cinci note şi teza pentru o anumită materie:\\
-Ana
-
+În urma executării secvenței de program alăturate se afişează:
+\\
+a) șirul de caractere dat de la tastatură
+\\
+b) șirul de caractere dat de la tastatură, răsturnat
+\\
+c) șirul de caractere fară cele de pe pozițiile $k$ și $p$
+\\
+d) subşirul de caractere aflate între poziţiile $k$ și $p$
+\\
+e) toate caracterele din şirul $s$ care nu se află între poziţiile $k$ şi $p$
+\\
+f) primul şi ultimul caracter din $s$
+\\
+38.13. Fișierul date.in conţine informaţii despre trei elevi. Pentru fiecare elev sunt precizate următoarele: numele; cinci note şi teza pentru o anumită materie:
 \begin{verbatim}
+Ana
 7 5 8 3 6
 6
 Sebby
@@ -17226,54 +17256,38 @@ Dan
 9 8 9 9 7
 9
 \end{verbatim}
-
 Se consideră următoarea secvenţă de program:
-
 \begin{verbatim}
 Limbajul C++/C
-ifstream f("date.in");l
-FILE *f; f= fopen("date.in","r");
+ifstream f("date.in"); | FILE *f; f= fopen("date.in","r");
 struct materie
 { char nume[51]; unsigned note[6];
     float teza;
 } clasa[30];
-float s;int i,j;
+float s; int i,j;
+s=0;
+for (j=1;j<=3;j++)
+{ f>>clasa[j].nume; | fscanf(f,"%s",clasa[j].nume);
+    for (i=1;i<= 5;i++)
+            { f>>clasa[j].note[i]; | fscanf(f,"%d",&clasa[j].note[i]);
+                s=s+clasa[j].note[i];
+            }
+                f>>clasa[j].teza; | fscanf(f,"%f",&clasa[j].teza);
+}
+    s=s-71;
+    cout<<(3*s+5*clasa[2].teza)/20; | printf("%f",(3*s+5*clasa[2].teza)/20);
+    f.close(); | fclose(f);
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 type sir=array [1..6] of byte;
-    materie= record
+    materie=record
         nume: string[50];
         note: sir; teza: real
-        end;
-var clasa:array [1..30] of
-materie;
+    end;
+var clasa:array [1..30] of materie;
     s:real; i,j:integer; f:text;
-\end{verbatim}
-
-\begin{verbatim}
-s=0;
-for (j=1;j<=3;j++)
-{ f>>clasa[j].nume; |
-        fscanf(f,"%s",clasa[j].nume);
-    for (i=1;i<= 5;i++)
-            { f>>clasa[j].note[i]; |
-        fscanf(f,"%d",&clasa[j].note[i]);
-                s=s+clasa[j].note[i];
-            }
-                f>>clasa[j].teza; |
-            fscanf(f,"%f",&clasa[j].teza);
-}
-    s=s-71;
-    cout<<(3*s+5*clasa[2].teza)/20; |
-printf("%f",(3*s
-+5*clasa[2].teza)/20);
-    f.close();|fclose(f);
-\end{verbatim}
-
-\begin{verbatim}
-assign(f,'date.in');reset(f);
+assign(f,'date.in'); reset(f);
 s:=0;
 for j:=1 to 3 do
     begin
@@ -17289,73 +17303,78 @@ s:=s-71;
 write((3*s+5*clasa[2].teza)/20);
 close(f);
 \end{verbatim}
-
-În urma executării secvenței de program alăturate se afişează:\\
-a) media celor trei elevi la respectiva materie;
-b) suma mediilor celor trei elevi;
-c) media lui Dan la respectiva materie;
-d) media lui Sebby la respectiva materie;
-e) cea mai mare medie dintre cele trei;
-f) cea mai mică medie dintre cele trei.\\
-14. Se consideră o parolă cu n caractere ce este alcătuită din cifre dispuse în progresie aritmetică. Folosind metoda backtracking se generează șiruri de numere de lungime n până la depistarea parolei respective. Se consideră următoarea secvenţă de program:
-
+În urma executării secvenței de program alăturate se afişează:
+\\
+a) media celor trei elevi la respectiva materie
+\\
+b) suma mediilor celor trei elevi
+\\
+c) media lui Dan la respectiva materie
+\\
+d) media lui Sebby la respectiva materie
+\\
+e) cea mai mare medie dintre cele trei
+\\
+f) cea mai mică medie dintre cele trei
+\\
+38.14. Se consideră o parolă cu $n$ caractere ce este alcătuită din cifre dispuse în progresie aritmetică. Folosind metoda backtracking se generează șiruri de numere de lungime $n$ până la depistarea parolei respective. Se consideră următoarea secvenţă de program:
 \begin{verbatim}
 Limbajul C++/C
-    void valid(int parola[10],int k,int &ev) |
-    void valid(int parola[10], int k, int *ev)
-    { ev= 1; |*ev= 1;
+void valid(int parola[10],int k,int &ev) | void valid(int parola[10], int k, int *ev)
+    { ev=1; | *ev=1;
         if (k>2)
             if (...)
-                ev= 0; |*ev= 0;
+                ev=0; | *ev=0;
     }
 Limbajul Pascal
-    type sir= array [1..10] of integer;
-        procedure valid( parola: sir; k: word; var ev: boolean);
+    type sir=array [1..10] of integer;
+        procedure valid(parola:sir; k:word; var ev:boolean);
         begin
             ev:= true;
             if k>2 then
                 if ... then ev:= false
         end;
 \end{verbatim}
-
-Expresia corespunzătoare punctelor de suspensie din secvența de program alăturată pentru ca cifra de pe poziția $\mathbf{k}(\mathbf{k}>\mathbf{2})$ să fie considerată validă și prin urmare variabila ev să primească valoarea $\mathbf{1 ( C + + / C ) / T r u e ( P a s c a l ) ~ e s t e : ~}$\\
-Limbajul C++/C
+Expresia corespunzătoare punctelor de suspensie din secvența de program alăturată pentru ca cifra de pe poziția $k$ ($k>2)$ să fie considerată validă și prin urmare variabila ev să primească valoarea $1$ (C++/C)/True (Pascal):
+\\
+Limbajul C++/ Limbajul C
 a) parola[k] - parola[k-1] != parola[2] - parola[1]
+\\
 b) parola[k] - parola[k-1] != parola[k+1]- parola[k]
+\\
 c) parola [k] <> parola[k-1]
+\\
 d) parola[k] - parola[k-1] >= parola[2] - parola[1]
+\\
 e) parola[k+1] - parola[k] != parola[2] - parola[1]
-
-\begin{verbatim}
+\\
 f) parola[k] == parola[2] - parola[1]
+\\
 Limbajul Pascal
 a) parola[k] - parola[k-1] <> parola[2] - parola[1]
+\\
 b) parola[k] - parola[k-1] <> parola[k+1]- parola[k]
+\\
 c) parola[k] != parola[k-1]
+\\
 d) parola[k] - parola[k-1] >= parola[2] - parola[1]
+\\
 e) parola[k+1] - parola[k]<> parola[2] - parola[1]
+\\
 f) parola[k] = parola[2] - parola[1]
-\end{verbatim}
-
-\begin{enumerate}
-  \setcounter{enumi}{14}
-  \item Variabilele $n(n \geq 2)$ și i memorează numere naturale şi tablou bidimensional pătratic a (n linii şi $n$ coloane) are valori din mulţimea ${1,2,3,4,5}$. Se consideră următoarea secvenţă de program:
-\end{enumerate}
-
-\section*{Limbajul C++/C}
+\\
+38.15. Variabilele $n$ ($n \geq 2$) și $i$ memorează numere naturale şi tablou bidimensional pătratic $a$ ($n$ linii şi $n$ coloane) are valori din mulţimea ${1,2,3,4,5}$. Se consideră următoarea secvenţă de program:
+Limbajul C++/C
 \begin{verbatim}
 for (i=n;i>= 1;i--)
     if (i!=n-i+1)
 {
-    a[i][n-i+1]=a[i][n-
-i+1]+a[i][i];
+    a[i][n-i+1]=a[i][n-i+1]+a[i][i];
     a[i][i]=a[i][n-i+1]-a[i][i];
-    a[i][n-i+1]=a[i][n-i+1]-
-a[i][i];
-    }
+    a[i][n-i+1]=a[i][n-i+1]-a[i][i];
+}
 \end{verbatim}
-
-\section*{Limbajul Pascal}
+Limbajul Pascal
 \begin{verbatim}
 for i:=n downto 1 do
     if i<>n-i+1 then
@@ -17365,14 +17384,20 @@ for i:=n downto 1 do
     a[i,n-i+1]:=a[i,n-i+1]-a[i,i]
     end;
 \end{verbatim}
-
-În urma executării secvenței de program alăturate se realizează:\\
-a) interschimbarea elementelor de pe linia i și coloana $\mathbf{n - i}+1$;
-b) egalarea valorilor de pe cele două diagonale;
-c) interschimbarea elementelor de pe cele două diagonale;
-d) înlocuirea elementelor de pe diagonala principală cu cele de pe diagonala secundară;
-e) interschimbarea elementelor de pe coloana i și linia $n-i+1$;
-f) înlocuirea elementelor de pe diagonala secundară cu cele de pe diagonala principală.
+În urma executării secvenței de program alăturate se realizează:
+\\
+a) interschimbarea elementelor de pe linia $i$ și coloana $n-i+1$;
+\\
+b) egalarea valorilor de pe cele două diagonale
+\\
+c) interschimbarea elementelor de pe cele două diagonale
+\\
+d) înlocuirea elementelor de pe diagonala principală cu cele de pe diagonala secundară
+\\
+e) interschimbarea elementelor de pe coloana $i$ și linia $n-i+1$
+\\
+f) înlocuirea elementelor de pe diagonala secundară cu cele de pe diagonala principală
+\\
 
 \section*{Varianta 39}
 
