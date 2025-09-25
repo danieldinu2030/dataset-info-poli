@@ -14393,99 +14393,143 @@ f) v[i]<v[i+1]
 \end{verbatim}
 
 \section*{Varianta 29}
-\begin{enumerate}
-  \item Răsturnatul tabloului unidimensional (2413705) este (5073142).
-\end{enumerate}
 
-Numărul necesar de interschimbări pentru a răsturna un tablou unidimensional cu n (număr natural nenul, impar) elemente este:\\
-a) 1\\
-b) $n / 2+1$\\
-c) $(\mathrm{n}-1) / 2$\\
-d) $(\mathrm{n}+1) / 2$\\
-e) $n / 2-1$\\
-f) $n$\\
-2. După permutarea circulară spre stânga cu 2 poziții, tabloul unidimensional (18 911 15 102) devine:\\
-a) ( $\left.\begin{array}{lllll}102 & 15 & 18 & 91 & 1\end{array}\right)$\\
-b) ( $\left.\begin{array}{lllll}1 & 15 & 102 & 18 & 91\end{array}\right)$\\
-c) ( $\left.\begin{array}{lllll}1 & 15 & 102 & 91 & 18\end{array}\right)$\\
-d) ( $\left.\begin{array}{lllll}15 & 102 & 18 & 91 & 1\end{array}\right)$\\
-e) ( $\left.\begin{array}{lllll}91 & 1 & 15 & 102 & 18\end{array}\right)$\\
-f) ( $\left.\begin{array}{lll}1 & 15 & 102\end{array}\right)$\\
-3. În șirurile de mai jos, elementul de pe poziția $\mathbf{k}$ reprezintă rândul pe care este așezată a $\mathbf{k}$-a damă (regină) pe o tablă de șah, damele fiind aşezate pe coloane distincte (dama 1 pe coloana 1, dama 2 pe coloana 2, ş.a.m.d.).\\
-Pentru a așeza 4 dame (regine) pe o tablă de șah $\mathbf{4 x 4}$, astfel încât acestea să nu se atace între ele (două dame se atacă atunci când se află pe aceeași linie, pe aceeași coloană sau pe aceeași diagonală), o soluție corectă este:\\
-a) 4321\\
-b) 4231\\
-c) 3142\\
-d) 2314\\
-e) 2134\\
-f) 1234\\
-4. Pentru a sorta crescător tabloul unidimensional (10 $\left.24 \begin{array}{llllll}10 & 9 & 11 & 33 & 7 & 15\end{array}\right)$, folosind BubbleSort, numărul de interschimbări necesare este:\\
-a) 9\\
-b) 10\\
-c) 11\\
-d) 12\\
-e) 13\\
-f) 14\\
-5. Cu ajutorul metodei backtracking se generează, în ordine crescătoare, numere cu proprietățile:
-
+29.1. Răsturnatul tabloului unidimensional (2 4 1 3 7 0 5) este (5 0 7 3 1 4 2). Numărul necesar de interschimbări pentru a răsturna un tablou unidimensional cu $n$ (număr natural nenul, impar) elemente este:
+\\
+a) $1$
+\\
+b) $n/2+1$
+\\
+c) $(n-1)/2$
+\\
+d) $(n+1)/2$
+\\
+e) $n/2-1$
+\\
+f) $n$
+\\
+29.2. După permutarea circulară spre stânga cu 2 poziții, tabloul unidimensional (18 91 1 15 102) devine:
+\\
+a) (102 15 18 91 1)
+\\
+b) (1 15 102 18 91)
+\\
+c) (1 15 102 91 18)
+\\
+d) (15 102 18 91 1)
+\\
+e) (91 1 15 102 18)
+\\
+f) (1 15 102)
+\\
+29.3. În șirurile de mai jos, elementul de pe poziția $\mathbf{k}$ reprezintă rândul pe care este așezată a $\mathbf{k}$-a damă (regină) pe o tablă de șah, damele fiind aşezate pe coloane distincte (dama 1 pe coloana 1, dama 2 pe coloana 2, ş.a.m.d.). Pentru a așeza 4 dame (regine) pe o tablă de șah $4 \times 4$, astfel încât acestea să nu se atace între ele (două dame se atacă atunci când se află pe aceeași linie, pe aceeași coloană sau pe aceeași diagonală), o soluție corectă este:
+\\
+a) 4 3 2 1
+\\
+b) 4 2 3 1
+\\
+c) 3 1 4 2
+\\
+d) 2 3 1 4
+\\
+e) 2 1 3 4
+\\
+f) 1 2 3 4
+\\
+29.4. Pentru a sorta crescător tabloul unidimensional (10 24 9 11 33 7 15), folosind Bubble Sort, numărul de interschimbări necesare este:
+\\
+a) 9
+\\
+b) 10
+\\
+c) 11
+\\
+d) 12
+\\
+e) 13
+\\
+f) 14
+\\
+29.5. Cu ajutorul metodei backtracking se generează, în ordine crescătoare, numere cu proprietățile:
 \begin{itemize}
   \item au exact cinci cifre;
   \item cifrele de pe poziții consecutive sunt în ordine strict crescătoare;
   \item au cel mult două cifre alăturate de aceeași paritate;
 \end{itemize}
-
-Exemplu de numere generate: 13469, 14589.\\
-O secvență care conține cinci numere generate consecutiv este:\\
-a) 4567845679456894678956789\\
-b) $3478935678 \quad 356793568945678$\\
-c) 3457834569345683456726789\\
-d) 1345813459134671347813479\\
-e) 1345813459134671346813469\\
-f) $267893456734568 \quad 3456934578$\\
-6. Pentru funcția $\pounds$ definită mai jos, valoarea returnată de apelul $\pounds(2019,2347)$; este:
-
+Exemplu de numere generate: 13469, 14589. O secvență care conține cinci numere generate consecutiv este:
+\\
+a) 45678 45679 45689 46789 56789
+\\
+b) 34789 35678 35679 35689 45678
+\\
+c) 34578 34569 34568 34567 26789
+\\
+d) 13458 13459 13467 13478 13479
+\\
+e) 13458 13459 13467 13468 13469
+\\
+f) 26789 34567 34568 34569 34578
+\\
+29.6. Pentru funcția $f$ definită mai jos, valoarea returnată de apelul $f(2019,2347)$; este:
+\begin{verbatim}
 Limbajul C++/C
-int $f($ int $a, ~ i n t ~ b) ~$\\
-{\\
-int cif;
-if ( $a+b>0$ )\\
-{\\
-cif=a\%10;
-if (cif<b\%10)\\
-cif=b\%10;
-return $f(a / 10, b / 10) * 10+c i f ;$\\
-}\\
-return 0;
-}\\
+int f(int a, int b)
+{
+    int cif;
+    if (a+b>0)
+    {
+        cif=a%10;
+        if (cif<b%10)
+            cif=b%10;
+        return f(a/10, b/10)*10+cif;
+    }
+    return 0;
+}
+\end{verbatim}
+\begin{verbatim}
 Limbajul Pascal
-function $f(a, b$ : integer) :integer;
+function f(a, b:integer):integer;
 var cif:integer;
-begin\\
-if ( $a+b>0$ ) then\\
-begin\\
-cif:=a mod 10;
-if (cif < b mod 10) then\\
-cif:=b mod 10 ;
-$\mathrm{f}:=\mathrm{f}(\mathrm{a} \operatorname{div} 10, \mathrm{~b} \operatorname{div} 10) * 10+c i f$\\
-end\\
-else\\
-f:=0\\
+begin
+    if (a+b>0) then
+    begin
+        cif:=a mod 10;
+        if (cif < b mod 10) then
+            cif:=b mod 10;
+        f:=f(a div 10, b div 10)*10+cif
+    end
+    else
+        f:=
 end;
-a) 349\\
-b) 2017\\
-c) 2349\\
-d) 7102\\
-e) 9432\\
-f) 9743\\
-7. Pentru tabloul unidimensional (4, 6, 14, 25, 61, $73,82,87,95,96,98$ ) numărul minim de elemente ale tabloului care trebuie verificate până este găsit elementul 82 este:\\
-a) 7\\
-b) 6\\
-c) 5\\
-d) 3\\
-e) 2\\
-f) 1\\
-8. În urma executării programului de mai jos, variabila $\mathbf{k}$ are valoarea:
-
+\end{verbatim}
+\\
+a) 349
+\\
+b) 2017
+\\
+c) 2349
+\\
+d) 7102
+\\
+e) 9432
+\\
+f) 9743
+\\
+29.7. Pentru tabloul unidimensional (4,6,14,25,61,73,82,87,95,96,98) numărul minim de elemente ale tabloului care trebuie verificate până este găsit elementul 82 este:
+\\
+a) 7
+\\
+b) 6
+\\
+c) 5
+\\
+d) 3
+\\
+e) 2
+\\
+f) 1
+\\
+29.8. În urma executării programului de mai jos, variabila $\mathbf{k}$ are valoarea:
 \begin{verbatim}
 Limbajul C++/C
 #include <iostream>
@@ -14493,18 +14537,6 @@ int k=1;
 int f(int n)
 {
     int k;
-\end{verbatim}
-
-\begin{verbatim}
-Limbajul Pascal
-program p;
-function f(n: integer):integer;
-var k:integer;
-begin
-    k:=k+2;
-\end{verbatim}
-
-\begin{verbatim}
     k=k+2;
     return k;
 }
@@ -14514,8 +14546,13 @@ int main()
     return 0;
 }
 \end{verbatim}
-
 \begin{verbatim}
+Limbajul Pascal
+program p;
+function f(n:integer):integer;
+var k:integer;
+begin
+    k:=k+2;
     f:=k
 end;
 var k:integer;
@@ -14524,163 +14561,249 @@ begin
     k:=f(k)
 end.
 \end{verbatim}
-
-a) 0\\
-b) 1\\
-c) 2\\
-d) 3\\
-e) nedefinită\\
-f) nicio valoare, programul are erori\\
-9. Numărul elementelor care se găsesc strict deasupra diagonalei secundare a unui tablou bidimensional cu 20 de linii și 20 de coloane este:\\
-a) 180\\
-b) 190\\
-c) 200\\
-d) 210\\
-e) 380\\
-f) 400\\
-10. Problema Turnurile din Hanoi:
-
-Se dau 3 tije. Pe prima tijă se găsesc discuri de diametre diferite, aşezate în ordinea descrescătoare a diametrelor privite de jos în sus. Se cere să se mute discurile de pe prima tijă pe cea de-a doua, utilizând ca tijă intermediară cea de-a treia, respectând următoarele reguli:
-
+\\
+a) 0
+\\
+b) 1
+\\
+c) 2
+\\
+d) 3
+\\
+e) nedefinită
+\\
+f) nicio valoare, programul are erori
+\\
+29.9. Numărul elementelor care se găsesc strict deasupra diagonalei secundare a unui tablou bidimensional cu 20 de linii și 20 de coloane este:
+\\
+a) 180
+\\
+b) 190
+\\
+c) 200
+\\
+d) 210
+\\
+e) 380
+\\
+f) 400
+\\
+29.10. Problema Turnurile din Hanoi: Se dau 3 tije. Pe prima tijă se găsesc discuri de diametre diferite, aşezate în ordinea descrescătoare a diametrelor privite de jos în sus. Se cere să se mute discurile de pe prima tijă pe cea de-a doua, utilizând ca tijă intermediară cea de-a treia, respectând următoarele reguli:
 \begin{itemize}
   \item la fiecare pas se mută un singur disc;
   \item nu este permis să se aşeze un disc cu diametrul mai mare peste un disc cu diametrul mai mic.\\
-Numărul minim de mutări necesare rezolvării problemei Turnurile din Hanoi pentru 10 discuri este:\\
-a) 99\\
-b) 100\\
-c) 1022\\
-d) 1023\\
-e) 1024\\
+Numărul minim de mutări necesare rezolvării problemei Turnurile din Hanoi pentru 10 discuri este:
+\\
+a) 99
+\\
+b) 100
+\\
+c) 1022
+\\
+d) 1023
+\\
+e) 1024
+\\
 f) 1025
-\end{itemize}
-
-\begin{enumerate}
-  \setcounter{enumi}{10}
-  \item Într-un graf orientat cu 56 de arce, în care oricare arc are extremităţi distincte şi oricare două arce diferă prin cel puţin una dintre extremităţi, numărul minim de vârfuri este:\\
-a) 6\\
-b) 7\\
-c) 8\\
-d) 28\\
-e) 56\\
+\\
+29.11. Într-un graf orientat cu 56 de arce, în care oricare arc are extremităţi distincte şi oricare două arce diferă prin cel puţin una dintre extremităţi, numărul minim de vârfuri este:
+\\
+a) 6
+\\
+b) 7
+\\
+c) 8
+\\
+d) 28
+\\
+e) 56
+\\
 f) 112
-  \item Fie problema:
-\end{enumerate}
-
-Se dau n -1 numere naturale distincte de la 1 la $\mathrm{n}\left(1<\mathrm{n}<10^{5}\right)$. Se cere un algoritm care să determine numărul lipsă.\\
-Fie algoritmii:\\
-$\mathrm{A}_{1}$ : Se verifică prin câte o parcurgere prezența fiecărui număr de la 1 la $\mathbf{n}$ în șir.\\
-$\mathrm{A}_{2}$ : Numărul lipsă este egal cu diferența dintre $[\mathrm{n} \cdot(\mathrm{n}+1) / 2]$ și suma numerelor din șir.\\
-$A_{3}: S e$ sortează numerele și se determină pentru ce valori consecutive în șirul sortat diferența este diferită de 1.\\
-A4: Se sortează crescător numerele și se determină prima valoare din șirul sortat care este diferită de poziția în șir.\\
-Este adevărat enunțul:\\
-a) Algoritmii $\mathrm{A}_{1}$ și $\mathrm{A}_{2}$ rezolvă problema pentru anumite date de intrare.\\
-b) Algoritmul $\mathrm{A}_{2}$ este cel mai puțin eficient din punctul de vedere al timpului de executare.\\
-c) Algoritmul $\mathrm{A}_{4}$ este cel mai eficient din punctul de vedere al timpului de executare.\\
-d) Algoritmul $\mathrm{A}_{4}$ rezolvă problema doar dacă numărul lipsă este cel mai mare din șir.\\
-e) Cel puțin unul dintre algoritmi nu rezolvă problema.\\
-f) Doi dintre algoritmi nu diferă ca eficiență din punctul de vedere al timpului de executare.\\
-13. Fie enunțurile:\\
-$\mathrm{E}_{1}$ : orice graf neorientat conex $\mathbf{G}$ cu cel puțin 2 noduri, conține cel puțin un nod $\mathbf{k}$ care poate fi eliminat (și muchiile incidente cu el) obținându-se un subgraf $\mathbf{G}^{\prime}$ conex; $\mathrm{E}_{2}$ : un graf neorientat cu $\mathrm{n}(\mathrm{n}>2)$ noduri și n muchii conține cel puțin un ciclu; $\mathrm{E}_{3}$ : orice arbore cu $\mathbf{n}(\mathbf{n}>1)$ noduri conține cel puțin două noduri cu gradul 1. Enunțurile adevărate sunt:\\
-a) doar $E_{1}$\\
-b) doar $E_{2}$\\
-c) doar $E_{1}$ și $E_{2}$\\
-d) doar $E_{1}$ și $E_{3}$\\
-e) doar $E_{2}$ și $E_{3}$\\
-f) $E_{1}, E_{2}$ și $E_{3}$\\
-14. În urma executării unui program pentru generarea permutărilor elementelor unui șir de caractere ce conține duplicate, numărul de cuvinte distincte, anagrame ale cuvântului "caracter", este:\\
-a) 120\\
-b) 2520\\
-c) 5040\\
-d) 10080\\
-e) 20160\\
-f) 40320\\
-15. Fie următoarele formule:
-
+\\
+29.12. Fie problema: Se dau $n-1$ numere naturale distincte de la 1 la $n$ ($1<n<10^{5}$). Se cere un algoritm care să determine numărul lipsă. Fie algoritmii:
+$A_{1}$: Se verifică prin câte o parcurgere prezența fiecărui număr de la 1 la $n$ în șir.
+$A_{2}$: Numărul lipsă este egal cu diferența dintre $[n \cdot (n+1) / 2]$ și suma numerelor din șir.
+$A_{3}$: Se sortează numerele și se determină pentru ce valori consecutive în șirul sortat diferența este diferită de 1.
+$A_{4}$: Se sortează crescător numerele și se determină prima valoare din șirul sortat care este diferită de poziția în șir.
+Este adevărat enunțul:
+\\
+a) Algoritmii $A_{1}$ și $A_{2}$ rezolvă problema pentru anumite date de intrare.
+\\
+b) Algoritmul $A_{2}$ este cel mai puțin eficient din punctul de vedere al timpului de executare.
+\\
+c) Algoritmul $A_{4}$ este cel mai eficient din punctul de vedere al timpului de executare.
+\\
+d) Algoritmul $A_{4}$ rezolvă problema doar dacă numărul lipsă este cel mai mare din șir.
+\\
+e) Cel puțin unul dintre algoritmi nu rezolvă problema.
+\\
+f) Doi dintre algoritmi nu diferă ca eficiență din punctul de vedere al timpului de executare.
+\\
+29.13. Fie enunțurile:
+$E_{1}$: orice graf neorientat conex $G$ cu cel puțin 2 noduri conține cel puțin un nod $k$ care poate fi eliminat (și muchiile incidente cu el) obținându-se un subgraf $G^{\prime}$ conex;
+$E_{2}$: un graf neorientat cu $n$ ($n>2$) noduri și $n$ muchii conține cel puțin un ciclu;
+$E_{3}$: orice arbore cu $n$ ($n>1$) noduri conține cel puțin două noduri cu gradul 1.
+Enunțurile adevărate sunt:
+\\
+a) doar $E_{1}$
+\\
+b) doar $E_{2}$
+\\
+c) doar $E_{1}$ și $E_{2}$
+\\
+d) doar $E_{1}$ și $E_{3}$
+\\
+e) doar $E_{2}$ și $E_{3}$
+\\
+f) $E_{1}$, $E_{2}$ și $E_{3}$
+\\
+29.14. În urma executării unui program pentru generarea permutărilor elementelor unui șir de caractere ce conține duplicate, numărul de cuvinte distincte, anagrame ale cuvântului "caracter", este:
+\\
+a) 120
+\\
+b) 2520
+\\
+c) 5040
+\\
+d) 10080
+\\
+e) 20160
+\\
+f) 40320
+\\
+29.15. Fie următoarele formule:
 \begin{enumerate}
   \item $F(n)=\left{\begin{array}{l}{\left[2 \cdot F\left(\frac{n}{2}-1\right)+F\left(\frac{n}{2}\right)\right] \cdot F\left(\frac{n}{2}\right), \text { n este par, } n>3} \\ {\left[F\left(\frac{n+1}{2}\right)\right]^{2}+\left[F\left(\frac{n-1}{2}\right)\right]^{2} \quad, n \text { este impar, } n>2}\end{array}\right.$
   \item $F(n)=\frac{1}{\sqrt{5}} \cdot\left(\frac{1+\sqrt{5}}{2}\right)^{n}+\frac{1}{\sqrt{5}} \cdot\left(\frac{1-\sqrt{5}}{2}\right)^{n}$
   \item $F(n)=\frac{1}{\sqrt{5}} \cdot\left(\frac{1+\sqrt{5}}{2}\right)^{n / 2}+\frac{1}{\sqrt{5}} \cdot\left(\frac{1-\sqrt{5}}{2}\right)^{n / 2}$
 \end{enumerate}
-
-Știind că $F(1)=1, F(2)=1$, pentru a determina al $\mathbf{n}$-lea ( $\mathbf{n}>2$ ) termen din șirul lui Fibonacci (1, 1, 2, 3, 5, 8, ...) se poate folosi:\\
-a) niciuna dintre cele trei formule\\
-b) doar formula 1\\
-c) doar formula 2\\
-d) doar formula 1 și formula 2\\
-e) doar formula 3\\
+Știind că $F(1)=1$, $F(2)=1$, pentru a determina al $n$-lea ($n>2$) termen din șirul lui Fibonacci (1, 1, 2, 3, 5, 8, ...) se poate folosi:
+\\
+a) niciuna dintre cele trei formule
+\\
+b) doar formula 1
+\\
+c) doar formula 2
+\\
+d) doar formula 1 și formula 2
+\\
+e) doar formula 3
+\\
 f) toate cele trei formule
+\\
 
 \section*{Varianta 30}
-\begin{enumerate}
-  \item Răsturnatul tabloului unidimensional (2 41370 ) este (0 7314 2).
-\end{enumerate}
 
-Numărul necesar de interschimbări pentru a răsturna un tabloul unidimensional cu n (număr natural nenul, par) elemente este:\\
+30.1. Răsturnatul tabloului unidimensional $(2 4 1 3 7 0)$ este $(0 7 3 1 4 2)$.
+Numărul necesar de interschimbări pentru a răsturna un tabloul unidimensional cu $n$ (număr natural nenul, par) elemente este:
+\\
 a) 1\\
-b) $n / 2-1$\\
-c) $\mathrm{n} / 2$\\
-d) $(\mathrm{n}-1) / 2$\\
-e) $n / 2+1$\\
-f) $n$\\
-2. Pentru a permuta, eficient din punctul de vedere al memoriei utilizate, circular spre dreapta $\mathrm{cu} \mathbf{k}$ poziții elementele unui tablou unidimensional $\mathrm{cu} \mathbf{n}$ numere întregi ( $\mathbf{n}, \mathbf{k}$ numere naturale nenule, $\mathbf{k} \leq \mathbf{n}$ ) este necesar un spațiu suplimentar de memorie de:\\
-a) $\mathbf{n} \cdot \mathbf{k}$ elemente\\
-b) $n$ elemente\\
-c) $\mathbf{k}$ elemente\\
-d) 0 elemente\\
-e) $2 \cdot n$ elemente\\
-f) $2 \cdot k$ elemente\\
-3. Numărul soluțiilor de așezare a 3 dame (regine) pe o tablă de șah $3 \times 3$, astfel încât acestea să nu se atace între ele (două dame se atacă atunci când se află pe aceeași linie, pe aceeași coloană sau pe aceeași diagonală), este:\\
-a) 5\\
-b) 4\\
-c) 3\\
-d) 2\\
-e) 1\\
-f) 0\\
-4. Un graf este memorat printr-o matrice de adiacență cu $\mathbf{x}+5$ linii și $\mathbf{y}+3$ coloane. Valorile lui $\mathbf{x}$ și respectiv $\mathbf{y}$ ar putea fi:\\
-a) 53\\
-b) 35\\
-c) 14\\
-d) 41\\
-e) 22\\
-f) 21\\
-5. dc $(\mathbf{a}, \mathbf{b})$ reprezintă o funcție care determină cel mai mare divizor comun al numerelor naturale $\mathbf{a}$ și $\mathbf{b}$ iar $\mathbf{a} \bmod \mathrm{b}$ reprezintă restul împărțirii numărului întreg a la numărul întreg nenul $\mathbf{b}$.\\
-O formulă recursivă pentru determinarea celui mai mare divizor comun a două numere $\mathbf{x}$ și y este:\\
-a) $\operatorname{dc}(\mathbf{x}, \mathrm{y})=\operatorname{dc}(\mathbf{x} \mathbf{y}, \mathrm{y})$\\
-b) $\operatorname{dc}(x, y)=\operatorname{dc}(x \bmod y, x)$\\
-c) $\operatorname{dc}(x, y)=\operatorname{dc}(y, x * y)$\\
-d) dc $(x, y)=d c(x, x \bmod y)$\\
-e) $\operatorname{dc}(x, y)=d c(y, x \bmod y)$\\
-f) $\mathrm{dc}(\mathrm{x}, \mathrm{y})=\mathrm{dc}(\mathrm{x} \bmod \mathrm{x}, \mathrm{y} \bmod \mathrm{y})$\\
-6. Fie un tablou unidimensional. Algoritmul de sortare rapidă (quick sort) împarte tabloul în:\\
-a) $\mathbf{2}$ subtablouri, întotdeauna cu același număr de elemente\\
-b) 2 subtablouri, nu întotdeauna cu același număr de elemente\\
-c) 3 subtablouri, întotdeauna cu același număr de elemente\\
-d) 3 subtablouri, nu întotdeauna cu același număr de elemente\\
-e) 4 subtablouri, întotdeauna cu același număr de elemente\\
-f) 4 subtablouri, nu întotdeauna cu același număr de elemente\\
-7. Fie șirul de caractere tablou. Răsturnatul acestui șir este uolbat.
-
-Structura de date cea mai adecvată în care se poate memora un șir de caractere pentru a-l folosi răsturnat este:\\
-a) arbore\\
-b) coadă\\
-c) graf orientat\\
-d) o coadă și un graf orientat\\
-e) stivă\\
-f) o coadă și un graf neorientat\\
-8. În programul de mai jos subprogramul $\pounds$ este definit incomplet.
-
+b) $n/2-1$
+\\
+c) $n/2$
+\\
+d) $(n-1)/2$
+\\
+e) $n/2+1$
+\\
+f) $n$
+\\
+30.2. Pentru a permuta, eficient din punctul de vedere al memoriei utilizate, circular spre dreapta cu $k$ poziții elementele unui tablou unidimensional cu $n$ numere întregi ($n$, $k$ numere naturale nenule, $k \leq n$) este necesar un spațiu suplimentar de memorie de:
+\\
+a) $n \cdot k$ elemente
+\\
+b) $n$ elemente
+\\
+c) $k$ elemente
+\\
+d) $0$ elemente
+\\
+e) $2 \cdot n$ elemente
+\\
+f) $2 \cdot k$ elemente
+\\
+30.3. Numărul soluțiilor de așezare a 3 dame (regine) pe o tablă de șah $3 \times 3$, astfel încât acestea să nu se atace între ele (două dame se atacă atunci când se află pe aceeași linie, pe aceeași coloană sau pe aceeași diagonală), este:
+\\
+a) 5
+\\
+b) 4
+\\
+c) 3
+\\
+d) 2
+\\
+e) 1
+\\
+f) 0
+\\
+30.4. Un graf este memorat printr-o matrice de adiacență cu $x+5$ linii și $y+3$ coloane. Valorile lui $x$ și respectiv $y$ ar putea fi:
+\\
+a) 53
+\\
+b) 35
+\\
+c) 14
+\\
+d) 41
+\\
+e) 22
+\\
+f) 21
+\\
+30.5. $dc(a, b)$ reprezintă o funcție care determină cel mai mare divizor comun al numerelor naturale $a$ și $b$ iar $a mod b$ reprezintă restul împărțirii numărului întreg $a$ la numărul întreg nenul $b$. O formulă recursivă pentru determinarea celui mai mare divizor comun a două numere $x$ și $y$ este:
+\\
+a) dc(x, y)=c(x * y, y)
+\\
+b) dc(x, y)=dc(x mod y, x)
+\\
+c) dc(x, y)=dc(y, x * y)
+\\
+d) dc(x, y)=dc(x, x mod y)
+\\
+e) dc(x, y)=dc(y, x mod y)
+\\
+f) dc(x, y)=dc(x mod x, y mod y)
+\\
+30.6. Fie un tablou unidimensional. Algoritmul de sortare rapidă (quick sort) împarte tabloul în:
+\\
+a) 2 subtablouri, întotdeauna cu același număr de elemente
+\\
+b) 2 subtablouri, nu întotdeauna cu același număr de elemente
+\\
+c) 3 subtablouri, întotdeauna cu același număr de elemente
+\\
+d) 3 subtablouri, nu întotdeauna cu același număr de elemente
+\\
+e) 4 subtablouri, întotdeauna cu același număr de elemente
+\\
+f) 4 subtablouri, nu întotdeauna cu același număr de elemente
+\\
+30.7. Fie șirul de caractere tablou. Răsturnatul acestui șir este uolbat. Structura de date cea mai adecvată în care se poate memora un șir de caractere pentru a-l folosi răsturnat este:
+\\
+a) arbore
+\\
+b) coadă
+\\
+c) graf orientat
+\\
+d) o coadă și un graf orientat
+\\
+e) stivă
+\\
+f) o coadă și un graf neorientat
+\\
+30.8. În programul de mai jos subprogramul $f$ este definit incomplet.
 \begin{verbatim}
 Limbajul C++/C
 void f(int n)
 {
     if(n!=0)
     {
-        cout<<n;|printf("%d",n);
+        cout<<n; | printf("%d",n);
         ........
     }
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
 procedure f(n:integer);
@@ -14692,25 +14815,35 @@ begin
     end
 end;
 \end{verbatim}
-
-Instrucțiunea cu care se pot înlocui punctele de suspensie astfel încât după apelul $f(\mathrm{n})$ din programul principal executarea să se încheie fără niciun fel de eroare, indiferent de valoarea întreagă a parametrului, este:
-
-\section*{Limbajul C++/C}
-Limbajul Pascal
+Instrucțiunea cu care se pot înlocui punctele de suspensie astfel încât după apelul $f(n)$ din programul principal executarea să se încheie fără niciun fel de eroare, indiferent de valoarea întreagă a parametrului, este:
+\\
+Limbajul C++/ Limbajul C
 a) $f(n-2)$;
-a) $\mathbf{f}(\mathbf{n}-2)$\\
-b) $\mathrm{f}(\mathrm{n}-1)$;
-b) $f(n-1)$\\
+\\
+b) $f(n-1)$;
+\\
 c) $f(n \% 2)$;
-c) $\mathrm{f}(\mathrm{n} \bmod 2)$\\
+\\
 d) $f(n / 2)$;
-d) $f(n \operatorname{div} 2)$\\
-e) $\mathrm{f}(\mathrm{n}+2)$;
-e) $f(n+2)$\\
+\\
+e) $f(n+2)$;
+\\
 f) $f(n * 2)$;
-f) $f(n * 2)$\\
-9. Subprogramele $\mathbf{f}$ și $\mathbf{s}$ sunt definite mai jos.
-
+\\
+Limbajul Pascal
+a) $f(n-2)$
+\\
+b) $f(n-1)$
+\\
+c) $f(n mod 2)$
+\\
+d) $f(n div 2)$
+\\
+e) $f(n+2)$
+\\
+f) $f(n * 2)$
+\\
+30.9. Subprogramele $\mathbf{f}$ și $\mathbf{s}$ sunt definite mai jos.
 \begin{verbatim}
 Limbajul C++/C
 int f(int x)
@@ -14723,101 +14856,136 @@ int s(int x, int y)
     return x+y;
 }
 \end{verbatim}
-
 \begin{verbatim}
 Limbajul Pascal
-function f(x: integer): integer;
+function f(x:integer):integer;
 begin
     x:=x+1;
     f:=x
 end;
-function s(x,y: integer): integer;
+function s(x,y:integer):integer;
 begin
     s:=x+y
 end;
 \end{verbatim}
-
 În urma executării instrucțiunii
-
-\begin{center}
-\begin{tabular}{l|l}
-Limbajul C++/C & Limbajul Pascal \\
-$\mathbf{z = s}(\mathrm{f}(1), \mathrm{f}(1)) ;$ & $\mathbf{z : = s}(\mathrm{f}(1), \mathbf{f}(1)) ;$ \\
-\end{tabular}
-\end{center} variabila de tip întreg $\mathbf{z}$ are valoarea:
-
-a) 0\\
-b) 1\\
-c) 2\\
-d) 3\\
-e) 4\\
-f) 5\\
-10. În mulțimea de numere naturale de la 101 la 200 numărul celor care nu sunt divizibile cu niciuna dintre valorile 2,3 și 5 este:\\
-a) $\mathbf{2 5}$\\
-b) 26\\
-c) 27\\
-d) 28\\
-e) 29\\
-f) 30\\
-11. În urma executării unui program pentru generarea permutărilor elementelor unui șir care conține elemente care apar de mai multe ori, rezultatul permutării elementelor șirului de caractere "xx", este:\\
-a) $\mathbf{x} \mathbf{x}$\\
-b) $\mathbf{x x}, \mathbf{x x}$\\
-c) $\mathbf{x}, \mathbf{x}$\\
-d) $x$\\
-e) $\mathbf{x}, \mathbf{x} \mathbf{x}$\\
-f) $\mathbf{x x}, \mathbf{x}$\\
-12. Cu ajutorul metodei backtracking se generează, în ordine crescătoare, numere naturale cu proprietătaile:
-
+Limbajul C++/C: z = s(f(1), f(1));
+Limbajul Pascal: z:=s(f(1), f(1));
+variabila de tip întreg $z$ are valoarea:
+\\
+a) 0
+\\
+b) 1
+\\
+c) 2
+\\
+d) 3
+\\
+e) 4
+\\
+f) 5
+\\
+30.10. În mulțimea de numere naturale de la 101 la 200 numărul celor care nu sunt divizibile cu niciuna dintre valorile 2,3 și 5 este:
+\\
+a) 25
+\\
+b) 26
+\\
+c) 27
+\\
+d) 28
+\\
+e) 29
+\\
+f) 30
+\\
+30.11. În urma executării unui program pentru generarea permutărilor elementelor unui șir care conține elemente care apar de mai multe ori, rezultatul permutării elementelor șirului de caractere "xx", este:
+\\
+a) $xx$
+\\
+b) $xx, xx$
+\\
+c) $x, x$
+\\
+d) $x$
+\\
+e) $x, xx$
+\\
+f) $xx, x$
+\\
+30.12. Cu ajutorul metodei backtracking se generează, în ordine crescătoare, numere naturale cu proprietățile:
 \begin{itemize}
   \item au exact cinci cifre;
   \item cifrele de pe poziții consecutive sunt în ordine strict crescătoare;
   \item au cel mult două cifre alăturate de aceeași paritate;
 \end{itemize}
-
-Exemplu de numere generate: 13469, 14589.\\
-Fie următoarele enunțuri:
-
+Exemplu de numere generate: 13469, 14589. Fie următoarele enunțuri:
 \begin{enumerate}
-  \item se generează cel mult $\mathbf{2 7}$ de numere cu prima cifră $\mathbf{2}$;
-  \item se generează exact șase numere de forma ippii, unde $\boldsymbol{i}$ este o cifră impară iar $\boldsymbol{p}$ este o cifră pară;
+  \item se generează cel mult 27 de numere cu prima cifră 2;
+  \item se generează exact șase numere de forma $ippii$, unde $i$ este o cifră impară iar $p$ este o cifră pară;
   \item există numere generate care să aibă patru cifre de aceeași paritate;
-  \item cifrele $\mathbf{2}$ și $\mathbf{7}$ nu pot apărea pe poziții consecutive în numerele generate;
-  \item în numerele generate cifra 1 apare pe prima poziție de exact același număr de ori cum cifra 9 apare pe ultima poziție.\\
-Numărul de enunțuri adevărate este:\\
-a) 0\\
-b) 1\\
-c) 2\\
-d) 3\\
-e) 4\\
+  \item cifrele 2 și 7 nu pot apărea pe poziții consecutive în numerele generate;
+  \item în numerele generate cifra 1 apare pe prima poziție de exact același număr de ori cum cifra 9 apare pe ultima poziție.
+Numărul de enunțuri adevărate este:
+\\
+a) 0
+\\
+b) 1
+\\
+c) 2
+\\
+d) 3
+\\
+e) 4
+\\
 f) 5
-  \item Numărul ciclurilor hamiltoniene distincte într-un graf neorientat complet $K_{n}$, cu $n \geq 3$ noduri, este:\\
-a) $2^{\mathrm{n}(\mathrm{n}-1) / 2}$\\
-b) $4^{n(n-1) / 2}$\\
-c) $(\mathrm{n}-1)$ !\\
-d) $(\mathrm{n}-1)!/ 2$\\
-e) $(n+1)!/ 2$\\
-f) $n!/ 2$
-  \item Un graf orientat este complet dacă oricare două vârfuri distincte ale sale sunt adiacente. Dacă numărul de grafuri orientate complete ce se pot obține cu n vârfuri este 59049, valoarea lui $n$ este:\\
-a) 4\\
-b) 5\\
-c) 6\\
-d) 7\\
-e) 8\\
+\\
+30.13. Numărul ciclurilor hamiltoniene distincte într-un graf neorientat complet $K_{n}$, cu $n \geq 3$ noduri, este:
+\\
+a) $2^{n(n-1)/2}$
+\\
+b) $4^{n(n-1)/2}$
+\\
+c) $(n-1)!$
+\\
+d) $(n-1)!/2$
+\\
+e) $(n+1)!/2$
+\\
+f) $n!/2$
+\\
+30.14. Un graf orientat este complet dacă oricare două vârfuri distincte ale sale sunt adiacente. Dacă numărul de grafuri orientate complete ce se pot obține cu $n$ vârfuri este 59049, valoarea lui $n$ este:
+\\
+a) 4
+\\
+b) 5
+\\
+c) 6
+\\
+d) 7
+\\
+e) 8
+\\
 f) 9
-\end{enumerate}
-
-Fie următoarele relații:\\
-15. $\quad E_{1}: F_{p}(n)=F(3 \cdot n)$;
-$E_{2}: F_{p}(n)=4 \cdot F_{p}(n-1)+F_{p}(n-2), n \geq 2, F_{p}(0)=0$ și $F_{p}(1)=2$.\\
-$E_{3}: F_{p}(n)=F\left(\frac{n+1}{2}\right) \cdot F\left(\frac{n+1}{2}\right)+F_{p}\left(\frac{n-1}{2}\right) \cdot F_{p}\left(\frac{n-1}{2}\right), n \geq 1$ și $F_{p}(0)=0$.\\
-unde: $F(n)$ este al $n$-lea termen din șirul lui Fibonacci (1, 1, 2, 3, 5, 8, ...), iar $F_{p}(n)$ este al $n$-lea termen par din șirul lui Fibonacci (2, 8, 34, ...).\\
-Pentru a determina al $n$-lea termen par din șirul lui Fibonacci putem folosi:\\
-a) doar relația $E_{1}$\\
-b) doar relația $E_{2}$\\
-c) doar relațiile $E_{1}$ și $E_{2}$\\
-d) doar relația $E_{3}$\\
-e) doar relațiile $E_{1}$ și $E_{3}$\\
+\\
+30.15. Fie următoarele relații:
+$E_{1}: F_{p}(n)=F(3 \cdot n)$;
+$E_{2}: F_{p}(n)=4 \cdot F_{p}(n-1)+F_{p}(n-2)$, $n \geq 2$, $F_{p}(0)=0$ și $F_{p}(1)=2$;
+$E_{3}: F_{p}(n)=F\left(\frac{n+1}{2}\right) \cdot F\left(\frac{n+1}{2}\right)+F_{p}\left(\frac{n-1}{2}\right) \cdot F_{p}\left(\frac{n-1}{2}\right)$, $n \geq 1$ și $F_{p}(0)=0$;
+unde: $F(n)$ este al $n$-lea termen din șirul lui Fibonacci (1, 1, 2, 3, 5, 8, ...), iar $F_{p}(n)$ este al $n$-lea termen par din șirul lui Fibonacci (2, 8, 34, ...) Pentru a determina al $n$-lea termen par din șirul lui Fibonacci putem folosi:
+\\
+a) doar relația $E_{1}$
+\\
+b) doar relația $E_{2}$
+\\
+c) doar relațiile $E_{1}$ și $E_{2}$
+\\
+d) doar relația $E_{3}$
+\\
+e) doar relațiile $E_{1}$ și $E_{3}$
+\\
 f) doar relațiile $E_{2}$ și $E_{3}$
+\\
 
 \section*{Varianta 31}
 
