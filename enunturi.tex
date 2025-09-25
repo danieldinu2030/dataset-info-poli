@@ -15348,214 +15348,308 @@ e) $\frac{(n+1)!}{2}$\\
 f) $\frac{(n+2)(n+1)}{2}$
 
 \section*{Varianta 33}
-\begin{enumerate}
-  \item Variabilele $\mathbf{x}$ și $\mathbf{y}$ memorează numere reale. Se consideră următoarea secvență de program:
-\end{enumerate}
 
+33.1. Variabilele $\mathbf{x}$ și $\mathbf{y}$ memorează numere reale. Se consideră următoarea secvență de program:
 \begin{verbatim}
-    Limbajul C++/C
-y=x;x=x*x;
-if(x<y) cout<<"DA"; if x<y then write('DA');
-        |printf("DA");
+Limbajul C++/C
+y=x; x=x*x;
+if(x<y) cout<<"DA"; | printf("DA");
 \end{verbatim}
-
-\section*{Limbajul Pascal}
-$y:=x ; x:=x * x$;
-if $x<y$ then write('DA');
-
-Executarea secvenței de program alăturate afişează DA pentru valori inițiale ale lui $\mathbf{x}$ :\\
-a) strict pozitive subunitare;
-b) strict pozitive supraunitare;
-c) strict negative subunitare;
-d) strict negative supraunitare;
-e) strict pozitive;
-f) strict negative.\\
-2. Variabilele $n$ şi $\mathbf{k}$ memorează numere naturale nenule. Expresia prin care se poate calcula cel mai mare număr natural divizibil cu $\mathbf{k}$, număr care să fie mai mic sau egal cu n este:\\
-Limbajul\\
-a) Nu există formulă.\\
-b) $(k * n) / k$\\
-C++/C
-c) $n \% k+n / k$\\
-d) $(k+n) / k$\\
-e) $n-n / k$\\
-f) $n-n \% k$\\
-Limbajul\\
-a) Nu există formulă.\\
-b) $(k$ * $n) \operatorname{div} k$\\
-Pascal
-c) $\mathrm{n} \bmod \mathrm{k}+\mathrm{n} \operatorname{div} \mathrm{k}$\\
-e) $n-n \operatorname{div} k$\\
-d) $(k+n) \operatorname{div} k$\\
-f) $n-n \bmod k$\\
-3. Variabilele n și i memorează numere naturale nenule. Se consideră următoarea secvenţă de program:
-
+\begin{verbatim}
+Limbajul Pascal
+y:=x; x:=x*x;
+if x<y then write('DA');
+\end{verbatim}
+Executarea secvenței de program alăturate afişează DA pentru valori inițiale ale lui $\mathbf{x}$:
+\\
+a) strict pozitive subunitare
+\\
+b) strict pozitive supraunitare
+\\
+c) strict negative subunitare
+\\
+d) strict negative supraunitare
+\\
+e) strict pozitive
+\\
+f) strict negative
+\\
+33.2. Variabilele $n$ şi $k$ memorează numere naturale nenule. Expresia prin care se poate calcula cel mai mare număr natural divizibil cu $k$, număr care să fie mai mic sau egal cu $n$ este:
+\\
+Limbajul C++/ Limbajul C
+a) Nu există formulă
+\\
+b) $(k * n) / k$
+\\
+c) $n \% k+n / k$
+\\
+d) $(k+n) / k$
+\\
+e) $n-n / k$
+\\
+f) $n-n \% k$
+\\
+Limbajul Pascal
+a) Nu există formulă
+\\
+b) $(k * n) div k$
+\\
+c) $n mod k+n div k$
+\\
+e) $n-n div k$
+\\
+d) $(k+n) div k$
+\\
+f) $n-n mod k$
+\\
+33.3. Variabilele $n$ și $i$ memorează numere naturale nenule. Se consideră următoarea secvenţă de program:
 \begin{verbatim}
 Limbajul C++
-for ( $i=1 ; i<=5 ; i++$ )
-n=n*i;
+for (i=1; i<=5; i++ )
+    n=n*i;
 cout<<n;
-\end{verbatim}
-
 Limbajul C
-for (i=1;i<=5;i++)\\
-n=n*i;
-printf("\%d",n);
-
-Valoarea inițială a variabilei n pentru care executarea secvenței de program alăturate afişează 360 este:\\
-a) 0\\
-b) 1\\
-c) 2\\
-d) 3\\
-e) 4\\
-f) 5\\
-4. Variabilele a şi b memorează numere naturale nenule. Se consideră următoarea secvență de program:
-
+for (i=1;i<=5;i++)
+    n=n*i;
+printf("%d",n);
+Limbajul Pascal
+for i:=1 to 5 do
+    n:=n*i;
+write(n);
+\end{verbatim}
+Valoarea inițială a variabilei $n$ pentru care executarea secvenței de program alăturate afişează 360 este:
+\\
+a) 0
+\\
+b) 1
+\\
+c) 2
+\\
+d) 3
+\\
+e) 4
+\\
+f) 5
+\\
+33.4. Variabilele $a$ şi $b$ memorează numere naturale nenule. Se consideră următoarea secvență de program:
 \begin{verbatim}
 Limbajul C++/C
-a=0;b=...;
-    while (b<10)
-    {
-        a=a+b; b++;
-    }
-    cout<<a; | printf("%d",a); write(a);
+a=0; b=...;
+while (b<10)
+{
+    a=a+b; b++;
+}
+cout<<a; | printf("%d",a);
 \end{verbatim}
-
-\section*{Limbajul Pascal}
-a:=0;b:=...;
-while $\mathrm{b}<10$ do
-
 \begin{verbatim}
+Limbajul Pascal
+a:=0; b:=...;
+while b<10 do
 begin
-        a:=a+b;b:=b+1
-    end;
+    a:=a+b; b:=b+1
+end;
 write(a);
 \end{verbatim}
-
-Limbajul Pascal for i:=1 to 5 do $\mathrm{n}:=\mathrm{n}$ * i ; write (y);
-
-Valoarea care poate înlocui punctele de suspensie din secvența alăturată, astfel încât valoarea afişată să fie 35 este:\\
-a) 2\\
-b) 3\\
-c) 4\\
-d) 5\\
-e) 6\\
-f) 7\\
-5. Un graf neorientat are gradele vârfurilor: 2, 3, 3, 2, 4. Numărul de muchii ale grafului este:\\
-a) 5\\
-b) 6\\
-c) 7\\
-d) 8\\
-e) 9\\
-f) 10\\
-6. Variabilele i şi j memorează numere naturale nenule. Se consideră următoarea secvenţă de program:
-
+Valoarea care poate înlocui punctele de suspensie din secvența alăturată, astfel încât valoarea afişată să fie 35 este:
+\\
+a) 2
+\\
+b) 3
+\\
+c) 4
+\\
+d) 5
+\\
+e) 6
+\\
+f) 7
+\\
+33.5. Un graf neorientat are gradele vârfurilor: 2, 3, 3, 2, 4. Numărul de muchii ale grafului este:
+\\
+a) 5
+\\
+b) 6
+\\
+c) 7
+\\
+d) 8
+\\
+e) 9
+\\
+f) 10
+\\
+33.6. Variabilele $i$ şi $j$ memorează numere naturale nenule. Se consideră următoarea secvenţă de program:
 Limbajul C++/C
-
 \begin{verbatim}
 for(i=0; i<=9; i++)
     for(j=0; j<=9; j++)
         a[i][j]=(2*i+3*j)%10;
 \end{verbatim}
-
-\section*{Limbajul Pascal}
-\begin{displayquote}
-for $i:=0$ to 9 do\\
-j:=0 to 9 do
-a[i][j]:=(2\textit{i+3}j) \%10;
-\end{displayquote}
-
-Suma elementelor de pe diagonala principală a tabloului bidimensional constuit este:\\
-a) 10\\
-b) 25\\
-c) 50\\
-d) 45\\
-e) 46\\
-f) 100\\
-7. Numărul maxim de comparări pentru ordonarea descrescătoare a valorilor celor 100 de componente ale tabloului unidimensional $\mathbf{v}$, ordonare realizată prin metoda bulelor, este:\\
-a) 100\\
-b) 4950\\
-c) 9701\\
-d) 9900\\
-e) 9999\\
-f) 10000\\
-8. Subprogramul $\mathbf{f}(\mathrm{a}, \mathrm{b})$ returnează media aritmetică a numerelor reale a şi b. Pentru a, b, c şi d numere reale, instrucţiunea care atribuie variabilei a suma dintre media aritmetică a numerelor b şi c şi media aritmetică a numerelor cssi d este:\\
-Limbajul\\
-a) $a=f(b, f(c, d)$;
-b) $a=f(\mathrm{f}(\mathrm{b}, \mathrm{c}), \mathrm{d})$;
-C++/C
+Limbajul Pascal
+\begin{verbatim}
+for i:=0 to 9 do
+    j:=0 to 9 do
+        a[i][j]:=(2*i+3*j)%10;
+\end{verbatim}
+Suma elementelor de pe diagonala principală a tabloului bidimensional constuit este:
+\\
+a) 10
+\\
+b) 25
+\\
+c) 50
+\\
+d) 45
+\\
+e) 46
+\\
+f) 100
+\\
+33.7. Numărul maxim de comparări pentru ordonarea descrescătoare a valorilor celor 100 de componente ale tabloului unidimensional $\mathbf{v}$, ordonare realizată prin metoda bulelor, este:
+\\
+a) 100
+\\
+b) 4950
+\\
+c) 9701
+\\
+d) 9900
+\\
+e) 9999
+\\
+f) 10000
+\\
+33.8. Subprogramul $f(a, b)$ returnează media aritmetică a numerelor reale $a$ şi $b$. Pentru $a$, $b$, $c$ şi $d$ numere reale, instrucţiunea care atribuie variabilei $a$ suma dintre media aritmetică a numerelor $b$ şi $c$ şi media aritmetică a numerelor $c$ și $d$ este:
+\\
+Limbajul C++/ Limbajul C
+a) $a=f(b, f(c, d))$;
+\\
+b) $a=f(f(b, c), d)$;
+\\
 c) $a=(b+c+d) / 2$;
+\\
 d) $a=f(b, c)+f(b, d)$;
+\\
 e) $a=f(b, d)+c$;
+\\
 f) $a=(f(b, c)+f(b, d)) / 2$;
-Limbajul a) $a:=f(b, f(c, d)$;
-b) $a:=f(\mathrm{f}(\mathrm{b}, \mathrm{c}), \mathrm{d})$;
-Pascal
+\\
+Limbajul Pascal
+a) $a:=f(b, f(c, d))$;
+\\
+b) $a:=f(f(b, c), d)$;
+\\
 c) $a:=(b+c+d) / 2$;
-d) a: $=\mathrm{f}(\mathrm{b}, \mathrm{c})+\mathrm{f}(\mathrm{b}, \mathrm{d})$;
+\\
+d) $a:=f(b, c)+f(b, d)$;
+\\
 e) $a:=f(b, d)+c$;
-f) $a:=(\mathrm{f}(\mathrm{b}, \mathrm{c})+\mathrm{f}(\mathrm{b}, \mathrm{d})) / 2$;
-9. Se consideră un graf neorientat G , cu 5 noduri, reprezentat prin matricea de adiacență alăturată.
-
+\\
+f) $a:=(f(b, c)+f(b, d)) / 2$;
+\\
+33.9. Se consideră un graf neorientat $G$, cu 5 noduri, reprezentat prin matricea de adiacență alăturată.
+0 1 0 0 1
+1 0 1 1 1
+0 1 0 1 0
+0 1 1 0 0
+1 1 0 0 0
 Afirmaţia adevărată este:
-
-\begin{center}
-\begin{tabular}{lllll}
-0 & 1 & 0 & 0 & 1 \\
-1 & 0 & 1 & 1 & 1 \\
-0 & 1 & 0 & 1 & 0 \\
-0 & 1 & 1 & 0 & 0 \\
-1 & 1 & 0 & 0 & 0 \\
-\end{tabular}
-\end{center}
-
-a) G este graf hamiltonian şi graf eulerian;
-b) G este graf hamiltonian, dar nu este graf eulerian;
-c) G nu este graf hamiltonian, dar este graf eulerian;
-d) G nu este graf hamiltonian, nici graf eulerian;
-e) G este graf hamiltonian;
-f) Toate afirmaţiile de mai sus sunt false.\\
-10. Pentru a determina toate modalităţile de a scrie pe 9 ca sumă de numere naturale nenule distincte (abstracţie făcând de ordinea termenilor), un elev foloseşte metoda backtracking generând, în această ordine, toate soluţiile: $1+2+6,1+3+5,1+8,2+3+4,2+7,3+6$ şi $4+5$. Aplicând exact aceeaşi metodă, el determină soluţiile pentru scrierea lui 12. Numărul soluţii de forma 3+. . . este:\\
-a) 0\\
-b) 1\\
-c) 2\\
-d) 4\\
-e) 6\\
-f) 7\\
-11. Fie $G$ un arbore cu n ( $\mathrm{n}>1$ ) noduri şi $\mathrm{d}_{1} \geq \mathrm{d}_{2} \geq \mathrm{d}_{3} \geq \ldots \mathrm{d}_{\mathrm{n}} \geq 1$ gradele nodurilor sale. Afirmaţia adevărată este:\\
-a) $\sum_{i=1}^{n} \mathbf{d}_{\mathrm{i}}=2 \mathrm{n}-2$\\
-b) $\sum_{i=1}^{n} \mathbf{d}_{\mathbf{i}}=2 \mathrm{n}-1$\\
-c) $\sum_{i=1}^{n} \mathbf{d}_{\mathbf{i}}=\mathbf{2 n}$\\
-d) $\sum_{i=1}^{n} \mathbf{d}_{\mathbf{i}}=2 \mathrm{n}+1$\\
-e) $\sum_{\mathrm{i}=1}^{\mathrm{n}} \mathrm{d}_{\mathrm{i}}=2 \mathrm{n}+2$\\
-f) $\sum_{i=1}^{n} d_{i}=n$\\
-12. Funcţiea $\mathbf{f}$ primeşte două valori întregi prin intermediul a doi parametri şi returnează suma tuturor cifrelor celor două numere. De exemplu, $f(173,608)$ returnează 25 . Apelul funcției $f$ care determină suma cifrelor unui număr întreg $n$ este:\\
-a) $f(1,1)$\\
-b) $f(n, 0)$\\
-c) $f(\mathrm{n}, 1)$\\
-d) $f(n, n)$\\
-e) $f(1, n)$\\
-f) $\mathrm{f}(\mathrm{n}, \mathrm{n}-1)$\\
-13. Într-o coadă, inițial vidă, la fiecare pas $\mathbf{k}$ se introduc $3 \mathbf{k}$ valori şi se extrag $\mathbf{k}+2$ valori. După executarea primilor 9 pași, în coadă se află un număr de elemente egal cu:\\
-a) 9\\
-b) 36\\
-c) 72\\
-d) 75\\
-e) 79\\
-f) $\mathbf{1 7 2}$\\
-14. Se consideră un graf neorientat conex cu $n$ noduri şi m muchii. Pentru a obţine exact 2 componente conexe, numărul minim de muchii care trebuie eliminate este egal cu:\\
-a) gradul minim din graf\\
-b) gradul maxim din graf\\
-c) $\mathrm{m}-1$\\
-d) $n-1$\\
-e) $\frac{m(m-1)}{2}$\\
-f) $\frac{\mathrm{n}(\mathrm{n}-\mathbf{1})}{2}-m$\\
-15. Numărul de elemente nule ale matricei de adiacență asociată unui arbore cu n noduri este:\\
-a) $\mathrm{n}^{2}$\\
-b) $n^{2}+1$\\
-c) $n(n-1)+n$\\
-d) $n^{2}-n-2$\\
-e) $n(n-1)-n$\\
+\\
+a) $G$ este graf hamiltonian şi graf eulerian
+\\
+b) $G$ este graf hamiltonian, dar nu este graf eulerian
+\\
+c) $G$ nu este graf hamiltonian, dar este graf eulerian
+\\
+d) $G$ nu este nici graf hamiltonian, nici graf eulerian
+\\
+e) $G$ este graf hamiltonian
+\\
+f) Toate afirmaţiile de mai sus sunt false
+\\
+33.10. Pentru a determina toate modalităţile de a scrie pe 9 ca sumă de numere naturale nenule distincte (abstracţie făcând de ordinea termenilor), un elev foloseşte metoda backtracking generând, în această ordine, toate soluţiile: $1+2+6$, $1+3+5$, $1+8$, $2+3+4$, $2+7,3+6$ şi $4+5$. Aplicând exact aceeaşi metodă, el determină soluţiile pentru scrierea lui 12. Numărul soluţii de forma $3+...$ este:
+\\
+a) 0
+\\
+b) 1
+\\
+c) 2
+\\
+d) 4
+\\
+e) 6
+\\
+f) 7
+\\
+33.11. Fie $G$ un arbore cu n ($n>1$) noduri şi $d_{1} \geq d_{2} \geq d_{3} \geq \ldots d_{n} \geq 1$ gradele nodurilor sale. Afirmaţia adevărată este:
+\\
+a) $\sum_{i=1}^{n} d_{i}=2n-2$
+\\
+b) $\sum_{i=1}^{n} d_{i}=2n-1$
+\\
+c) $\sum_{i=1}^{n} d_{i}=2 n$
+\\
+d) $\sum_{i=1}^{n} d_{i}=2n+1$
+\\
+e) $\sum_{i=1}^{n} d_{i}=2n+2$
+\\
+f) $\sum_{i=1}^{n} d_{i}=n$
+\\
+33.12. Funcţiea $f$ primeşte două valori întregi prin intermediul a doi parametri şi returnează suma tuturor cifrelor celor două numere. De exemplu, $f(173,608)$ returnează 25. Apelul funcției $f$ care determină suma cifrelor unui număr întreg $n$ este:
+\\
+a) $f(1, 1)$
+\\
+b) $f(n, 0)$
+\\
+c) $f(n, 1)$
+\\
+d) $f(n, n)$
+\\
+e) $f(1, n)$
+\\
+f) $f(n, n-1)$
+\\
+33.13. Într-o coadă, inițial vidă, la fiecare pas $k$ se introduc $3 k$ valori şi se extrag $k+2$ valori. După executarea primilor 9 pași, în coadă se află un număr de elemente egal cu:
+\\
+a) 9
+\\
+b) 36
+\\
+c) 72
+\\
+d) 75
+\\
+e) 79
+\\
+f) 172
+\\
+33.14. Se consideră un graf neorientat conex cu $n$ noduri şi $m$ muchii. Pentru a obţine exact 2 componente conexe, numărul minim de muchii care trebuie eliminate este egal cu:
+\\
+a) gradul minim din graf
+\\
+b) gradul maxim din graf
+\\
+c) $m-1$
+\\
+d) $n-1$
+\\
+e) $\frac{m(m-1)}{2}$
+\\
+f) $\frac{n(n-1)}{2}-m$
+\\
+33.15. Numărul de elemente nule ale matricei de adiacență asociată unui arbore cu $n$ noduri este:\\
+a) $n^{2}$
+\\
+b) $n^{2}+1$
+\\
+c) $n(n-1)+n$
+\\
+d) $n^{2}-n-2$
+\\
+e) $n(n-1)-n$
+\\
 f) $n^{2}-2 n+2$
+\\
 
 \section*{Varianta 34}
 
