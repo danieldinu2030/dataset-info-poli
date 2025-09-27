@@ -15,6 +15,7 @@ while true; do
     echo "[3] Format check for dual mode exercises"
     echo "[4] Format check for trio mode exercises"
     echo "[5] Attempt extraction to CSV"
+    echo "[6] Find out which exercises are missing"
     echo "==============================================================="
     read -p "Choose operation: " choice
 
@@ -54,6 +55,19 @@ while true; do
             ;;
         5)
             python3 $extractor $src $dest
+            read -p "Press Enter to continue..."
+            ;;
+        6)
+            read -p "Enter number of exercise sets (at least 1): " sets
+            read -p "Enter number of exercises in a set (at least 1): " number
+            for x in $(seq 1 $sets); do
+                for y in $(seq 1 $number); do
+                    pattern="^$x\.$y\."
+                    if ! grep -qE "$pattern" $src; then
+                        echo "Could not find exercise $x.$y."
+                    fi
+                done
+            done
             read -p "Press Enter to continue..."
             ;;
         *)

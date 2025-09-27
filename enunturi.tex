@@ -5328,20 +5328,20 @@ e) 0
 \\
 f) $n-1$
 \\
-12.2.În secvenţa următoare $\mathbf{i}, \mathbf{j}$ şi $\mathbf{n}$ sunt variabile întregi, iar a este un tablou bidimensional format din $\mathbf{n}$ linii şi $\mathbf{n}$ coloane numerotate de la 1 la $\mathbf{n}$. Indicați care este suma elementelor de pe diagonala secundară a tabloului a, în urma executării acestei secvențe.
+12.2. În secvenţa următoare $\mathbf{i}, \mathbf{j}$ şi $\mathbf{n}$ sunt variabile întregi, iar a este un tablou bidimensional format din $\mathbf{n}$ linii şi $\mathbf{n}$ coloane numerotate de la 1 la $\mathbf{n}$. Indicați care este suma elementelor de pe diagonala secundară a tabloului a, în urma executării acestei secvențe.
 \begin{verbatim}
 Limbajul C++ 
 for(i=1; i<=n; i++) 
-for(j=1; j<=n; j++) 
-a[i][j] = (i+j)% n;
+    for(j=1; j<=n; j++) 
+        a[i][j] = (i+j)% n;
 Limbajul C 
 for(i=1; i<=n; i++) 
-for(j=1; j<=n; j++) 
-a[i][j] = (i+j)% n;
+    for(j=1; j<=n; j++) 
+    a[i][j] = (i+j)% n;
 Limbajul Pascal 
 for i:=1 to n do 
-for j:=1 to n do 
-a[i,j]:=(i+j) mod n;
+    for j:=1 to n do 
+        a[i,j]:=(i+j) mod n;
 \end{verbatim}
 \\
 a) $n$
@@ -10096,7 +10096,7 @@ e) o
 \\
 f) p
 \\
-7. Se consideră graful neorientat $G$ reprezentat prin următoarea matrice de adiacență:
+21.7. Se consideră graful neorientat $G$ reprezentat prin următoarea matrice de adiacență:
 $$
 A=\left(\begin{array}{lllllll}
 0 & 1 & 1 & 0 & 0 & 0 & 0 \\
@@ -13341,7 +13341,7 @@ e) $b=\left(\begin{array}{lll}29 & 38 & 47 \\ 38 & 50 & 62 \\ 47 & 62 & 77\end{a
 \\
 f) $b=\left(\begin{array}{lll}77 & 62 & 47 \\ 62 & 50 & 38 \\ 47 & 38 & 29\end{array}\right)$
 \\
-26.15 În urma executării programului de mai jos se afișează:
+26.15. În urma executării programului de mai jos se afișează:
 \begin{verbatim}
 Limbajul C++
 #include <iostream>
