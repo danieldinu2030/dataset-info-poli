@@ -1,155 +1,156 @@
-INDICATII ȘI RĂSPUNSURI
-
 \section*{Varianta 1}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect:
-a) not $((a<-3)$ or $(a>2))$ or $(a=3)$ or $(a=5)$ or ( $a=9$ ) (Pascal) respectiv
-\end{verbatim}
+1.1. Răspuns corect: a) $not ((a<-3) or (a>2)) or (a=3) or (a=5) or (a=9)$ (Pascal), respectiv $!((a<=3) || (a>2)) || (a==3) || (a==5) || (a==9)$ (C/C++)\\
+Indicații: Valoarea lui $a$ trebuie să fie mai mare sau egală cu -3 și mai mică sau egală decât 2 sau egală cu 3 sau egală cu 5 sau egală cu 9.\\
 
-!((a<-3) || (a>2)) || (a\hl{3) || (a}5) || (a==9) (C/C++)
+1.2. Răspuns corect: c) $q-1+j$\\
 
+1.3. Răspuns corect: f) info\\
+
+1.4. Răspuns corect: d)\\
+Limbajul C++/Limbajul C
 \begin{verbatim}
-
-Indicațiii: Valoarea lui a trebuie să fie mai mare sau egală cu -3 și mai mică sau egală decât 2 sau egală cu 3 sau egală cu 5 sau egală cu 9
-2. Răspuns corect: c) $q-1+j$
-3. Răspuns corect: $f$ ) info
-4. Răspuns corect: $d$ )
+s=0; i=1;
+while(i<=n)
+{
+    s=s+x[p][i];
+    i++;
+}
 \end{verbatim}
-
-Limbajul C++/LimbajulC\\
-s=0; i=1;\\
-while(i<=n)\\[0pt]
-\{s=s+x[p][i];\\
-i++;\}
-
-\begin{verbatim}
-
 Limbajul Pascal
-\end{verbatim}
-
-s:=0; i:=1;\\
-while i<=n do\\
-begin\\[0pt]
-s:=s+x[p,i];\\
-i:=i+1;\\
+\begin{verbatim}
+s:=0; i:=1;
+while i<=n do
+begin
+    s:=s+x[p,i];
+    i:=i+1;
 end;
+\end{verbatim}
+Indicații: Fiind vorba de suma elementelor pe linia p, primul indice al elementului din tabloul bidimensional trebuie să fie p. Având n coloane în matrice, cel de-al doilea indice al elementutlui din matrice trebuie să parcurgă toate valorile de la 1 la n.\\
 
+1.5. Răspuns corect: a)\\
 \begin{verbatim}
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+0 0 0 1 1
+0 0 0 1 1
+\end{verbatim}
+\begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-251.jpg} \end{center}
+Indicații: Se observă cu ajutorul desenului de mai sus, că de la nodurile 4 și 5 nu există niciun drum la nodurile 1, 2 și 3. Deci în matrice doar elementele $\mathrm{a}_{41}$, $\mathrm{a}_{42}$, $\mathrm{a}_{43}$, $\mathrm{a}_{51}$, $\mathrm{a}_{52}$ și $\mathrm{a}_{53}$ vor avea valoarea 0 restul elementelor din matrice având valoarea 1.\\
 
-\section*{Indicații:}
+1.6. Răspuns corect: b) $(3,3,3)$\\
+Indicații: Mulțimea $\mathbf{A}_{\mathbf{2}}$ nu conține elementul 3, deci în produsul cartezian a celor 3 mulțimi nu putem avea ca soluție $(3,3,3)$.\\
 
-Fiind vorba de suma elementelor pe linia p, primul indice al elementului din tabloul bidimensional trebuie să fie p. Având n coloane în matrice, cel de-al doilea indice al elementutlui din matrice trebuie să parcurgă toate valorile de la 1 la n.
-5.
-
-\section*{Răspuns corect:}
-a) 11111
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-251.jpg?height=294&width=625&top_left_y=1672&top_left_x=910)
-
-Indicații: Se observă cu ajutorul desenului de mai sus, că de la nodurile 4 și 5 nu există niciun drum la nodurile 1,2 și 3 . Deci în matrice doar elementele $\mathrm{a}_{41}, \mathrm{a}_{42}, \mathrm{a}_{43}, \mathrm{a}_{51}, \mathrm{a}_{52}$ și $\mathrm{a}_{53}$ vor avea valoarea 0 restul elementelor din matrice având valoarea 1 .
-6. Răspuns corect: b) $(3,3,3)$
-
-Indicații: Mulțimea $\mathbf{A}_{\mathbf{2}}$ nu conține elementul 3, deci în produsul cartezian a celor 3 mulțimi nu putem avea ca soluție ( $3,3,3$ ).
-7. Răspuns corect: a)
-\begin{tabular}{l|l} 
-Limbajul C++/LimbajulC \\
-a) if (p(x,x)==2) cout<<"prim"; \begin{tabular}{l} 
-printf ("prim") ; ;
-\end{tabular} & \begin{tabular}{l} 
-Limbajul Pascal \\
-a) if $p(x, x)=2$ then \\
-write ('prim' $) ;$
-\end{tabular}
-\end{tabular}
-
-Indicații: Funcția calculează numărul de divizori al lui a care sunt mai mici sau egali cu b.
-8. Răspuns corect: d) $2,4,0,3,4$
-9. Răspuns corect: f) 673656
-
-Indicații: În urma apelului $\mathbf{t}(7,7) \mathrm{x}=7-1=6, \mathrm{y}=6+1=7$ deci se afișează 67 , iar la ieșirea din funcție $\mathbf{y}$ va avea valoarea 6 datorită primului parametru al funcției transmis prin adresă, iar $\mathbf{x}$ va avea valoarea 3 . Se va afișa $\mathbf{x}$ și $\mathbf{y}$ adică 3 și 6 . În urma apelului $\mathbf{t}(6,3) \mathbf{x}=6-1=5$, $y=5+1=6$, se va afișa 56 .
-10. Răspuns corect: c)
-
-Limbajul C++/LimbajulC
-c) $\operatorname{par}(\mathrm{a}, \mathrm{b})==(\mathrm{b}-\mathrm{a}+1) / 2$
-
+1.7. Răspuns corect: a)\\
+\begin{verbatim}
+Limbajul C++/Limbajul C
+if (p(x,x)==2) cout<<"prim"; | printf("prim");
 Limbajul Pascal
-c) par $(a, b)=(b-a+1)$ DIV 2
+if p(x, x)=2 then write('prim');
+\end{verbatim}
+Indicații: Funcția calculează numărul de divizori al lui a care sunt mai mici sau egali cu b.\\
 
-Indicații: Pentru verificarea expresiilor, se pot folosi perechi de valori cu aceeași paritate sau de parități diferite.
-11. Răspuns corect: $c$ )
-\begin{tabular}{l|l} 
-Limbajul C++/LimbajulC & \begin{tabular}{l} 
-Limbajul Pascal \\
-$c) ~$ \\
-$c) ~$ \\
-$c$
-\end{tabular}$\quad=\operatorname{mini}(c, v[i]) ;$
-\end{tabular}
-12. Răspuns corect: e) amTre
-13. Răspuns corect: a)
-Limbajul C++/LimbajulC
-a) $e[10]=x$;
+1.8. Răspuns corect: d) $2,4,0,3,4$\\
 
+1.9. Răspuns corect: f) 673656\\
+Indicații: În urma apelului $\mathbf{t}(7,7)$, $\mathrm{x}=7-1=6$, $\mathrm{y}=6+1=7$, deci se afișează 67, iar la ieșirea din funcție $\mathbf{y}$ va avea valoarea 6 datorită primului parametru al funcției transmis prin adresă, iar $\mathbf{x}$ va avea valoarea 3. Se va afișa $\mathbf{x}$ și $\mathbf{y}$, adică 3 și 6. În urma apelului $\mathbf{t}(6,3)$, $\mathbf{x}=6-1=5$, $y=5+1=6$, se va afișa 56.\\
+
+1.10. Răspuns corect: c)\\
+\begin{verbatim}
+Limbajul C++/Limbajul C
+par(a, b)==(b-a+1) / 2
 Limbajul Pascal
-a) $e[10]$ := x;
-14. Răspuns corect: f) 5120
+par(a, b)=(b-a+1) DIV 2
+\end{verbatim}
+Indicații: Pentru verificarea expresiilor, se pot folosi perechi de valori cu aceeași paritate sau de parități diferite.\\
 
-Indicații: Cu 5 noduri se pot forma $2^{\left(5^{* *}\right) / 2}=2^{10}=1024$ grafuri neorientate distincte. Deci avem 1024 de grafuri distincte în care nodul 2 este adiacent cu nodul 1, alte 1024 de grafuri distincte în care nodul 2 este adiacent cu nodul 3, ..., 1024 de grafuri distincte în care nodul 2 este adiacent cu nodul 6. În total sunt $1024 * 5=5120$ de grafuri distincte.
-15. Răspuns corect: c) 5
+1.11. Răspuns corect: c)\\
+\begin{verbatim}
+Limbajul C++/Limbajul C
+c=mini(c, v[i]);
+Limbajul Pascal
+c:=mini(c, v[i]);
+\end{verbatim}\\
+
+1.12. Răspuns corect: e) amTre\\
+
+1.13. Răspuns corect: a)\\
+\begin{verbatim}
+Limbajul C++/Limbajul C
+e[10]=x;
+Limbajul Pascal
+e[10]:=x;
+\end{verbatim}\\
+
+1.14. Răspuns corect: f) 5120\\
+Indicații: Cu 5 noduri se pot forma $2^{(5*4)/2}=2^{10}=1024$ grafuri neorientate distincte. Deci avem 1024 de grafuri distincte în care nodul 2 este adiacent cu nodul 1, alte 1024 de grafuri distincte în care nodul 2 este adiacent cu nodul 3, ..., 1024 de grafuri distincte în care nodul 2 este adiacent cu nodul 6. În total sunt $1024 * 5=5120$ de grafuri distincte.\\
+
+1.15. Răspuns corect: c) 5\\
 
 \section*{Varianta 2}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: c) 543212222543445
-2. Răspuns corect: d )
+2.1. Răspuns corect: c) 543212222543445\\
 
-Limbajul C++/LimbajulC
-d) $(x>y| | x<z) \& \& x>t$
-
+2.2. Răspuns corect: d)\\
+\begin{verbatim}
+Limbajul C++/Limbajul C
+(x>y || x<z) && x>t
 Limbajul Pascal
-d) ( $(x>y)$ or $(x<z))$ and ( $x>t$ )
-3. Răspuns corect: e)
-\begin{tabular}{l|l} 
-Limbajul C++/LimbajulC & Limbajul Pascal \\
-e) $a[i][j]==a[n+1-j][n+1-i]$ & e) $a[i, j]=a[n+1-j, n+1-i]$
-\end{tabular}
+((x>y) or (x<z)) and (x>t)
+\end{verbatim}\\
 
-Indicații: Se observă că elementele unui tablou bidimensional cu 4 linii și 4 coloane sunt simetrice față de diagonala secundară astfel: $\mathrm{a}_{11}=\mathrm{a}_{44}, \mathrm{a}_{12}=\mathrm{a}_{34}, \mathrm{a}_{13}=\mathrm{a}_{24}, \mathrm{a}_{21}=\mathrm{a}_{43}, \mathrm{a}_{22}=\mathrm{a}_{33}$, $\mathrm{a}_{31}=\mathrm{a}_{42}$, deci putem deduce expresia pe caz general $\mathrm{a}_{\mathrm{i}, \mathrm{j}}=\mathrm{a}_{\mathrm{n}+1-\mathrm{j}, \mathrm{n}+1-\mathrm{i}}$.
-4. Răspuns corect: d) 10
-5. Răspuns corect: $£$ ) (s.A.y+s.B.y)/2
-6. Răspuns corect: b) 0010
+2.3. Răspuns corect: e)\\
+\begin{verbatim}
+Limbajul C++/Limbajul C
+a[i][j]==a[n+1-j][n+1-i]
+Limbajul Pascal
+a[i, j]=a[n+1-j, n+1-i]
+\end{verbatim}
+Indicații: Se observă că elementele unui tablou bidimensional cu 4 linii și 4 coloane sunt simetrice față de diagonala secundară astfel: $\mathrm{a}_{11}=\mathrm{a}_{44}$, $\mathrm{a}_{12}=\mathrm{a}_{34}$, $\mathrm{a}_{13}=\mathrm{a}_{24}$, $\mathrm{a}_{21}=\mathrm{a}_{43}$, $\mathrm{a}_{22}=\mathrm{a}_{33}$, $\mathrm{a}_{31}=\mathrm{a}_{42}$, deci putem deduce expresia pe caz general $\mathrm{a}_{\mathrm{i}, \mathrm{j}}=\mathrm{a}_{\mathrm{n}+1-\mathrm{j}, \mathrm{n}+1-\mathrm{i}}$.\\
 
+2.4. Răspuns corect: d) 10\\
+
+2.5. Răspuns corect: f) (s.A.y+s.B.y)/2\\
+
+2.6. Răspuns corect: b)\\
+\begin{verbatim}
+0010
 0100
 1000
 0001
-Indicații: Se observă că fiecărui tabloul bidimensional îi corespunde o permutare. Permutarea este o funcție f: \{1,2,..,n\}-> \{1,2,..,n\}, bijectivă. Notăm linia 1000 cu 1, linia 0100 cu 2 , linia 0010 cu 3 și linia 0001 cu 4 . Observăm ca permutarea pentru tabloul bidimensional dat este $(3,1,4,2)$ iar permutarea următoare acesteia din punct de vedere lexicografic este $(3,2,1,4)$, corespunzătoare tabloului bidimensional de la punctul b.
-7. Răspuns corect: d) 3
+\end{verbatim}
+Indicații: Se observă că fiecărui tabloul bidimensional îi corespunde o permutare. Permutarea este o funcție $f:\{1,2,..,n\}->\{1,2,..,n\}$, bijectivă. Notăm linia 1000 cu 1, linia 0100 cu 2, linia 0010 cu 3 și linia 0001 cu 4. Observăm ca permutarea pentru tabloul bidimensional dat este $(3,1,4,2)$ iar permutarea următoare acesteia din punct de vedere lexicografic este $(3,2,1,4)$, corespunzătoare tabloului bidimensional de la punctul b.\\
 
-Indicații: Funcția calculează numărul de moduri distincte în care poate fi scris un număr $\mathbf{x}$ ca sumă de $\mathbf{y}$ numere naturale strict pozitive. Deci 6 poate fi scris in 3 moduri: 6=1+2+3, $6=1+1+4,6=2+2+2$, același rezultat se obține urmărind apelurile recursive efectuate de funcția $\mathbf{n r}$.
-8. Răspuns corect: b) 5, 6, 7, 9, 10
-9. Răspuns corect: e) 22
+2.7. Răspuns corect: d) 3\\
+Indicații: Funcția calculează numărul de moduri distincte în care poate fi scris un număr $\mathbf{x}$ ca sumă de $\mathbf{y}$ numere naturale strict pozitive. Deci 6 poate fi scris in 3 moduri: $6=1+2+3$, $6=1+1+4$, $6=2+2+2$, același rezultat se obține urmărind apelurile recursive efectuate de funcția $\mathbf{nr}$.\\
 
-Indicații: În urma apelului $\mathbf{F}(\mathbf{x}, \mathbf{y})$ respectiv $\mathbf{F}(\mathbf{\& x}, \mathbf{y})$, variabila $\mathbf{x}$ este singura variabilă care își modifică valoarea după apel, fiind un parametru transmis prin adresă, deci $\mathbf{y}$ rămâne neschimbat.
-10. Răspuns corect: c) 3
+2.8. Răspuns corect: b) 5, 6, 7, 9, 10\\
 
-Indicații: O soluție: culoarea 1 nodurile 1 , 4 și 6 , culoarea 2 nodurile 3 și 8 , culoarea 3 nodurile 5 și 7 , iar nodul 2 fiind nod izolat propun culoarea 1 (se putea colora și cu 2 și cu $3)$.
-11. Răspuns corect: $£) 45$
+2.9. Răspuns corect: e) 22\\
+Indicații: În urma apelului $\mathbf{F}(\mathbf{x}, \mathbf{y})$ respectiv $\mathbf{F}(\mathbf{\& x}, \mathbf{y})$, variabila $\mathbf{x}$ este singura variabilă care își modifică valoarea după apel, fiind un parametru transmis prin adresă, deci $\mathbf{y}$ rămâne neschimbat.\\
 
-Indicații: Avem formula: Nrmaxmuchii=(n-p)(n-p+1)/2, unde n reprezintă numărul de noduri iar $\mathbf{p}$ numărul de componente conexe.
-12. Răspuns corect: a)
+2.10. Răspuns corect: c) 3\\
+Indicații: O soluție: culoarea 1 nodurile 1, 4 și 6, culoarea 2 nodurile 3 și 8, culoarea 3 nodurile 5 și 7, iar nodul 2 fiind nod izolat propun culoarea 1 (se putea colora și cu 2 și cu 3).\\
 
-Limbajul C++/LimbajulC
-a) cout<<strchr(c, 'd')-c; | printf("\%d", strchr(c, 'd')-c );
+2.11. Răspuns corect: f) 45\\
+Indicații: Avem formula: $Nrmaxmuchii=(n-p)(n-p+1)/2$, unde $n$ reprezintă numărul de noduri iar $p$ numărul de componente conexe.\\
 
+2.12. Răspuns corect: a)\\
+\begin{verbatim}
+Limbajul C++/Limbajul C
+cout<<strchr(c, 'd')-c; | printf("%d", strchr(c, 'd')-c);
 Limbajul Pascal
-a) write (pos('d', c));
-13. Răspuns corect: c) 2021
+write (pos('d', c));
+\end{verbatim}\\
 
-Indicații: Instrucțiunea for nu produce efecte
-14. Răspuns corect: e) combinărilor de 30 de elemente luate câte 5
+2.13. Răspuns corect: c) 2021\\
+Indicații: Instrucțiunea $for$ nu produce efecte\\
 
-Indicațiii: Nu contează ordinea în echipă
-15. Răspuns corect: f) 14
+2.14. Răspuns corect: e) combinărilor de 30 de elemente luate câte 5\\
+Indicații: Nu contează ordinea în echipă\\
+
+2.15. Răspuns corect: f) 14\\
 
 \section*{Varianta 3}
 
