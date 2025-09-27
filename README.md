@@ -3,22 +3,23 @@
 ## Surse
 
 - Culegerea oficială a UPB cu probleme pentru admiterea la informatică, ediția 2020:
-    > De adăugat
+    - 46 de variante a câte 15 probleme
+    - **Total**: 690 probleme
 
 - Chestionarele de concurs date la admiteri, simulări și/sau preadmiteri:
     > De adăugat
 
 ## Conținut
 
-> A se edita după caz, este un template preluat de la dataset-ul pentru fizică
-
-- Din culegerea de probleme:
+- Pentru culegerea de probleme:
     - Fișiere LaTeX provenite din culegerea de probleme scanată, editate și formatate pe linii
     - Fișiere `.csv` intermediare pentru enunțuri, răspunsuri și rezolvări
     - Fișiere `.csv` finale care reunesc toate informațiile problemelor
-    - Script-uri Python utilizate pentru prelucrarea fișierelor
+    - Script-uri Python și Shell utilizate pentru prelucrarea fișierelor
 
-- Din subiectele de admitere:
+> A se edita după caz, este un template preluat de la dataset-ul pentru fizică (https://github.com/danieldinu2030/dataset-fizica-poli)
+
+- Pentru subiectele de admitere:
     - Fișiere LaTeX provenite din PDF-urile scanate, editate și formatate pe linii
     - Fișiere `.csv` finale care reunesc toate informațiile problemelor
     - Script-uri Python utilizate pentru prelucrarea fișierelor
