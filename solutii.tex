@@ -2412,67 +2412,66 @@ Indicații: Complexitatea algoritmului pare a fi $\mathrm{O}\left(\mathrm{n}^{2}
 
 Indicații: Pentru a afla numărul de drumuri de lungime $\mathbf{k}$ dintre două noduri $\mathbf{i}$ și $\mathbf{j}$ întrun graf orientat, se calculează matricea $\mathbf{X}=\mathbf{A}^{\mathbf{k}}$, unde $\mathbf{A}$ este matricea de adiacență. $\mathbf{X}_{\mathbf{i}, \boldsymbol{j}}$ reprezintă numărul de drumuri dintre nodurile $\mathbf{i}$ și $\mathbf{j}$ de lungime $\mathbf{k}$. Pentru a calcula numărul total de drumuri din digraf, atunci se adună toate valorile matricei $\mathbf{X}$. Deci
 $\mathrm{A}=\left(\begin{array}{llll}0 & 1 & 1 & 0 \\ 1 & 0 & 1 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0\end{array}\right), . ., \mathrm{A}^{3}=\left(\begin{array}{llll}3 & 2 & 2 & 1 \\ 3 & 2 & 3 & 2 \\ 2 & 1 & 2 & 2 \\ 2 & 0 & 1 & 2\end{array}\right)$. Se adună toate elementele și se obține 30.
+\end{verbatim}
 
 \section*{Varianta 46}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: c) 6
+46.1. Răspuns corect: c) 6\\
+Indicații: Se fac operațiile în ordinea priorităț̦ii operatorilor\\
 
-Indicații: Se fac operațiile în ordinea priorităț̦ii operatorilor
-2. Răspuns corect: e) $\mathbf{3 2}$
+46.2. Răspuns corect: e) 32\\
+Indicații: Sunt generate toate numerele care conțin doar cifrele 5 și/sau 7.\\
 
-Indicații: Sunt generate toate numerele care conțin doar cifrele 5 și/sau 7.
-3. Răspuns corect: d) $4852 \quad 26114165$
+46.3. Răspuns corect: d) 48 52 26 11 41 65\\
+Indicații: Se rearanjează elementele vectorului, astfel încât cele pare să fie la începutul șirului, iar cele impare la sfârșit.\\
 
-Indicații: Se rearanjează elementele vectorului, astfel încât cele pare să fie la începutul șirului, iar cele impare la sfârșit.
-4. Răspuns corect: d) informaticatest
+46.4. Răspuns corect: d) informaticatest\\
+Indicații: Funcția strtok (C) separă șirul inițial în două șiruri. Se concatenează al doilea șir cu primul și se modifică șirul inițial. Nu se mai adaugă spațiu între cele două șiruri.\\
 
-Indicații: Funcția strtok (C) separă șirul inițial în două șiruri. Se concatenează al doilea șir cu primul și se modifică șirul inițial. Nu se mai adaugă spațiu între cele două șiruri.
-5. Răspuns corect: $f$ ) $r>t$
+46.5. Răspuns corect: f) \begin{verbatim}
+    r>t
+\end{verbatim}\\
+Indicații: Pentru intersecția a $\mathbf{n}$ intervale se determină maximul dintre capetele din stânga ale intervalelor (notat cu $\mathbf{r}$ în secvența dată) și minimul dintre capetele din dreapta ale intervalelor (notat cu $\mathbf{t}$ în secvența dată). Intervalele se intersectează dacă $\mathbf{r \leq t}$.\\
 
-Indicații: Pentru intersecția a $\mathbf{n}$ intervale se determină maximul dintre capetele din stânga ale intervalelor (notat cu $\boldsymbol{r}$ în secvența dată) și minimul dintre capetele din dreapta ale intervalelor (notat cu t în secvența dată). Intervalele se intersectează dacă $r \leq t$.
-6. Răspuns corect: f) $a[n+1-j][n+1-i] \quad \mid a[n+1-j, n+1-i]$
+46.6. Răspuns corect: f) \begin{verbatim}
+    a[n+1-j][n+1-i] | a[n+1-j, n+1-i]
+\end{verbatim}\\
+Indicații: Algoritmul parcurge elementele din zona $\mathbf{I}$ și, prin simetrie față de diagonala secundară, accesează elementele din zona $\mathbf{II}$.\\
 
-Indicații: Algoritmul parcurge elementele din zona I și, prin simetrie față de diagonala secundară, accesează elementele din zona II.
-7. Răspuns corect: a$) \mathrm{p} /=2 \mid \mathrm{p}$ div 2
+46.7. Răspuns corect: a) \begin{verbatim}
+    p/=2│p div 2 
+\end{verbatim}\\
+Indicații: Este folosit algoritmul căutării binare.\\
 
-Indicații: Este folosit algoritmul căutării binare.
-8. Răspuns corect: c) 3
+46.8. Răspuns corect: c) 3\\
+Indicații: Variabila $\mathbf{S}$ de tip înregistrare, după toate atribuirile făcute, va avea valoarea $\{4,5,6,\{3,2,1\}\}$. Se afișează rezultatul expresiei: $\mathbf{5-2}$\\
 
-Indicații: Variabila $\mathbf{S}$ de tip înregistrare, după toate atribuirile făcute, va avea valoarea $\{4,5,6,\{3,2,1\}\}$. Se afișează rezultatul expresiei: 5-2
-9. Răspuns corect: a) 0
+46.9. Răspuns corect: a) 0\\
+Indicații: Șirul apelurilor este: $\mathrm{f}(6,2) \stackrel{6>2}{\Longrightarrow} \mathrm{f}(2,6) \stackrel{2<6}{\Longrightarrow} 4$, apoi se revine la apelul anterior și se evaluează $f(4,3) \stackrel{4>3}{\Longrightarrow} f(3,4) \stackrel{3<4}{\Longrightarrow} 1$; se continuă cu $f(1,1) \stackrel{1=1}{\Longrightarrow} f(2,1) \stackrel{2>1}{\Longrightarrow} f(1,2) \stackrel{1<2}{\Rightarrow} 1$ și se revine adunând pe 2 sau scăzând pe 1.\\
 
-Indicații: Șirul apelurilor este: $\mathrm{f}(6,2) \stackrel{6>2}{\Longrightarrow} \mathrm{f}(2,6) \stackrel{2<6}{\Longrightarrow} 4$, apoi se revine la apelul anterior și se evaluează $f(4,3) \stackrel{4>3}{\Longrightarrow} f(3,4) \stackrel{3<4}{\Longrightarrow} 1$; se continuă cu $f(1,1) \stackrel{1=1}{\Longrightarrow} f(2,1) \stackrel{2>1}{\Longrightarrow} f(1,2) \stackrel{1<2}{\Rightarrow} 1$ și se revine adunând pe 2 sau scăzând pe 1 .
-10. Răspuns corect: e) 8
+46.10. Răspuns corect: e) 8\\
+Indicații: Circuitele elementare sunt: ABA, ACBA, ACDBA, ADBA, ADCBA, AEA, AEDBA, AEDCBA\\
 
-Indicații: Circuitele elementare sunt: ABA, ACBA, ACDBA, ADBA, ADCBA, AEA, AEDBA, AEDCBA
+46.11. Răspuns corect: b) egrl egrm\\
+Indicații: O abordare ar putea să plece de la o variantă dată. Folosind metoda backtracking, ținând cont de condițiile impuse de problemă, se pleacă de la primul cuvânt propus și se generează următoarele două soluții.\\
 
-\section*{11. Răspuns corect: b) egrl egrm}
+46.12. Răspuns corect: c) \begin{verbatim}
+    x=t[x]; │ x:=t[x];
+\end{verbatim}\\
+Indicații: Se merge pe drumul de la nodul $\mathbf{x}$ către rădăcină, adică, de fiecare dată, se trece de la $\mathbf{x}$ la tatăl lui.\\
 
-Indicații: O abordare ar putea să plece de la o variantă dată. Folosind metoda backtracking, ținând cont de condițiile impuse de problemă, se pleacă de la primul cuvânt propus și se generează următoarele două soluții.
-12. Răspuns corect: c) $\mathbf{x}=\mathbf{t}[\mathbf{x}]$; | $\mathbf{x}:=\mathrm{t}[\mathbf{x}]$;
+46.13. Răspuns corect: a) 1100\\
+Indicații: Algoritmul determină cifra de control a numărului $\mathbf{n}$. Deci, se cere să se determine câte numere din intervalul $\mathbf{[100, 10000]}$ au cifra de control $\mathbf{5}$. Cum numerele cu aceeași cifră de control reprezintă o progresie aritmetică cu rația $\mathbf{9}$, atunci raspunsul este $\mathbf{(10000-100)/9=1100}$.\\
 
-Indicații: Se merge pe drumul de la nodul $\mathbf{x}$ către rădăcină, adică, de fiecare dată, se trece de la $\mathbf{x}$ la tatăl lui.
-13. Răspuns corect: a) 1100
+46.14. Răspuns corect: e) 148\\
+Indicații: Grupăm elementele câte două (primul cu al doilea, al treilea cu al patrulea etc). Pentru prima pereche de elemente se face o comparare, presupunându-se că minimul perechii este minimul global, respectiv maximul perechii este maximul global. Pentru fiecare dintre celelalte perechi, se face o comparare ca să se determine cel mai mic și cel mai mare număr din pereche și apoi minimul perechii cu minimul global și maximul perechii cu maximul global. Deci, pentru fiecare pereche de elemente, se fac 3 comparații. Deci $3 \cdot \frac{100}{2}-2=148$\\
 
-Indicații: Algoritmul determină cifra de control a numărului $n$. Deci, se cere să se determine câte numere din intervalul [100, 10000] au cifra de control 5. Cum numerele cu aceeași cifră de control reprezintă o progresie aritmetică cu rația 9 , atunci raspunsul este (10000-100)/9=1100.
-14. Răspuns corect: e) 148
-
-Indicații: Grupăm elementele câte două (primul cu al doilea, al treilea cu al patrulea etc). Pentru prima pereche de elemente se face o comparare, presupunându-se că minimul perechii este minimul global, respectiv maximul perechii este maximul global. Pentru fiecare dintre celelalte perechi, se face o comparare ca să se determine cel mai mic și cel mai mare număr din pereche și apoi minimul perechii cu minimul global și maximul perechii cu maximul global. Deci, pentru fiecare pereche de elemente, se fac 3 comparații. Deci $3 \cdot \frac{100}{2}-2=148$
-15. Răspuns corect: d) 4
-
+46.15. Răspuns corect: d) 4\\
 Indicații: Dacă aranjăm nodurile astfel:
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-335.jpg?height=286&width=356&top_left_y=1792&top_left_x=1139) componentă conexă conține nodurile de pe două coloane. Adică, prima componentă conține nodurile de pe coloanele 1 și 5 , a doua componentă conține nodurile de pe coloanele $\mathbf{2}$ și 6 , a treia de pe coloanele 3 și 7 iar a patra de pe coloanele 4 și 8 . Deci componentele conexe sunt:
-\end{verbatim}
-
-\{100, 96, 92, 88, 84, 80, ......, 12, 8, 4\}\\
-\{99, 95, 91, 87, 83, 79, ......., 11, 7, 3\}\\
-\{98, 94, 90, 86, 82, 78, ...., 10, 6, 2\}\\
-\{97, 93, 89, 85, 81, 77, ....., 9, 5, 1\}
-
+\begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-335.jpg} \end{center}, se observă că o componentă conexă conține nodurile de pe două coloane. Adică, prima componentă conține nodurile de pe coloanele $\mathbf{1}$ și $\mathbf{5}$, a doua componentă conține nodurile de pe coloanele $\mathbf{2}$ și $\mathbf{6}$, a treia de pe coloanele $\mathbf{3}$ și $\mathbf{7}$ iar a patra de pe coloanele $\mathbf{4}$ și $\mathbf{8}$. Deci componentele conexe sunt:
 \begin{verbatim}
-
-\end{verbatim}
-
-
-\end{document}
+{100, 96, 92, 88, 84, 80, ......, 12, 8, 4} 
+{99, 95, 91, 87, 83, 79, ........, 11, 7, 3} 
+{98, 94, 90, 86, 82, 78, ...., 10, 6, 2} 
+{97, 93, 89, 85, 81, 77, ....., 9, 5, 1}
+\end{verbatim}\\
