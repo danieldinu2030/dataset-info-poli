@@ -949,262 +949,137 @@ Indicație: Funcția va returna 0 dacă toate elementele vectorului sunt în ord
 
 \section*{Varianta 23}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: c) $b+a / 10!=b \% c * a / c$ (limbaj $C++/ C)$
-b+a div $10<>b$ mod $c * a \operatorname{div} c$ (limbaj Pascal)
-2. Răspuns corect: f) 11
+23.1. Răspuns corect: c) $b+a / 10!=b \% c * a / c$ (limbajul C++/ C)\\ $b+a$ div $10<>b$ mod $c * a$ div $c$ (limbajul Pascal)\\
 
-Indicații: suma gradelor trebuie să fie un număr par. Pentru $\mathrm{n}=13$ și $\mathrm{d}=11$ suma gradelor ar fi 143.
-3. Răspuns corect: c) 7
+23.2. Răspuns corect: f) 11\\
+Indicații: Suma gradelor trebuie să fie un număr par. Pentru $\mathrm{n}=13$ și $\mathrm{d}=11$, suma gradelor ar fi 143.\\
 
-Indicații: $i=1 ; i=2 ; i=4 ; i=8 ; i=16 ; i=32 ; i=64$
-4. Răspuns corect: e) 8
+23.3. Răspuns corect: c) 7\\
+Indicații: $i=1$; $i=2$; $i=4$; $i=8$; $i=16$; $i=32$; $i=64$\\
 
-Indicații: se elimină cifrele, dar nu cele care sunt precedate de o cifră ștearsă
-5. Răspuns corect: b) $n *(n-1) / 2$
+23.4. Răspuns corect: e) 8\\
+Indicații: Se elimină cifrele, dar nu cele care sunt precedate de o cifră ștearsă.\\
 
-Indicații: se execută $(n-1)+(n-2)+\ldots+2+1$ comparații
-6. Răspuns corect: c ) -4
+23.5. Răspuns corect: b) $n *(n-1) / 2$\\
+Indicații: Se execută $(n-1)+(n-2)+\ldots+2+1$ comparații.\\
 
-Indicații: $\mathrm{x}=15$; $\mathrm{x}=14 ; \mathrm{x}=7 ; \mathrm{x}=2 ; \mathrm{x}=1 ; \mathrm{x}=-4$;
-7. Răspuns corect: d) 13
+23.6. Răspuns corect: c) -4\\
+Indicații: $\mathrm{x}=15$; $\mathrm{x}=14$; $\mathrm{x}=7$; $\mathrm{x}=2$; $\mathrm{x}=1$; $\mathrm{x}=-4$;\\
 
-Indicații: Se generează: 1003, 1012, 1021, 1030, 1102, 1111, 1120, 1201, 1210, 1300, 2002, 2011, 2020
-8. Răspuns corect: a) suma elementelor de sub diagonala principală exclusiv elementele diagonalei principale
-9. Răspuns corect: e) h.g.c [2]
-10. Răspuns corect: e) $1,4,5,6,8$
+23.7. Răspuns corect: d) 13\\
+Indicații: Se generează: 1003, 1012, 1021, 1030, 1102, 1111, 1120, 1201, 1210, 1300, 2002, 2011, 2020.\\
 
-Indicații: lanțurile elementare de lungime 3 sunt: $(1,2,3,4),(1,2,3,6)(1,2,7,5)(8,2,3,4)$ (8,2,3,6) (8,2,7,5) (3,2,7,5) (6,3,2,7) (4,3,2,7)
-Nodurile $1,4,5,6$ și 8 apar în câte 3 lanțuri elementare, celelalte noduri apar de mai multe ori.
-11. Răspuns corect: f) 631321
+23.8. Răspuns corect: a) suma elementelor de sub diagonala principală exclusiv elementele diagonalei principale\\
 
-Indicații: Primul "for" atribuie tabloului: 051321
-$a[a[6]]=2 * 6 \% 7 \quad a[1]=5$
-$a[a[5]]=2 * 5 \% 7 \quad a[2]=3$
-$a[a[4]]=2 * 4 \% 7 \quad a[3]=1$
-$a[a[3]]=2 * 3 \% 7 a[1]=6$
-12. Răspuns corect: c) $\mathbf{s}(\mathbf{2 0 2 0}, \mathbf{2})=\mathbf{4}$ și reprezintă suma exponenților divizorilor primi din descompunerea în factori primi a numărului 2020
-13. Răspuns corect: d) 1792
+23.9. Răspuns corect: e) h.g.c[2]\\
 
-Indicații: Sunt $2^{6}=64$ grafuri cu 4 noduri (nodurile 3, 4, 5, 6).
-Dacă există muchia [1,2] atunci 2 se conectează cu 3 sau 4 sau 5 sau 6 . Deci în acest caz avem 4 variante.
-Dacă 1 se conectează cu 3 sau 4 sau 5 sau 6 atunci și 2 se conectează cu două dintre nodurile $3,4,5,6$. În acest caz avem $4 * 6=24$ variante.
-În total avem 4+24=28 variante de conectare pentru 1 și 2. În total avem 28*64=1792 grafuri cu proprietatea cerută.
-14. Răspuns corect:f) 3112210219216
-15. Răspuns corect: f) Aplicând metoda de sortare prin inserție se poate obține ca etapă intermediară tabloul $v=(1,3,4,2,5,7,6)$
-Indicații: Dacă se parcurge tabloul de la primul element la ultimul, prin inserție avem: $(2,3,4,5,1,7,6)(1,2,3,4,5,7,6)(1,2,3,4,5,6,7)$
-Bubble Sort: prima traversare: se schimbă 4 cu $2,5 \mathrm{cu} 1,7$ cu 6 și se obține tabloul ( $3,2,4,1,5$, 6, 7); a doua traversare: se schimbă 3 cu 2,4 cu 1 și se obține tabloul ( $2,3,1,4,5$, 7); a treia traversare: se schimbă 3 cu 1 și se obține tabloul ( $2,1,3,4,5,6,7$ ); a patra traversare: se schimbă $\mathbf{2}$ cu 1 și se obține tabloul sortat
-b) interclasare: dacă se interclasează $(2,3,4,5)$ cu $(1,6,7)$, se compară 1 cu 2 și 1 devine primul în tablou, apoi $2 \mathrm{cu} 6,3 \mathrm{cu} 6$ etc.
-Dacă se interclasează $(2,3,4)$ cu $(1,5,6,7)$ se compară 1 cu 2 si 1 devine primul în tablou, apoi $2 \mathrm{cu} 5,3 \mathrm{cu} 5$ etc.
-c) prin selecția minimului/maximului se fac cel mult $\mathbf{n - 1}$ interschimbări
-d) la prima parcurgere se compară 3 cu 2 și minimul devine 2 . Tabloul devine (1, 4, 2,5,3,7,6). La a doua parcurgere minimul inițial este 4, apoi devine $\mathbf{2}$ și se compară cu 3, iar 2 este plasat pe a doua poziție a tabloului.
-e) După prima traversare se obține tabloul (3, 2, 4, 1, 5, 6, 7)
+23.10. Răspuns corect: e) $1,4,5,6,8$\\
+Indicații: Lanțurile elementare de lungime 3 sunt: $(1,2,3,4)$, $(1,2,3,6)$, $(1,2,7,5)$, $(8,2,3,4)$, $(8,2,3,6)$, $(8,2,7,5)$, $(3,2,7,5)$, $(6,3,2,7)$, $(4,3,2,7)$\\ Nodurile 1, 4, 5, 6 și 8 apar în câte 3 lanțuri elementare, celelalte noduri apar de mai multe ori.\\
+
+23.11. Răspuns corect: f) 6 3 1 3 2 1\\
+Indicații: Primul "for" atribuie tabloului: 0 5 1 3 2 1\\ $a[a[6]]=2 * 6 \% 7 \Rightarrow a[1]=5$\\ $a[a[5]]=2 * 5 \% 7 \Rightarrow a[2]=3$\\ $a[a[4]]=2 * 4 \% 7 \Rightarrow a[3]=1$\\ $a[a[3]]=2 * 3 \% 7 \Rightarrow a[1]=6$\\
+
+23.12. Răspuns corect: c) $\mathbf{s}(\mathbf{2 0 2 0}, \mathbf{2})=\mathbf{4}$ și reprezintă suma exponenților divizorilor primi din descompunerea în factori primi a numărului 2020
+
+23.13. Răspuns corect: d) 1792\\
+Indicații: Sunt $2^{6}=64$ grafuri cu 4 noduri (nodurile 3, 4, 5, 6). Dacă există muchia [1,2], atunci 2 se conectează cu 3 sau 4 sau 5 sau 6. Deci în acest caz avem 4 variante.\\ Dacă 1 se conectează cu 3 sau 4 sau 5 sau 6, atunci și 2 se conectează cu două dintre nodurile 3, 4, 5, 6. În acest caz avem $4 * 6=24$ variante.\\ În total avem $4+24=28$ variante de conectare pentru 1 și 2. În total avem $28*64=1792$ grafuri cu proprietatea cerută.\\
+
+23.14. Răspuns corect:f) 3 11 2 2 10 2 1 9 2 1 6\\
+
+23.15. Răspuns corect: f) Aplicând metoda de sortare prin inserție se poate obține ca etapă intermediară tabloul $v=(1,3,4,2,5,7,6)$\\
+Indicații: Dacă se parcurge tabloul de la primul element la ultimul, prin inserție avem: $(2,3,4,5,1,7,6) \rightarrow (1,2,3,4,5,7,6) \rightarrow (1,2,3,4,5,6,7)$\\ Bubble Sort:\\ Prima traversare: se schimbă 4 cu 2, 5 cu 1, 7 cu 6 și se obține tabloul $(3,2,4,1,5,6,7)$;\\ A doua traversare: se schimbă 3 cu 2, 4 cu 1 și se obține tabloul $(2,3,1,4,5,6,7)$;\\ A treia traversare: se schimbă 3 cu 1 și se obține tabloul $(2,1,3,4,5,6,7)$;\\ A patra traversare: se schimbă 2 cu 1 și se obține tabloul sortat.\\ b) interclasare: dacă se interclasează $(2,3,4,5)$ cu $(1,6,7)$, se compară 1 cu 2 și 1 devine primul în tablou, apoi 2 cu 6, 3 cu 6 etc.\\ Dacă se interclasează $(2,3,4)$ cu $(1,5,6,7)$ se compară 1 cu 2 și 1 devine primul în tablou, apoi 2 cu 5, 3 cu 5 etc.\\ c) prin selecția minimului/maximului se fac cel mult $n - 1$ interschimbări\\ d) la prima parcurgere se compară 3 cu 2 și minimul devine 2. Tabloul devine $(1,4,2,5,3,7,6)$. La a doua parcurgere minimul inițial este 4, apoi devine 2 și se compară cu 3, iar 2 este plasat pe a doua poziție a tabloului.\\ e) După prima traversare se obține tabloul $(3,2,4,1,5,6,7)$\\
 
 \section*{Varianta 24}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: d$)$ număr natural impar de o singură cifră
+24.1. Răspuns corect: d) număr natural impar de o singură cifră\\
+Indicații: $n \% 2 == 1$ este adevărată pentru numere naturale impare.\\
 
-Indicații: $\mathbf{n \%} \mathbf{2 = = 1}$ este adevărată pentru numere naturale impare
-2. Răspuns corect: f) $\mathbf{i}+j=n+1$
-3. Răspuns corect: d) este hamiltonian dar nu eulerian
+24.2. Răspuns corect: f) $i+j=n+1$\\
 
-Indicații: fiecare nod are gradul 9, care nu este un număr par
-4. Răspuns corect: c) a[i]-a[i-1]!=d (C++/C) respectiva[i]-a[i-1]<>d (Pascal)
-5. Răspuns corect: b) 2
+24.3. Răspuns corect: d) este hamiltonian dar nu eulerian\\
+Indicații: Fiecare nod are gradul 9, care nu este un număr par.\\
 
-Indicații: cele mai lungi lanțuri elementare sunt (5, 7, 2, 3, 6), (5, 7, 2, 3, 4) și au în mijloc nodul 2
-6. Răspuns corect: a) 1326
+24.4. Răspuns corect: c) $a[i]-a[i-1]!=d$ (C++/C), respectiv $a[i]-a[i-1]<>d$ (Pascal)\\
 
-Indicații: se compară la fiecare pas ultima cifră a numărului a cu ultima cifră a numărului $\mathbf{b}$ și cea mai mică dintre acestea este adăugată numărului $\mathbf{p}$.
-$a=11357$
-b= 1426
-7. Răspuns corect: c) 19
+24.5. Răspuns corect: b) 2\\
+Indicații: Cele mai lungi lanțuri elementare sunt $(5, 7, 2, 3, 6)$, $(5, 7, 2, 3, 4)$ și au în mijloc nodul 2.\\
 
-Indicații: se determină maxim pentru toți indicii, mai puțin pentru ultimul indice
-8. Răspuns corect: c) orientat cu 4 noduri și 6 arce
+24.6. Răspuns corect: a) 1326\\
+Indicații: Se compară la fiecare pas ultima cifră a numărului $a$ cu ultima cifră a numărului $b$ și cea mai mică dintre acestea este adăugată numărului $p$. a=11357; b=1426\\
 
-Indicații: Matricea are 4 linii și 4 coloane, deci graful are 4 noduri. Matricea nu este simetrică, deci nu este graf neorientat. Are 6 elemente nenule, deci are 6 arce.
-9. Răspuns corect: e) noram și nramo
+24.7. Răspuns corect: c) 19\\
+Indicații: Se determină maxim pentru toți indicii, mai puțin pentru ultimul indice.\\
 
-Indicații: după ordonarea alfabetică a literelor cuvântului roman se obține amnor. Daca nu le ordonează și consideră ca primă soluție cuvântul dat se obține răspunsul a
-10. Răspuns corect: c) o rama alba
+24.8. Răspuns corect: c) orientat cu 4 noduri și 6 arce\\
+Indicații: Matricea are 4 linii și 4 coloane, deci graful are 4 noduri. Matricea nu este simetrică, deci nu este graf neorientat. Are 6 elemente nenule, deci are 6 arce.\\
 
-Indicații: Se elimină spațiile din șir și se verifică dacă este palindrom. Singurul care nu este palindrom este oramaalba
-11. Răspuns corect: d) 14
+24.9. Răspuns corect: e) noram și nramo\\
+Indicații: După ordonarea alfabetică a literelor cuvântului roman se obține amnor. Daca nu le ordonează și consideră ca primă soluție cuvântul dat se obține răspunsul a).\\
 
-Indicații: $\mathrm{f}(3)=\mathrm{f}(2)+2 * f(0)=3+2 * 1=5$
-$f(2)=f(1)+2 * f(-1)=1+2=3$ deci $f(3)$ are 4 apeluri
-$f(5)=f(4)+2 * f(2) \quad f(2)=f(1)+2 * f(-1)$
-$f(4)=f(3)+2 * f(1) \quad f(3)=f(2)+2 * f(0) \quad f(2)=f(1)+2 * f(-1)$
-$f(5)$ și $f(3)$ nu se numără pentru că sunt apeluri din programul principal. Se cere numărul de autoapeluri!
-12. Răspuns corect: c) $\mathbf{1 4}$
+24.10. Răspuns corect: c) o rama alba\\
+Indicații: Se elimină spațiile din șir și se verifică dacă este palindrom. Singurul care nu este palindrom este oramaalba.\\
 
-Indicații: se generează tabloul
-\begin{tabular}{rrrr}
-1 & 2 & 3 & 4 \\
-5 & 6 & 7 & 3 \\
-8 & 9 & 6 & 2 \\
-10 & 8 & 5 & 1
-\end{tabular}
-13. Răspuns corect: f) 112 și 166
+24.11. Răspuns corect: d) 14\\
+Indicații: $f(3)=f(2)+2 * f(0)=3+2 * 1=5$\\ $f(2)=f(1)+2 * f(-1)=1+2=3$, deci $f(3)$ are 4 apeluri\\ $f(5)=f(4)+2 * f(2) \quad f(2)=f(1)+2 * f(-1)$\\ $f(4)=f(3)+2 * f(1) \quad f(3)=f(2)+2 * f(0) \quad f(2)=f(1)+2 * f(-1)$\\ $f(5)$ și $f(3)$ nu se numără pentru că sunt apeluri din programul principal. Se cere numărul de autoapeluri!\\
 
-Indicații: $\mathrm{f}(95)=\mathrm{f}(1+\mathrm{f}(97))=\mathrm{f}(110)=112$;
-$\mathrm{f}(97)=\mathrm{f}(1+\mathrm{f}(99))=\mathrm{f}(107)=109$;
-$\mathrm{f}(99)=\mathrm{f}(1+\mathrm{f}(101))=\mathrm{f}(1+103)=\mathrm{f}(104)=106$;
-Se observă că plecând de la $x=99$, dacă $x$ scade cu $2, f(x)$ crește cu 3 .
-Plecând de la 99 avem $99-59=40 ; 40 / 2=20 ; 20 * 3=60 ; 60+106=166$ sau
-Plecând de la 95 avem $95-59=36 ; 36 / 2=18 ; ~ 18 * 3=54 ; 54+112=166$
-14. Răspuns corect: e) Cel mai mic număr de operații s-a efectuat pentru $\mathbf{z}$.
+24.12. Răspuns corect: c) 14\\
+Indicații: Se generează tabloul:\\ \begin{tabular}{rrrr} 1 & 2 & 3 & 4 \\ 5 & 6 & 7 & 3 \\ 8 & 9 & 6 & 2 \\ 10 & 8 & 5 & 1 \end{tabular}\\
 
-Indicații: ca operații avem:
-operații comune la toate tablourile:
--numărul de comparații pentru determinarea minimului este 6
--inițializarea indicelui valorii minime 3 operații
--verificare dacă minimul se află pe poziția i (ca să nu fac interschimbare cu el însuși)
-3 operații
-diferente:
--(d1) nr de interschimbări
--(d2) nr de actualizări ale indicelui minimului
-v: d1=3 și d2=3
-x: d1=2 și d2=2
-y: d1=2 și d2=2
-z: d1=1 și d2=2
-15. Răspuns corect: d) divizorii primi ai lui $\mathbf{x}$ și numărul tuturor divizorilor lui $\mathbf{x}$
+24.13. Răspuns corect: f) 112 și 166\\
+Indicații: $\mathrm{f}(95)=\mathrm{f}(1+\mathrm{f}(97))=\mathrm{f}(110)=112$;\\ $\mathrm{f}(97)=\mathrm{f}(1+\mathrm{f}(99))=\mathrm{f}(107)=109$;\\ $\mathrm{f}(99)=\mathrm{f}(1+\mathrm{f}(101))=\mathrm{f}(1+103)=\mathrm{f}(104)=106$;\\ Se observă că plecând de la $x=99$, dacă $x$ scade cu 2, $f(x)$ crește cu 3.\\ Plecând de la 99 avem $99-59=40$; $40 / 2=20$; $20 * 3=60$; $60+106=166$ sau\\ Plecând de la 95 avem $95-59=36$; $36 / 2=18$; $18 * 3=54$; $54+112=166$\\
 
-EXEMPLU: pentru x=36 se afișează 239
-Indicații: este o descompunere în factori primi care afișează divizorii primi (la prima apariție în descompunere ) și returnează numărul total de divizori calculat ca produs de exponenți plus 1.
-$36=2^{2} \cdot 3^{2}$
-numărul divizorilor este $(2+1) \cdot(2+1)=9$
+24.14. Răspuns corect: e) Cel mai mic număr de operații s-a efectuat pentru $z$.\\
+Indicații: Ca operații avem:\\ Operații comune la toate tablourile:\\ - numărul de comparații pentru determinarea minimului este 6\\ - inițializarea indicelui valorii minime are 3 operații\\ - verificarea dacă minimul se află pe poziția $i$ (ca să nu fac interschimbare cu el însuși) are 3 operații\\ Diferențe:\\ - (d1) numărul de interschimbări\\ - (d2) numărul de actualizări ale indicelui minimului\\ v: d1=3 și d2=3\\ x: d1=2 și d2=2\\ y: d1=2 și d2=2\\ z: d1=1 și d2=2\\
+
+24.15. Răspuns corect: d) divizorii primi ai lui $x$ și numărul tuturor divizorilor lui $x$\\
+Exemplu: pentru $x=36$, se afișează 2 3 9\\ Indicații: este o descompunere în factori primi care afișează divizorii primi (la prima apariție în descompunere) și returnează numărul total de divizori calculat ca produs de exponenți plus 1.\\ Deoarece $36=2^{2} \cdot 3^{2}$, numărul divizorilor este $(2+1) \cdot(2+1)=9$.\\
 
 \section*{Varianta 25}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: b) 4 *a* (a-1) <a*a-2
+25.1. Răspuns corect: b) $4 *a* (a-1) <a*a-2$\\
+Indicații: $4 * a *(a-1)<a * a-2$ se scrie astfel: $3 a^{2}-4 a+2<0$, unde discriminantul ecuației este $\Delta=-8$, rezultă că expresia va fi pozitivă mereu.\\
 
-Indicații: $4 * a *(a-1)<a * a-2$ se scrie astfel $3 a^{2}-4 a+2<0$ unde delta este -8 , rezultă că ecuația de gradul al II-lea va fi pozitivă mereu.
-2. Răspuns corect: a) 167238945
+25.2. Răspuns corect: a) 167238945\\
+Indicații:\\ \begin{tabular}{|l|l|l|l|} \hline & & & Se afișează \\ \hline & $i=4$ & $j=0$ & $A[4][0]=1$ \\ \hline $j<>4$ (A) & $i=3$ & $j=0$ & $A[3][0]=6$ \\ \hline & $i=3$ & $j=1$ & $A[3][1]=7$ \\ \hline $j<>4$ (A) & $i=2$ & $j=1$ & $A[2][1]=2$ \\ \hline & $i=2$ & $j=2$ & $A[2][2]=3$ \\ \hline $j<>4$ (A) & $i=1$ & $j=2$ & $A[1][2]=8$ \\ \hline & $i=1$ & $j=3$ & $A[1][3]=9$ \\ \hline $j<>4$ (A) & $i=0$ & $j=3$ & $A[0][3]=4$ \\ \hline & $i=0$ & $j=4$ & $A[0][4]=5$ \\ \hline $j<>4$ (F) & & & \\ \hline \end{tabular}\\
 
-Indicații:
-\begin{tabular}{|l|l|l|l|}
-\hline & & & Se afișează \\
-\hline & i=4 & j=0 & A [4] [0]=1 \\
-\hline j<>4 (A) & $i=3$ & j=0 & A[3] [0] $=6$ \\
-\hline & $i=3$ & j=1 & A[3][1] $=7$ \\
-\hline j<>4 (A) & i=2 & j=1 & A[2][1] $=2$ \\
-\hline & i=2 & j=2 & A[2][2] $=3$ \\
-\hline j<>4 (A) & $\mathrm{i}=1$ & j=2 & A[1][2]=8 \\
-\hline & $i=1$ & j=3 & A [1] [3] $=9$ \\
-\hline j<>4 (A) & $i=0$ & j=3 & A[0][3]=4 \\
-\hline & $i=0$ & j=4 & A[0][4] $=5$ \\
-\hline j<>4 (F) & & & \\
-\hline
-\end{tabular}
-3. Răspuns corect: e) 7
+25.3. Răspuns corect: e) 7\\
+Indicații:\\ Ad(3) $\Rightarrow$ 3\\ El() $\Rightarrow$ coadă goală\\ Ad(7) $\Rightarrow$ 7\\ Ad(9) $\Rightarrow$ 7 9\\ El() $\Rightarrow$ 9\\ Ad(5) $\Rightarrow$ 9 5\\ Ad(2) $\Rightarrow$ 9 5 2\\ El() $\Rightarrow$ 5 2\\
 
-Indicații:
+25.4. Răspuns corect: c) 2\\
+Indicații:\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-290(6).jpg} \end{center}\\ Componenta conexă I este formată din nodurile: 1, 4, 6\\ Componenta conexă II este formată din nodurile: 2, 3, 5\\
 
-Ad (3)
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-290.jpg?height=170&width=413&top_left_y=1634&top_left_x=620)
+25.5. Răspuns corect: f) 9 4\\
+Indicații: Figura arborelui\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-291.jpg} \end{center}\\
 
-Ad (7)
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-290.jpg?height=69&width=285&top_left_y=1825&top_left_x=741)
+25.6. Răspuns corect: e) 8\\
+Indicații: 114, 123, 132, 141, 213, 222, 231, 312.\\
 
-Ad (9)
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-290.jpg?height=71&width=285&top_left_y=1919&top_left_x=741)
+25.7. Răspuns corect: a) xxmmnn\\
+Indicații: Instrucțiunea repetitivă for parcurge șirul "examen" până la penultimul caracter inclusiv și verifică dacă valoarea elementului de pe poziția $i$ este strict mai mică din punct de vedere lexicografic decât valoarea elementului următor, $a[i+1]$. Dacă acest element este strict mai mic decât următorul, lui $a[i]$ i se atribuie valoarea lui $a[i+1]$.\\
 
-El()
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-290.jpg?height=69&width=286&top_left_y=1635&top_left_x=1299)
+25.8. Răspuns corect: b)\\
+Indicații: Deoarece există o instrucțiune if cu condiția $\mathrm{n}<=100$, înseamnă că funcția numar se va opri când $\mathrm{n}=82$. Până atunci va verifica fiecare cifră a numărului $\mathrm{n}$. Dacă cifra este mai mică decât 5 aceasta va fi afișată imediat deoarece afișarea se face înainte de reapelarea funcției (de aici cifrele 4, 3, 2 și 4). Dacă cifra este mai mare decât 5 (cifrele 9 și 7) aceasta va fi afișată la sfârșit, în ordine inversă a găsirii ei, deoarece afișarea se execută după reapelarea funcției.\\
 
-Ad (5)
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-290.jpg?height=74&width=286&top_left_y=1730&top_left_x=1299)
+25.9. Răspuns corect: b) 3\\
+Indicații: Liniile de cod află câți divizori primi are valoarea memorată în variabila $a$. Variabila $c$, care inițial are valoarea 2, este incrementată cu 1 până când valoarea variabilei $a$ devine 1. Valoarea variabilei $a$ ajunge la 1 deoarece este împărțită, pe rând, dacă este posibil, la valorile luate de variabila $c$. De câte ori se găsește un număr în variabila $c$ care divide valoarea variabilei $a$, valoarea variabilei $b$ crește cu 1.\\
 
-Ad (2)
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-290.jpg?height=85&width=280&top_left_y=1828&top_left_x=1302)
+25.10. Răspuns corect: c) $v=[5,8,2,6,6,5,4,4]$
+Indicații:\\ \begin{tabular}{|l|ll|l|ll|l|} \hline $\mathrm{i}=0$ & $\mathrm{v}[0]<5$ & (F) & $\mathrm{v}[0]=5$ & $\mathrm{v}[7]>\mathrm{v}[0]$ & (A) & $\mathrm{v}[7]=4$ \\ \hline $\mathrm{i}=1$ & $\mathrm{v}[1]<5$ & (F) & $\mathrm{v}[1]=8$ & $\mathrm{v}[6]>\mathrm{v}[1]$ & (F) & $\mathrm{v}[6]=4$ \\ \hline $\mathrm{i}=2$ & $\mathrm{v}[2]<5$ & (A) & $\mathrm{v}[2]=2$ & $\mathrm{v}[5]>\mathrm{v}[2]$ & (A) & $\mathrm{v}[5]=5$ \\ \hline $\mathrm{i}=3$ & $\mathrm{v}[3]<5$ & (A) & $\mathrm{v}[3]=6$ & $\mathrm{v}[4]>\mathrm{v}[3]$ & (F) & $\mathrm{v}[4]=6$ \\ \hline \end{tabular}\\
 
-El()
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-290.jpg?height=68&width=283&top_left_y=1923&top_left_x=1303)
-4. Răspuns corect: c) 2
+25.11. Răspuns corect: d) $\frac{c \cdot(c+2)}{4}$\\
+Indicații: $2+4+6+\cdots+n=2 *\left(1+2+3+\cdots+\frac{n}{2}\right)=2 * \frac{\frac{n}{2} *\left(\frac{n}{2}+1\right)}{2}$.\\ Instrucțiunea repetitivă for calculează suma $1+2+3+\cdots+\frac{n}{2}$.\\
 
-Indicații:
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-290.jpg?height=232&width=547&top_left_y=2047&top_left_x=588)
+25.12. Răspuns corect: a) 1 2 3 4 5 6 7\\
+Indicații:\\ \begin{tabular}{|l|l|l|} \hline$i=1$ & $a[1]=7$ & $a[7]=1$ \\ \hline$i=2$ & $a[2]=6$ & $a[6]=2$ \\ \hline$i=3$ & $a[3]=5$ & $a[5]=3$ \\ \hline$i=4$ & $a[4]=4$ & $a[4]=4$ \\ \hline$i=5$ & $a[5]=3$ & $a[3]=5$ \\ \hline$i=6$ & $a[6]=2$ & $a[2]=6$ \\ \hline$i=7$ & $a[7]=1$ & $a[1]=7$ \\ \hline \end{tabular}\\
 
-Componenta conexă I este formată din nodurile: 1, 4, 6
-Componenta conexă II este formată din nodurile: 2, 3, 5
-5. Răspuns corect: f) 94
+25.13. Răspuns corect: d) 101\\
+Indicații: Instrucțiunile respective numără căte cifre impare există, în total, în intervalul $[200,300]$. Prin urmare, pe poziția cifrei sutelor, o cifră impară va apărea doar pentru numărul 300.\\ Pe poziția zecilor, o cifră impară se va regăsi de exact 50 de ori în acest interval, pentru numerele de forma $\overline{2 a b}$ unde $a \in\{1, 3, 5, 7, 9\}$ iar $b \in\{0,1,2, \ldots, 9\}$.\\ Cifra unităților va avea o valoare impară pentru numere de forma $\overline{2 a b}$, unde $a \in$ $\{0,1,2, \ldots, 9\}$, iar $b \in\{1,3,5,7,9\}$. Putem deduce de aici că în intervalul $[200,300]$ pe poziția cifrei unităților vom regăsi o cifră impară de exact 50 de ori.\\ Pe poziția sutelor există o singură cifră impară. Deci $50+50+1=101$.\\
 
-Indicații:
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-291.jpg?height=567&width=405&top_left_y=378&top_left_x=361)
-6. Răspuns corect: e) 8
+25.14. Răspuns corect: c) determinantul matricei\\
+Indicații: Subprogramul mat calculează recursiv determinantul matricei $d$, primită ca parametru, prin descompunerea acesteia după linii și coloane.\\ În variabila $e$, declarată tot ca tablou bidimensional, este reținută matricea rezultată după descompunerea matricei inițiale, în funcție de elementul $d[i][j]$. Prin urmare, tabloul bidimensional $e$ va reține o matrice de $n-1$ linii și $n-1$ coloane.\\ Aceasta metodă se aplică recursiv până când matricea reținută în tabloul bidimensional $e$ va avea un singur element.\\ 
 
-Indicații: 114, 123, 132, 141, 213, 222, 231, 312
-7. Răspuns corect: a) xxmmnn
-
-Indicații: Instrucțiunea repetitivă for parcurge șirul "examen" până la penultimul caracter inclusiv și verifică dacă valoarea elementului de pe poziția i este strict mai mică din punct de vedere lexicografic decât valoarea elementului următor, $a[i+1]$. Dacă acest element este strict mai mic decât următorul, lui $a$ [i] i se atribuie valoarea lui $a[i+1]$.
-8. Răspuns corect: b) 4324
-
-Indicații: Deoarece există $o$ instrucțiune if cu condiția $\mathbf{n}<=100$, înseamnă că funcția numar se va opri când $\mathbf{n = 8 2}$. Până atunci va verifica fiecare cifră a numărului n . Dacă cifra este mai mică decât 5 aceasta va fi afișată imediat deoarece afișarea se face înainte de reapelarea funcției (4, 3, 2 și 4). Dacă cifra este mai mare decât 5 ( 9 și 7) aceasta va fi afișată la sfârșit, în ordine inversă a găsirii ei, deoarece afișarea se execută după reapelarea funcției.
-9. Răspuns corect: b) 3
-
-Indicații: Liniile de cod află câți divizori primi are valoarea memorată în variabila a. Variabila c, care inițial are valoarea 2 , este incrementată cu 1 până când valoarea variabilei a devine 1. Valoarea variabilei a ajunge la 1 deoarece este împărțită, pe rând, dacă este posibil, la valorile luate de variabila c. De câte ori se găsește un număr în variabila c care divide valoarea variabilei $a$, valoarea variabilei b crește cu 1 .
-10. Răspuns corect: $c$ ) $v=[5,8,2,6,6,5,4,4]$
-
-Indicații:
-\begin{tabular}{|l|ll|l|ll|l|}
-\hline $\mathrm{i}=0$ & $\mathrm{v}[0]<5$ & (F) & $\mathrm{v}[0]=5$ & $\mathrm{v}[7]>\mathrm{v}[0]$ & (A) & $\mathrm{v}[7]=4$ \\
-\hline $\mathrm{i}=1$ & $\mathrm{v}[1]<5$ & (F) & $\mathrm{v}[1]=8$ & $\mathrm{v}[6]>\mathrm{v}[1]$ & (F) & $\mathrm{v}[6]=4$ \\
-\hline $\mathrm{i}=2$ & $\mathrm{v}[2]<5$ & (A) & $\mathrm{v}[2]=2$ & $\mathrm{v}[5]>\mathrm{v}[2]$ & (A) & $\mathrm{v}[5]=5$ \\
-\hline $\mathrm{i}=3$ & $\mathrm{v}[3]<5$ & (A) & $\mathrm{v}[3]=6$ & $\mathrm{v}[4]>\mathrm{v}[3]$ & (F) & $\mathrm{v}[4]=6$ \\
-\hline
-\end{tabular}
-11. Răspuns corect: d) $\frac{c \cdot(c+2)}{4}$
-
-Indicații: $2+4+6+\cdots+n=2 *\left(1+2+3+\cdots+\frac{n}{2}\right)=2 * \frac{\frac{n}{2} *\left(\frac{n}{2}+1\right)}{2}$.
-Instrucțiunea repetitivă for calculează suma $1+2+3+\cdots+\frac{n}{2}$.
-12. Răspuns corect: a) 1234567
-
-Indicații:
-\begin{tabular}{|l|l|l|}
-\hline$i=1$ & $a[1]=7$ & $a[7]=1$ \\
-\hline$i=2$ & $a[2]=6$ & $a[6]=2$ \\
-\hline$i=3$ & $a[3]=5$ & $a[5]=3$ \\
-\hline
-\end{tabular}
-\begin{tabular}{|l|l|l|}
-\hline$i=4$ & $a[4]=4$ & $a[4]=4$ \\
-\hline$i=5$ & $a[5]=3$ & $a[3]=5$ \\
-\hline$i=6$ & $a[6]=2$ & $a[2]=6$ \\
-\hline$i=7$ & $a[7]=1$ & $a[1]=7$ \\
-\hline
-\end{tabular}
-13. Răspuns corect: d) 101
-
-Indicații: Instrucțiunile respective numără căte cifre impare există, în total, în intervalul $[200,300]$. Prin urmare pe poziția cifrei sutelor, o cifră impară va apărea doar pentru numărul 300.
-Pe poziția zecilor, o cifră impară, se va regăsi de exact 50 de ori în acest interval, pentru numerele de forma $\overline{2 a b}$ unde $a \in\{\mathbf{1}, \mathbf{3}, \mathbf{5}, \mathbf{7}, \mathbf{9}\}$ iar $b \in\{0,1,2, \ldots, 9\}$.
-Cifra unităților va avea o valoare impară pentru numere de forma $\overline{2 a b}$ unde $a \in$ $\{0,1,2, \ldots, 9\}$ iar $b \in\{1,3,5,7,9\}$. Putem deduce de aici că în intervalul [200,300] pe poziția cifrei unităților vom regăsi o cifră impară de exact 50 de ori.
-Pe poziția sutelor există o singură cifră impară. Deci $50+50+1=101$.
-14. Răspuns corect: $c$ ) determinantul matricei
-
-Indicații: Subprogramul mat calculează recursiv determinantul matricei d, primită ca parametru, prin descompunerea acesteia după linii și coloane.
-În variabila e, declarată tot ca tablou bidimensional, este reținută matricea rezultată după descompunerea matricei inițiale, în funcție de elementul d[i] [j]. Prin urmare, tabloul bidimensional e va reține o matrice de n -1 linii și n -1 coloane.
-Aceasta metodă se aplică recursiv până când matricea reținută în tabloul bidimensional e va avea un singur element.
-15. Răspuns corect: b) 5417032963258410
-
-Indicații: În cazul de față funcția recursivă denumită afis se va opri în momentul în care $\mathbf{k}$ devine $\mathbf{1}$. De menționat că, în cazul de față, $\mathbf{k}$ pornește de la valoarea 8 care este valoarea sumei indicilor lui a [4] [4], elementul din dreapta jos.
-Valoarea variabilei $\mathbf{k}$ scade cu 1 la fiecare reapelare a funcției. Pentru $\mathbf{k}$ par se vor afișa elementele de la stânga spre dreapta iar pentru $\mathbf{k}$ impar se vor afișa elementele de la dreapta spre stânga.
-$$
-v=\left(\begin{array}{llll}
-v_{11} & v_{12} & v_{13} & v_{14} \\
-v_{21} & v_{22} & v_{23} & v_{24} \\
-v_{31} & v_{32} & v_{33} & v_{84} \\
-v_{41} & v_{42} & v_{43} & v_{44}
-\end{array}\right) \quad V=\left(\begin{array}{llll}
-0 & 1 & 2 & 3 \\
-4 & 5 & 6 & 7 \\
-8 & 9 & 0 & 1 \\
-2 & 3 & 4 & 5
-\end{array}\right)
-$$
+25.15. Răspuns corect: b) 5417032963258410\\
+Indicații: În cazul de față, funcția recursivă denumită afis se va opri în momentul în care $k$ devine 1. De menționat că, în cazul de față, $k$ pornește de la valoarea 8, care este valoarea sumei indicilor lui $a[4][4]$, elementul din dreapta jos.\\ Valoarea variabilei $k$ scade cu 1 la fiecare reapelare a funcției. Pentru $k$ par se vor afișa elementele de la stânga spre dreapta iar pentru $k$ impar se vor afișa elementele de la dreapta spre stânga.\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-337.jpg} \end{center}\\ $V=\left(\begin{array}{llll} 0 & 1 & 2 & 3 \\ 4 & 5 & 6 & 7 \\ 8 & 9 & 0 & 1 \\ 2 & 3 & 4 & 5 \end{array}\right)$\\
 
 \section*{Varianta 26}
 
