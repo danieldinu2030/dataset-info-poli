@@ -2245,109 +2245,115 @@ n \cdot\left(n^{2}\right)^{\frac{k-1}{2}}, \text { daca } k \text { impar } \\
 \left(n^{2}\right)^{\frac{k}{2}}, \text { daca } k \text { par }
 \end{array}\right.
 $$
+\end{verbatim}
 
 \section*{Varianta 44}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: c) 10
+44.1. Răspuns corect: c) 10\\
+Indicații: Se fac operațiile matematice în ordinea priorității operatorilor.\\
 
-Indicații: Se fac operațiile matematice în ordinea priorității operatorilor.
-2. Răspuns corect: e) 3.5
+44.2. Răspuns corect: e) 3.5\\
+Indicații: Se folosește operatorul cast, astfel încât rezultatul împărțirii i/j să fie real.\\
 
-Indicații: Se folosește operatorul cast, astfel încât rezultatul împărțirii i/j să fie real.
-3. Răspuns corect: f) 5
+44.3. Răspuns corect: f) 5\\
+Indicații: Se evaluează $\mathrm{j} \neq 0$ (A)și apoi operatorul de decrementare $=>\mathrm{j}=2$. Pentru că $!\mathrm{j}=0$ atunci se evaluează $\mathrm{i} \neq 0(\mathrm{~A})$ și se incrementează $\mathrm{j}=>\mathrm{j}=3$.\\
 
-Indicații: Se evaluează $\mathrm{j} \neq 0$ (A)și apoi operatorul de decrementare $=>\mathrm{j}=2$. Pentru că $!\mathrm{j}=0$ atunci se evaluează $\mathrm{i} \neq 0(\mathrm{~A})$ și se incrementează $\mathrm{j}=>\mathrm{j}=3$.
-4. Răspuns corect: d) 3
+44.4. Răspuns corect: d) 3\\
+Indicații: Se concatenează la sfârșitul șirului s șirul ABCDE și se obține ABCDEABCDE, apoi se șterg primele 3 caractere. Deci șirul s este DEABCDE.\\
 
-Indicații: Se concatenează la sfârșitul șirului s șirul ABCDE și se obține ABCDEABCDE, apoi se șterg primele 3 caractere. Deci șirul s este DEABCDE.
-5. Răspuns corect: b) 1
+44.5. Răspuns corect: b) 1\\
+Indicații: Apelul funcției implică decrementarea valorii parametrului și returnarea acestui rezultat.\\
 
-Indicații: Apelul funcției implică decrementarea valorii parametrului și returnarea acestui rezultat.
-6. Răspuns corect: a) $p^{*}=2 \mid p:=p * 2$
+44.6. Răspuns corect: a) \begin{verbatim}
+    p*=2 | p:=p*2
+\end{verbatim}\\
+Indicații: Fie $\mathrm{n}=d_{1}{ }^{e_{1}} \cdot d_{2}{ }^{e_{2}} \cdot \ldots \cdot d_{r}{ }^{e_{r}}$, descompus în factori primi. Ș̦tim că numărul de divizori ai lui $n$ este $\left(e_{1}+1\right) \cdot\left(e_{2}+1\right) \cdot \ldots \cdot\left(e_{r}+1\right)$. Folosindu-se acest rezultat, se determină factorii primi până la $\sqrt{n}$. Dacă $n \neq 1$ atunci $n$ este un număr prim, deci la produsul anterior mai trebuie înmulțit 2.\\
 
-Indicații: Fie $\mathrm{n}=d_{1}{ }^{e_{1}} \cdot d_{2}{ }^{e_{2}} \cdot \ldots \cdot d_{r}{ }^{e_{r}}$, descompus în factori primi. Ș̦tim că numărul de divizori ai lui $n$ este $\left(e_{1}+1\right) \cdot\left(e_{2}+1\right) \cdot \ldots \cdot\left(e_{r}+1\right)$. Folosindu-se acest rezultat, se determină factorii primi până la $\sqrt{n}$. Dacă $n \neq 1$ atunci $n$ este un număr prim, deci la produsul anterior mai trebuie înmulțit 2.
-7. Răspuns corect: e) $x[k / 2]^{*}(x[k / 2]-1) / 2 \mid x[k \operatorname{div} 2]^{*}(x[k \operatorname{div} 2]-1) \operatorname{div} 2$
+44.7. Răspuns corect: e) \begin{verbatim}
+    x[k/2]*(x[k/2]-1)/2 | x[k div 2]*(x[k div 2]-1) div 2 
+\end{verbatim}\\
+Indicații: Se folosește vectorul de frecvență $x$ astfel încât, x[i] să exprime numărul de elemente din v care au restul i la împărțirea cu k. Se observă că algoritmul nu adaugă numărul de perechi obținute între elemente cu același rest [ $\mathrm{k}: 2$ ], în cazul în care $k$ este par. Acest număr reprezintă numărul de combinări ale valorilor de rest [ $\mathrm{k}: 2]$.\\
 
-Indicații: Se folosește vectorul de frecvență $x$ astfel încât, x[i] să exprime numărul de elemente din v care au restul i la împărțirea cu k. Se observă că algoritmul nu adaugă numărul de perechi obținute între elemente cu același rest [ $\mathrm{k}: 2$ ], în cazul în care $k$ este par. Acest număr reprezintă numărul de combinări ale valorilor de rest [ $\mathrm{k}: 2]$.
-8. Răspuns corect: $c) a[n-j-1][n-i-1]=2 ; \quad a[n-j-1, n-i-1]:=2$;
+44.8. Răspuns corect: c) \begin{verbatim}
+    a[n-j-1][n-i-1]=2; | a[n-j-1,n-i-1]:=2; 
+\end{verbatim}\\
+Indicații: Se parcurg elementele din cadranul 1 și apoi prin simetrie față de diagonala secundară se vor completa și elementele din cadranul II.\\
 
-Indicații: Se parcurg elementele din cadranul 1 și apoi prin simetrie față de diagonala secundară se vor completa și elementele din cadranul II.
-9. Răspuns corect: c) -1
+44.9. Răspuns corect: c) -1\\
+Indicații: Șirul apelurilor este: $\mathrm{f}(16) \stackrel{16>8}{\Longrightarrow} \mathrm{f}(13) \stackrel{13>8}{\Longrightarrow} f(10) \stackrel{10>8}{\Longrightarrow} \mathrm{f}(7) \stackrel{7<8}{\Longrightarrow} 7-5=2$. Se calculează $f(2)=-3$, apoi se revine cu $-3+4$, se calculează $f(1)=-4$ ș.a.m.d.\\
 
-Indicații: Șirul apelurilor este: $\mathrm{f}(16) \stackrel{16>8}{\Longrightarrow} \mathrm{f}(13) \stackrel{13>8}{\Longrightarrow} f(10) \stackrel{10>8}{\Longrightarrow} \mathrm{f}(7) \stackrel{7<8}{\Longrightarrow} 7-5=2$. Se calculează $f(2)=-3$, apoi se revine cu $-3+4$, se calculează $f(1)=-4$ ș.a.m.d.
-10. Răspuns corect: c) 8
+44.10. Răspuns corect: c) 8\\
+Indicații: Se observă că între nodurile 1, 2, 6 există drum între oricare două noduri, deci ele formează o componentă tare conexă. Între celelalte 7 noduri nu există drum de la i la j și de la j la i, deci fiecare nod formează separat, câte o componentă tare conexă.\\
 
-Indicații: Se observă că între nodurile 1, 2, 6 există drum între oricare două noduri, deci ele formează o componentă tare conexă. Între celelalte 7 noduri nu există drum de la i la j și de la j la i, deci fiecare nod formează separat, câte o componentă tare conexă.
-Răspuns corect: e) apnmdc
-Indicații: Plecând de la soluția apnmdc se generează următoarele încercări: apnmdd, apnmdm, apnmdn, apnmdp... și se revine la primul caracter și se generează ebacid
+44.11. Răspuns corect: e) apnmdc\\
+Indicații: Plecând de la soluția apnmdc se generează următoarele încercări: \sout{apnmdd}, \sout{apnmdm}, \sout{apnmdn}, \sout{apnmdp}... și se revine la primul caracter și se generează ebacid\\
 
-Răspuns corect: b) se elimină o muchie și se adaugă două
-Indicații: Se observă că graful are două componente conexe. Fiecare componentă conexă are 501 noduri, fiind subgrafuri complete. Deși gradul fiecărui nod este par, graful nu este eulerian pentru că nu este conex. Dacă, de exemplu, se elimină muchia [2,4] din subgraful cu noduri pare, atunci gradele celor două noduri devin impare, deci trebuie refăcută paritatea, așa că putem adăuga, de exemplu, muchia [2,1], dar și [4,1]. În felul acesta, graful devine conex și se păstrează paritatea gradelor nodurilor.
-13. Răspuns corect: d) 7
+44.12. Răspuns corect: b) se elimină o muchie și se adaugă două\\
+Indicații: Se observă că graful are două componente conexe. Fiecare componentă conexă are 501 noduri, fiind subgrafuri complete. Deși gradul fiecărui nod este par, graful nu este eulerian pentru că nu este conex. Dacă, de exemplu, se elimină muchia [2,4] din subgraful cu noduri pare, atunci gradele celor două noduri devin impare, deci trebuie refăcută paritatea, așa că putem adăuga, de exemplu, muchia [2,1], dar și [4,1]. În felul acesta, graful devine conex și se păstrează paritatea gradelor nodurilor.\\
 
-Indicații: Pentru ca înălțimea arborelui să fie minimă, numărul de fii ai fiecărui nod trebuie să fie maxim, adică 4 . Deci pe nivelul 0 se găsește rădăcina, pe nivelul 1 vor fi $4^{1}$ noduri, pe nivelul $2,4^{2}=16$ noduri, pe nivelul $3,4^{3}=64$ noduri, apoi $4^{4}=256,4^{5}=1024$, pe nivelul 6, restul nodurilor. Deci, în total, 7 nivele.
-14. Răspuns corect: d) $O$ (nlogn)
+44.13. Răspuns corect: d) 7\\
+Indicații: Pentru ca înălțimea arborelui să fie minimă, numărul de fii ai fiecărui nod trebuie să fie maxim, adică 4 . Deci pe nivelul 0 se găsește rădăcina, pe nivelul 1 vor fi $4^{1}$ noduri, pe nivelul $2,4^{2}=16$ noduri, pe nivelul $3,4^{3}=64$ noduri, apoi $4^{4}=256,4^{5}=1024$, pe nivelul 6, restul nodurilor. Deci, în total, 7 nivele.\\
 
-Indicații: Pentru prima repetiție timpul este $\mathrm{O}(\mathrm{n})$, dar pentru a doua, timpul este logaritmic.
-15. Răspuns corect: b) n
+44.14. Răspuns corect: d) $O$ (nlogn)\\
+Indicații: Pentru prima repetiție timpul este $\mathrm{O}(\mathrm{n})$, dar pentru a doua, timpul este logaritmic.\\
 
+44.15. Răspuns corect: b) n\\
 Indicații: Expresia se poatere scrie astfel:
-$a_{0}+a_{1} * x+a_{2} * x^{2}+a_{3} * x^{3}+\ldots+a_{n} * x^{n}=a_{0}+x^{*}\left(a_{1}+x^{*}\left(a_{2}+\ldots . .+x^{*}\left(a_{n-1}+x^{*} a_{n}\right)\right) ..\right)$
+$a_{0}+a_{1} * x+a_{2} * x^{2}+a_{3} * x^{3}+\ldots+a_{n} * x^{n}=a_{0}+x^{*}\left(a_{1}+x^{*}\left(a_{2}+\ldots . .+x^{*}\left(a_{n-1}+x^{*} a_{n}\right)\right) ..\right)$\\
 
 \section*{Varianta 45}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: d) $\mathbf{1 5}$
+45.1. Răspuns corect: d) 15\\
+Indicații: Întâi se evaluează operatorul de decrementare, deci valoarea variabilei $\mathbf{i}$ devine 3, se face produsul $\mathbf{i*j}$ și apoi se evaluează operatorul de incrementare.\\
 
-Indicații: Întâi se evaluează operatorul de decrementare, deci valoarea variabilei i devine 3, se face produsul i*j și apoi se evaluează operatorul de incrementare.
-2. Răspuns corect: c) -4
+45.2. Răspuns corect: c) -4\\
+Indicații: Întâi se face produsul, deci $\mathbf{k}=-9$, apoi la $\mathbf{k}$ se adună $\mathbf{j}=>\mathbf{k}=\mathbf{- 1 2}$ și se determină câtul împărtirii lui $\mathbf{k}$ la $\mathbf{i}$.\\
 
-Indicații: Întâi se face produsul, deci $\mathbf{k}=-9$, apoi la $\mathbf{k}$ se adună $\mathbf{j}=>\mathbf{k}=\mathbf{- 1 2}$ și se determină câtul împărtirii lui $\mathbf{k}$ la $\mathbf{i}$.
-3. Răspuns corect: b) -1
+45.3. Răspuns corect: b) -1\\
+Indicații: Se evaluează $\mathbf{j} \neq 0$ și apoi operatorul de decrementare $=>\mathbf{i}=1$. Pentru că $\mathbf{i} \neq 0$ se mărește $\mathbf{j}$ cu $\mathbf{1} => \mathbf{j=-1}$ și apoi se evaluează produsul.\\
 
-Indicații: Se evaluează $\mathbf{j} \neq 0$ și apoi operatorul de decrementare $=>\mathbf{i}=1$. Pentru că $\mathbf{i} \neq 0$ se mărește $\mathbf{j}$ cu 1 => $j=-1$ și apoi se evaluează produsul.
-4. Răspuns corect: d) 21
+45.4. Răspuns corect: d) 2 1\\
+Indicații: Se returnează valoarea inițială a parametrului și apoi se incrementează parametrul, pentru că operatorul de incrementare este în formă postfixată. Deci se returnează 1 iar parametrul va avea valoarea 2.\\
 
-Indicații: Se returnează valoarea inițială a parametrului și apoi se incrementează parametrul, pentru că operatorul de incrementare este în formă postfixată. Deci se returnează 1 iar parametrul va avea valoarea 2 .
-5. Răspuns corect: e) 4
+45.5. Răspuns corect: e) 4\\
+Indicații: Este declarat un vector cu $\mathbf{2}$ elemente de tip structură, fiecare element conținând un alt vector cu două numere întregi. Se atribuie valoare doar elementelor $\mathbf{S[0].a[1]}$ și $\mathbf{S[1].a[0]}$.\\
 
-Indicații: Este declarat un vector cu 2 elemente de tip structură, fiecare element conținând un alt vector cu două numere întregi. Se atribuie valoare doar elementelor S[0].a[1] și S[1].a[0].
-6. Răspuns corect: f) $\mathbf{3 0}$
+45.6. Răspuns corect: f) 30\\
+Indicații: Algoritmul determină toate numerele din intervalul $\mathbf{[1, 10000]}$ care sunt formate doar din cifrele $\mathbf{4}$ și/sau $\mathbf{6}$. Exemple $\mathbf{4, 6, 44, 46, 64, 66}$ etc.\\
 
-Indicații: Algoritmul determină toate numerele din intervalul [1, 10000] care sunt formate doar din cifrele 4 și/sau 6. Exemple 4, 6, 44, 46, 64, 66 etc.
-7. Răspuns corect: c) II
+45.7. Răspuns corect: c) II\\
+Indicații: Se parcurg elementele din zona $\mathbf{I}$, dar se folosesc elementele simetrice cu acestea față de diagonala secundară, deci elemente din zona $\mathbf{II}$\\
 
-Indicații: Se parcurg elementele din zona I, dar se folosesc elementele simetrice cu acestea față de diagonala secundară, deci elemente din zona II
-8. Răspuns corect: b) Automatica-UPB
+45.8. Răspuns corect: b) Automatica-UPB\\
+Indicații: Se determină adresa de memorie | poziția caracterului '-', împărțindu-se astfel șirul inițial în două șiruri de caractere. Apoi se concatenează al doilea șir cu primul, după ce prima literă a celui de al doilea șir se transformă în literă mare.\\
 
-Indicații: Se determină adresa de memorie poziția caracterului '-', împărțindu-se astfel șirul inițial în două șiruri de caractere. Apoi se concatenează al doilea șir cu primul, după ce prima literă a celui de al doilea șir se transformă în literă mare.
-9. Răspuns corect: f) $a[i]>a[j]$
+45.9. Răspuns corect: f) \begin{verbatim}
+    a[i]>a[j]
+\end{verbatim}\\
+Indicații: Se folosește algoritmul de ordonare prin numărare. Fiecare element $\mathbf{b[i]}$ memorează numărul de elemente din tabloul unidimensional $\mathbf{a}$, mai mari decât $\mathbf{a[i]}$.\\
 
-Indicații: Se folosește algoritmul de ordonare prin numărare. Fiecare element b[i] memorează numărul de elemente din tabloul unidimensional a, mai mari decât a[i].
-10. Răspuns corect: a) - 6
+45.10. Răspuns corect: a) -6\\
+Indicații: Șirul apelurilor este: $f(19,7) \stackrel{19>7}{\Longrightarrow} f(16,8) \stackrel{16>8}{\Longrightarrow} f(13,9) \stackrel{13>9}{\Longrightarrow} f(10,10) \stackrel{10=10}{\Longrightarrow} f(11$, $10) \stackrel{11>10}{\Longrightarrow} f(8,11) \stackrel{8<11}{\Longrightarrow} 3 * 8-2^{*} 11$ raspuns care se returnează la apelul anterior șamd, scăzându-se 2 , unde e cazul.\\
 
-Indicații: Șirul apelurilor este: $f(19,7) \stackrel{19>7}{\Longrightarrow} f(16,8) \xrightarrow{16>8} f(13,9) \xrightarrow{13>9} f(10,10) \xrightarrow{10=10} f(11$, $10) \stackrel{11>10}{ } f(8,11) \stackrel{8<11}{\Longrightarrow} 3 * 8-2^{*} 11$ raspuns care se returnează la apelul anterior șamd, scăzându-se 2 , unde e cazul.
-11. Răspuns corect: c) $4316 \quad 3618 \quad 3418$
+45.11. Răspuns corect: c) 4316  3618  3418\\
+Indicații: O abordare ar putea să plece de la o variantă dată. Folosind metoda backtracking, ținând cont de condițiile impuse de problemă, se pleacă de la primul număr propus și se generează următoarele trei soluții.\\
 
-Indicații: O abordare ar putea să plece de la o variantă dată. Folosind metoda backtracking, ținând cont de condițiile impuse de problemă, se pleacă de la primul număr propus și se generează următoarele trei soluții.
-12. Răspuns corect: a) $\mathbf{2}^{\text {i-1 }} \mathbf{- 1}$
+45.12. Răspuns corect: a) $\mathbf{2}^{\text {i-1 }} \mathbf{- 1}$\\
+Indicații: Pentru ca pe niveluri, să avem număr maxim de noduri, trebuie ca toate nodurile de pe nivelurile anterioare sa aibă câte 2 fii. Deci, pe nivelul $\mathbf{1}$, avem $\mathbf{2}^{\circ}$ noduri, pe nivelul $\mathbf{2}$ sunt $\mathbf{2}^{\mathbf{1}}$ noduri, pe nivelul $\mathbf{3}$ sunt $\mathbf{2}^{\mathbf{2}}$ noduri ș.a.m.d. Deci, pe nivelul $\mathbf{i}$ vor fi $2^{\text {i-1 }}$ noduri. Cum numărul total de noduri este par, iar pe nivelul 1 este un nod, atunci pe nivelul i vor fi $\mathbf{2}^{\mathbf{i}-1} \mathbf{- 1}$ noduri.\\
 
-Indicații: Pentru ca pe niveluri, să avem număr maxim de noduri, trebuie ca toate nodurile de pe nivelurile anterioare sa aibă câte 2 fii. Deci, pe nivelul 1, avem $\mathbf{2}^{\circ}$ noduri, pe nivelul 2 sunt $\mathbf{2}^{\mathbf{1}}$ noduri, pe nivelul $\mathbf{3}$ sunt $\mathbf{2}^{\mathbf{2}}$ noduri ș.a.m.d. Deci, pe nivelul i vor fi $2^{\text {i-1 }}$ noduri. Cum numărul total de noduri este par, iar pe nivelul 1 este un nod, atunci pe nivelul i vor fi $\mathbf{2}^{\mathbf{i}-1} \mathbf{- 1}$ noduri.
-13. Răspuns corect: c) $\mathbf{2 5}$
+45.13. Răspuns corect: c) 25\\
+Indicații: Partițiile mulțimii nodurilor pot avea:\\
+prima mulțime - $\mathbf{1}$ nod; a doua - $\mathbf{9}$ noduri $=>$ nr de muchii $\mathbf{1 * 9}$\\
+prima mulțime - $\mathbf{2}$ noduri; a doua - $\mathbf{8}$ noduri $=>$ nr de muchii $\mathbf{2 * 8}$\\
+...\\
+prima mulțime - $\mathbf{5}$ noduri; a doua - $\mathbf{5}$ noduri $=>$ nr de muchii $\mathbf{5*5}$ (maxim)\\
 
-Indicații: Partițiile mulțimii nodurilor pot avea:
-prima mulțime - 1 nod; a doua - 9 noduri $=>$ nr de muchii $1 * 9$
-prima mulțime - $\mathbf{2}$ noduri; a doua - $\mathbf{8}$ noduri $=>$ nr de muchii 2 * 8
-prima mulțime - 5 noduri; a doua - 5 noduri => nr de muchii 5*5 (maxim)
-14. Răspuns corect: b) $O$ ( $n$ )
+45.14. Răspuns corect: b) $\mathbf{O(n)}$\\
+Indicații: Complexitatea algoritmului pare a fi $\mathrm{O}\left(\mathrm{n}^{2}\right)$. Pentru că a doua repetiție nu resetează valoarea lui j la 0 , atunci vor fi valori ale lui i pentru care a doua repetiție nu se mai execută . Deci, vom avea maxim 2 treceri prin vector, deci O(n).\\
 
-Indicații: Complexitatea algoritmului pare a fi $\mathrm{O}\left(\mathrm{n}^{2}\right)$. Pentru că a doua repetiție nu resetează valoarea lui j la 0 , atunci vor fi valori ale lui i pentru care a doua repetiție nu se mai execută . Deci, vom avea maxim 2 treceri prin vector, deci O(n).
-15. Răspuns corect: e) $\mathbf{3 0}$
-
+45.15. Răspuns corect: e) 30\\
 Indicații: Pentru a afla numărul de drumuri de lungime $\mathbf{k}$ dintre două noduri $\mathbf{i}$ și $\mathbf{j}$ întrun graf orientat, se calculează matricea $\mathbf{X}=\mathbf{A}^{\mathbf{k}}$, unde $\mathbf{A}$ este matricea de adiacență. $\mathbf{X}_{\mathbf{i}, \boldsymbol{j}}$ reprezintă numărul de drumuri dintre nodurile $\mathbf{i}$ și $\mathbf{j}$ de lungime $\mathbf{k}$. Pentru a calcula numărul total de drumuri din digraf, atunci se adună toate valorile matricei $\mathbf{X}$. Deci
-$\mathrm{A}=\left(\begin{array}{llll}0 & 1 & 1 & 0 \\ 1 & 0 & 1 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0\end{array}\right), . ., \mathrm{A}^{3}=\left(\begin{array}{llll}3 & 2 & 2 & 1 \\ 3 & 2 & 3 & 2 \\ 2 & 1 & 2 & 2 \\ 2 & 0 & 1 & 2\end{array}\right)$. Se adună toate elementele și se obține 30.
-\end{verbatim}
+$\mathrm{A}=\left(\begin{array}{llll}0 & 1 & 1 & 0 \\ 1 & 0 & 1 & 1 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 0\end{array}\right), . ., \mathrm{A}^{3}=\left(\begin{array}{llll}3 & 2 & 2 & 1 \\ 3 & 2 & 3 & 2 \\ 2 & 1 & 2 & 2 \\ 2 & 0 & 1 & 2\end{array}\right)$. Se adună toate elementele și se obține 30.\\
 
 \section*{Varianta 46}
 
@@ -2391,7 +2397,7 @@ Indicații: Circuitele elementare sunt: ABA, ACBA, ACDBA, ADBA, ADCBA, AEA, AEDB
 Indicații: O abordare ar putea să plece de la o variantă dată. Folosind metoda backtracking, ținând cont de condițiile impuse de problemă, se pleacă de la primul cuvânt propus și se generează următoarele două soluții.\\
 
 46.12. Răspuns corect: c) \begin{verbatim}
-    x=t[x]; │ x:=t[x];
+    x=t[x]; | x:=t[x];
 \end{verbatim}\\
 Indicații: Se merge pe drumul de la nodul $\mathbf{x}$ către rădăcină, adică, de fiecare dată, se trece de la $\mathbf{x}$ la tatăl lui.\\
 
