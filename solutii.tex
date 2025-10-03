@@ -1083,303 +1083,162 @@ Indicații: În cazul de față, funcția recursivă denumită afis se va opri �
 
 \section*{Varianta 26}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: e) $C++:(a \% 3+a \% 7) / 9$
+26.1. Răspuns corect: e) C++: $(a \% 3+a \% 7) / 9$\\ Pascal: (a MOD 3+a MOD 7) DIV 9\\
+Indicații: Restul împărțirii unui număr la 3 poate fi 0, 1 sau 2. Restul împărțirii unui număr la 7 poate fi maxim 6. În concluzie, suma acestor două resturi nu poate fi mai mare de 8.\\
 
-Pascal: (a MOD 3+a MOD 7) DIV 9
-Indicații: Restul împărțirii unui număr la 3 poate fi 0,1 sau 2. Restul împărțirii unui număr la 7 poate fi maxim 6. În concluzie, suma acestor două resturi nu poate fi mai mare de 8.
-2. Răspuns corect: b) $v=(5,3,4,8,6,2,1,9)$
+26.2. Răspuns corect: b) $v=(5,3,4,8,6,2,1,9)$\\
+Indicații: Instrucțiunile din cadrul instrucțiunii repetitive while (C++: $v[i]=v[i]+v[j]$; $v[j]=v[i]-v[j]$; $v[i]=v[i]-v[j]$; sau Pascal: $v[i]:=v[i]+v[j]$; $v[j]:=v[i]-v[j]$; $v[i]:=v[i]-v[j]$;) interschimbă valoarea aflată în $v[i]$ cu valoarea aflată în $v[j]$.\\ \begin{tabular}{|c|c|c|c|} \hline$i=0$ & $j=1$ & $v[0]=5$ & $v[1]=3$ \\ \hline$i=2$ & $j=3$ & $v[2]=4$ & $v[3]=8$ \\ \hline$i=4$ & $j=5$ & $v[4]=6$ & $v[5]=2$ \\ \hline$i=6$ & $j=7$ & $v[6]=1$ & $v[7]=9$ \\ \hline \end{tabular}\\
 
-Indicații: Instrucțiunile din cadrul instrucțiunii repetitive while (C++: v[i]=v[i]+v[j]; v[j]=v[i]-v[j]; v[i]=v[i]-v[j]; sau Pascal: v[i]:=v[i]+v[j]; v[j]:=v[i]-v[j]; v[i]:=v[i]-v[j];) interschimbă valoarea aflată în $\mathbf{v}[i]$ cu valoarea aflată în $v[j]$.
-\begin{tabular}{|c|c|c|c|}
-\hline$i=0$ & $j=1$ & $v[0]=5$ & $v[1]=3$ \\
-\hline$i=2$ & $j=3$ & $v[2]=4$ & $v[3]=8$ \\
-\hline$i=4$ & $j=5$ & $v[4]=6$ & $v[5]=2$ \\
-\hline$i=6$ & $j=7$ & $v[6]=1$ & $v[7]=9$ \\
-\hline
-\end{tabular}
-3. Răspuns corect: f) poLItEHnica
+26.3. Răspuns corect: f) poLItEHnica\\
+Indicații: Toate literele mai mici decât litera $n$, în ordine alfabetică, până la poziția 7 din șirul de caractere memorat în variabila $a$, sunt transformate în litere mari (spre exemplu: $l$ devine $L$).\\
 
-Indicații: Toate literele mai mici decât litera n, în ordine alfabetică, până la poziția 7 din șirul de caractere memorat în variabila a, sunt transformate în litere mari (spre exemplu: 1 devine L )
-4. Răspuns corect: d) $A=\left(\begin{array}{llll}0 & 1 & 2 & 3 \\ 1 & 2 & 2 & 4 \\ 2 & 2 & 4 & 3 \\ 3 & 4 & 3 & 6\end{array}\right)$
+26.4. Răspuns corect: d) $A=\left(\begin{array}{llll}0 & 1 & 2 & 3 \\ 1 & 2 & 2 & 4 \\ 2 & 2 & 4 & 3 \\ 3 & 4 & 3 & 6\end{array}\right)$\\
+Indicații: Cele două instrucțiuni repetitive while parcurg toate elementele tabloului bidimensional $A$. Elementele care respectă condiția instrucțiunii if ($i+j$ să fie par) sunt: $A[0][0]=0$, $A[0][2]=2$, $A[1][1]=2$, $A[1][3]=4$, $A[2][0]=2$, $A[2][2]=4$, $A[3][1]=4$ și $A[3][3]=6$.\\ Celelalte elemente au valoarea celui mai mare dintre indicii $i$ și $j$: $A[0][1]=1$, $A[0][3]=3$, $A[1][0]=1$, $A[1][2]=2$, $A[2][1]=2$, $A[2][3]=3$, $A[3][0]=3$ și $A[3][2]=3$.\\
 
-Indicații: Cele două instrucțiuni repetitive while parcurg toate elementele tabloului bidimensional A. Elementele care respectă condiția instrucțiunii if (i+j să fie par) sunt: $A[0][0]=0, A[0][2]=2, A[1][1]=2, A[1][3]=4, A[2][0]=2$, $A[2][2]=4, A[3][1]=4$ și $A[3][3]=6$.
-Celelalte elemente au valoarea celui mai mare dintre indicii i și $\mathbf{j}: \mathrm{A}[0][1]=1$, $\mathbf{A}[0][3]=3, \quad \mathbf{A}[1][0]=1, \quad \mathbf{A}[1][2]=2, \quad \mathbf{A}[2][1]=2, \quad \mathbf{A}[2][3]=3$, A[3][0]=3 și A[3][2]=3.
-5. Răspuns corect: d) 11
+26.5. Răspuns corect: d) 11\\
+Indicații:\\ \begin{tabular}{|l|l|l|l|l|l|} \hline Ad (3) & Ad (7) & Ad (5) & El () & El () & Ad (8) \\ \hline $\square$ & & 5 & $\square$ & $\square$ & $\square$ \\ \hline & 7 & 7 & 7 & & 8 \\ \hline 3 & 3 & 3 & 3 & 3 & 3 \\ \hline \end{tabular}\\
 
-Indicații:
-\begin{tabular}{|l|l|l|l|l|l|}
-\hline Ad (3) & Ad (7) & Ad (5) & El () & El () & Ad (8) \\
-\hline $\square$ & & 5 & $\square$ & $\square$ & $\square$ \\
-\hline & 7 & 7 & 7 & & 8 \\
-\hline 3 & 3 & 3 & 3 & 3 & 3 \\
-\hline
-\end{tabular}
-6. Răspuns corect: d) $\mathbf{2 4}$
+26.6. Răspuns corect: d) 24\\
+Indicații: 4a8b (4185, 4189, 4581, 4589, 4981, 4985) - 6 numere\\ 8a4b-6 numere\\ a4b8-6 numere\\ a8b4-6 numere\\
 
-Indicații: 4a8b (4185, 4189, 4581, 4589, 4981, 4985) - 6 numere 8a4b-6 numere
-$$
-\begin{aligned}
-& \text { a4b8-6 numere } \\
-& \text { a8b4-6 numere }
-\end{aligned}
-$$
-7. Răspuns corect: f) 222112
+26.7. Răspuns corect: f) 2 2 2 1 1 2\\
+Indicații: Nodul cu numărul 2 din varianta de răspuns a) indică faptul că este adiacent cu 5 noduri chiar dacă gradul nodului 3 este 0. Același raționament se aplică și pentru varianta d). Într-un graf neorientat suma gradelor tuturor nodurilor trebuie să fie un număr par. Prin urmare variantele b) și e) sunt false. Nodul cu numărul 3 din varianta de răspuns c) are gradul 7 chiar dacă graful are 6 noduri.\\
 
-Indicații: Nodul cu numărul 2 din varianta de răspuns a indică faptul că este adiacent cu $\mathbf{5}$ noduri chiar dacă gradul nodului $\mathbf{3}$ este $\mathbf{0}$. Același raționament se aplică și pentru varianta d. Într-un graf neorientat suma gradelor tuturor nodurilor trebuie să fie un număr par. Prin urmare variantele b și e sunt false. Nodul cu numărul $\mathbf{3}$ din varianta de răspuns c are gradul 7 chiar dacă graful are $\mathbf{6}$ noduri.
-8. Răspuns corect: d) $\boldsymbol{T}=\left(\begin{array}{l}05731312)\end{array}\right.$
+26.8. Răspuns corect: d) T=(0 5 7 3 1 3 1 2)\\
+Indicații:\\ Reprezentarea grafică a variantei a:\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-294(4).jpg} \end{center} Reprezentarea grafică a variantei c:\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-294(2).jpg} \end{center} Reprezentarea grafică a variantei e:\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-294(5).jpg} \end{center} Reprezentarea grafică a variantei b:\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-294.jpg} \end{center} Reprezentarea grafică a variantei d:\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-294(3).jpg} \end{center} Reprezentarea grafică a variantei f:\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-294(1).jpg} \end{center}
 
-\section*{Indicații:}
+26.9. Răspuns corect: b) $a^{2}+1$\\
+Indicații: Cele două instrucțiuni repetitive while și do... while / repeat... until aflate în interiorul instrucțiunii for parcurg intervalul $[1,a]$. Instrucțiunea while parcurge intervalul $[1,i]$, iar instrucțiunea do... while / repeat... until parcurge intervalul complementar $[i+1,a]$.\\ Deoarece aceste instrucțiuni se află într-un for care parcurge același interval $[1, a]$, variabila $s$ va avea valoarea $a^{2}$. Va afișa $a^{2}+1$ deoarece instrucțiunea do . . . while / repeat. . . until va incrementa cu 1 variabila $s$ în ultima apelare a instrucțiunii chiar dacă condiția este falsă, deoarece este instrucțiune repetitivă cu test final.\\ Pentru C++ nu se va afișa $a^{2}$, ci $a^{2}+1$ ,deoarece $s--$ decrementează variabila $s$ după afișare!\\
 
-Reprezentarea grafică a variantei a:
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-294.jpg?height=366&width=372&top_left_y=809&top_left_x=508)
+26.10. Răspuns corect: d) 53078520\\
+Indicații: În cazul de față, funcția recursivă denumită afis se va opri în momentul în care $k$ devine 1. De menționat că, în cazul de față, $k$ pornește de la valoarea 8, care este valoarea sumei indicilor lui $a[4][4]$, elementul din dreapta jos.\\ Valoarea variabilei $k$ scade cu 2 la fiecare reapelare a funcției. Elementele se vor afișa din partea dreaptă spre cea stângă.\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-338.jpg} \end{center}\\ $V=\left(\begin{array}{cccc} 0 & 1 & 2 & 3 \\ 4 & 5 & 6 & 7 \\ 8 & 9 & 0 & 1 \\ 2 & 3 & 4 & 5 \end{array}\right)$\\
 
-Reprezentarea grafică a variantei $\mathbf{c}$ :
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-294.jpg?height=367&width=372&top_left_y=1242&top_left_x=497)
+26.11. Răspuns corect: f) $\underbrace{f(t) \circ \ldots \circ f(t)}_{c}$\\
+Indicații: $abc(functie(t), c-1)$ apelează subprogramul $functie()$ de $c$ ori. Această apelare se face cu rezultatul primit deja de la subprogramul $functie()$, adică $f(f(x))$.\\
 
-Reprezentarea grafică a variantei e:
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-294.jpg?height=367&width=372&top_left_y=1676&top_left_x=497)
+26.12. Răspuns corect: d) cuei\\
+Indicații:\\ Pentru C++: A fost definit un tablou bidimensional de caractere, astfel:\\ \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|} \hline & $\mathbf{0}$ & $\mathbf{1}$ & $\mathbf{2}$ & $\mathbf{3}$ & $\mathbf{4}$ & $\mathbf{5}$ & $\mathbf{6}$ & $\mathbf{7}$ & $\mathbf{8}$ & $\mathbf{9}$ & $\mathbf{1 0}$ \\ \hline $\mathbf{1}$ & b & a & c & a & L & a & u & r & e & a & t \\ \hline $\mathbf{2}$ & l & i & c & e & U & & & & & & \\ \hline $\mathbf{3}$ & e & x & a & m & E & n & e & & & & \\ \hline $\mathbf{4}$ & p & o & l & i & T & e & h & n & i & c & a \\ \hline \end{tabular}\\ Prin urmare sunt afişate elementele:\\ \begin{tabular}{|l|l|} \hline $i=1$ & $a[1][2]=`c`$ \\ \hline $i=2$ & $a[2][4]=`u`$ \\ \hline $i=3$ & $a[3][6]=`e`$ \\ \hline $i=4$ & $a[4][8]=`i`$ \\ \hline \end{tabular}\\ Pentru Pascal: În comparație cu C++, unde șirul de caractere pornește de la indexul 0, aici pornește de la 1. Prin urmare avem următoarele date:\\ \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|} \hline & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\ \hline 1 & b & a & c & a & L & a & u & R & e & a & T \\ \hline 2 & 1 & i & c & e & U & & & & & & \\ \hline 3 & e & x & a & m & E & n & e & & & & \\ \hline 4 & p & o & 1 & i & T & e & h & N & i & c & a \\ \hline \end{tabular}\\ Următoarele elemente sunt afișate:\\ \begin{tabular}{|l|l|} \hline $i=1$ & $a[1][3]=`c`$ \\ \hline $i=2$ & $a[2][5]=`u`$\\ \hline $i=3$ & $a[3][7]=`e`$ \\ \hline $i=4$ & $a[4][9]=`i`$ \\ \hline \end{tabular}\\
 
-Reprezentarea grafică a variantei $\mathbf{b}$ :
-(1)
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-294.jpg?height=272&width=372&top_left_y=894&top_left_x=1207)
+26.13. Răspuns corect: a) 17 5\\
+Indicații: $m=6$, $n=3$ rezultă că după apelarea $f1(m, n)$ vor fi următoarele valori:\\ $f1(6,3)=10$, $m=6$, $n=2$. Apelarea $f1(f1(m, n), m)$ se face, de fapt, pentru $f1(10,6)$, care conduce la valorile $f1(10,6)=17$, $m=5$, $n=2$.\\
 
-Reprezentarea grafică a variantei $\mathbf{d}$ :
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-294.jpg?height=367&width=356&top_left_y=1242&top_left_x=1291)
+26.14. Răspuns corect: e) $b=\left(\begin{array}{lll}29 & 38 & 47 \\ 38 & 50 & 62 \\ 47 & 62 & 77\end{array}\right)$\\
+Indicații:\\ \begin{tabular}{|c|c|c|c|} \hline$i=1$ & $j=1$ & $k=1$ & $b[1][1]=4$ \\ \hline$i=1$ & $j=1$ & $k=2$ & $b[1][1]=13$ \\ \hline$i=1$ & $j=1$ & $k=3$ & $b[1][1]=29$ \\ \hline$i=1$ & $j=2$ & $k=1$ & $b[1][2]=6$ \\ \hline$i=1$ & $j=2$ & $k=2$ & $b[1][2]=18$ \\ \hline$i=1$ & $j=2$ & $k=3$ & $b[1][2]=38$ \\ \hline$i=1$ & $j=3$ & $k=1$ & $b[1][3]=8$ \\ \hline$i=1$ & $j=3$ & $k=2$ & $b[1][3]=23$ \\ \hline$i=1$ & $j=3$ & $k=3$ & $b[1][3]=47$ \\ \hline \end{tabular}\\ Identic se procedează și pentru $i=2$ și $i=3$.\\
 
-Reprezentarea grafică a variantei $\mathbf{f}$ :
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-294.jpg?height=373&width=362&top_left_y=1700&top_left_x=1250)
-9. Răspuns corect: b) $a^{2}+1$
-
-Indicații: Cele două instrucțiuni repetitive while și do... while / repeat... until aflate în interiorul instrucțiunii for parcurg intervalul [1,a]. Instrucțiunea while parcurge intervalul [1,i] iar instrucțiunea do... while / repeat... until parcurge intervalul complementar [i+1,a].
-Deoarece aceste instrucțiuni se află într-un for care parcurge același interval [1, a], variabila $\mathbf{s}$ va avea valoarea $\mathbf{a}^{2}$. Va afișa $\mathbf{a}^{2}+1$ deoarece instrucțiunea do . . . while
-/ repeat. . . until va incrementa cu 1 variabila s în ultima apelare a instrucțiunii chiar dacă condiția este falsă deoarece este instrucțiune repetitivă cu test final.
-Pentru $\mathbf{C}++$ nu se va afișa $\mathbf{a}^{2}$, ci $\mathbf{a}^{2}+1$ deoarece $\mathbf{s}--$ decrementează variabila $\mathbf{s}$ după afișare!
-10. Răspuns corect: d) 53078520
-
-Indicații: În cazul de față funcția recursivă denumită afis se va opri în momentul în care $\mathbf{k}$ devine $\mathbf{1}$. De menționat că, în cazul de față, $\mathbf{k}$ pornește de la valoarea 8 care este valoarea sumei indicilor lui a [4] [4], elementul din dreapta jos.
-Valoarea variabilei $\mathbf{k}$ scade cu 2 la fiecare reapelare a funcției. Elementele se vor afișa din partea dreaptă spre cea stângă.
-$$
-\boldsymbol{v}=\left(\begin{array}{llll}
-v_{11} & v_{12} & v_{13} & v_{14} \\
-v_{21} & v_{22} & v_{23} & v_{k 4} \\
-v_{31}^{2} & v_{32} & v_{33} & v_{34} \\
-v_{41} & v_{42} & v_{43} & v_{44}
-\end{array}\right) \quad V=\left(\begin{array}{cccc}
-0 & 1 & 2 & 3 \\
-4 & 5 & 6 & 7 \\
-8 & 9 & 0 & 1 \\
-2 & 3 & 4 & 5
-\end{array}\right)
-$$
-11. Răspuns corect: f) $\underbrace{\boldsymbol{f}(\boldsymbol{t}) \circ \ldots \circ f(t)}_{c}$
-
-Indicații: abc (functie (t) , c-1) apelează subprogramul functie () de c ori. Această apelare se face cu rezultatul primit deja de la subprogramul functie(), adică $\mathbf{f}(\mathbf{f}(\mathbf{x})$ ).
-12. Răspuns corect: d) cuei
-
-Indicații:
-Pentru C++: A fost definit un tablou bidimensional de caractere, astfel:
-\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
-\hline & $\mathbf{0}$ & $\mathbf{1}$ & $\mathbf{2}$ & $\mathbf{3}$ & $\mathbf{4}$ & $\mathbf{5}$ & $\mathbf{6}$ & $\mathbf{7}$ & $\mathbf{8}$ & $\mathbf{9}$ & $\mathbf{1 0}$ \\
-\hline $\mathbf{1}$ & b & a & c & a & L & a & u & r & e & a & t \\
-\hline $\mathbf{2}$ & l & i & c & e & U & & & & & & \\
-\hline $\mathbf{3}$ & e & x & a & m & E & n & e & & & & \\
-\hline $\mathbf{4}$ & p & $\circ$ & l & i & T & e & h & n & i & c & a \\
-\hline
-\end{tabular}
-
-Prin urmare sunt afişate elementele:
-\begin{tabular}{|l|l|}
-\hline$i=1$ & $a[1][2]=` c^{`}$ \\
-\hline$i=2$ & $a[2][4]=`{ }^{\prime}$ \\
-\hline$i=3$ & $a[3][6]=` e^{`}$ \\
-\hline$i=4$ & $a[4][8]=` i$ \\
-\hline
-\end{tabular}
-
-Pentru Pascal: În comparație cu C++ unde șirul de caractere pornește de la 0 , aici pornește de la 1. Prin urmare avem următoarele date:
-\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|}
-\hline & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
-\hline 1 & b & a & c & a & L & a & u & R & e & a & T \\
-\hline 2 & 1 & i & c & e & U & & & & & & \\
-\hline 3 & e & x & a & m & E & n & e & & & & \\
-\hline 4 & p & $\bigcirc$ & 1 & i & T & e & h & N & i & c & a \\
-\hline
-\end{tabular}
-
-Următoarele elemente sunt afișate:
-\begin{tabular}{|l|l|}
-\hline$i=1$ & $a[1][3]=` c `$ \\
-\hline$i=2$ & $a[2][5]=` u$ \\
-\hline$i=3$ & $a[3][7]=` e `$ \\
-\hline$i=4$ & $a[4][9]=` i `$ \\
-\hline
-\end{tabular}
-13. Răspuns corect: a) $17 \mathbf{5}$
-
-Indicații: $m=6, n=3$ rezultă că după apelarea $f 1(m, n)$ vor fi următoarele valori:
-$\mathrm{f} 1(6,3)=10, \mathrm{~m}=6, \mathrm{n}=2$. Apelarea $\mathrm{f} 1(\mathrm{f} 1(\mathrm{~m}, \mathrm{n}), \mathrm{m})$ se face, de fapt, pentru $\mathrm{f} 1(10,6)$ care conduce la valorile $\mathrm{f} 1(10,6)=17, \mathrm{~m}=5, \mathrm{n}=2$.
-14. Răspuns corect: $e$ ) $b=\left(\begin{array}{lll}29 & 38 & 47 \\ 38 & 50 & 62 \\ 47 & 62 & 77\end{array}\right)$
-
-\section*{Indicații:}
-\begin{tabular}{|c|c|c|c|}
-\hline$i=1$ & $j=1$ & $k=1$ & $b[1][1]=4$ \\
-\hline$i=1$ & $j=1$ & $k=2$ & $b[1][1]=13$ \\
-\hline$i=1$ & $j=1$ & $k=3$ & $b[1][1]=29$ \\
-\hline$i=1$ & $j=2$ & $k=1$ & $b[1][2]=6$ \\
-\hline$i=1$ & $j=2$ & $k=2$ & $b[1][2]=18$ \\
-\hline$i=1$ & $j=2$ & $k=3$ & $b[1][2]=38$ \\
-\hline$i=1$ & $j=3$ & $k=1$ & $b[1][3]=8$ \\
-\hline$i=1$ & $j=3$ & $k=2$ & $b[1][3]=23$ \\
-\hline$i=1$ & $j=3$ & $k=3$ & $b[1][3]=47$ \\
-\hline
-\end{tabular}
-
-Identic se procedează și pentru $i=2$ și $i=3$.
-15. Răspuns corect: e) $\mathbf{2 4}$
-
-Indicații: $\mathbf{n}=\mathbf{4}$ rezultă că variabila b din functie devine 12 . Dacă b devine 12 rezultă că și $\mathbf{n}$ devine 12. Instrucțiunea $a=2 * a$; atribuie lui $a$ valoarea $2 * n$ iar $n$ este 12 , adică 24.
+26.15. Răspuns corect: e) 24\\
+Indicații: $n=4$ rezultă că variabila $b$ din functie devine 12. Dacă $b$ devine 12, rezultă că și $n$ devine 12. Instrucțiunea $a=2 * a;$ atribuie lui $a$ valoarea $2 * n$, iar $n$ este 12, adică 24.\\
 
 \section*{Varianta 27}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: b) -24
+27.1. Răspuns corect: b) -24\\
+Indicații: Se evaluează mai întâi rezultatul din paranteză, care este -2, apoi se calculează câtul împărțirii lui 16 la -2 și în final acesta se înmulțește cu 3.\\
 
-Indicații: Se evaluează mai întâi rezultatul din paranteză, care este -2, apoi se calculează câtul împărțirii lui 16 la -2 și în final acesta se înmulțește cu 3.
-2. Răspuns corect: b) $\mathrm{n} / 10$ \% 10 în varianta $\mathrm{C} / \mathrm{C}++$, respectiv n div $10 \bmod$ 10 în varianta Pascal.
-EXEMPLU: Pentru $\mathrm{n}=3185, \mathrm{n} / 10=\mathrm{n}$ div $10=318$, iar $\mathrm{n} / 10 \% 10=$ $318 \% 10=8$, respectivn div $10 \bmod 10=318 \bmod 10=8$.
-3. Răspuns corect: f) La final d1 și d2 vor fi egale doar dacă $\mathbf{n}$ reține un număr pătrat perfect.
-EXEMPLE: Pentru $\mathrm{n}=11$ vom avea $\mathrm{d} 1=1$ și $\mathrm{d} 2=11$, deci $\mathrm{d} 1 \neq \mathrm{d} 2$, pentru $\mathrm{n}=125=5^{3}$ vom avea d1=5 și d2=25, deci d1 $=\mathrm{d} 2$, pentru $\mathrm{n}=21$ vom avea $\mathrm{d} 1=3$ și d2=7, deci $d 1 \neq d 2$. Pentru orice pătrat perfect de forma $n=r^{2}$, vom avea $d 1=d 2=r$. De exemplu, pentru $\mathrm{n}=36$ vom avea $\mathrm{d} 1=\mathrm{d} 2=6$.
-Indicații: Algoritmul reține la final în d1 cel mai mare divizor al lui $\mathbf{n}$ al cărui pătrat e mai mic sau egal cu n, iar în d2 divizorul „complementar", care înmulțit cu d1 dă rezultatul n . Doar în cazul pătratelor perfecte $\mathrm{d} 1=\mathrm{d} 2$.
-4. Răspuns corect: a) for ( $\mathrm{j}=\mathrm{n}-2$; j >= $\mathbf{i}$; $\mathrm{j}-\mathrm{-}$ ) în varianta $\mathrm{C} / \mathrm{C}++$, respectiv for $j$ := $\mathrm{n}-2$ downto i do în varianta Pascal.
-EXEMPLU: Dacă $n=\mathbf{4}$ și $v=(3,2,1,4)$, la primul pas, în care $i=0$ vor fi comparate 1 și 4, fără a fi nevoie de interschimbare, apoi 2 și 1, care vor fi interschimbate și la final 3 și 1, care vor fi de asemenea interschimbate. Tabloul va deveni astfel ( $1,3,2,4$ ). Pentru i=1 vor fi comparate 2 și 4 fără a fi interschimbate, apoi 3 și 2, care vor fi interschimbate. Tabloul va deveni (1,2,3,4). Pentru i=2 vor mai fi comparate, fără a fi interschimbate 3 și 4.
-Indicații: Algoritmul se aseamănă foarte mult cu sortarea prin metoda bulelor (Bubble Sort), constând de asemenea din parcurgeri succesive ale tabloului, în cadrul cărora sunt comparate și eventual interschimbate elemente aflate pe poziții consecutive. În cazul său însă parcurgerile se fac de la dreapta la stânga, în cadrul fiecăreia elementul minim fiind mutat în stânga subsecvenței prelucrate.
-5. Răspuns corect: $c) f(1, n)==n$ în varianta $C / C++$, respectiv $f(1, n)=n$ în varianta Pascal.
-Indicații: Apelul $\mathbf{f}(\mathbf{d}, \mathrm{n})$ returnează cel mai mic divizor al lui $\mathbf{n}$ mai mare strict ca d. În cazul în care $\mathbf{n}$ este prim acesta va fi $\mathbf{n}$ și reciproc (în enunț se garantează că $\mathbf{n}$ este natural, mai mare strict ca 1).
-6. Răspuns corect: e) $\mathbf{3 6}$
+27.2. Răspuns corect: b) $n / 10 \% 10$ în varianta C / C++, respectiv $n$ div $10$ mod $10$ în varianta Pascal.\\
+Exemplu: Pentru $n=3185$, $n / 10=n$ div $10=318$, iar $n / 10 \% 10=318 \% 10=8$, respectiv $n$ div $10$ mod $10=318$ mod $10=8$.\\
 
-Indicații: Un arbore cu 10 vârfuri are cu siguranță 9 muchii, iar un graf complet cu 10 vârfuri are cu siguranță 10* (10-1) /2 = 45 de muchii. Prin urmare, vor trebui adăugate 45-9 = 36 de muchii.
-7. Răspuns corect: e) 65
+27.3. Răspuns corect: f) La final $d1$ și $d2$ vor fi egale doar dacă $n$ reține un număr pătrat perfect.\\
+Exemple: Pentru $n=11$ vom avea $d1=1$ și $d2=11$, deci $d1 \neq d2$.\\ Pentru $n=125=5^{3}$ vom avea $d1=5$ și $d2=25$, deci $d1 \neq d2$.\\ Pentru $n=21$ vom avea $d1=3$ și $d2=7$, deci $d1 \neq d2$.\\ Pentru orice pătrat perfect de forma $n=r^{2}$, vom avea $d1=d2=r$. De exemplu, pentru $n=36$ vom avea $d1=d2=6$.\\ Indicații: Algoritmul reține la final în $d1$ cel mai mare divizor al lui $n$ al cărui pătrat e mai mic sau egal cu $n$, iar în $d2$ divizorul „complementar", care înmulțit cu $d1$ dă rezultatul $n$. Doar în cazul pătratelor perfecte $d1=d2$.\\
 
-Indicații: Secvența de instrucțiuni construiește următoarea matrice:
-\begin{tabular}{rrrrr}
-25 & 24 & 23 & 22 & 21 \\
-20 & 19 & 18 & 17 & 16 \\
-15 & 14 & 13 & 12 & 11 \\
-10 & 9 & 8 & 7 & 6 \\
-5 & 4 & 3 & 2 & 1
-\end{tabular}
-8. Răspuns corect: c) $(2,1,0,2,0)$
+27.4. Răspuns corect: a) for ($j=n-2$; $j>=i$; $j--$) în varianta C / C++, respectiv for $j:=n-2$ downto $i$ do în varianta Pascal.\\
+Exemplu: Dacă $n=4$ și $v=(3,2,1,4)$, la primul pas, în care $i=0$ vor fi comparate 1 și 4, fără a fi nevoie de interschimbare, apoi 2 și 1, care vor fi interschimbate și la final 3 și 1, care vor fi de asemenea interschimbate. Tabloul va deveni astfel $(1,3,2,4)$. Pentru $i=1$ vor fi comparate 2 și 4 fără a fi interschimbate, apoi 3 și 2, care vor fi interschimbate. Tabloul va deveni $(1,2,3,4)$. Pentru $i=2$ vor mai fi comparate, fără a fi interschimbate 3 și 4.\\ Indicații: Algoritmul se aseamănă foarte mult cu sortarea prin metoda bulelor (Bubble Sort), constând de asemenea din parcurgeri succesive ale tabloului, în cadrul cărora sunt comparate și eventual interschimbate elemente aflate pe poziții consecutive. În cazul său însă parcurgerile se fac de la dreapta la stânga, în cadrul fiecăreia elementul minim fiind mutat în stânga subsecvenței prelucrate.\\
 
-Indicații: Dacă numerotăm vârfurile ca în figura alăturată, vom obține șirul gradelor interne de la punctul c)
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-298.jpg?height=329&width=649&top_left_y=481&top_left_x=1101)
-9. Răspuns corect: c) Algoritmul generează în ordine lexicografică anagramele cuvântului citit care nu au vocale pe poziții alăturate.
-Indicații: Ordinea alfabetică a literelor din cuvintele pilo și poli este i, l, o, p. Prin urmare varianta a) nu are cum să fie cea corectă (este înaintea lui pilo în ordine invers lexicografică). Variantele b) și d) nu sunt corecte, deoarece în ambele cazuri, penultimul cuvânt generat ar fi poil.
-10. Răspuns corect: a) strcpy ( $t$, strchr (s, ' ' )) ; în varianta C/C++, respectiv t:=copy (s, pos(' ', s), 5) ; în varianta Pascal.
-Indicații: Variantele b), d), e) și f) ar produce erori de compilare, iar c) ar face ca în variabila $t$ să fie reținut "Politehnica 20202020".
-11. Răspuns corect: b) 31
+27.5. Răspuns corect: c) $f(1, n)==n$ în varianta C / C++, respectiv $f(1, n)=n$ în varianta Pascal.\\
+Indicații: Apelul $f(d, n)$ returnează cel mai mic divizor al lui $n$ mai mare strict ca $d$. În cazul în care $n$ este prim, acesta va fi $n$ și reciproc (în enunț se garantează că $n$ este natural, mai mare strict ca 1).\\
 
-Indicații: Ordinea apelurilor recursive va fi: $\mathrm{f}(24,34)=2+f(25,34)=$ $2+(1+f(26,33))=3+f(26,31)=3+f(26,29)=3+(1+f(27,28))$ $=4+f(27,26)=4+27=31$
-12. Răspuns corect: f) 3
+27.6. Răspuns corect: e) 36\\
+Indicații: Un arbore cu 10 vârfuri are cu siguranță 9 muchii, iar un graf complet cu 10 vârfuri are cu siguranță $10 * (10-1) / 2 = 45$ de muchii. Prin urmare, vor trebui adăugate $45-9 = 36$ de muchii.\\
 
-Indicații: Putem elimina muchiile $\{1,3\},\{3,4\}$ și $\{3,5\}$.Vom avea 3 cicluri elementare: $(1,5,6,1),(2,5,6,2)$ și $(1,5,2,6,1)$.
-13. Răspuns corect: d) 011135
+27.7. Răspuns corect: e) 65\\
+Indicații: Secvența de instrucțiuni construiește următoarea matrice:\\ \begin{tabular}{rrrrr} 25 & 24 & 23 & 22 & 21 \\ 20 & 19 & 18 & 17 & 16 \\ 15 & 14 & 13 & 12 & 11 \\ 10 & 9 & 8 & 7 & 6 \\ 5 & 4 & 3 & 2 & 1 \end{tabular}\\
 
-Indicații: Primii trei vectori în ordine lexicografică sunt: $(0,1,1,1,2,5)$, $(0,1,1,1,3,5)$ și $(0,1,1,1,4,5)$. Vectorul $(0,1,2,3,1,1)$ nu este al doilea, $(0,1,1,1,1,3)$ corespunde unui arbore cu înălțimea 2 , iar $(0,1,1,1,2,6)$ nu corespunde unui arbore ( 6 nu poate fi propriul său tată).
-14. Răspuns corect: b) $m$ * $m>=x$
+27.8. Răspuns corect: c) $(2,1,0,2,0)$\\
+Indicații: Dacă numerotăm vârfurile ca în figura alăturată, vom obține șirul gradelor interne de la punctul c)\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-298.jpg} \end{center}\\
 
-EXEMPLU: Dacă $\mathbf{x}=30$ și apelurile subprogramului sunt următoarele (făcând observația că rezultatul dorit nu poate fi mai mare ca $\mathbf{x}$ ): $\operatorname{rad}(1,30,30)=\operatorname{rad}$ $(1,15,30)=\operatorname{rad}(1,8,30)=\operatorname{rad}(5,8,30)=\operatorname{rad}(6,8,30)=$ $\operatorname{rad}(6,7,30)=\operatorname{rad}(6,6,30)=6$
-Indicații: Subprogramul folosește o versiune modificată a căutării binare pentru a obține rezultatul dorit. Astfel dacă elementul din mijlocul intervalului în care se caută rezultatul are proprietatea dorită (pătratul său e mai mare sau egal cu x), căutarea continuă în prima jumătate, altfel în cea de-a doua.
-15. Răspuns corect: $d$ ) $s-=v[j]$; în varianta $C / C++$, respectiv $s:=s-v[j]$; în varianta Pascal.
+27.9. Răspuns corect: c) Algoritmul generează în ordine lexicografică anagramele cuvântului citit care nu au vocale pe poziții alăturate.\\
+Indicații: Ordinea alfabetică a literelor din cuvintele pilo și poli este i, l, o, p. Prin urmare varianta a) nu are cum să fie cea corectă (este înaintea lui pilo în ordine invers lexicografică). Variantele b) și d) nu sunt corecte, deoarece în ambele cazuri, penultimul cuvânt generat ar fi poil.\\
 
-EXEMPLU: Dacă $n=8$, v=(3,5,4,1,2,8,19,3) și $t=10$ atunci 1 max va avea la sfârșitul executării secvenței de instrucțiuni valoarea 3 . Mai precis pentru $i=0$ se va găsi $\mathbf{j}=0$, pentru $\mathbf{i = 1}$ se va găsi de asemenea $\mathbf{j}=0$, deoarece suma primelor $\mathbf{2}$ elemente ale tabloului nu depășește $t=10$, pentru $i=2$ se va găsi $j=1$, deoarece suma primelor 3 elemente depășește $t$, dar $v[1]+v[2] \leq t$, pentru $i=3$ se va găsi $j=1$, pentru $i=4$ se va găsi $j=2$, pentru $i=5$ se va găsi $j=4$, pentru $i=6$ se va găsi $j=7$, pentru $i=7$ se va găsi $j=7$,
-Indicații: Pentru fiecare i cuprins între 0 și n-1, algoritmul determină în timp liniar cel mai mare $\mathbf{j}$ cu proprietatea că subsecvența de la poziția i până la poziția j inclusiv respectă restricția de a avea suma mai mică sau egală cu t. Pentru verificarea acestei condiții este păstrată în permanență în variabila s suma elementelor din subsecvența curentă. Incrementarea lui $j$ este echivalentă cu eliminarea lui $v[j]$ din subsecvență, prin urmarea este necesar ca s să scadă cu v[j].
+27.10. Răspuns corect: a) strcpy(t, strchr (s, ' ' )); în varianta C/C++, respectiv t:=copy(s, pos(' ', s), 5); în varianta Pascal.\\
+Indicații: Variantele b), d), e) și f) ar produce erori de compilare, iar c) ar face ca în variabila $t$ să fie reținut "Politehnica 20202020".\\
+
+27.11. Răspuns corect: b) 31\\
+Indicații: Ordinea apelurilor recursive va fi:\\ $f(24,34)=2+f(25,34)=2+(1+f(26,33))=3+f(26,31)= \\ =3+f(26,29)=3+(1+f(27,28))=4+f(27,26)=4+27=31$\\
+
+27.12. Răspuns corect: f) 3\\
+Indicații: Putem elimina muchiile $\{1,3\},\{3,4\}$ și $\{3,5\}$. Vom avea 3 cicluri elementare: $(1,5,6,1)$, $(2,5,6,2)$ și $(1,5,2,6,1)$.\\
+
+27.13. Răspuns corect: d) 0 1 1 1 3 5\\
+Indicații: Primii trei vectori în ordine lexicografică sunt: $(0,1,1,1,2,5)$, $(0,1,1,1,3,5)$ și $(0,1,1,1,4,5)$. Vectorul $(0,1,2,3,1,1)$ nu este al doilea, $(0,1,1,1,1,3)$ corespunde unui arbore cu înălțimea 2, iar $(0,1,1,1,2,6)$ nu corespunde unui arbore (6 nu poate fi propriul său tată).\\
+
+27.14. Răspuns corect: b) $m * m>=x$\\
+Exemplu: Dacă $x=30$ și apelurile subprogramului sunt următoarele (făcând observația că rezultatul dorit nu poate fi mai mare ca $x$):\\ $\operatorname{rad}(1,30,30)=\operatorname{rad}(1,15,30)=\operatorname{rad}(1,8,30)= \\ =\operatorname{rad}(5,8,30)=\operatorname{rad}(6,8,30)=\operatorname{rad}(6,7,30)=\operatorname{rad}(6,6,30)=6$\\ Indicații: Subprogramul folosește o versiune modificată a căutării binare pentru a obține rezultatul dorit. Astfel, dacă elementul din mijlocul intervalului în care se caută rezultatul are proprietatea dorită (pătratul său e mai mare sau egal cu $x$), căutarea continuă în prima jumătate, altfel în cea de-a doua.\\
+
+27.15. Răspuns corect: d) $s-=v[j];$ în varianta C / C++, respectiv $s:=s-v[j];$ în varianta Pascal.\\
+Exemplu: Dacă $n=8$, $v=(3,5,4,1,2,8,19,3)$ și $t=10$, atunci $lmax$ va avea la sfârșitul executării secvenței de instrucțiuni valoarea 3. Mai precis, pentru $i=0$ se va găsi $j=0$, pentru $i=1$ se va găsi de asemenea $j=0$, deoarece suma primelor 2 elemente ale tabloului nu depășește $t=10$, pentru $i=2$ se va găsi $j=1$, deoarece suma primelor 3 elemente depășește $t$, dar $v[1]+v[2] \leq t$, pentru $i=3$ se va găsi $j=1$, pentru $i=4$ se va găsi $j=2$, pentru $i=5$ se va găsi $j=4$, pentru $i=6$ se va găsi $j=7$, pentru $i=7$ se va găsi $j=7$.\\ Indicații: Pentru fiecare $i$ cuprins între 0 și $n-1$, algoritmul determină în timp liniar cel mai mare $j$ cu proprietatea că subsecvența de la poziția $i$ până la poziția $j$ inclusiv respectă restricția de a avea suma mai mică sau egală cu $t$. Pentru verificarea acestei condiții este păstrată în permanență în variabila $s$ suma elementelor din subsecvența curentă. Incrementarea lui $j$ este echivalentă cu eliminarea lui $v[j]$ din subsecvență, prin urmare este necesar ca $s$ să scadă cu $v[j]$.\\
 
 \section*{Varianta 28}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: $d)(a+b+c+d) * 0.25$
+28.1. Răspuns corect: d) $(a+b+c+d) * 0.25$\\
+Indicații: Varianta a) ar fi corectă doar dacă suma $a+b+c+d$ ar fi scrisă între paranteze. Variantele b), c), e) și f) sunt incorecte din punct de vedere matematic, deși nu au erori de sintaxă.\\
 
-Indicații: Varianta a) ar fi corectă doar dacă suma $a+b+c+d$ ar fi scrisă între paranteze. Variantele b) , c), e) și f) sunt incorecte din punct de vedere matematic, deși nu au erori de sintaxă.
-2. Răspuns corect: c) Atât S1, cât și S2
+28.2. Răspuns corect: c) Atât S1, cât și S2\\
+Indicații: Ambele secvențe de instrucțiuni au ca efect obținerea în variabila $p$ a primei cifre a numărului reținut inițial de $n$. În cadrul $S1$, $p$ reține mai întâi o copie a lui $n$, iar apoi, cât timp $p$ are mai mult de o cifră se elimină ultima dintre acestea. În $S2$ se reține în mod repetat în $p$ ultima cifră a lui $n$, apoi aceasta se elimină prin păstrarea în $n$ a câtului împărțirii întregi a lui $n$ la 10. În felul acesta, ultima cifră eliminată este evident prima cifră a numărului reținut inițial de $n$, aceasta fiind valoarea finală a lui $p$. Singura diferență dintre $S1$ și $S2$ este că în cazul celei de-a doua secvențe de instrucțiuni valoarea inițială a lui $n$ se va pierde, aceasta fiind înlocuită cu 0 la sfârșitul executării buclei.\\
 
-Indicații: Ambele secvențe de instrucțiuni au ca efect obținerea în variabila $\mathbf{p}$ a primei cifre a numărului reținut inițial de $n$. În cadrul $\mathbf{S 1} \mathbf{p}$ reține mai întâi o copie a lui n , iar apoi, cât timp p are mai mult de o cifră se elimină ultima dintre acestea. În S2 se reține în mod repetat în $\mathbf{p}$ ultima cifră a lui $n$, apoi aceasta se elimină prin păstrarea în $n$ a câtului împărțirii întregi a lui $n$ la 10. În felul acesta ultima cifră eliminată este evident prima cifră a numărului reținut inițial de $n$, aceasta fiind valoarea finală a lui $\mathbf{p}$. Singura diferență dintre S1 și S2 este că în cazul celei de-a doua secvențe de instrucțiuni valoarea inițială a lui $\mathbf{n}$ se va pierde, aceasta fiind înlocuită cu 0 la sfârșitul executării buclei.
-3. Răspuns corect: $f$ ) n \% $\mathrm{d}=\mathbf{0}$ în varianta $\mathrm{C} / \mathrm{C}++$, respectiv $\mathrm{n} \bmod \mathrm{d}=0$ în varianta Pascal.
-EXEMPLU: Pentru $n=300$, când $d=2$, în bucla while ( $n \% d==0$ ) a programului C/C++, respectiv while n mod $\mathrm{d}=0$ do a variantei Pascal n va deveni 75 , iar $p$ și $n r$ vor deveni 1. Apoi, pentru $d=3$, în aceeași buclă $n$ va deveni $25, p$, din nou 1 , iar $n r$ va primi valoarea 2. Pentru $d=4 n u$ se va intra în bucla while internă, deci $p$ va rămâne 0 , iar $n$ și $n r$ nu se vor modifica. În fine, când $d=5, p$ va deveni din nou 1 , $n r$ va deveni 3 , iar $n$ va ajunge 1 , ceea ce va face ca bucla while exterioară să se încheie.
-Indicații: Algoritmul găsește divizorii primi ai lui n bazându-se pe faptul că, dacă atunci când e găsit un divizor d, ne împărțit la el de câte ori e posibil, atunci nu se va intra în bucla interioară decât pentru divizorii primi ai numărului reținut inițial de $\mathbf{n}$.
-4. Răspuns corect: e) $\mathrm{v}[\mathrm{i}+1]=\mathbf{x}$ în varianta $\mathrm{C} / \mathrm{C}++$, respectiv $\mathrm{v}[i+1]:=\mathbf{x}$ în varianta Pascal.
-EXEMPLE: Dacă $n=5, v=(2,3,5,5,8)$ și $x=4$, la primul pas, în care $i=4$ sunt comparate 4 și 8, iar v[5] devine 8, apoi i devine 3 și, pentru că v[3]=5 și e în continuare mai mare ca $\mathbf{x}=4, \mathrm{v}[4]$ devine 5 . Același lucru se întâmplă pentru $i=2$ și $v$ [3] devine de asemenea 5. Bucla se încheie cu i=1, pentru că v[1]=3 și 3 nu e mai mare strict ca $\mathbf{x}=4$. Evident, 4 va fi inserat după 3 , pe poziția $i+1=2$. Vectorul va deveni astfel ( $2,3,4,5,5,8$ ).
-Dacă $n=4, v=(2,3,5,5)$ și $x=1$, atunci în bucla while vor fi mutate cu o poziție spre dreapta toate elementele vectorului, iar la final i va avea valoarea -1. Pe poziția $i+1=0$ va fi scris $\mathbf{x}=1$. Vectorul va deveni astfel ( $1,2,3,5,5,8$ ).
-Indicații: Algoritmul îl inserează pe $\mathbf{x}$ în $\mathbf{v}$ după ce mută spre dreapta cu o poziție toate componentele mai mari strict ca $\mathbf{x}$. Bucla while se poate termina fie atunci când toate elementele lui $\mathbf{v}$ sunt strict mai mici ca $\mathbf{x}$ și sunt mutate (i devine $\mathbf{- 1}$ ), fie când se
-ajunge la un i cu proprietatea că $\mathbf{v}[\mathbf{i}] \leq \mathbf{x}$. În ambele cazuri este necesar ca $\mathbf{x}$ să fie inserat pe poziția $\mathbf{i}+1$.
-5. Răspuns corect: b) 60 .
+28.3. Răspuns corect: f) $n \% d==0$ în varianta C / C++, respectiv $n$ mod $d=0$ în varianta Pascal.\\
+Exemplu: Pentru $n=300$, când $d=2$, în bucla while ($n \% d==0$) a programului C/C++, respectiv while $n$ mod $d=0$ do a variantei Pascal, $n$ va deveni 75, iar $p$ și $nr$ vor deveni 1. Apoi, pentru $d=3$, în aceeași buclă $n$ va deveni 25, $p$, din nou 1, iar $nr$ va primi valoarea 2. Pentru $d=4$ nu se va intra în bucla while internă, deci $p$ va rămâne 0, iar $n$ și $nr$ nu se vor modifica. În fine, când $d=5$, $p$ va deveni din nou 1, $nr$ va deveni 3, iar $n$ va ajunge 1, ceea ce va face ca bucla while exterioară să se încheie.\\ Indicații: Algoritmul găsește divizorii primi ai lui $n$ bazându-se pe faptul că, dacă atunci când e găsit un divizor $d$, $n$ e împărțit la el de câte ori e posibil, atunci nu se va intra în bucla interioară decât pentru divizorii primi ai numărului reținut inițial de $n$.\\
 
-Indicații: Secvența de instrucțiuni construiește următoarea matrice:
-\begin{tabular}{lllll}
-5 & 4 & 3 & 2 & 1 \\
-6 & 5 & 4 & 3 & 2 \\
-7 & 6 & 5 & 4 & 3 \\
-8 & 7 & 6 & 5 & 4 \\
-9 & 8 & 7 & 6 & 5
-\end{tabular}
-6. Răspuns corect: b) $£(225)$
+28.4. Răspuns corect: e) $v[i+1]=x$ în varianta C / C++, respectiv $v[i+1]:=x$ în varianta Pascal.\\
+Exemple: Dacă $n=5$, $v=(2,3,5,5,8)$ și $x=4$, la primul pas, în care $i=4$, sunt comparate 4 și 8, iar $v[5]$ devine 8, apoi $i$ devine 3 și, pentru că $v[3]=5$ și e în continuare mai mare ca $x=4$, $v[4]$ devine 5. Același lucru se întâmplă pentru $i=2$ și $v[3]$ devine de asemenea 5. Bucla se încheie cu $i=1$, pentru că $v[1]=3$ și 3 nu e mai mare strict ca $x=4$. Evident, 4 va fi inserat după 3, pe poziția $i+1=2$. Vectorul va deveni astfel $(2,3,4,5,5,8)$.\\ Dacă $n=4$, $v=(2,3,5,5)$ și $x=1$, atunci în bucla while vor fi mutate cu o poziție spre dreapta toate elementele vectorului, iar la final $i$ va avea valoarea -1. Pe poziția $i+1=0$ va fi scris $x=1$. Vectorul va deveni astfel $(1,2,3,5,5,8)$.\\ Indicații: Algoritmul îl inserează pe $x$ în $v$ după ce mută spre dreapta cu o poziție toate componentele mai mari strict ca $x$. Bucla while se poate termina fie atunci când toate elementele lui $v$ sunt strict mai mici ca $x$ și sunt mutate ($i$ devine -1), fie când se ajunge la un $i$ cu proprietatea că $v[i] \leq x$. În ambele cazuri este necesar ca $x$ să fie inserat pe poziția $i+1$.\\
 
-Indicații: În cadrul buclei while $r$ devine cel mai mic număr al cărui pătrat este mai mare sau egal cu $n$ (partea întreagă superioară a rădăcinii pătrate a lui $n$ ). Subprogramul returnează astfel 0 dacă și numai dacă $n$ este pătrat perfect.
-7. Răspuns corect: d) (1,1,2,2)
+28.5. Răspuns corect: b) 60\\
+Indicații: Secvența de instrucțiuni construiește următoarea matrice:\\ \begin{tabular}{lllll} 5 & 4 & 3 & 2 & 1 \\ 6 & 5 & 4 & 3 & 2 \\ 7 & 6 & 5 & 4 & 3 \\ 8 & 7 & 6 & 5 & 4 \\ 9 & 8 & 7 & 6 & 5 \end{tabular}\\
 
-Indicații: Variantele a) și f) sunt incorecte, pentru că un vârf nu poate avea gradul intern mai mare decât 3 . Varianta b) are suma gradelor interne mai mare decât suma gradelor externe, iar varianta e) are suma suma gradelor interne mai mică decât suma gradelor externe. În cazul variantei c) contradicția provine din faptul că vârful 4 are gradul intern 0 , deci nu poate exista un arc ( 1,4 ), iar 1 are gradul extern 3 . Graful cu arcele $(1,2),(1,3),(1,4),(2,1),(3,4),(4,3)$, corespunde șirului gradelor interne (1,1,2,2).
-8. Răspuns corect: c) 5
+28.6. Răspuns corect: b) $f(225)$\\
+Indicații: În cadrul buclei while, $r$ devine cel mai mic număr al cărui pătrat este mai mare sau egal cu $n$ (partea întreagă superioară a rădăcinii pătrate a lui $n$). Subprogramul returnează astfel 0 dacă și numai dacă $n$ este pătrat perfect.\\
 
-Indicații: Arborele din figura alăturată corespunde vectorului de tați dat.
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-301.jpg?height=537&width=752&top_left_y=1290&top_left_x=865)
-9. Răspuns corect: a) strcpy ( $p, p+1$ ) în varianta $C / C++$, respectiv
-delete ( $\mathrm{s}, \mathrm{p}, 1$ ) în varianta Pascal.
-Indicații: Având în vedere că de fiecare dată caracterul $\mathbf{c}$ este căutat de la începutul șirului ( $\mathbf{p}=\mathbf{s t r c h r}(\mathbf{s}, \mathbf{c})$; , respectiv $p:=\operatorname{pos}(\mathbf{c}, \mathbf{s})$ ) de caractere $\mathbf{s}, \mathrm{e}$ necesar ca la fiecare iterație a buclei while să se șteargă ultima apariție găsită.
-10. Răspuns corect: f) 012013
+28.7. Răspuns corect: d) $(1,1,2,2)$\\
+Indicații: Variantele a) și f) sunt incorecte, pentru că un vârf nu poate avea gradul intern mai mare decât 3. Varianta b) are suma gradelor interne mai mare decât suma gradelor externe, iar varianta e) are suma gradelor interne mai mică decât suma gradelor externe. În cazul variantei c) contradicția provine din faptul că vârful 4 are gradul intern 0, deci nu poate exista un arc $(1,4)$, iar 1 are gradul extern 3. Graful cu arcele $(1,2)$, $(1,3)$, $(1,4)$, $(2,1)$, $(3,4)$, $(4,3)$ corespunde șirului gradelor interne $(1,1,2,2)$.\\
 
-Indicații: Arborele apelurilor recursive este cel din figura de mai jos.
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-302.jpg?height=432&width=936&top_left_y=245&top_left_x=356)
+28.8. Răspuns corect: c) 5\\
+Indicații: Arborele din figura alăturată corespunde vectorului de tați dat.\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-301.jpg} \end{center}\\
 
-Apelul cu $n=3$ va afișa pe ecran 012, apoi apelul cu $n=1$ va afișa 01 și în final apelul cu $\mathrm{n}=3$ va mai afișa 3 . Celelalte 3 apeluri nu vor afișa nimic, întrucât condiția $\mathrm{n}>0 \mathrm{nu}$ va fi verificată în cazul lor.
-11. Răspuns corect: b) Generarea tuturor permutărilor mulțimii $\{1,2, \ldots, n\}$.
+28.9. Răspuns corect: a) strcpy (p, p+1) în varianta C / C++, respectiv delete (s, p, 1) în varianta Pascal.\\
+Indicații: Având în vedere că de fiecare dată caracterul $c$ este căutat de la începutul șirului (p=strchr(s, c);, respectiv p:=pos(c, s)) de caractere $s$, e necesar ca la fiecare iterație a buclei while să se șteargă ultima apariție găsită.\\
 
-Indicații: În cazul ambelor probleme elementul curent din vectorul soluție, sol [p] trebuie să respecte condiția sol [p] $\boldsymbol{\operatorname { s o n }}$ [i] pentru orice $\mathbf{i}<\mathrm{p}$.
-12. Răspuns corect: d) G nu poate fi eulerian
+28.10. Răspuns corect: f) 012013\\
+Indicații: Arborele apelurilor recursive este cel din figura de mai jos.\\ \begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-302.jpg} \end{center}\\ Apelul cu $n=3$ va afișa pe ecran 012, apoi apelul cu $n=1$ va afișa 01 și în final apelul cu $n=3$ va mai afișa 3. Celelalte 3 apeluri nu vor afișa nimic, întrucât condiția $n>0$ nu va fi verificată în cazul lor.\\
 
-Indicații: Un graf cu 10 vârfuri și mai puțin de 9 muchii nu poate fi conex, deci afirmația de la punctul a) este adevărată. Un graf care nu este conex nu poate fi hamiltonian, deci afirmația de la punctul c) este adevărată. Graful G poate avea două cicluri elementare cu câte 4 vârfuri și 4 muchii și 2 vârfuri izolate (4 componente conexe în total), deci afirmația de la punctul b) este adevărată. În fine, un graf eulerian poate avea vârfuri izolate, deci în cazul lui G putem avea un ciclu cu 8 vârfuri care să conțină toate cele 8 muchii și alte două vârfuri izolate. Prin urmare, afirmația de la punctul d) este singura care nu e adevărată.
-13. Răspuns corect: e) 5
+28.11. Răspuns corect: b) Generarea tuturor permutărilor mulțimii $\{1,2, \ldots, n\}$.\\
+Indicații: În cazul ambelor probleme, elementul curent din vectorul soluție, $sol[p]$ trebuie să respecte condiția $sol[p] \neq sol[i]$ pentru orice $i<p$.\\
 
-Indicațiii: $O$ soluție posibilă este un arbore cu vectorul de tați:
-( $0,1,1,1,2,2,2,5,5,5,8,11$ ) cu lanțul ( $1,2,5,8,11,12$ ) de lungime 5 , care unește rădăcina 1 cu frunza 12.
-14. Răspuns corect: a)
-\end{verbatim}
+28.12. Răspuns corect: d) $G$ nu poate fi eulerian\\
+Indicații: Un graf cu 10 vârfuri și mai puțin de 9 muchii nu poate fi conex, deci afirmația de la punctul a) este adevărată. Un graf care nu este conex nu poate fi hamiltonian, deci afirmația de la punctul c) este adevărată. Graful $G$ poate avea două cicluri elementare cu câte 4 vârfuri și 4 muchii și 2 vârfuri izolate (4 componente conexe în total), deci afirmația de la punctul b) este adevărată. În fine, un graf eulerian poate avea vârfuri izolate, deci în cazul lui $G$ putem avea un ciclu cu 8 vârfuri care să conțină toate cele 8 muchii și alte două vârfuri izolate. Prin urmare, afirmația de la punctul d) este singura care nu e adevărată.\\
 
-if (v[n-2] > v[n-1])\\
-\{\\[0pt]
-aux = v[n-1];\\[0pt]
-v[n-1] = v[n-2];\\[0pt]
-v[n-2] = aux;\\
-mysort(n - 1, v);\\
-\}\\
-pentru limbajul C/C++, respectiv\\[0pt]
-if v[n-2] > v[n-1] then\\
-begin\\[0pt]
-aux := v[n-1];\\[0pt]
-v[n-1] := v[n-2];\\[0pt]
-v[n-2] := aux;\\
-mysort(n-1, v)\\
-end\\
-pentru limbajul Pascal
+28.13. Răspuns corect: e) 5\\
+Indicații: O soluție posibilă este un arbore cu vectorul de tați:\\ $(0,1,1,1,2,2,2,5,5,5,8,11)$ cu lanțul $(1,2,5,8,11,12)$ de lungime 5, care unește rădăcina 1 cu frunza 12.\\
 
+28.14. Răspuns corect: a)\\
 \begin{verbatim}
+if (v[n-2] > v[n-1])
+{
+    aux = v[n-1];
+    v[n-1] = v[n-2];
+    v[n-2] = aux;
+    mysort(n-1, v);
+}
+\end{verbatim} pentru limbajul C/C++, respectiv\\
+\begin{verbatim}
+if v[n-2] > v[n-1] then
+begin
+    aux := v[n-1];
+    v[n-1] := v[n-2];
+    v[n-2] := aux;
+    mysort(n-1, v)
+end
+\end{verbatim} pentru limbajul Pascal\\
+Indicații: În urma apelului recursiv mysort(n-1, v), primele $n-1$ componente ale lui $v$ vor fi ordonate. Dacă $v[n-2] \leq v[n-1]$, atunci nu mai sunt necesare alte prelucrări. În caz contrar ultimele două componente ale subsecvenței $(v[0], v[1], \ldots, v[n-2], v[n-1])$ care trebuie ordonată vor fi interschimbate, iar procesul va fi reluat pentru primele $n-1$ elemente printr-un nou apel recursiv cu aceleași argumente. Cum $v[n-1]$ este cu siguranță elementul maxim după interschimbare, la revenirea din apelul recursiv, subsecvența va fi ordonată.\\
 
-Indicații: În urma apelului recursiv mysort ( $n-1, v$ ), primele $n-1$ componente ale lui $\mathbf{v}$ vor fi ordonate. Dacă $\mathbf{v}[\mathrm{n}-2] \leq \mathrm{v}[\mathrm{n}-1]$, atunci nu mai sunt necesare alte
-prelucrări. În caz contrar ultimele două componente ale subsecvenței ( $v[0], v[1]$, $\ldots, v[n-2], v[n-1])$ care trebuie ordonată vor fi interschimbate, iar procesul va fi reluat pentru primele n -1 elemente printr-un nou apel recursiv cu aceleași argumente. Cum v[n-1] este cu siguranță elementul maxim după interschimbare, la revenirea din apelul recursiv, subsecvența va fi ordonată.
-15. Răspuns corect: $c$ ) v [i]>s [m-1]
-
-EXEMPLU: Dacă $n=8, \quad v=(3,3,1,8,2,1,5,4)$, corespunzător lui $X=33182154$ și $k=4$ atunci aplicând algoritmul vom obține vectorul $s=(8,2,5,4)$, corespunzător lui $Y=8254$. Acesta e cel mai mare număr natural care poate fi obținut din $\mathbf{X}$ prin eliminarea a exact $\mathbf{4}$ cifre, fără a schimba ordinea în care cifrele apăreau în X.
-
-Indicații: Algoritmul folosește vectorul s, organizat după principiul „ultimul sosit primul servit". Componentele acestuia sunt acele cifre care pot face parte din Y. În momentul luării în considerare a unei noi cifre (v[i]) aceasta este introdusă cu siguranță în s(nu se știe încă nimic despre cifrele care urmează și deci acestea ar putea fi mai mici). Apariția cifrei curente (v [i]) poate avea ca efect eliminarea din sa altor cifre, mai mici, care nu trebuie să se afle înaintea lui v[i] în Y. Aceste eliminări se fac în bucla while prin decrementarea lui $m$ (numărul de elemente din vectorul $\mathbf{s}$ ).
+28.15. Răspuns corect: c) $v[i]>s[m-1]$\\
+Exemplu: Dacă $n=8$, $v=(3,3,1,8,2,1,5,4)$, corespunzător lui $X=33182154$ și $k=4$, atunci aplicând algoritmul vom obține vectorul $s=(8,2,5,4)$, corespunzător lui $Y=8254$. Acesta e cel mai mare număr natural care poate fi obținut din $X$ prin eliminarea a exact 4 cifre, fără a schimba ordinea în care cifrele apăreau în $X$.\\ Indicații: Algoritmul folosește vectorul $s$, organizat după principiul „ultimul sosit primul servit”. Componentele acestuia sunt acele cifre care pot face parte din $Y$. În momentul luării în considerare a unei noi cifre ($v[i]$), aceasta este introdusă cu siguranță în $s$ (nu se știe încă nimic despre cifrele care urmează și deci acestea ar putea fi mai mici). Apariția cifrei curente ($v[i]$) poate avea ca efect eliminarea din $s$ a altor cifre, mai mici, care nu trebuie să se afle înaintea lui $v[i]$ în $Y$. Aceste eliminări se fac în bucla while prin decrementarea lui $m$ (numărul de elemente din vectorul $s$).\\
 
 \section*{Varianta 29}
 
