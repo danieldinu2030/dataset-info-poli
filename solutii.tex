@@ -1242,220 +1242,96 @@ Exemplu: Dacă $n=8$, $v=(3,3,1,8,2,1,5,4)$, corespunzător lui $X=33182154$ și
 
 \section*{Varianta 29}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: c) ( $n-1$ )/2
+29.1. Răspuns corect: c) $(n-1)/2$\\
+Exemplu: Pentru $n=7$ și tabloul unidimensional $(4, 2, 3, 1, 6, 8, 5)$, se obține tabloul $(5, 8, 6, 1, 3, 2, 4)$.\\ Indicații: Elementul de pe poziția din mijloc nu este necesar să fie mutat. Se interschimbă 4 cu 5, 2 cu 8 și 3 cu 6, 3 interschimbări, adică se fac $(n-1)/2$ interschimbări.\\
 
-EXEMPLU: Pentru n=7 și tabloul unidimensional ( $\left.\begin{array}{lllll}4 & 2 & \underline{3} & 1 & \underline{6} \\ 8 & \text { 5 }\end{array}\right)$ se obține tabloul (5 861324 ).
-Indicații: Elementul de pe poziția din mijloc nu este necesar să fie mutat. Se interschimbă 4 cu 5, 2 cu 8 și 3 cu 6, 3 interschimbări, adică se fac ( $n-1$ )/2 interschimbări.
-2. Răspuns corect: b) (1 1510218 91)
+29.2. Răspuns corect: b) (1 15 102 18 91)\\
+Indicații: Se mută al treilea element spre stânga cu 2 poziții ș.a.m.d. Primele 2 elemente se mută în aceeași ordine la sfârș̦it.\\
 
-Indicații: Se mută al treilea element spre stânga cu 2 poziții ș.a.m.d. Primele 2 elemente se mută în aceeași ordine la sfârș̦it.
-3. EXEMPLU:
-\begin{tabular}{|c|c|c|c|}
-\hline & $\mathbf{x}$ & & \\
-\hline $\mathbf{x}$ & & & $\mathbf{x}$ \\
-\hline $\mathbf{x}$ & & & \\
-\hline
-\end{tabular}
+29.3. Răspuns corect: c) 3 1 4 2\\
+Indicații: Două dame nu se atacă între ele dacă nu se află pe aceeași coloană, pe aceeași diagonală sau pe același rând. Astfel așezarea lor poate fi: dama 1 pe rândul 3, dama 2 pe rândul 1, dama 3 pe rândul 4, dama 4 pe rândul 2.\\ Exemplu:\\ \begin{tabular}{|c|c|c|c|} \hline & $\mathbf{x}$ & & \\ \hline & & & $\mathbf{x}$ \\ \hline $\mathbf{x}$ & & & \\ \hline & & $\mathbf{x}$ & \\ \hline \end{tabular}\\
 
-Răspuns corect: c) 3142
-Indicații: Două dame nu se atacă între ele dacă nu se află pe aceeași coloană, pe aceeași diagonală sau pe același rând. Astfel așezarea lor poate fi: dama 1 pe rândul 3, dama 2 pe rândul 1, dama 3 pe rândul 4, dama 4 pe rândul 2.
-4. Răspuns corect: b) 10
+29.4. Răspuns corect: b) 10\\
+Exemplu: Pentru tabloul unidimensional (10 24 9 11 33 7 15) se fac următoarele interschimbări:\\ Pasul 1: (10 9 11 24 7 15 33): 4 interschimbări\\ Pasul 2: (9 10 11 7 15 24 33): 3 interschimbări\\ Pasul 3: (9 10 7 11 15 24 33): 1 interschimbare\\ Pasul 4: (9 7 10 11 15 24 33): 1 interschimbare\\ Pasul 5: (7 9 10 11 15 24 33): 1 interschimbare\\ Indicații: O interschimbare se face dacă sunt îndeplinite simultan condițiile $v[i]>v[j]$ și $i<j$.\\
 
-EXEMPLU: Pentru tabloul unidimensional ( $\left.\begin{array}{llllllll}10 & 24 & 9 & 11 & 33 & 7 & 15\end{array}\right)$ se fac următoarele interschimbări:
-Pasul 1: (10 91124715 33): 4 interschimbări
-Pasul 2: (9 $\left.10 \begin{array}{llllll}9 & 11 & 15 & 24 & 33\end{array}\right): 3$ interschimbări
-Pasul 3: (9 10 7111524 33): 1 interschimbare
-Pasul 4: (9 710111524 33): 1 interschimbare
-Pasul 5: ( $\begin{aligned} & 7 \\ & 9\end{aligned} 10111524$ 33): 1 interschimbare
-Indicații: O interschimbare se face dacă sunt îndeplinite simultan comdițiile v[i]>v[j] și i<j.
-5. Răspuns corect: f) 2678934567345683456934578
+29.5. Răspuns corect: f) 26789 34567 34568 34569 34578\\
+Indicații:\\ a) 45678 45679 45689 $\underline{45789}$ 46789 56789 - lipsește numărul subliniat\\ b) 34789 35678 35679 35689 $\underline{36789}$ 45678 - lipsește numărul subliniat\\ c) 34578 34569 34568 34567 26789 - nu sunt în ordine crescătoare\\ d) 13458 13459 13467 $\underline{13469}$ 13478 13479 - lipsește numărul subliniat\\ e) 13458 13459 13467 13468 13469 - numărul subliniat are mai mult de 2 cifre alăturate de aceeași paritate\\
 
-Indicații:
-a) 456784567945689457894678956789 - lipsește numărul subliniat
-b) $347893567835679 \quad 35689 \quad 36789 \quad 45678$ - lipsește numărul subliniat
-c) 3457834569345683456726789 - nu sunt în ordine crescătoare
-d) $134581345913467 \quad 1346913478 \quad 13479$ - lipsește numărul subliniat
-e) $13458 \quad 1345913467 \quad 13468$ 13469-numărul subliniat are mai mult de 2 cifre alăturate de aceeași paritate
-6. Răspuns corect: c) 2349
+29.6. Răspuns corect: c) 2349\\
+Indicații: Subprogramul parcurge recursiv cele două numere $a$ și $b$ și returnează un număr format cu cifra mai mare de pe aceeași poziție din cele două numere.\\
 
-Indicații: Subprogramul parcurge recursiv cele două numere a și b și returnează un număr format cu cifra mai mare de pe aceeași poziție din cele două numere.
-7. Răspuns corect: d) 3
+29.7. Răspuns corect: d) 3\\
+Indicații: Numărul minim de comparații se obține folosind algoritmul de căutare binară.\\ Comparația 1: elementul din mijloc: 73;\\ Comparația 2: elementul din mijloc: 95;\\ Comparația 3: elementul din mijloc: 82;\\
 
-Indicații: Numărul minim de comparații se obține folosind algoritmul de căutare binară. Comparația 1: elementul din mijloc: 73; Comparația 2: elementul din mijloc: 95; Comparația 3: elementul din mijloc: 82;
-8. Răspuns corect: e) nedefinită
+29.8. Răspuns corect: e) nedefinită\\
+Indicații: Este o variabilă locală neiniţializată.\\
 
-Indicații: Este o variabilă locală neiniţializată.
-9. Răspuns corect: b) 190
+29.9. Răspuns corect: b) 190\\
+Indicații: În total sunt 400 de elemente, 20 sunt pe diagonala secundară.\\
 
-Indicații: În total sunt 400 de elemente, 20 sunt pe diagonala secundară.
-10. Răspuns corect: d) 1023
+29.10. Răspuns corect: d) 1023\\
+Exemplu: Fie cele 3 tije $a$, $b$ și $c$. Se mută discurile de pe tija $a$ pe tija $b$, utilizând ca tijă intermediară tija $c$. Pentru $k=3$ discuri se fac 7 mutări: $a \rightarrow b$, $a \rightarrow c$, $b \rightarrow c$, $a \rightarrow b$, $c \rightarrow a$, $c \rightarrow b$, $a \rightarrow b$.\\ Indicații: Pentru $k$ discuri este necesar un număr de $2^{k}-1$ mutări.\\
 
-EXEMPLU: Fie cele 3 tije $\mathbf{a}$, $\mathbf{b}$ și c. Se mută discurile de pe tija a pe tija b, utilizând ca tijă intermediară tija c. Pentru $k=3$ discuri se fac 7 mutări: $a \rightarrow b, a \rightarrow c, b \rightarrow c, a \rightarrow b$, $c \rightarrow a, c \rightarrow b, a \rightarrow b$.
-Indicații: Pentru $\mathbf{k}$ discuri este necesar un număr de $\mathbf{2}^{\mathbf{k}} \mathbf{- 1}$ mutări.
-11. Răspuns corect: c) 8
+29.11. Răspuns corect: c) 8\\
+Indicații: Graful nu conține bucle. Fiecare vârf este adiacent cu toate celelalte vârfuri. Dacă graful are $n$ vârfuri există $n(n-1)$ arce. $56=n(n-1) \Rightarrow n=8$.\\
 
-Indicații: Graful nu conține bucle. Fiecare vârf este adiacent cu toate celelalte vârfuri. Dacă graful are n vârfuri există $\mathrm{n}(\mathrm{n}-1)$ arce. $56=\mathrm{n}(\mathrm{n}-1), \mathrm{n}=8$.
-12. Răspuns corect: f) Doi dintre algoritmi nu diferă ca eficiență din punctul de vedere al timpului de executare.
-Indicații:
-a) Algoritmii $\mathrm{A}_{1}$ și $\mathrm{A}_{2}$ rezolvă problema pentru orice date de intrare cu valorile din interval.
-b) Algoritmul $\mathrm{A}_{2}$ este cel mai eficient din punctul de vedere al timpului de executare. Are complexitatea $O(n)$ pentru parcurgerea șirului și determinarea sumei.
-c) Algoritmul $\mathrm{A}_{4}$ are complexitate dată de o sortare rapidă, $\mathrm{O}(\mathrm{n} \log \mathrm{n})$.
-d) Algoritmul $\mathrm{A}_{4}$ rezolvă problema.
-e) Algoritmii rezolvă problema pentru orice date de intrare cu valorile din interval.
-f) $\mathrm{A}_{3}$ și $\mathrm{A}_{4}$ au aceeași eficiență, complexitate dată de o sortare rapidă, $\mathrm{O}(\mathrm{n} \log \mathrm{n})$.
+29.12. Răspuns corect: f) Doi dintre algoritmi nu diferă ca eficiență din punctul de vedere al timpului de executare.\\
+Indicații:\\ a) Algoritmii $\mathrm{A}_{1}$ și $\mathrm{A}_{2}$ rezolvă problema pentru orice date de intrare cu valorile din interval.\\ b) Algoritmul $\mathrm{A}_{2}$ este cel mai eficient din punctul de vedere al timpului de executare. Are complexitatea $O(n)$ pentru parcurgerea șirului și determinarea sumei.\\ c) Algoritmul $\mathrm{A}_{4}$ are complexitate dată de o sortare rapidă, $O(n \log n)$.\\ d) Algoritmul $\mathrm{A}_{4}$ rezolvă problema.\\ e) Algoritmii rezolvă problema pentru orice date de intrare cu valorile din interval.\\ f) $\mathrm{A}_{3}$ și $\mathrm{A}_{4}$ au aceeași eficiență, complexitate dată de o sortare rapidă, $O(n \log n)$.\\ Observație: Există algoritmi care rezolvă această problemă într-un timp mai scurt (folosind operații pe biți).\\
 
-Observație: Există algoritmi care rezolvă această problemă într-un timp mai scurt (folosind operații pe biți).
-13. Răspuns corect: f) $\mathrm{E}_{1}, \mathrm{E}_{2}$ și $\mathrm{E}_{3}$
-14. Răspuns corect: c) 5040
+29.13. Răspuns corect: f) $\mathrm{E}_{1}$, $\mathrm{E}_{2}$ și $\mathrm{E}_{3}$.\\
 
-EXEMPLU: Anagramele (nu neapărat în această ordine) sunt: aaccerrt, aaccertr, aaccetrr, ..., rtreccaa, trreccaa. În total 5040.
-Indicații: Litera a apare de două ori, litera c apare de două ori, litera e apare o dată, litera $r$ apare de două ori, litera $t$ apare o dată; permutările sunt cu repetiție.
-Numărul permutărilor este: 8 !/(2! $2!\cdot 1!\cdot 2!\cdot 1!)$
-15. Răspuns corect: b) doar formula 1
+29.14. Răspuns corect: c) 5040\\
+Exemplu: Anagramele (nu neapărat în această ordine) sunt: aaccerrt, aaccertr, aaccetrr, ..., rtreccaa, trreccaa. În total 5040.\\ Indicații: Litera $a$ apare de două ori, litera $c$ apare de două ori, litera $e$ apare o dată, litera $r$ apare de două ori, litera $t$ apare o dată; permutările sunt cu repetiție.\\ Numărul permutărilor este: $8 !/(2! \cdot 2!\cdot 1!\cdot 2!\cdot 1!)$\\
 
-Indicații:
-Formula 1 poate fi obținută din ecuația
-$\left(\begin{array}{ll}1 & 1 \\ 1 & 0\end{array}\right)^{n}=\left(\begin{array}{cc}F_{n+1} & F_{n} \\ F_{n} & F_{n-1}\end{array}\right)$
-Claculăm determinantul: $(-1)^{n}=F_{n+1} * F_{n-1}-F_{n}^{2}$.
-Știm că $M^{m} * M^{n}=M^{m+n}$, pentru orice matrice $M$ pătratică.
-Așadar $(-1)^{m}=F_{m+1} * F_{m-1}-F_{m}^{2}$.
-$M^{m}=\left(\begin{array}{cc}F_{m+1} & F_{m} \\ F_{m} & F_{m-1}\end{array}\right)$
-$M^{n}=\left(\begin{array}{cc}F_{n+1} & F_{n} \\ F_{n} & F_{n-1}\end{array}\right)$
-$$
-\begin{aligned}
-& M^{m+n}=\left(\begin{array}{cc}
-F_{m+n+1} & F_{m+n} \\
-F_{m+n} & F_{m+n-1}
-\end{array}\right) \\
-& M^{m} \cdot M^{m}=\left(\begin{array}{cc}
-F_{m+1} & F_{m} \\
-F_{m} & F_{m-1}
-\end{array}\right) \cdot\left(\begin{array}{cc}
-F_{n+1} & F_{n} \\
-F_{n} & F_{n-1}
-\end{array}\right)= \\
-& \quad=\left(\begin{array}{cc}
-F_{m+1} \cdot F_{n+1}+F_{m} \cdot F_{n} & F_{m+1} \cdot F_{n}+F_{m} \cdot F_{n-1} \\
-F_{m} \cdot F_{n+1}+F_{m-1} \cdot F_{n} & F_{m} \cdot F_{n}+F_{m-1} \cdot F_{n-1}
-\end{array}\right)=M^{m+n}= \\
-& \quad=\left(\begin{array}{cc}
-F_{m+n+1} & F_{m+n} \\
-F_{m+n} & F_{m+n-1}
-\end{array}\right)
-\end{aligned}
-$$
-
-Identificăm:
-$F_{m} \cdot F_{n+1}+F_{m-1} \cdot F_{n}=F_{m+n} \quad$ (a)
-$F_{m} \cdot F_{n}+F_{m-1} \cdot F_{n-1}=F_{m+n-1} \quad$ (b)
-Punem $m=n$
-$$
-\begin{equation*}
-F_{n} \cdot F_{n+1}+F_{n-1} \cdot F_{n}=F_{2 n} \tag{a}
-\end{equation*}
-$$
-$$
-\begin{equation*}
-F_{n}^{2}+F_{n-1}^{2}=F_{2 n-1} \tag{b}
-\end{equation*}
-$$
-
-Din relația (a) rezultă
-$F_{2 n}=F_{n} \cdot\left(F_{n+1}+F_{n-1}\right)=F_{n} \cdot\left(F_{n-1}+F_{n}+F_{n-1}\right)=F_{n} \cdot\left(2 \cdot F_{n-1}+F_{n}\right)$.
-Așadar:
-Dacă $n$ este par, înjumătățindu-l, rezultă:
-$F(n)=F\left(\frac{n}{2}\right) \cdot\left[2 \cdot F\left(\frac{n}{2}-1\right)+F\left(\frac{n}{2}\right)\right]$.
-Dacă $n$ este impar, din (b), rezultă:
-$F(n)=\left[F\left(\frac{n+1}{2}\right)\right]^{2}+\left[F\left(\frac{n-1}{2}\right)\right]^{2}$.
-Termeni, conform formulelor, sunt:
-$1,1,2,3,5,8, \ldots$
-Referitor la formulele 2 și 3, corect este: $F(n)=\frac{1}{\sqrt{5}} \cdot\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\frac{1}{\sqrt{5}} \cdot\left(\frac{1-\sqrt{5}}{2}\right)^{n}$
+29.15. Răspuns corect: b) doar formula 1\\
+Indicații: Formula 1 poate fi obținută din ecuația\\ $\left(\begin{array}{ll}1 & 1 \\ 1 & 0\end{array}\right)^{n}=\left(\begin{array}{cc}F_{n+1} & F_{n} \\ F_{n} & F_{n-1}\end{array}\right)$\\ Calculăm determinantul: $(-1)^{n}=F_{n+1} * F_{n-1}-F_{n}^{2}$.\\ Știm că $M^{m} * M^{n}=M^{m+n}$, pentru orice matrice $M$ pătratică.\\ Așadar $(-1)^{m}=F_{m+1} * F_{m-1}-F_{m}^{2}$.\\ $M^{m}=\left(\begin{array}{cc}F_{m+1} & F_{m} \\ F_{m} & F_{m-1}\end{array}\right)$\\ $M^{n}=\left(\begin{array}{cc}F_{n+1} & F_{n} \\ F_{n} & F_{n-1}\end{array}\right)$\\ $\begin{aligned} & M^{m+n}=\left(\begin{array}{cc} F_{m+n+1} & F_{m+n} \\ F_{m+n} & F_{m+n-1} \end{array}\right) \\ & M^{m} \cdot M^{m}=\left(\begin{array}{cc} F_{m+1} & F_{m} \\ F_{m} & F_{m-1} \end{array}\right) \cdot\left(\begin{array}{cc} F_{n+1} & F_{n} \\ F_{n} & F_{n-1} \end{array}\right)= \\ & \quad=\left(\begin{array}{cc} F_{m+1} \cdot F_{n+1}+F_{m} \cdot F_{n} & F_{m+1} \cdot F_{n}+F_{m} \cdot F_{n-1} \\ F_{m} \cdot F_{n+1}+F_{m-1} \cdot F_{n} & F_{m} \cdot F_{n}+F_{m-1} \cdot F_{n-1} \end{array}\right)=M^{m+n}= \\ & \quad=\left(\begin{array}{cc} F_{m+n+1} & F_{m+n} \\ F_{m+n} & F_{m+n-1} \end{array}\right) \end{aligned}$\\ Identificăm:\\ $F_{m} \cdot F_{n+1}+F_{m-1} \cdot F_{n}=F_{m+n} \quad$ (a)\\ $F_{m} \cdot F_{n}+F_{m-1} \cdot F_{n-1}=F_{m+n-1} \quad$ (b)\\ Punem $m=n$\\ $F_{n} \cdot F_{n+1}+F_{n-1} \cdot F_{n}=F_{2 n} \quad$ (a)\\ $F_{n}^{2}+F_{n-1}^{2}=F_{2 n-1} \quad$ (b)\\ Din relația (a) rezultă:\\ $F_{2 n}=F_{n} \cdot\left(F_{n+1}+F_{n-1}\right)=F_{n} \cdot\left(F_{n-1}+F_{n}+F_{n-1}\right)=F_{n} \cdot\left(2 \cdot F_{n-1}+F_{n}\right)$.\\ Așadar:\\ Dacă $n$ este par, înjumătățindu-l, rezultă:\\ $F(n)=F\left(\frac{n}{2}\right) \cdot\left[2 \cdot F\left(\frac{n}{2}-1\right)+F\left(\frac{n}{2}\right)\right]$.\\ Dacă $n$ este impar, din (b), rezultă:\\ $F(n)=\left[F\left(\frac{n+1}{2}\right)\right]^{2}+\left[F\left(\frac{n-1}{2}\right)\right]^{2}$.\\ Termenii, conform formulelor, sunt: $1,1,2,3,5,8, \ldots$\\ Referitor la formulele 2 și 3, corect este: $F(n)=\frac{1}{\sqrt{5}} \cdot\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\frac{1}{\sqrt{5}} \cdot\left(\frac{1-\sqrt{5}}{2}\right)^{n}$\\
 
 \section*{Varianta 30}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: c$) \mathrm{n} / 2$
+30.1. Răspuns corect: c) $n / 2$\\
+Exemplu: Pentru $n=8$ și tabloul unidimensional $(4 2 3 1 9 6 8 5)$ se obține tabloul (5 8 6 9 1 3 2 4)\\ Indicații: Se interschimbă 4 cu 5, 2 cu 8,3 cu 6 și 1 cu 9,4 interschimbări, adică se fac $n/2$ interschimbări.\\
 
-EXEMPLU: Pentru n=8 și tabloul unidimensional ( $\left.\begin{array}{llllllll}4 & 2 & \underline{3} & 1 & 9 & \underline{6} & 8 & 5\end{array}\right)$ se obține tabloul (5 8 ( 6
-Indicații: Se interschimbă 4 cu 5, 2 cu 8,3 cu 6 și 1 cu 9,4 interschimbări, adică se fac n/2 interschimbări.
-2. Răspuns corect: d) 0 elemente
+30.2. Răspuns corect: d) 0 elemente\\
+Indicații: Nu este nevoie de spațiu de memorie suplimentar.\\
 
-Indicații: Nu este nevoie de spațiu de memorie suplimentar.
-3. Răspuns corect: f) 0
+30.3. Răspuns corect: f) 0\\
+Indicații: Nu există nicio soluție pentru 3 dame.\\
 
-Indicații: Nu există nicio soluție pentru 3 dame.
-4. Răspuns corect: b) 35
+30.4. Răspuns corect: b) 3 5\\
+Indicații: Matricea de adiacență are numărul de linii egal cu numărul de coloane.\\
 
-Indicații: Matricea de adiacență are numărul de linii egal cu numărul de coloane.
-5. Răspuns corect: e) dc $(x, y)=d c(y, x \bmod y)$
+30.5. Răspuns corect: e) dc(x, y)=dc(y, x mod y)\\
+Exemplu: Pentru $x=6$ și $y=8$:\\ a) $\operatorname{dc}(6,8) \neq \operatorname{dc}(48,8)$\\ b) $\operatorname{dc}(6,8) \neq \operatorname{dc}(6,6)$\\ c) $\operatorname{dc}(6,8)=\operatorname{dc}(8,48)=\operatorname{dc}(48,384)=...$\\ d) $\operatorname{dc}(6,8) \neq \operatorname{dc}(6,6)$\\ f) $\operatorname{dc}(6,8) \neq \operatorname{dc}(0,0)$\\ Indicații: Formula pentru a calcula cel mai mare divizor comun folosind algoritmul lui Euclid este dc(x, y)=dc(y, x mod y). Se folosește recursiv până se obține restul 0.\\
 
-EXEMPLU: pentru $\mathbf{x = 6}$ și $\mathbf{y}=8$
-a) dc $(6,8) \neq \operatorname{dc}(48,8)$
-b) $\mathrm{dc}(6,8) \neq \mathrm{dc}(6,6)$
-c) $\operatorname{dc}(6,8)=\operatorname{dc}(8,48)=\operatorname{dc}(48,384)=.$.
-d) $\operatorname{dc}(6,8) \neq \operatorname{dc}(6,6)$
-f) $\mathrm{dc}(6,8) \neq \mathrm{dc}(0,0)$
+30.6. Răspuns corect: b) 2 subtablouri, nu întotdeauna cu același număr de elemente.\\
+Indicații: În partea stângă se vor găsi elementele mai mici decât pivotul, în partea dreaptă se vor găsi elementele mai mari decât pivotul, elementele egale cu pivotul pot rămâne în oricare parte a pivotului. Rezultă că cele două părți nu au întotdeauna același număr de elemente.\\
 
-Indicații: Formula pentru a calcula cel mai mare divizor comun folosind algoritmul lui Euclid este dc $(\mathbf{x}, \mathrm{y})=\mathrm{dc}(\mathrm{y}, \mathbf{x} \bmod \mathbf{y})$. Se folosește recursiv până se obține restul 0.
-6. Răspuns corect: b) 2 subtablouri, nu întotdeauna cu același număr de elemente. În partea stângă se vor găsi elementele mai mici decât pivotul, în partea dreaptă se vor găsi elementele mai mari decât pivotul, elementele egale cu pivotul pot rămâne în oricare parte a pivotului. Rezultă că cele două părți nu au întotdeauna același număr de elemente.
-7. Răspuns corect: e) stivă
+30.7. Răspuns corect: e) stivă\\
+Exemplu: Se creează o stivă, operația de adăugare numită push(), memorând șirul de la primul caracter până la ultimul. Astfel fiecare caracter al șirului va fi, pe rând, în vârful stivei. Extragerea se face din vârful stivei, eliminând, pe rând, primul element, folosind operația numită pop().\\ Indicații: Stiva corespunde principiului LIFO (Last In First Out).\\
 
-EXEMPLU: Se creează o stivă, operația de adăugare numită push(), memorând șirul de la primul caracter până la ultimul. Astfel fiecare caracter al șirului va fi, pe rând, în vârful stivei. Extragerea se face din vârful stivei, eliminând, pe rând, primul element, folosind operația numită pop().
-Indicații: Stiva corespunde principiului LIFO (Last In First Out).
-8. Răspuns corect: $d) f(n / 2)$; (respectiv $f(n \operatorname{div} 2)$ )
+30.8. Răspuns corect: d) f(n / 2); (respectiv f(n div 2))\\
+Indicații:\\ a) $f(n-2)$ subprogramul nu se încheie pentru valori impare ale lui $n$.\\ b) $f(n-1)$ subprogramul nu se încheie pentru valori negative ale lui $n$.\\ c) $f(n \% 2)$ (respectiv f(n mod 2)) subprogramul nu se încheie pentru valori impare ale lui $n$.\\ e) $f(n+2)$ subprogramul nu se încheie pentru valori ale lui $n$ diferite de -2 și 0.\\ f) $f(n * 2)$ subprogramul nu se încheie pentru valori nenule ale lui $n$.\\
 
-Indicații:
-a) $\mathbf{f}(\mathrm{n}-2)$ subprogramul nu se încheie pentru valori impare ale lui n .
-b) $\mathbf{f}(\mathrm{n}-1)$ subprogramul nu se încheie pentru valori negative ale lui n .
-c) $\mathbf{f}(\mathrm{n} \% 2)$ (respectiv $\mathrm{f}(\mathrm{n} \bmod 2)$ ) subprogramul nu se încheie pentru valori impare ale lui $n$.
-e) $f(n+2)$ subprogramul nu se încheie pentru valori ale lui $n$ diferite de $\mathbf{- 2}$ și 0 .
-f) $f(n * 2)$ subprogramul nu se încheie pentru valori nenule ale lui $n$.
-9. Răspuns corect: e) 4
+30.9. Răspuns corect: e) 4\\
+Indicații: Un apel $f(1)$ are rezultatul 2, celălalt apel $f(1)$ are rezultatul 2.\\
 
-Indicații: Un apel $\mathbf{f ( 1 )}$ are rezultatul 2, celălalt apel $\mathbf{f}(1)$ are rezultatul 2
-10. Răspuns corect: d) 28
+30.10. Răspuns corect: d) 28\\
+Indicații: Folosim principiul includerii-excluderii. Considerăm mulțimea $M=\{101, 102, ..., 200\}$. Luăm alte trei submulțimi $A$, $B$, $C$ care au ca elemente cele aflate în $M$ divizibile cu 2, 3, respectiv 5. Determinăm elementele comune mulțimilor $A$ și $B$, $A$ și $C$, $B$ și $C$, apoi comune mulțimilor $A$, $B$ și $C$.\\ Exemplu: Pentru valorile date avem: $card(M)=100$, $card(A)=50$, $card(B)=33$, $card(C)=20$, $card(AB)=17$, $card(AC)=10$, $card(BC)=7$, $card(ABC)=3$.\\ $card(M)-card(A)-card(B)-card(C)+card(AB)+card(AC)+card(BC)-card(ABC)=100-50-33-20+17+10+7-3=28$.\\
 
-Indicații: Folosim principiul includerii-excluderii. Considerăm mulțimea $\mathrm{M}=\{\mathbf{1 0 1 , 1 0 2}$, ..., 200\}. Luăm alte trei submulțimi A, B, C care au ca elemente cele aflate în $\mathbf{M}$ divizibile cu 2, 3, respectiv 5. Determinăm elementele comune mulțimilor A și B, A și C, B și C, apoi comune mulțimilor A, B și C.
-EXEMPLU: Pentru valorile date avem: cardM=100. cardA=50. cardB=33. cardC=20. $\operatorname{card}(\mathrm{AB})=17 . \operatorname{card}(\mathrm{AC})=10 . \operatorname{card}(\mathrm{BC})=7 . \operatorname{card}(\mathrm{ABC})=3$.
-cardM-cardA-cardB-cardC+card(AB)+card(AC)+card(BC)-card(ABC) = 100-50-33-$20+17+10+7-3=28$.
+30.11. Răspuns corect: a) $xx$\\
+Indicații: Dacă programul generează permutări de elemente care se repetă, atunci cele două caractere $x$ nu sunt diferite; se formează o singură permutare.\\
 
-\section*{11. Răspuns corect: a) $\mathbf{x x}$}
+30.12. Răspuns corect: d) 3\\
+Indicații: Sunt adevărate enunțurile 2, 3 și 5.\\ Enunțul 1: se generează 28 de numere cu prima cifră 2.\\ Enunțul 2: 12457, 12459, 12479, 12679, 14679, 34679.\\ Enunțul 3: 13679 sau 24568.\\ Enunțul 4, un număr corect este 12789.\\ Enunțul 5: cifra 1 apare de 50 de ori pe prima poziție, cifra 9 apare de 50 de ori pe ultima poziție.\\
 
-Indicații: Dacă programul generează permutări de elemente care se repetă atunci cele două caractere $\mathbf{x}$ nu sunt diferite; se formează o singură permutare.
-12. Răspuns corect: d) 3
+30.13. Răspuns corect: d) $(n-1)! / 2$\\
+Indicații: În graful neorientat complet, orice permutare a celor $n$ noduri este un ciclu hamiltonian. Un același ciclu, ca permutare circulară, se parcurge în $2 \cdot n$ moduri. Se pornește de la un nod în sensul acelor de ceasornic, dar și în sens trigonometric.\\ Exemplu: pentru $n=4$, ciclurile identice sunt:\\ (1 2 3 4 1), (1 4 3 2 1), (2 3 4 1 2), (2 1 4 3 2), (3 4 1 2 3), (3 2 1 4 3), (4 1 2 3 4), (4 3 2 1 4);\\ (1 3 4 2 1),( 1 2 4 3 1), (2 4 3 1 2), (2 1 3 4 2), (3 4 2 1 3), (3 1 2 4 3), (4 2 1 3 4), (4 3 1 2 4);\\ (1 4 2 3 1), (1 3 2 4 1), (2 4 1 3 2), (2 3 1 4 2), (3 1 4 2 3), (3 2 4 1 3), (4 1 3 2 4), (4 2 3 1 4).\\ În total avem 3 cicluri distincte hamiltoniene.\\ În general există $n!/(2 \cdot n)=(n-1)!/ 2$ cicluri hamiltoniene distincte.\\
 
-Indicații: sunt adevărate enunțurile 2, 3 și 5 .
-Enunțul 1: se generează 28 de numere cu prima cifră 2.
-Enunțul 2: 12457, 12459, 12479, 12679, 14679, 34679.
-Enunțul 3: 13679 sau 24568.
-Enunțul 4, un număr corect este 12789.
-Enunțul 5: cifra 1 apare de 50 de ori pe prima poziție, cifra 9 apare de 50 de ori pe ultima poziție.
-13. Răspuns corect: d) ( $\mathbf{n}-1$ ) !/2
+30.14. Răspuns corect: b) 5\\
+Indicații: Numărul de grafuri orientate complete cu $n$ noduri este $3^{C_{n}^{2}}$, adică $3^{n(n-1) / 2}$.\\ $3^{n(n-1) / 2}=59049 \Rightarrow 3^{n(n-1) / 2}=3^{10} \Rightarrow n=5$.\\
 
-Indicații: În graful neorientat complet orice permutare a celor $\mathbf{n}$ noduri este un ciclu hamiltonian. Un același ciclu, ca permutare circulară, se parcurge în $2 \cdot n$ moduri. Se pornește de la un nod în sensul acelor de ceasornic, dar și în sens trigonometric.
-Exemplu: pentru $\mathrm{n}=4$,
-Cicluri identice:
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-308.jpg?height=52&width=1505&top_left_y=1508&top_left_x=375)
-4 3), (4 $\left.1 \begin{array}{llll}4 & 2 & 3\end{array}\right),\left(\begin{array}{lllll}4 & 3 & 1 & 4\end{array}\right)$;
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-308.jpg?height=52&width=1505&top_left_y=1611&top_left_x=375)
-4 3), (4 $\left.2112 \begin{array}{l}4\end{array}\right),\left(\begin{array}{lllll}4 & 3 & 1 & 2\end{array}\right)$;
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-308.jpg?height=52&width=1505&top_left_y=1714&top_left_x=375) 1 3), (4 $\left.1 \begin{array}{llll}4 & 3 & 2\end{array}\right)$, (4 $\left.2 \begin{array}{llll}4 & 1 & 4\end{array}\right)$.
-În total avem 3 cicluri distincte hamiltoniene.
-În general există $\mathrm{n}!/(2 \cdot n)=(n-1)!/ 2$ cicluri hamiltoniene distincte.
-14. Răspuns corect: b) 5
-
-Indicații: Numărul de grafuri orientate complete cu n noduri este $3^{\mathrm{C}_{\mathrm{n}}^{2}}$, adică $3^{\mathrm{n}(\mathrm{n}-1) / 2}$.
-$3^{n(n-1) / 2}=59049,3^{n(n-1) / 2}=3^{10}, n=5$.
-15. Răspuns corect: c) doar relațiile $E_{1}$ și $E_{2}$
-
-Indicații:
-$E_{1}$ : Se poate observa că fiecare al treilea termen din șirul lui Fibonacci este par.
-$E_{2}: F_{n}=F_{n-1}+F_{n-2}=\left(F_{n-2}+F_{n-3}\right)+\left(F_{n-3}+F_{n-4}\right)=F_{n-2}+2 \cdot F_{n-3}++F_{n-4}=$ $\left(F_{n-3}+F_{n-4}\right)+2 \cdot F_{n-3}+F_{n-4}=3 \cdot F_{n-3}+F_{n-4}+\left(F_{n-5}+F_{n-6}\right)=3 \cdot F_{n-3}+$
-$F_{n-3}+F_{n-6}=4 \cdot F_{n-3}+F_{n-6}$.
-
-Așadar, cum fiecare al treilea termen din șirul lui Fibonacci este par, atunci $F_{n-3}$ și $F_{n-6}$ sunt ambii pari. Notăm $F_{n}$ cu $F_{p}(n)$, rezultă că $F_{n-3}$ este termenul par precedent, adică $F_{p}(n-1)$, iar $F_{n-6}$ este $F_{p}(n-2)$.
-Înseamnă că $F_{p}(n)=4 \cdot F_{p}(n-1)+F_{p}(n-2), n \geq 2, F_{p}(0)=0$ și $F_{p}(1)=2$.
+30.15. Răspuns corect: c) doar relațiile $E_{1}$ și $E_{2}$\\
+Indicații:\\ $E_{1}$: Se poate observa că fiecare al treilea termen din șirul lui Fibonacci este par.\\ $E_{2}$: $F_{n}=F_{n-1}+F_{n-2}=\left(F_{n-2}+F_{n-3}\right)+\left(F_{n-3}+F_{n-4}\right)= \\ =F_{n-2}+2 \cdot F_{n-3}+F_{n-4}=\left(F_{n-3}+F_{n-4}\right)+2 \cdot F_{n-3}+F_{n-4}=3 \cdot F_{n-3}+F_{n-4}+\left(F_{n-5}+F_{n-6}\right)=3 \cdot F_{n-3}+F_{n-3}+F_{n-6}=4 \cdot F_{n-3}+F_{n-6}$.\\ Așadar, cum fiecare al treilea termen din șirul lui Fibonacci este par, atunci $F_{n-3}$ și $F_{n-6}$ sunt ambii pari. Notăm $F_{n}$ cu $F_{p}(n)$, rezultă că $F_{n-3}$ este termenul par precedent, adică $F_{p}(n-1)$, iar $F_{n-6}$ este $F_{p}(n-2)$.\\ Înseamnă că $F_{p}(n)=4 \cdot F_{p}(n-1)+F_{p}(n-2)$, $n \geq 2$, $F_{p}(0)=0$ și $F_{p}(1)=2$.\\
 
 \section*{Varianta 31}
 
