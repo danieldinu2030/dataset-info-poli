@@ -107,6 +107,13 @@ for match in exercise_pattern.finditer(data):
     exercise_text = parts[0].strip()
     rest = parts[1].strip() if len(parts) > 1 else ""
 
+    # Look for includegraphics inside exercise text
+    graphic_match = re.search(r'\\includegraphics\[.*?\]\{(.*?)\}', exercise_text)
+    if graphic_match:
+        graphic = graphic_match.group(1).strip()
+    else:
+        graphic = "N/A"
+
     # Dual mode: "Limbajul C++/ Limbajul C"
     if rest.lstrip().startswith("Limbajul C++/ Limbajul C") or re.match(r'^\s*Limbajul C\+\+\s*/\s*Limbajul C', rest):
         # Capture the combined C++/C block (up to Limbajul Pascal or end) and optional Pascal block
@@ -172,6 +179,7 @@ for match in exercise_pattern.finditer(data):
         exercise_number,
         mode,
         exercise_text,
+        graphic,
         opts_cpp["a"], opts_cpp["b"], opts_cpp["c"], opts_cpp["d"], opts_cpp["e"], opts_cpp["f"],
         opts_c["a"],   opts_c["b"],   opts_c["c"],   opts_c["d"],   opts_c["e"],   opts_c["f"],
         opts_p["a"],   opts_p["b"],   opts_p["c"],   opts_p["d"],   opts_p["e"],   opts_p["f"],
@@ -179,7 +187,7 @@ for match in exercise_pattern.finditer(data):
 
 # Write CSV
 header = [
-    "section", "exercise_number", "mode", "exercise_text",
+    "section", "exercise_number", "mode", "exercise_text", "graphic",
     "a-C++", "b-C++", "c-C++", "d-C++", "e-C++", "f-C++",
     "a-C", "b-C", "c-C", "d-C", "e-C", "f-C",
     "a-Pascal", "b-Pascal", "c-Pascal", "d-Pascal", "e-Pascal", "f-Pascal",
