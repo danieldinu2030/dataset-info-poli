@@ -17,7 +17,7 @@ Pentru compilarea părților din set, este necesară includerea următoarelor pa
     - **Total**: 690 probleme
 
 - Chestionarele de concurs date la admiteri, simulări și/sau preadmiteri:
-    > De adăugat
+    > De adăugat pe viitor, odată ce există rezolvări publice complete
 
 ## Conținut
 
