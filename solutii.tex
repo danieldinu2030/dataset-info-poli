@@ -1865,116 +1865,115 @@ Indicații: $1+3+3 x 2+3 x 2^{2}+3 x 2^{3}+3 x 2^{4}=94$
 
 \section*{Varianta 42}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: d) 6
+42.1. Răspuns corect: d) 6\\
+Indicații: Subprogramul se apelează pe prima jumătate (de la n la $(\mathrm{n}+\mathrm{m}) / 2$ ) şi pe a doua $((\mathrm{n}+\mathrm{m}) / 2+1$ până la m$)$ adunând restul fiecărui element la imparitrea cu 2.\\
 
-Indicații: Subprogramul se apelează pe prima jumătate (de la n la $(\mathrm{n}+\mathrm{m}) / 2$ ) şi pe a doua $((\mathrm{n}+\mathrm{m}) / 2+1$ până la m$)$ adunând restul fiecărui element la imparitrea cu 2.
-2. Răspuns corect: a) Numai S1
+42.2. Răspuns corect: a) Numai S1\\
+Indicații: S1 funcţionează cât timp există litera în şir şi cât timp caracterele sunt diferite de litere mari. Asemeni cel de-al doilea. Când se opresc afișează caracterul la care s-au oprit.\\
 
-Indicații: S1 funcţionează cât timp există litera în şir şi cât timp caracterele sunt diferite de litere mari. Asemeni cel de-al doilea. Când se opresc afișează caracterul la care s-au oprit.
-3. Răspuns corect: d) $1+2=3$
+42.3. Răspuns corect: d) $1+2=3$\\
+Indicații: Se trece peste primele două litere , când se ajunge la primul 1 se schimbă următorul cu caracterul + . Se trece la primul caracter de 2 , următorul după acesta fiind schimbat în caracterul =, urmând ca mai apoi să rămână la final doar caracterul 3.\\
 
-Indicații: Se trece peste primele două litere , când se ajunge la primul 1 se schimbă următorul cu caracterul + . Se trece la primul caracter de 2 , următorul după acesta fiind schimbat în caracterul =, urmând ca mai apoi să rămână la final doar caracterul 3.
-4. Răspuns corect: d) trei
+42.4. Răspuns corect: d) trei\\
+Indicații: Se parcurg elementele până la întâlnirea lui 0 , pentru $\mathrm{i}>0$.\\
 
-Indicații: Se parcurg elementele până la întâlnirea lui 0 , pentru $\mathrm{i}>0$.
-5. Răspuns corect: f) Cea mai lungă secvență de valori de parități diferite
+42.5. Răspuns corect: f) Cea mai lungă secvență de valori de parități diferite\\
+Indicații: Se parcurge vectorul numărând elementele consecutive de pafități diferite. Dacă se ajunge la un element de aceeași paritate cu cel de dinainte se resetează lungimea secvenței și se analizează lungimea maximă.\\
 
-Indicații: Se parcurge vectorul numărând elementele consecutive de pafități diferite. Dacă se ajunge la un element de aceeași paritate cu cel de dinainte se resetează lungimea secvenței și se analizează lungimea maximă.
-6. Răspuns corect: f) 62
-7. Răspuns corect: e) $C_{n-p+1}^{2}$
-8. Răspuns corect: c) $\mathrm{j}^{*} \mathrm{j}+$ suma( $\mathrm{j}^{*} \mathrm{j}-1$ )
-9. Răspuns corect: b) 1
+42.6. Răspuns corect: f) 62\\
 
-Indicații: Se repetă o singură dată pentru că se evaluează v[0], care este 0 , deci repetițiea se oprește, și apoi se incrementează i.
-10. Răspuns corect: d) $2^{5}$
+42.7. Răspuns corect: e) $C_{n-p+1}^{2}$\\
 
-Indicații: Pe nivelul 0, se găsește un nod (rădăcina), pe nivelul 1, 2 noduri, pe nivelul 2, 4 noduri, pe nivelul 3, 8 noduri, pe nivelul 4, 16 noduri iar nivelul 532 noduri.
-11. Răspuns corect: d) 1023; 1032; 105; 1203;
+42.8. Răspuns corect: c) \begin{verbatim}
+    j*j+suma(j*j-1)
+\end{verbatim}\\
 
-Indicații: Se pornește de la o soluție propusă și se generează cu algoritmul backtracking celelalte soluții.
-12. Răspuns corect: a) metoda căutării binare
+42.9. Răspuns corect: b) 1\\
+Indicații: Se repetă o singură dată pentru că se evaluează v[0], care este 0 , deci repetițiea se oprește, și apoi se incrementează i.\\
 
-Indicații: Sunt 2 metode de căutare: secvențială și binară. Eficientă este metoda căutării binare pentru care se efectuează $\log (n)$ operații.
-13. Răspuns corect: d) permutărilor
+42.10. Răspuns corect: d) $2^{5}$\\
+Indicații: Pe nivelul 0, se găsește un nod (rădăcina), pe nivelul 1, 2 noduri, pe nivelul 2, 4 noduri, pe nivelul 3, 8 noduri, pe nivelul 4, 16 noduri iar nivelul 5 32 noduri.\\
 
-Indicații: Se folosește metoda backtracking. Coloanele din matrice vor reprezenta elementele care se generează.
-14. Răspuns corect: f) 20
+42.11. Răspuns corect: d) 1023; 1032; 105; 1203;\\
+Indicații: Se pornește de la o soluție propusă și se generează cu algoritmul backtracking celelalte soluții.\\
 
-Indicații: Vor exista doar muchii în care extremitatea inițială este mai mică decât extremitatea finală. Deci, dacă există drumul de la i la j, în care nodurile sunt în ordine crescătoare, nu va exista drumul de la j la i. Deci, fiecare nod formează o componentă tare conexă.
-15. Răspuns corect: c) 13
+42.12. Răspuns corect: a) metoda căutării binare\\
+Indicații: Sunt 2 metode de căutare: secvențială și binară. Eficientă este metoda căutării binare pentru care se efectuează $\log (n)$ operații.\\
 
-Indicații: Se numără numărul de înjumătățiri care se fac pentru a ajunge la 1.
+42.13. Răspuns corect: d) permutărilor\\
+Indicații: Se folosește metoda backtracking. Coloanele din matrice vor reprezenta elementele care se generează.\\
+
+42.14. Răspuns corect: f) 20\\
+Indicații: Vor exista doar muchii în care extremitatea inițială este mai mică decât extremitatea finală. Deci, dacă există drumul de la i la j, în care nodurile sunt în ordine crescătoare, nu va exista drumul de la j la i. Deci, fiecare nod formează o componentă tare conexă.\\
+
+42.15. Răspuns corect: c) 13\\
+Indicații: Se numără numărul de înjumătățiri care se fac pentru a ajunge la 1.\\
 
 \section*{Varianta 43}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: b) 1
+43.1. Răspuns corect: b) 1\\
+Indicații: Se execută operațiile matematice în ordinea priorității operatorilor.\\
 
-Indicații: Se execută operațiile matematice în ordinea priorității operatorilor.
-2. Răspuns corect: e) 3.15
+43.2. Răspuns corect: e) 3.15\\
+Indicații: Variabilelor i și j, fiind de tip întreg, li se atribuie [x] și, respectiv, [y].\\
 
-Indicații: Variabilelor i și j, fiind de tip întreg, li se atribuie [x] și, respectiv, [y].
-3. Răspuns corect: d) 0
+43.3. Răspuns corect: d) 0\\
+Indicații: Se evaluează $\mathbf{j} \neq 0(\mathrm{~F})$ și apoi operatorul de incrementare $=>\mathrm{i}=1$. Pentru că $\mathrm{i} \neq 0$ se decrementează $=>\mathrm{i}=0$ și apoi se evaluează suma.\\
 
-Indicații: Se evaluează $\mathbf{j} \neq 0(\mathrm{~F})$ și apoi operatorul de incrementare $=>\mathrm{i}=1$. Pentru că $\mathrm{i} \neq 0$ se decrementează $=>\mathrm{i}=0$ și apoi se evaluează suma.
-4. Răspuns corect: e) 51970
+43.4. Răspuns corect: e) 51970\\
+Indicații: Se introduc în x cifrele impare din n, în aceeași ordine, doar că se începe de la cifra zecilor.\\
 
-Indicații: Se introduc în x cifrele impare din n , în aceeași ordine, doar că se începe de la cifra zecilor.
-5. Răspuns corect: f) 8
+43.5. Răspuns corect: f) 8\\
+Indicații: Se calculează ultima cifră nenulă a numărului n!.\\
 
-Indicații: Se calculează ultima cifră nenulă a numărului n!.
-6. Răspuns corect: d) 2856413618269025
+43.6. Răspuns corect: d) 8 56 4 13 6 18 26 90 25\\
+Indicații: Se șterg elementele nule din tabloul unidimensional.\\
 
-Indicații: Se șterg elementele nule din tabloul unidimensional.
-7. Răspuns corect: b) Informatica-poli
+43.7. Răspuns corect: b) Informatica-poli\\
+Indicații: Se determină adresa de memorie a caracterului '-', împărțindu-se astfel șirul inițial în două șiruri de caractere. Apoi se concatenează al doilea șir cu primul, după ce prima literă a fiecărui șir se transformă.\\
 
-Indicații: Se determină adresa de memorie a caracterului '-', împărțindu-se astfel șirul inițial în două șiruri de caractere. Apoi se concatenează al doilea șir cu primul, după ce prima literă a fiecărui șir se transformă.
-8. Răspuns corect: b) b
+43.8. Răspuns corect: b) b\\
+Indicații: Se declară un tablou unidimensional cu 2 elemente de tip structură, fiecare element conținând un pointer către un șir de caractere. Câmpului din a doua structură i se atribuie șirul definit de la poziția 1.\\
 
-Indicații: Se declară un tablou unidimensional cu 2 elemente de tip structură, fiecare element conținând un pointer către un șir de caractere. Câmpului din a doua structură i se atribuie șirul definit de la poziția 1 .
-9. Răspuns corect: c) A și D
+43.9. Răspuns corect: c) A și D\\
+Indicații: Pentru a afla numărul de drumuri de lungime k dintre două noduri i și j într-un graf orientat, se calculează matricea $X=A^{k}$, unde $A$ este matricea de adiacență. $X_{i, j}$ reprezintă numărul de drumuri. Deci $\mathrm{A}=\left(\begin{array}{llll}0 & 1 & 1 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1 \\ 1 & 1 & 0 & 0\end{array}\right)$ și $\mathrm{A}^{3}=\left(\begin{array}{llll}2 & 2 & 0 & 1 \\ 1 & 1 & 0 & 1 \\ 0 & 1 & 2 & 1 \\ 1 & 1 & 1 & 3\end{array}\right)$ Se observă că între $\mathrm{A}^{3}[1,3]=\mathrm{A}^{3}[3][1]=0$.\\
 
-Indicații: Pentru a afla numărul de drumuri de lungime k dintre două noduri i și j într-un graf orientat, se calculează matricea $X=A^{k}$, unde $A$ este matricea de adiacență. $X_{i, j}$ reprezintă numărul de drumuri. Deci $\mathrm{A}=\left(\begin{array}{llll}0 & 1 & 1 & 0 \\ 0 & 0 & 1 & 1 \\ 0 & 0 & 0 & 1 \\ 1 & 1 & 0 & 0\end{array}\right)$ și $\mathrm{A}^{3}=\left(\begin{array}{llll}2 & 2 & 0 & 1 \\ 1 & 1 & 0 & 1 \\ 0 & 1 & 2 & 1 \\ 1 & 1 & 1 & 3\end{array}\right)$ Se observă că între $\mathrm{A}^{3}[1,3]=\mathrm{A}^{3}[3][1]=0$.
-10. Răspuns corect: d) 4
+43.10. Răspuns corect: d) 4\\
+Indicații: Șirul apelurilor este: $f(0) \stackrel{0<7}{\Rightarrow} f(2) \xlongequal{2<7} f(4) \stackrel{4<7}{\Longrightarrow} f(6) \xrightarrow{6<7} f(8) \stackrel{8>7}{\Longrightarrow} 8-3$ raspuns care se returnează la apelul anterior, adunându-se de fiecare dată $1 . f(0)=7$. Apoi se calculează $f(7)=2 ; f(2)=6$ și $f(6)=4$.\\
 
-Indicații: Șirul apelurilor este: $f(0) \stackrel{0<7}{\Rightarrow} f(2) \xlongequal{2<7} f(4) \stackrel{4<7}{\Longrightarrow} f(6) \xrightarrow{6<7} f(8) \stackrel{8>7}{\Longrightarrow} 8-3$ raspuns care se returnează la apelul anterior, adunându-se de fiecare dată $1 . f(0)=7$. Apoi se calculează $f(7)=2 ; f(2)=6$ și $f(6)=4$.
-11. Răspuns corect: c) 24153
-$$
-\begin{aligned}
-& 51423 \\
-& 12345 \\
-& 54321 \\
-& 41532
-\end{aligned}
-$$
+43.11. Răspuns corect: c) \begin{verbatim}
+    2 4 1 5 3 
+    5 1 4 2 3 
+    1 2 3 4 5 
+    5 4 3 2 1 
+    4 1 5 3 2
+\end{verbatim}\\
+Indicații: Se fac 3 permutări circulare ale ultimelor 3 linii astfel încât matricea la final revine la configurația inițială.\\
 
-Indicații: Se fac 3 permutări circulare ale ultimelor 3 linii astfel încât matricea la final revine la configurația inițială.
-12.
+43.12. Răspuns corect: c) \begin{verbatim}
+    7196
+      7198
+\end{verbatim}\\
+Indicații: Dacă se pornește de la 7196 se continuă cu 7197 (incorectă, se repetă cifra 7), 7198 , se revine la a doua cifrăși se alege 2 , dar fiind prim nu e permis, la fel 3 și se ajunge la 4 , apoi se continuă cu 0 și cu 1 , adică 7401.\\
 
-Răspuns corect: c) 7196 7198
-
-Indicații: Dacă se pornește de la 7196 se continuă cu 7197 (incorectă, se repetă cifra 7), 7198 , se revine la a doua cifrăși se alege 2 , dar fiind prim nu e permis, la fel 3 și se ajunge la 4 , apoi se continuă cu 0 și cu 1 , adică 7401 .
-13. Răspuns corect: c) II și IV
-
+43.13. Răspuns corect: c) II și IV\\
 Indicații: Însecvența IV, există un nod cu gradul 8, ceeace nu este posibil într-un graf cu 8 noduri. Însecvența II, gradul 6 al celor 4 vârfuri înseamnă 18 muchii (nodul 1 incident cu 6 muchii, nodul 2 incident cu 5 muchii (a șasea fiind (1,2), deja numărată)) etc. Adică
 $6+5+4+3=18$ muchii. Un exemplu posibil de graf ar fi:
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-329.jpg?height=267&width=348&top_left_y=1325&top_left_x=1395) Din secvența dată: $6+6+6+6+3+3+2+2=34=>17$ (muchii contradicție).
-14. Răspuns corect: b) $\mathrm{O}(\mathrm{n})$ pentru f 1 și $\mathrm{O}\left(2^{\mathrm{n}}\right)$ pentru f2
+\begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-329.jpg} \end{center} Din secvența dată: $6+6+6+6+3+3+2+2=34=>17$ (muchii contradicție).\\
 
-Indicații: Am puteascriepentrufiecarefuncție, complexitatea timp, recurent, astfel:
-$\mathrm{T}_{1}(\mathrm{n})=\mathrm{T}_{1}(\mathrm{n}-1)+\mathrm{C}$ care este $\mathrm{O}(\mathrm{n})$
-$\mathrm{T}_{2}(\mathrm{n})=2 \cdot \mathrm{~T}_{2}(\mathrm{n}-1)+\mathrm{C}$ care este $\mathrm{O}\left(2^{\mathrm{n}}\right)$
-15. Răspuns corect: a) $\mathrm{O}\left(\log _{2} k\right)$
+43.14. Răspuns corect: b) $\mathrm{O}(\mathrm{n})$ pentru f1 și $\mathrm{O}\left(2^{\mathrm{n}}\right)$ pentru f2\\
+Indicații: Am putea scrie pentru fiecare funcție, complexitatea timp, recurent, astfel:\\
+$\mathrm{T}_{1}(\mathrm{n})=\mathrm{T}_{1}(\mathrm{n}-1)+\mathrm{C}$ care este $\mathrm{O}(\mathrm{n})$\\
+$\mathrm{T}_{2}(\mathrm{n})=2 \cdot \mathrm{~T}_{2}(\mathrm{n}-1)+\mathrm{C}$ care este $\mathrm{O}\left(2^{\mathrm{n}}\right)$\\
 
-Indicații: Se calculează $\mathrm{n}^{\mathrm{k}}$ în timp logaritmic după următoarea metodă:
+43.15. Răspuns corect: a) $\mathrm{O}\left(\log _{2} k\right)$\\
+Indicații: Se calculează $\mathrm{n}^{\mathrm{k}}$ în timp logaritmic după următoarea metodă:\\
 $$
 n^{k}=\left\{\begin{array}{c}
-n \cdot\left(n^{2}\right)^{\frac{k-1}{2}}, \text { daca } k \text { impar } \\
-\left(n^{2}\right)^{\frac{k}{2}}, \text { daca } k \text { par }
+n \cdot\left(n^{2}\right)^{\frac{k-1}{2}}, \text { daca\ k\ impar } \\
+\left(n^{2}\right)^{\frac{k}{2}}, \text { daca\ k\ par }
 \end{array}\right.
-$$
-\end{verbatim}
+$$\\
 
 \section*{Varianta 44}
 
