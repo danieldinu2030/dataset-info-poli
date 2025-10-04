@@ -1700,142 +1700,151 @@ Indicații: Dacă diferenţa dintre componenta de pe poziţia curentă si cea an
 
 Indicații: Se parcurg în paralel cele două diagonale şi se interschimbă fiecare element de pe diagonala principală( $\mathbf{a}_{\mathbf{i}}, \mathbf{i}$ ) cu fiecare element de pe cea secundară ( $a_{i, n-i+1}$ ).
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: c) a și -1
+\section*{Varianta 39}
 
-Indicații: Din numărul total de valori din șir, 100, elimină numărul cifrelor din șir
-2. Răspuns corect: e) VBPRE
-3. Răspuns corect: e) patru
+1. Răspuns corect: c) a și -1\\
+Indicații: Din numărul total de valori din șir, 100, elimină numărul cifrelor din șir\\
 
-Indicații: Primele patru elemente din tablou primesc valoarea 9
-4. Răspuns corect: c) 2
+2. Răspuns corect: e) VBPRE\\
 
-Indicații: după prima parcurgere 51 ajunge pe poziția finală, după cea de-a doua parcurgere 40 ajunge pe poziția finală
-5. Răspuns corect:
+3. Răspuns corect: e) patru\\
+Indicații: Primele patru elemente din tablou primesc valoarea 9\\
 
-Limbajul C++/C b) (i<j) \& \& (i+j<n+1)
-Limbajul Pascal b) (i<j)AND (i+j<n+1)
-Indicații: Condiția stabilește o intersecție pe cele două zone: zona aflată deasupra diagonalei principale ( $\mathrm{i}<\mathrm{j}$ ) și zona aflată deasupra diagonalei secundare ( $\mathrm{i}+\mathrm{j}<\mathrm{n}+1$ )
-6. Răspuns corect: e) 12
+4. Răspuns corect: c) 2\\
+Indicații: după prima parcurgere 51 ajunge pe poziția finală, după cea de-a doua parcurgere 40 ajunge pe poziția finală\\
 
-Indicații: Graful neorientat cu 8 noduri şi 28 de muchii este un graf complet. Pentru un număr minim de muchii eliminate se aleg 2 componente conexe astfel: o component conexă cu 2 noduri și o componentă conexă cu 6 noduri, se vor elimina $6+6=12$ muchii.
-7. Răspuns corect:
+5. Răspuns corect: b) \begin{verbatim}
+    Limbajul C++/C    (i<j)&&(i+j<n+1) 
+    Limbajul Pascal     (i<j)AND(i+j<n+1)
+\end{verbatim}\\
+Indicații: Condiția stabilește o intersecție pe cele două zone: zona aflată deasupra diagonalei principale ( $\mathrm{i}<\mathrm{j}$ ) și zona aflată deasupra diagonalei secundare ( $\mathrm{i}+\mathrm{j}<\mathrm{n}+1$ )\\
 
-Limbajul C++/C a) $x^{*} y>y^{*} z \quad \& \& \quad x^{*} z>y^{*} z$
-Limbajul Pascal a) ( $x^{\star} y>y^{\star} z$ ) AND ( $x^{*} z>y^{\star} z$ )
-8. Răspuns corect:
+6. Răspuns corect: e) 12\\
+Indicații: Graful neorientat cu 8 noduri şi 28 de muchii este un graf complet. Pentru un număr minim de muchii eliminate se aleg 2 componente conexe astfel: o component conexă cu 2 noduri și o componentă conexă cu 6 noduri, se vor elimina $6+6=12$ muchii.\\
 
-Limbajul C++/C b) ( $x>1000$ ) \&\& ( $\left.\left(x^{*} x^{*} x\right) \% 1000==0\right)$
-Limbajul Pascal b) ( $x>1000$ ) AND ( $\left(x^{*} x^{*} x\right)$ MOD $\left.1000=0\right)$
-Indicații: $x=36 * 35=1260$
-Răspuns corect: f) [ $\left.\log _{2} \mathrm{n}\right]+1$
-Răspuns corect: d) 45
-Răspuns corect: c) este conex și suma elementelor de pe fiecare coloană a matricei de adiacență este număr par
-Răspuns corect: a) $8 \quad 7 \quad 20 \quad 12$
-Răspuns corect: e) 12600
-Indicații: $C_{10}^{1} * C_{9}^{2} * C_{7}^{3 *} C_{4}^{4}=10 * 36 * 35 * 1=12600$ șiruri distincte
-14. Răspuns corect: b) 8
+7. Răspuns corect: a) \begin{verbatim}
+Limbajul C++/C   x*y>y*z && x*z>y*z 
+Limbajul Pascal    (x*y>y*z) AND(x*z>y*z)
+\end{verbatim}\\
 
-Indicații: Pentru fiecare nod ales drept nod rădăcină, există un singur vector de tați
-Răspuns corect: b) verifică dacă numărul $\mathbf{x}$ este divizibil cu b-1
-15.
+8. Răspuns corect: b) \begin{verbatim}
+Limbajul C++/C    (x>1000) && ((x*x*x) % 1000 == 0) 
+Limbajul Pascal     (x>1000) AND ((x*x*x) MOD 1000 = 0)
+\end{verbatim}\\
+Indicații: $x=36 * 35=1260$\\
 
-Indicații: Se aplică criteriul de divizibilitate: un număr natural scris în bază b se divide cu b-1 dacă și numai dacă suma cifrelor sale este un multiplu de b-1.
+9. Răspuns corect: f) [ $\left.\log _{2} \mathrm{n}\right]+1$\\
+
+10. Răspuns corect: d) 45\\
+
+11. Răspuns corect: c) este conex și suma elementelor de pe fiecare coloană a matricei de adiacență este număr par\\
+
+12. Răspuns corect: a) 8 7 20 12\\
+
+13. Răspuns corect: e) 12600\\
+Indicații: $C_{10}^{1} * C_{9}^{2} * C_{7}^{3 *} C_{4}^{4}=10 * 36 * 35 * 1=12600$ șiruri distincte\\
+
+14. Răspuns corect: b) 8\\
+Indicații: Pentru fiecare nod ales drept nod rădăcină, există un singur vector de tați\\
+
+15. Răspuns corect: b) verifică dacă numărul $\mathbf{x}$ este divizibil cu b-1\\
+Indicații: Se aplică criteriul de divizibilitate: un număr natural scris în bază b se divide cu b-1 dacă și numai dacă suma cifrelor sale este un multiplu de b-1.\\
 
 \section*{Varianta 40}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect: d) 63
+40.1. Răspuns corect: d) 63\\
+Indicații: $f(63)=f(62)+63=\ldots=f(4)+5+6+\ldots+63=8+(5+6+\ldots+63)=2014$\\
 
-Indicații: $f(63)=f(62)+63=\ldots=f(4)+5+6+\ldots+63=8+(5+6+\ldots+63)=2014$
-2. Răspuns corect: e) 50
-3. Răspuns corect: c) studentarterou
+40.2. Răspuns corect: e) 50\\
 
-Indicații: La primul șir se concatenează cel de-al doilea șir, mai puțin primul caracter, apoi se concatenează cel de-al treilea șir, mai puțin primele două caractere.
-4. Răspuns corect: d) oricare ar fi $\mathrm{x}, \mathrm{y}, \mathrm{z}, \mathrm{p}$ egal cu q
+40.3. Răspuns corect: c) studentarterou\\
+Indicații: La primul șir se concatenează cel de-al doilea șir, mai puțin primul caracter, apoi se concatenează cel de-al treilea șir, mai puțin primele două caractere.\\
 
-Indicații: cele două expresii sunt echivalente
-5. Răspuns corect: c) 130
+40.4. Răspuns corect: d) oricare ar fi x, y, z, p egal cu q\\
+Indicații: cele două expresii sunt echivalente\\
 
-Răspuns corect: a) $\left[-2^{\mathrm{n}-1}, 2^{\mathrm{n}-1}-1\right]$
-Indicații: primul bit, din reprezentare, este cel de semn (0- pentru numere întregi pozitive șii 1- pentru numere întregi negative), ceilalți $n-1$ biți sunt folosiți pentru reprezentarea valorii absolute a numărului.
-7. Răspuns corect: b) 16
+40.5. Răspuns corect: c) 130\\
 
-Indicații: se intră o singură dată în instrucțiunea while, variabila $\mathbf{p}$ nu se modifică
-8. Răspuns corect: b) $7,16,10$
+40.6. Răspuns corect: a) $\left[-2^{\mathrm{n}-1}, 2^{\mathrm{n}-1}-1\right]$\\
+Indicații: primul bit, din reprezentare, este cel de semn (0- pentru numere întregi pozitive șii 1- pentru numere întregi negative), ceilalți $n-1$ biți sunt folosiți pentru reprezentarea valorii absolute a numărului.\\
 
-Indicații: se înjumătățește secvența curentă în care se face căutarea
-9. Răspuns corect: e) 777
+40.7. Răspuns corect: b) 16\\
+Indicații: se intră o singură dată în instrucțiunea while, variabila $\mathbf{p}$ nu se modifică\\
 
-Indicații: Numărul valorilor de 1 din tabloul bidimensional, pe linii, este $1+2+4+8+$ $16+32+64+128=255$. Tabloul are 8 linii și 129 coloane. De unde, numărul de valori 0 este: $(129-1)+(129-2)+\ldots+(129-128)=777$
-10. Răspuns corect: a) 377
+40.8. Răspuns corect: b) $7,16,10$\\
+Indicații: se înjumătățește secvența curentă în care se face căutarea\\
 
-Indicații: se pot folosi termenii din șirul lui Fibonacci
-11. Răspuns corect: c) 11
+40.9. Răspuns corect: e) 777\\
+Indicații: Numărul valorilor de 1 din tabloul bidimensional, pe linii, este $1+2+4+8+$ $16+32+64+128=255$. Tabloul are 8 linii și 129 coloane. De unde, numărul de valori 0 este: $(129-1)+(129-2)+\ldots+(129-128)=777$\\
 
-Indicații: Graful neorientat are 20 de muchii care formează o componentă conexă folosind 7 noduri. Rămân 10 noduri izolate.
-12. Răspuns corect: b) 13
+40.10. Răspuns corect: a) 377\\
+Indicații: se pot folosi termenii din șirul lui Fibonacci\\
 
-Indicațiii: 2 și toate numerele impare cuprinse între 3 și [sqrt(681)]
-13. Răspuns corect: d) 101
+40.11. Răspuns corect: c) 11\\
+Indicații: Graful neorientat are 20 de muchii care formează o componentă conexă folosind 7 noduri. Rămân 10 noduri izolate.\\
 
-Indicații: Numărul total de permutări cu 5 elemente este $5!=120$. După permutarea 51423 se mai generează încă 19 termeni.
-14. Răspuns corect: b) $A, B$
+40.12. Răspuns corect: b) 13\\
+Indicațiii: 2 și toate numerele impare cuprinse între 3 și [sqrt(681)]\\
 
-Indicații: c.m.m.m.c(m,n)=m*n/c.m.m.d.c(m,n)
-15. Răspuns corect: f) $4^{13}$
+40.13. Răspuns corect: d) 101\\
+Indicații: Numărul total de permutări cu 5 elemente este $5!=120$. După permutarea 51423 se mai generează încă 19 termeni.\\
 
-Indicații: Numărul grafurilor neorientate cu 8 noduri este $2^{28}$. Numărul grafurilor neorientate cu 8 noduri, în care nodurile 2 și 3 sunt neadiacente, este $2^{28} / 2=2^{27}$, s.a.m.d.
+40.14. Răspuns corect: b) $A, B$\\
+Indicații: c.m.m.m.c(m,n)=m*n/c.m.m.d.c(m,n)\\
+
+40.15. Răspuns corect: f) $4^{13}$\\
+Indicații: Numărul grafurilor neorientate cu 8 noduri este $2^{28}$. Numărul grafurilor neorientate cu 8 noduri, în care nodurile 2 și 3 sunt neadiacente, este $2^{28} / 2=2^{27}$, s.a.m.d.\\
 
 \section*{Varianta 41}
 
-\section*{Indicații și răspunsuri}
-1. Răspuns corect:a) exact $n(n-1) / 2-m$
+41.1. Răspuns corect: a) exact $n(n-1) / 2-m$\\
+Indicații: Graful G1 va conţine muchiile grafului complementar al lui G (dacă în G există o muchie în G1 nu va exista). Din graful complet cu n noduri şi n(n-1)/2 muchhi se scad muchiile grafului $G$, $m$\\
 
-Indicații: Graful G1 va conţine muchiile grafului complementar al lui G (dacă în G există o muchie în G1 nu va exista). Din graful complet cu n noduri şi n(n-1)/2 muchhi se scad muchiile grafului $G$, $m$
-2. Răspuns corect: f) $\mathrm{x}<=\mathrm{d}$
+41.2. Răspuns corect: f) $\mathrm{x}<=\mathrm{d}$\\
+Indicații: Funcţia descompune în factori primi un număr. Când numărul $x$ devinde egal cu divizorul atunci numărul $x$ este un factor prim la puterea 1\\
 
-Indicații: Funcţia descompune în factori primi un număr. Când numărul $x$ devinde egal cu divizorul atunci numărul $x$ este un factor prim la puterea 1
-3. Răspuns corect: d) 4
+41.3. Răspuns corect: d) 4\\
+Indicații: Se parcurge vectorul pentru căutarea valorii x, repetiția oprindu-se la prima apariţie a valorii $x$ în vector sau după ce toate elementele au fost parcurse dacă x nu apare în vector.\\
 
-Indicații: Se parcurge vectorul pentru căutarea valorii x, repetiția oprindu-se la prima apariţie a valorii $x$ în vector sau după ce toate elementele au fost parcurse dacă x nu apare în vector.
-4. Răspuns corect: d) 128
+41.4. Răspuns corect: d) 128\\
+Indicații: Există şirul de apeluri: $\mathrm{F}(7), \mathrm{F}(6) \ldots \mathrm{F}(0)$ care duce la valorile returnate de la stânga la dreapta $1,2 * 1,2 * 2,2 * 4,2 * 8,2 * 16,2 * 32,2 * 64=128$\\
 
-Indicații: Există şirul de apeluri: $\mathrm{F}(7), \mathrm{F}(6) \ldots \mathrm{F}(0)$ care duce la valorile returnate de la stânga la dreapta $1,2 * 1,2 * 2,2 * 4,2 * 8,2 * 16,2 * 32,2 * 64=128$
-5. Răspuns corect: c) CDEFGEFG
+41.5. Răspuns corect: c) CDEFGEFG\\
+Indicații. Se memorează şirul de caractere începând de la poziţia 4 (C) 5 (Pascal) apoi şirul începând de la poziţia 2 (C) | 3 (Pascal) şi apoi se concatenează aceste două şiruri.\\
 
-Indicații. Se memorează şirul de caractere începând de la poziţia 4 (C) 5 (Pascal) apoi şirul începând de la poziţia 2 (C) | 3 (Pascal) şi apoi se concatenează aceste două şiruri.
-6. Răspuns corect: d) B,C
+41.6. Răspuns corect: d) B,C\\
+Indicații: La evaluare se ține cont de prioritatea operatorilor\\
 
-Indicații: La evaluare se ține cont de prioritatea operatorilor
-7. Răspuns corect: b) BEC BED CAB
+41.7. Răspuns corect: b) BEC BED CAB\\
+Indicații: Se pleacă de la variantele propuse şi aplicând metoda backtracking se generează următoarele soluţii.\\
 
-Indicații: Se pleacă de la variantele propuse şi aplicând metoda backtracking se generează următoarele soluţii.
-8. Răspuns corect: a) de 5 ori
-9. Răspuns corect: f) 0
+41.8. Răspuns corect: a) de 5 ori\\
 
-Indicații: Fiecare nod $n$ are ca fii nodurile $2 n$ şi $2 n+1$. Fiind număr impar nu rămâne nici un nod cu un fiu.
-10. Răspuns corect: $e) n(n-1) / 2$
+41.9. Răspuns corect: f) 0\\
+Indicații: Fiecare nod $n$ are ca fii nodurile $2 n$ şi $2 n+1$. Fiind număr impar nu rămâne nici un nod cu un fiu.\\
 
-Indicații: Inițial vectorul este ordonat crescător, deci se face numărul maxim de interschimbări.
-11. Răspuns corect: $\mathbf{c}$ ) $\mathrm{n}=5, \mathrm{U}=\{[1,3],[1,4],[3,4],[2,4],[4,5],[2,5]\}$
+41.10. Răspuns corect: e) $n(n-1) / 2$\\
+Indicații: Inițial vectorul este ordonat crescător, deci se face numărul maxim de interschimbări.\\
 
-Indicații: Se desenează fiecare graf. Ca să fie eulerian trebuie ca să existe un ciclu care să conțină toate muchiile grafului o singură dată iar ca să nu fie hamiltonian trebuie să nu existe niciun ciclu care să conţină toate nodurile grafului o singură dată.
-12. Răspuns corect:
+41.11. Răspuns corect: c) $\mathrm{n}=5, \mathrm{U}=\{[1,3],[1,4],[3,4],[2,4],[4,5],[2,5]\}$\\
+Indicații: Se desenează fiecare graf. Ca să fie eulerian trebuie ca să existe un ciclu care să conțină toate muchiile grafului o singură dată iar ca să nu fie hamiltonian trebuie să nu existe niciun ciclu care să conţină toate nodurile grafului o singură dată.\\
 
-Limbajul C++/C b) if( $x>y \& \& y>z$ ) $p=x^{*} y^{*} z ;$
+41.12. Răspuns corect: b) \begin{verbatim}
+Limbajul C++/C    if(x>y && y>z) 
+                            p=x*y*z; 
+Limbajul Pascal   if (x>y) AND (y>z) 
+                            then p:=x*y*z;
+\end{verbatim}\\
+Indicații: Din proprietatea de tranzitivitate se observă că expresia logică $\mathrm{z}>\mathrm{x}$ are întotdeauna valoare 1 |true.\\
 
-Limbajul Pascal b) if ( $x>y$ ) AND ( $y>z$ ) then $\mathrm{p}:=\mathrm{x}^{*} \mathrm{y}^{*} \mathrm{z}$;
-Indicații: Din proprietatea de tranzitivitate se observă că expresia $\operatorname{logică~} \mathrm{z}>\mathrm{x}$ are întotdeauna valoare 1 |true.
-13. Răspuns corect: b) cuprins între 7 și 12
+41.13. Răspuns corect: b) cuprins între 7 și 12\\
+Indicații: Numărul de înjumătăţiri este $\log 1000$\\
 
-Indicații: Numărul de înjumătăţiri este $\log 1000$
-14. Răspuns corect: a) A
+41.14. Răspuns corect: a) A\\
+Indicații: Se foloseşte algoritmul care modifică numărul prin adunarea ultimei cifre la câtul împărțirii la 10 până când se obține un număr care are o singură cifră.\\
 
-Indicații: Se foloseşte algoritmul care modifică numărul prin adunarea ultimei cifre la câtul împărțirii la 10 până când se obține un număr care are o singură cifră.
-15. Răspuns corect: c) 94
-
-Indicații: $1+3+3 x 2+3 x 2^{2}+3 x 2^{3}+3 x 2^{4}=94$
+41.15. Răspuns corect: c) 94\\
+Indicații: $1+3+3 x 2+3 x 2^{2}+3 x 2^{3}+3 x 2^{4}=94$\\
 
 \section*{Varianta 42}
 
