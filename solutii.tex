@@ -1597,57 +1597,59 @@ Indicații: Secvenţa interschimbă elementele triunghiurilor unu şi doi inclus
 Indicații: Pentru $n$ număr natural format din 3 cifre, subprogramul va returna un număr natural format din aceleași 3 cifre. Dacă $n$ conține cel puțin o cifră de 9, atunci numărul returnat va avea cifra sutelor egală cu 9.\\ În intervalul $[100,199]$ există 19 numere naturale care au cel puțin o cifră de 9. În intervalul $[100,899]$ există $8 * 19=152$ numere naturale care au cel puțin o cifră de 9. În intervalul $[900,999]$ există 100 de numere care au cel puțin o cifră de 9.\\ Așadar, pentru $n \in[100,999]$ subprogramul poate returna 252 numere naturale cu cifra sutelor 9.\\
 
 \section*{Varianta 37}
-1. Răspuns corect: b)
 
-Indicații: Se face diferenţa la nivel de cod ASCII (97- 99= -2).
-2. Răspuns corect: c)
+37.1. Răspuns corect: b)\\
+Indicații: Se face diferenţa la nivel de cod ASCII (97- 99= -2).\\
 
+37.2. Răspuns corect: c)\\
 Indicații: Reprezentarea grafică a respectivului arbore este:
-![](https://cdn.mathpix.com/cropped/2025_04_17_46e04c6acd873ea9558dg-318.jpg?height=318&width=240&top_left_y=600&top_left_x=395)
-3. Răspuns corect: f)
+\begin{center} \includegraphics[width=0.4\linewidth]{images/2025_04_17_46e04c6acd873ea9558dg-318.jpg} \end{center}\\
 
-Indicații: Matricea de adiacență este simetrică faţă de diagonala principală prin urmare numărul total de cifre 1 este $n(n-1)=n^{2}-n$. Cum pe diagonala principală avem un număr de $n$ cifre de 0 , iar numărul total de elemente din matrice este $n^{2}$, matricea desemnează încă de la bun început un graf norientat complet.
-4. Răspuns corect: c)
+37.3. Răspuns corect: f)\\
+Indicații: Matricea de adiacență este simetrică faţă de diagonala principală prin urmare numărul total de cifre 1 este $n(n-1)=n^{2}-n$. Cum pe diagonala principală avem un număr de $n$ cifre de 0 , iar numărul total de elemente din matrice este $n^{2}$, matricea desemnează încă de la bun început un graf norientat complet.\\
 
-Indicații: Pentru a obține un număr maxim de noduri izolate, vom asigura totalul de 10589 de muchii cu un număr minim de noduri (147). Cum restul nodurilor sunt izolate, gradul maxim pe care îl poate avea un nod din cele 147 este egal cu 146.
-5. Răspuns corect: f)
+37.4. Răspuns corect: c)\\
+Indicații: Pentru a obține un număr maxim de noduri izolate, vom asigura totalul de 10589 de muchii cu un număr minim de noduri (147). Cum restul nodurilor sunt izolate, gradul maxim pe care îl poate avea un nod din cele 147 este egal cu 146.\\
 
-Indicații: Pentru a ajunge la cuvântul din mijloc, se elimină primul cuvânt din şirul de caractere, iar apoi în cadrul structurii repetitive următoarele patru cuvinte. Ultimul cuvânt copiat în variabila c desemnează cuvântul căutat.
-6. Răspuns corect: b)
+37.5. Răspuns corect: f)\\
+Indicații: Pentru a ajunge la cuvântul din mijloc, se elimină primul cuvânt din şirul de caractere, iar apoi în cadrul structurii repetitive următoarele patru cuvinte. Ultimul cuvânt copiat în variabila c desemnează cuvântul căutat.\\
 
-Indicații: Variabila $\mathbf{k}$ va desemna numărul seriei de termeni în care se găseşte cel de pe poziţia $n$, iar $\mathbf{s}$ va reţine poziţia ultimului termen din acea serie.
-7. Răspuns corect: c)
+37.6. Răspuns corect: b)\\
+Indicații: Variabila $\mathbf{k}$ va desemna numărul seriei de termeni în care se găseşte cel de pe poziţia $n$, iar $\mathbf{s}$ va reţine poziţia ultimului termen din acea serie.\\
 
+37.7. Răspuns corect: c)\\
 Indicații: Ex: pentru $n=5$, se va construi în memorie un tablou simetric faţă de ambele diagonale de forma:
-23456
-34565
-45654
-56543
-65432
-8. Răspuns corect: c)
+\begin{verbatim}
+2 3 4 5 6  
+3 4 5 6 5  
+4 5 6 5 4  
+5 6 5 4 3  
+6 5 4 3 2
+\end{verbatim}\\
 
-Indicații: Se rețin în ordine descrescătoare multiplii comuni ai celor două variabile. La final variabila d va păstra valoarea celui mai mic multiplu comun al acestora.
-9. Răspuns corect: d)
+37.8. Răspuns corect: c)\\
+Indicații: Se rețin în ordine descrescătoare multiplii comuni ai celor două variabile. La final variabila d va păstra valoarea celui mai mic multiplu comun al acestora.\\
 
-Indicații: Variabila c reţine puterea lui 5 din factorialul lui a, dar cum există în acelaşi timp şi un număr de elemente pare mai mare decat c, valoarea sa va desemna şi numărul de 0 obţinut din înmulţiri de forma 2*5.
-10. Răspuns corect: $\mathbf{c}$ )
+37.9. Răspuns corect: d)\\
+Indicații: Variabila c reţine puterea lui 5 din factorialul lui a, dar cum există în acelaşi timp şi un număr de elemente pare mai mare decat c, valoarea sa va desemna şi numărul de 0 obţinut din înmulţiri de forma $2*5$.\\
 
-Indicații: Pentru a ajunge la o anumită literă din şirul de caractere strada, va trebui mai întâi accesat un element din tablou (v [5]), iar apoi câmpul adresa.
-11. Răspuns corect: c)
+37.10. Răspuns corect: c)\\
+Indicații: Pentru a ajunge la o anumită literă din şirul de caractere strada, va trebui mai întâi accesat un element din tablou (v [5]), iar apoi câmpul adresa.\\
 
-Indicații: La prima deschidere a fişierului se vor citi toate valorile existente în acesta, iar la cea de-a doua se vor citi doar primele $\mathbf{n - 1}$ valori care includ şi valoarea citită initial în n .
-12. Răspuns corect: a)
+37.11. Răspuns corect: c)\\
+Indicații: La prima deschidere a fişierului se vor citi toate valorile existente în acesta, iar la cea de-a doua se vor citi doar primele $\mathbf{n - 1}$ valori care includ şi valoarea citită initial în n.\\
 
-Indicații: Se caută valoarea raportului dintre suma cifrelor (obţinută prin apelul $f(n)$ ) şi numărul de cifre calculat în variabila c.
-13. Răspuns corect: e)
+37.12. Răspuns corect: a)\\
+Indicații: Se caută valoarea raportului dintre suma cifrelor (obţinută prin apelul $f(n)$ ) şi numărul de cifre calculat în variabila c.\\
 
-Indicații: Se lipesc primele două caractere din şirul p la ceea ce a rămas în $\boldsymbol{s}$ după eliminarea de caractere.
-14. Răspuns corect: b)
+37.13. Răspuns corect: e)\\
+Indicații: Se lipesc primele două caractere din şirul $\mathbf{p}$ la ceea ce a rămas în $\mathbf{s}$ după eliminarea de caractere.\\
 
-Indicații: Secvența parcurge în spirală în sensul acelor de ceasornic elementele tabloului respectiv.
-15. Răspuns corect: e)
+37.14. Răspuns corect: b)\\
+Indicații: Secvența parcurge în spirală în sensul acelor de ceasornic elementele tabloului respectiv.\\
 
-Indicații: Pentru a obține media dorită, variabila ev nu este validată dacă apelul funcţiei medie nu se regăseşte în intervalul de valori $[\mathbf{x}-0.5 ; \mathbf{x + 0 . 5}$ ).
+37.15. Răspuns corect: e)\\
+Indicații: Pentru a obține media dorită, variabila ev nu este validată dacă apelul funcţiei medie nu se regăseşte în intervalul de valori $[\mathbf{x}-0.5 ; \mathbf{x + 0 . 5}$ ).\\
 
 \section*{Varianta 38}
 
